@@ -1,0 +1,12 @@
+{
+  "name": "pokemoncardwiki",
+  "version": "1.0.0",
+  "description": "## Overview A project to build an advanced search database for Pokemon Card Game (PTCG), enabling complex queries (e.g., status effects, energy acceleration) that are difficult to perform on the official site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
