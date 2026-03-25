@@ -525,7 +525,7 @@
     "evolutions": []
   },
   {
-    "master_id": "プリズムエネルギー_none_none_このカードは、エネルギー1個ぶんとしてはたらく。\nたねポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+    "master_id": "プリズムエネルギー_none_none_none",
     "name": "プリズムエネルギー",
     "hp": null,
     "type": "",
@@ -890,7 +890,9 @@
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -916,33 +918,6 @@
     "abilities": [],
     "attacks": [],
     "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ふうせん_none_none_ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
-    "name": "ふうせん",
-    "hp": null,
-    "type": "",
-    "card_kind": "ポケモンのどうぐ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
-    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -1240,7 +1215,7 @@
     ]
   },
   {
-    "master_id": "ドダイトスex_340_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドダイトスex_340_grass_none",
     "name": "ドダイトスex",
     "hp": 340,
     "type": "grass",
@@ -1544,7 +1519,7 @@
     ]
   },
   {
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "name": "ウガツホムラex",
     "hp": 230,
     "type": "fire",
@@ -2064,7 +2039,7 @@
     ]
   },
   {
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "name": "ウネルミナモex",
     "hp": 220,
     "type": "water",
@@ -2107,7 +2082,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ウミトリオex_250_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウミトリオex_250_electric_none",
     "name": "ウミトリオex",
     "hp": 250,
     "type": "electric",
@@ -3106,7 +3081,7 @@
     ]
   },
   {
-    "master_id": "ゲンガーex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲンガーex_310_dark_none",
     "name": "ゲンガーex",
     "hp": 310,
     "type": "dark",
@@ -3374,7 +3349,7 @@
     "evolutions": []
   },
   {
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "name": "タケルライコex",
     "hp": 240,
     "type": "dragon",
@@ -4654,7 +4629,7 @@
     ]
   },
   {
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "name": "テツノイサハex",
     "hp": 220,
     "type": "grass",
@@ -4914,7 +4889,7 @@
     ]
   },
   {
-    "master_id": "ガオガエンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガオガエンex_320_fire_none",
     "name": "ガオガエンex",
     "hp": 320,
     "type": "fire",
@@ -5531,7 +5506,7 @@
     "evolutions": []
   },
   {
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "name": "テツノカシラex",
     "hp": 220,
     "type": "psychic",
@@ -5761,7 +5736,7 @@
     ]
   },
   {
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "name": "テツノイワオex",
     "hp": 240,
     "type": "fighting",
@@ -5808,7 +5783,7 @@
     "evolutions": []
   },
   {
-    "master_id": "リキキリンex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リキキリンex_260_dark_none",
     "name": "リキキリンex",
     "hp": 260,
     "type": "dark",
@@ -5903,7 +5878,7 @@
     ]
   },
   {
-    "master_id": "ハッサムex_270_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハッサムex_270_steel_none",
     "name": "ハッサムex",
     "hp": 270,
     "type": "steel",
@@ -7251,7 +7226,7 @@
     "evolutions": []
   },
   {
-    "master_id": "コライドンex_230_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_dragon_none",
     "name": "コライドンex",
     "hp": 230,
     "type": "dragon",
@@ -7536,7 +7511,7 @@
     ]
   },
   {
-    "master_id": "ミライドンex_220_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミライドンex_220_dragon_none",
     "name": "ミライドンex",
     "hp": 220,
     "type": "dragon",
@@ -7716,7 +7691,7 @@
     ]
   },
   {
-    "master_id": "カラミンゴex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カラミンゴex_200_none_none",
     "name": "カラミンゴex",
     "hp": 200,
     "type": "none",
@@ -7874,7 +7849,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ニャオハex_200_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャオハex_200_grass_none",
     "name": "ニャオハex",
     "hp": 200,
     "type": "grass",
@@ -8205,7 +8180,7 @@
     ]
   },
   {
-    "master_id": "グレンアルマex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレンアルマex_260_fire_none",
     "name": "グレンアルマex",
     "hp": 260,
     "type": "fire",
@@ -8317,7 +8292,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "name": "ピカチュウex",
     "hp": 200,
     "type": "electric",
@@ -8737,7 +8712,7 @@
     ]
   },
   {
-    "master_id": "ハカドッグex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハカドッグex_260_psychic_none",
     "name": "ハカドッグex",
     "hp": 260,
     "type": "psychic",
@@ -9020,7 +8995,7 @@
     ]
   },
   {
-    "master_id": "ゲッコウガex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_300_water_none",
     "name": "ゲッコウガex",
     "hp": 300,
     "type": "water",
@@ -9064,7 +9039,7 @@
     ]
   },
   {
-    "master_id": "ダークライex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダークライex_210_dark_none",
     "name": "ダークライex",
     "hp": 210,
     "type": "dark",
@@ -9417,7 +9392,7 @@
     ]
   },
   {
-    "master_id": "ルカリオex_250_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルカリオex_250_fighting_none",
     "name": "ルカリオex",
     "hp": 250,
     "type": "fighting",
@@ -9597,7 +9572,7 @@
     ]
   },
   {
-    "master_id": "メルメタルex_280_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メルメタルex_280_steel_none",
     "name": "メルメタルex",
     "hp": 280,
     "type": "steel",
@@ -10165,7 +10140,7 @@
     ]
   },
   {
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "name": "ヤバソチャex",
     "hp": 240,
     "type": "grass",
@@ -10294,7 +10269,7 @@
     ]
   },
   {
-    "master_id": "マグカルゴex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マグカルゴex_270_fire_none",
     "name": "マグカルゴex",
     "hp": 270,
     "type": "fire",
@@ -11114,7 +11089,7 @@
     ]
   },
   {
-    "master_id": "テツノイバラex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイバラex_230_electric_none",
     "name": "テツノイバラex",
     "hp": 230,
     "type": "electric",
@@ -11428,7 +11403,7 @@
     "evolutions": []
   },
   {
-    "master_id": "サケブシッポex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サケブシッポex_190_psychic_none",
     "name": "サケブシッポex",
     "hp": 190,
     "type": "psychic",
@@ -11656,7 +11631,7 @@
     ]
   },
   {
-    "master_id": "ゲッコウガex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_310_fighting_none",
     "name": "ゲッコウガex",
     "hp": 310,
     "type": "fighting",
@@ -11950,7 +11925,7 @@
     ]
   },
   {
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "name": "ガチグマ アカツキex",
     "hp": 260,
     "type": "none",
@@ -12874,7 +12849,7 @@
     "evolutions": []
   },
   {
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "name": "オーガポン みどりのめんex",
     "hp": 210,
     "type": "grass",
@@ -13148,7 +13123,7 @@
     ]
   },
   {
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "name": "オーガポン かまどのめんex",
     "hp": 210,
     "type": "fire",
@@ -13774,7 +13749,7 @@
     ]
   },
   {
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "name": "イルカマンex",
     "hp": 340,
     "type": "water",
@@ -13854,7 +13829,7 @@
     "evolutions": []
   },
   {
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "name": "オーガポン いどのめんex",
     "hp": 210,
     "type": "water",
@@ -13990,7 +13965,7 @@
     ]
   },
   {
-    "master_id": "レントラーex_310_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レントラーex_310_electric_none",
     "name": "レントラーex",
     "hp": 310,
     "type": "electric",
@@ -15036,7 +15011,7 @@
     "evolutions": []
   },
   {
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "name": "オーガポン いしずえのめんex",
     "hp": 210,
     "type": "fighting",
@@ -15676,7 +15651,7 @@
     ]
   },
   {
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "name": "ドラパルトex",
     "hp": 320,
     "type": "dragon",
@@ -15853,7 +15828,7 @@
     ]
   },
   {
-    "master_id": "ハピナスex_300_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハピナスex_300_none_none",
     "name": "ハピナスex",
     "hp": 300,
     "type": "none",
@@ -16361,7 +16336,7 @@
     "evolutions": []
   },
   {
-    "master_id": "タイカイデンex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タイカイデンex_260_electric_none",
     "name": "タイカイデンex",
     "hp": 260,
     "type": "electric",
@@ -17072,7 +17047,7 @@
     ]
   },
   {
-    "master_id": "キングドラex_310_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キングドラex_310_water_none",
     "name": "キングドラex",
     "hp": 310,
     "type": "water",
@@ -17217,7 +17192,7 @@
     ]
   },
   {
-    "master_id": "ブロロロームex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブロロロームex_280_electric_none",
     "name": "ブロロロームex",
     "hp": 280,
     "type": "electric",
@@ -18185,7 +18160,7 @@
     ]
   },
   {
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "name": "イイネイヌex",
     "hp": 250,
     "type": "dark",
@@ -18231,7 +18206,7 @@
     "evolutions": []
   },
   {
-    "master_id": "マシマシラex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マシマシラex_210_dark_none",
     "name": "マシマシラex",
     "hp": 210,
     "type": "dark",
@@ -18274,7 +18249,7 @@
     "evolutions": []
   },
   {
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "name": "キチキギスex",
     "hp": 210,
     "type": "dark",
@@ -18317,7 +18292,7 @@
     "evolutions": []
   },
   {
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "name": "モモワロウex",
     "hp": 190,
     "type": "dark",
@@ -19638,7 +19613,7 @@
     ]
   },
   {
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "name": "カミツオロチex",
     "hp": 330,
     "type": "grass",
@@ -19911,7 +19886,7 @@
     ]
   },
   {
-    "master_id": "エースバーンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エースバーンex_320_fire_none",
     "name": "エースバーンex",
     "hp": 320,
     "type": "fire",
@@ -19964,7 +19939,7 @@
     ]
   },
   {
-    "master_id": "ラプラスex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラプラスex_220_water_none",
     "name": "ラプラスex",
     "hp": 220,
     "type": "water",
@@ -20520,7 +20495,7 @@
     ]
   },
   {
-    "master_id": "デンチュラex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "デンチュラex_260_electric_none",
     "name": "デンチュラex",
     "hp": 260,
     "type": "electric",
@@ -20991,7 +20966,7 @@
     ]
   },
   {
-    "master_id": "バウッツェルex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バウッツェルex_250_psychic_none",
     "name": "バウッツェルex",
     "hp": 250,
     "type": "psychic",
@@ -21287,7 +21262,7 @@
     ]
   },
   {
-    "master_id": "チャーレムex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "チャーレムex_260_fighting_none",
     "name": "チャーレムex",
     "hp": 260,
     "type": "fighting",
@@ -22150,7 +22125,7 @@
     ]
   },
   {
-    "master_id": "ミミズズex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミズズex_220_steel_none",
     "name": "ミミズズex",
     "hp": 220,
     "type": "steel",
@@ -22683,7 +22658,7 @@
     ]
   },
   {
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "name": "テラパゴスex",
     "hp": 230,
     "type": "none",
@@ -23177,7 +23152,7 @@
     ]
   },
   {
-    "master_id": "ミガルーサex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミガルーサex_210_water_none",
     "name": "ミガルーサex",
     "hp": 210,
     "type": "water",
@@ -23338,7 +23313,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ソウブレイズex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ソウブレイズex_270_fire_none",
     "name": "ソウブレイズex",
     "hp": 270,
     "type": "fire",
@@ -23693,7 +23668,7 @@
     ]
   },
   {
-    "master_id": "ニンフィアex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニンフィアex_270_psychic_none",
     "name": "ニンフィアex",
     "hp": 270,
     "type": "psychic",
@@ -24252,7 +24227,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ブラックキュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラックキュレムex_230_water_none",
     "name": "ブラックキュレムex",
     "hp": 230,
     "type": "water",
@@ -24583,7 +24558,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "name": "ラティアスex",
     "hp": 210,
     "type": "psychic",
@@ -24945,7 +24920,7 @@
     ]
   },
   {
-    "master_id": "フライゴンex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "フライゴンex_310_fighting_none",
     "name": "フライゴンex",
     "hp": 310,
     "type": "fighting",
@@ -25284,7 +25259,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "name": "ブリジュラスex",
     "hp": 300,
     "type": "steel",
@@ -25424,7 +25399,7 @@
     "evolutions": []
   },
   {
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "name": "アローラ ナッシーex",
     "hp": 300,
     "type": "dragon",
@@ -25876,7 +25851,7 @@
     ]
   },
   {
-    "master_id": "モトトカゲex_210_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モトトカゲex_210_none_none",
     "name": "モトトカゲex",
     "hp": 210,
     "type": "none",
@@ -26285,7 +26260,7 @@
     ]
   },
   {
-    "master_id": "アイアントex_190_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アイアントex_190_grass_none",
     "name": "アイアントex",
     "hp": 190,
     "type": "grass",
@@ -27090,7 +27065,7 @@
     ]
   },
   {
-    "master_id": "スコヴィランex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "スコヴィランex_260_fire_none",
     "name": "スコヴィランex",
     "hp": 260,
     "type": "fire",
@@ -27181,7 +27156,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ミロカロスex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミロカロスex_270_water_none",
     "name": "ミロカロスex",
     "hp": 270,
     "type": "water",
@@ -28287,7 +28262,7 @@
     "evolutions": []
   },
   {
-    "master_id": "シロデスナex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロデスナex_280_psychic_none",
     "name": "シロデスナex",
     "hp": 280,
     "type": "psychic",
@@ -28825,7 +28800,7 @@
     ]
   },
   {
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "name": "サザンドラex",
     "hp": 330,
     "type": "dark",
@@ -29210,7 +29185,7 @@
     "evolutions": []
   },
   {
-    "master_id": "シャリタツex_160_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャリタツex_160_dragon_none",
     "name": "シャリタツex",
     "hp": 160,
     "type": "dragon",
@@ -29336,7 +29311,7 @@
     ]
   },
   {
-    "master_id": "ケッキングex_340_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケッキングex_340_none_none",
     "name": "ケッキングex",
     "hp": 340,
     "type": "none",
@@ -30084,7 +30059,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ベラカスex_250_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ベラカスex_250_grass_none",
     "name": "ベラカスex",
     "hp": 250,
     "type": "grass",
@@ -30493,7 +30468,7 @@
     ]
   },
   {
-    "master_id": "モロバレルex_260_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モロバレルex_260_grass_none",
     "name": "モロバレルex",
     "hp": 260,
     "type": "grass",
@@ -30704,7 +30679,7 @@
     ]
   },
   {
-    "master_id": "バシャーモex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バシャーモex_320_fire_none",
     "name": "バシャーモex",
     "hp": 320,
     "type": "fire",
@@ -30790,7 +30765,7 @@
     ]
   },
   {
-    "master_id": "レシラムex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_220_fire_none",
     "name": "レシラムex",
     "hp": 220,
     "type": "fire",
@@ -31197,7 +31172,7 @@
     "evolutions": []
   },
   {
-    "master_id": "カイオーガex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カイオーガex_230_water_none",
     "name": "カイオーガex",
     "hp": 230,
     "type": "water",
@@ -31246,7 +31221,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ピカチュウex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_190_electric_none",
     "name": "ピカチュウex",
     "hp": 190,
     "type": "electric",
@@ -31433,7 +31408,7 @@
     ]
   },
   {
-    "master_id": "カプ・コケコex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カプ・コケコex_200_electric_none",
     "name": "カプ・コケコex",
     "hp": 200,
     "type": "electric",
@@ -31596,7 +31571,7 @@
     ]
   },
   {
-    "master_id": "ゼルネアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼルネアスex_210_psychic_none",
     "name": "ゼルネアスex",
     "hp": 210,
     "type": "psychic",
@@ -31685,7 +31660,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ミミッキュex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミッキュex_190_psychic_none",
     "name": "ミミッキュex",
     "hp": 190,
     "type": "psychic",
@@ -31949,7 +31924,7 @@
     ]
   },
   {
-    "master_id": "マホイップex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マホイップex_250_psychic_none",
     "name": "マホイップex",
     "hp": 250,
     "type": "psychic",
@@ -32086,7 +32061,7 @@
     ]
   },
   {
-    "master_id": "ルカリオex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルカリオex_260_fighting_none",
     "name": "ルカリオex",
     "hp": 260,
     "type": "fighting",
@@ -32270,7 +32245,7 @@
     ]
   },
   {
-    "master_id": "コライドンex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_fighting_none",
     "name": "コライドンex",
     "hp": 230,
     "type": "fighting",
@@ -32355,7 +32330,7 @@
     ]
   },
   {
-    "master_id": "パルデア ドオーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "パルデア ドオーex_280_dark_none",
     "name": "パルデア ドオーex",
     "hp": 280,
     "type": "dark",
@@ -32530,7 +32505,7 @@
     ]
   },
   {
-    "master_id": "バンギラスex_340_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バンギラスex_340_dark_none",
     "name": "バンギラスex",
     "hp": 340,
     "type": "dark",
@@ -32702,7 +32677,7 @@
     ]
   },
   {
-    "master_id": "ディアルガex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ディアルガex_220_steel_none",
     "name": "ディアルガex",
     "hp": 220,
     "type": "steel",
@@ -32889,7 +32864,7 @@
     ]
   },
   {
-    "master_id": "ザシアンex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ザシアンex_220_steel_none",
     "name": "ザシアンex",
     "hp": 220,
     "type": "steel",
@@ -32935,7 +32910,7 @@
     "evolutions": []
   },
   {
-    "master_id": "カビゴンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カビゴンex_260_none_none",
     "name": "カビゴンex",
     "hp": 260,
     "type": "none",
@@ -33027,7 +33002,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ルギアex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルギアex_220_none_none",
     "name": "ルギアex",
     "hp": 220,
     "type": "none",
@@ -33411,7 +33386,7 @@
     ]
   },
   {
-    "master_id": "オンバーンex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オンバーンex_270_none_none",
     "name": "オンバーンex",
     "hp": 270,
     "type": "none",
@@ -33777,7 +33752,7 @@
     ]
   },
   {
-    "master_id": "リーフィアex_270_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーフィアex_270_grass_none",
     "name": "リーフィアex",
     "hp": 270,
     "type": "grass",
@@ -33850,7 +33825,7 @@
     ]
   },
   {
-    "master_id": "ブースターex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブースターex_270_fire_none",
     "name": "ブースターex",
     "hp": 270,
     "type": "fire",
@@ -33965,7 +33940,7 @@
     ]
   },
   {
-    "master_id": "シャワーズex_280_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャワーズex_280_water_none",
     "name": "シャワーズex",
     "hp": 280,
     "type": "water",
@@ -34038,7 +34013,7 @@
     ]
   },
   {
-    "master_id": "グレイシアex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレイシアex_270_water_none",
     "name": "グレイシアex",
     "hp": 270,
     "type": "water",
@@ -34112,7 +34087,7 @@
     ]
   },
   {
-    "master_id": "サンダースex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サンダースex_260_electric_none",
     "name": "サンダースex",
     "hp": 260,
     "type": "electric",
@@ -34185,7 +34160,7 @@
     ]
   },
   {
-    "master_id": "エーフィex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エーフィex_270_psychic_none",
     "name": "エーフィex",
     "hp": 270,
     "type": "psychic",
@@ -34259,7 +34234,7 @@
     ]
   },
   {
-    "master_id": "ブラッキーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラッキーex_280_dark_none",
     "name": "ブラッキーex",
     "hp": 280,
     "type": "dark",
@@ -34333,7 +34308,7 @@
     ]
   },
   {
-    "master_id": "イーブイex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イーブイex_200_none_none",
     "name": "イーブイex",
     "hp": 200,
     "type": "none",
@@ -35262,7 +35237,7 @@
     ]
   },
   {
-    "master_id": "ボルケニオンex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボルケニオンex_220_fire_none",
     "name": "ボルケニオンex",
     "hp": 220,
     "type": "fire",
@@ -35802,7 +35777,7 @@
     ]
   },
   {
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "name": "ナンジャモのハラバリーex",
     "hp": 280,
     "type": "electric",
@@ -35930,7 +35905,7 @@
     ]
   },
   {
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "name": "リーリエのピッピex",
     "hp": 190,
     "type": "psychic",
@@ -36463,7 +36438,7 @@
     ]
   },
   {
-    "master_id": "マンムーex_340_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マンムーex_340_fighting_none",
     "name": "マンムーex",
     "hp": 340,
     "type": "fighting",
@@ -36949,7 +36924,7 @@
     ]
   },
   {
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "name": "Nのゾロアークex",
     "hp": 280,
     "type": "dark",
@@ -37260,7 +37235,7 @@
     ]
   },
   {
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "name": "ホップのザシアンex",
     "hp": 230,
     "type": "steel",
@@ -37407,7 +37382,7 @@
     ]
   },
   {
-    "master_id": "ボーマンダex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボーマンダex_320_dragon_none",
     "name": "ボーマンダex",
     "hp": 320,
     "type": "dragon",
@@ -37723,7 +37698,7 @@
     ]
   },
   {
-    "master_id": "ノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ノココッチex_270_none_none",
     "name": "ノココッチex",
     "hp": 270,
     "type": "none",
@@ -38789,7 +38764,7 @@
     ]
   },
   {
-    "master_id": "マリィのオーロンゲex_320_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マリィのオーロンゲex_320_dark_none",
     "name": "マリィのオーロンゲex",
     "hp": 320,
     "type": "dark",
@@ -39152,7 +39127,7 @@
     ]
   },
   {
-    "master_id": "ダイゴのメタグロスex_340_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダイゴのメタグロスex_340_steel_none",
     "name": "ダイゴのメタグロスex",
     "hp": 340,
     "type": "steel",
@@ -39316,7 +39291,7 @@
     ]
   },
   {
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "name": "メガヤンマex",
     "hp": 280,
     "type": "grass",
@@ -39828,7 +39803,7 @@
     ]
   },
   {
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "name": "ヒビキのホウオウex",
     "hp": 230,
     "type": "fire",
@@ -40331,7 +40306,7 @@
     ]
   },
   {
-    "master_id": "ヘイラッシャex_260_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヘイラッシャex_260_water_none",
     "name": "ヘイラッシャex",
     "hp": 260,
     "type": "water",
@@ -40423,7 +40398,7 @@
     "evolutions": []
   },
   {
-    "master_id": "エレキブルex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エレキブルex_280_electric_none",
     "name": "エレキブルex",
     "hp": 280,
     "type": "electric",
@@ -40813,7 +40788,7 @@
     ]
   },
   {
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "name": "シロナのガブリアスex",
     "hp": 330,
     "type": "fighting",
@@ -41109,7 +41084,7 @@
     ]
   },
   {
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "name": "ペパーのマフィティフex",
     "hp": 270,
     "type": "dark",
@@ -41421,7 +41396,7 @@
     ]
   },
   {
-    "master_id": "ストリンダーex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ストリンダーex_260_electric_none",
     "name": "ストリンダーex",
     "hp": 260,
     "type": "electric",
@@ -41795,7 +41770,7 @@
     ]
   },
   {
-    "master_id": "オリーヴァex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オリーヴァex_310_grass_none",
     "name": "オリーヴァex",
     "hp": 310,
     "type": "grass",
@@ -41944,7 +41919,7 @@
     ]
   },
   {
-    "master_id": "ロケット団のファイヤーex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のファイヤーex_220_fire_none",
     "name": "ロケット団のファイヤーex",
     "hp": 220,
     "type": "fire",
@@ -42655,7 +42630,7 @@
     ]
   },
   {
-    "master_id": "ハルクジラex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハルクジラex_300_water_none",
     "name": "ハルクジラex",
     "hp": 300,
     "type": "water",
@@ -42962,7 +42937,7 @@
     ]
   },
   {
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "name": "ロケット団のミュウツーex",
     "hp": 280,
     "type": "psychic",
@@ -43417,7 +43392,7 @@
     ]
   },
   {
-    "master_id": "レジロックex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジロックex_230_fighting_none",
     "name": "レジロックex",
     "hp": 230,
     "type": "fighting",
@@ -43781,7 +43756,7 @@
     ]
   },
   {
-    "master_id": "ロケット団のニドキングex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のニドキングex_330_dark_none",
     "name": "ロケット団のニドキングex",
     "hp": 330,
     "type": "dark",
@@ -43915,7 +43890,7 @@
     ]
   },
   {
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "name": "ロケット団のクロバットex",
     "hp": 310,
     "type": "dark",
@@ -44373,7 +44348,7 @@
     ]
   },
   {
-    "master_id": "ロケット団のペルシアンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のペルシアンex_260_none_none",
     "name": "ロケット団のペルシアンex",
     "hp": 260,
     "type": "none",
@@ -45229,7 +45204,7 @@
     ]
   },
   {
-    "master_id": "ジャローダex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジャローダex_320_grass_none",
     "name": "ジャローダex",
     "hp": 320,
     "type": "grass",
@@ -46071,7 +46046,7 @@
     ]
   },
   {
-    "master_id": "キュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キュレムex_230_water_none",
     "name": "キュレムex",
     "hp": 230,
     "type": "water",
@@ -46339,7 +46314,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "name": "ゼクロムex",
     "hp": 230,
     "type": "electric",
@@ -46705,7 +46680,7 @@
     ]
   },
   {
-    "master_id": "メロエッタex_200_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メロエッタex_200_psychic_none",
     "name": "メロエッタex",
     "hp": 200,
     "type": "psychic",
@@ -46746,7 +46721,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ドリュウズex_270_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドリュウズex_270_fighting_none",
     "name": "ドリュウズex",
     "hp": 270,
     "type": "fighting",
@@ -47440,7 +47415,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "name": "ゲノセクトex",
     "hp": 220,
     "type": "steel",
@@ -47675,31 +47650,6 @@
     "evolutions": []
   },
   {
-    "master_id": "プリズムエネルギー_none_none_none",
-    "name": "プリズムエネルギー",
-    "hp": null,
-    "type": "",
-    "card_kind": "特殊エネルギー",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
     "master_id": "クルミル_50_grass_none",
     "name": "クルミル",
     "hp": 50,
@@ -47829,7 +47779,7 @@
     ]
   },
   {
-    "master_id": "エルフーンex_230_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エルフーンex_230_grass_none",
     "name": "エルフーンex",
     "hp": 230,
     "type": "grass",
@@ -48191,7 +48141,7 @@
     "evolutions": []
   },
   {
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "name": "レシラムex",
     "hp": 230,
     "type": "fire",
@@ -48649,7 +48599,7 @@
     ]
   },
   {
-    "master_id": "ケルディオex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケルディオex_210_water_none",
     "name": "ケルディオex",
     "hp": 210,
     "type": "water",
@@ -49112,7 +49062,7 @@
     ]
   },
   {
-    "master_id": "ブルンゲルex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブルンゲルex_270_psychic_none",
     "name": "ブルンゲルex",
     "hp": 270,
     "type": "psychic",
@@ -50243,7 +50193,7 @@
     ]
   },
   {
-    "master_id": "バッフロンex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バッフロンex_220_none_none",
     "name": "バッフロンex",
     "hp": 220,
     "type": "none",
@@ -50590,7 +50540,7 @@
     ]
   },
   {
-    "master_id": "メガフシギバナex_380_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガフシギバナex_380_grass_none",
     "name": "メガフシギバナex",
     "hp": 380,
     "type": "grass",
@@ -50786,7 +50736,7 @@
     ]
   },
   {
-    "master_id": "メガバクーダex_340_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガバクーダex_340_fire_none",
     "name": "メガバクーダex",
     "hp": 340,
     "type": "fire",
@@ -51297,7 +51247,7 @@
     ]
   },
   {
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "name": "メガルカリオex",
     "hp": 340,
     "type": "fighting",
@@ -51599,7 +51549,7 @@
     ]
   },
   {
-    "master_id": "メガアブソルex_280_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガアブソルex_280_dark_none",
     "name": "メガアブソルex",
     "hp": 280,
     "type": "dark",
@@ -51864,7 +51814,7 @@
     ]
   },
   {
-    "master_id": "メガクチートex_270_steel_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガクチートex_270_steel_none",
     "name": "メガクチートex",
     "hp": 270,
     "type": "steel",
@@ -52809,7 +52759,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガユキノオーex_350_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキノオーex_350_water_none",
     "name": "メガユキノオーex",
     "hp": 350,
     "type": "water",
@@ -53309,7 +53259,7 @@
     ]
   },
   {
-    "master_id": "メガライボルトex_330_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガライボルトex_330_electric_none",
     "name": "メガライボルトex",
     "hp": 330,
     "type": "electric",
@@ -53619,7 +53569,7 @@
     ]
   },
   {
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "name": "メガサーナイトex",
     "hp": 360,
     "type": "psychic",
@@ -53891,7 +53841,7 @@
     ]
   },
   {
-    "master_id": "メガラティアスex_280_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガラティアスex_280_dragon_none",
     "name": "メガラティアスex",
     "hp": 280,
     "type": "dragon",
@@ -53978,7 +53928,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガガルーラex_300_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガガルーラex_300_none_none",
     "name": "メガガルーラex",
     "hp": 300,
     "type": "none",
@@ -54379,7 +54329,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ラプラスex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラプラスex_210_water_none",
     "name": "ラプラスex",
     "hp": 210,
     "type": "water",
@@ -54530,7 +54480,7 @@
     ]
   },
   {
-    "master_id": "メガゲンガーex_350_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガゲンガーex_350_dark_none",
     "name": "メガゲンガーex",
     "hp": 350,
     "type": "dark",
@@ -54897,7 +54847,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガディアンシーex_270_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガディアンシーex_270_psychic_none",
     "name": "メガディアンシーex",
     "hp": 270,
     "type": "psychic",
@@ -55172,7 +55122,7 @@
     ]
   },
   {
-    "master_id": "メガヘラクロスex_280_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガヘラクロスex_280_grass_none",
     "name": "メガヘラクロスex",
     "hp": 280,
     "type": "grass",
@@ -55521,7 +55471,7 @@
     ]
   },
   {
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "name": "メガリザードンXex",
     "hp": 360,
     "type": "fire",
@@ -55640,7 +55590,7 @@
     ]
   },
   {
-    "master_id": "オドリドリex_190_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オドリドリex_190_fire_none",
     "name": "オドリドリex",
     "hp": 190,
     "type": "fire",
@@ -56048,7 +55998,7 @@
     ]
   },
   {
-    "master_id": "ロトムex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロトムex_190_electric_none",
     "name": "ロトムex",
     "hp": 190,
     "type": "electric",
@@ -56293,7 +56243,7 @@
     ]
   },
   {
-    "master_id": "ムウマージex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ムウマージex_260_psychic_none",
     "name": "ムウマージex",
     "hp": 260,
     "type": "psychic",
@@ -56832,7 +56782,7 @@
     ]
   },
   {
-    "master_id": "メガサメハダーex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサメハダーex_330_dark_none",
     "name": "メガサメハダーex",
     "hp": 330,
     "type": "dark",
@@ -57014,7 +56964,7 @@
     ]
   },
   {
-    "master_id": "エンペルトex_320_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エンペルトex_320_steel_none",
     "name": "エンペルトex",
     "hp": 320,
     "type": "steel",
@@ -57451,7 +57401,7 @@
     ]
   },
   {
-    "master_id": "メガミミロップex_330_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガミミロップex_330_none_none",
     "name": "メガミミロップex",
     "hp": 330,
     "type": "none",
@@ -57700,7 +57650,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ワルビアルex_320_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ワルビアルex_320_dark_none",
     "name": "ワルビアルex",
     "hp": 320,
     "type": "dark",
@@ -58120,7 +58070,7 @@
     ]
   },
   {
-    "master_id": "メガユキメノコex_310_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキメノコex_310_water_none",
     "name": "メガユキメノコex",
     "hp": 310,
     "type": "water",
@@ -58360,7 +58310,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガシビルドンex_350_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガシビルドンex_350_electric_none",
     "name": "メガシビルドンex",
     "hp": 350,
     "type": "electric",
@@ -58825,7 +58775,7 @@
     ]
   },
   {
-    "master_id": "メガルチャブルex_250_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルチャブルex_250_fighting_none",
     "name": "メガルチャブルex",
     "hp": 250,
     "type": "fighting",
@@ -59133,7 +59083,7 @@
     ]
   },
   {
-    "master_id": "メガズルズキンex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガズルズキンex_330_dark_none",
     "name": "メガズルズキンex",
     "hp": 330,
     "type": "dark",
@@ -59177,49 +59127,6 @@
       "ズルズキン",
       "メガズルズキンex",
       "ズルッグ"
-    ]
-  },
-  {
-    "master_id": "Nのゾロアークex_280_dark_none",
-    "name": "Nのゾロアークex",
-    "hp": 280,
-    "type": "dark",
-    "card_kind": "1 進化",
-    "abilities": [
-      {
-        "name": "とりひき",
-        "text": "自分の番に、自分の手札を1枚トラッシュするなら、1回使える。自分の山札を2枚引く。"
-      }
-    ],
-    "attacks": [
-      {
-        "name": "ナイトジョーカー",
-        "damage": "",
-        "cost": [
-          "dark",
-          "dark"
-        ],
-        "text": "自分のベンチの「Nのポケモン」が持つワザを1つ選び、このワザとして使う。"
-      }
-    ],
-    "rules": [],
-    "weakness": {
-      "type": "grass",
-      "value": "×2"
-    },
-    "resistance": {
-      "type": "",
-      "value": "--"
-    },
-    "retreatCost": 2,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": [
-      "Nのゾロアークex",
-      "Nのゾロア"
     ]
   },
   {
@@ -59394,7 +59301,7 @@
     ]
   },
   {
-    "master_id": "メガカイリューex_370_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガカイリューex_370_dragon_none",
     "name": "メガカイリューex",
     "hp": 370,
     "type": "dragon",
@@ -59837,7 +59744,7 @@
     ]
   },
   {
-    "master_id": "エリカのラフレシアex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エリカのラフレシアex_310_grass_none",
     "name": "エリカのラフレシアex",
     "hp": 310,
     "type": "grass",
@@ -60098,7 +60005,7 @@
     ]
   },
   {
-    "master_id": "メガメガニウムex_360_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガメガニウムex_360_grass_none",
     "name": "メガメガニウムex",
     "hp": 360,
     "type": "grass",
@@ -60184,7 +60091,7 @@
     ]
   },
   {
-    "master_id": "メガリザードンYex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンYex_360_fire_none",
     "name": "メガリザードンYex",
     "hp": 360,
     "type": "fire",
@@ -60269,7 +60176,7 @@
     ]
   },
   {
-    "master_id": "メガエンブオーex_380_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエンブオーex_380_fire_none",
     "name": "メガエンブオーex",
     "hp": 380,
     "type": "fire",
@@ -60392,7 +60299,7 @@
     ]
   },
   {
-    "master_id": "メガオーダイルex_370_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガオーダイルex_370_water_none",
     "name": "メガオーダイルex",
     "hp": 370,
     "type": "water",
@@ -60435,7 +60342,7 @@
     ]
   },
   {
-    "master_id": "レジアイスex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジアイスex_230_water_none",
     "name": "レジアイスex",
     "hp": 230,
     "type": "water",
@@ -60482,7 +60389,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ビリリダマex_170_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ビリリダマex_170_electric_none",
     "name": "ビリリダマex",
     "hp": 170,
     "type": "electric",
@@ -60520,7 +60427,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ミライドンex_220_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミライドンex_220_electric_none",
     "name": "ミライドンex",
     "hp": 220,
     "type": "electric",
@@ -60566,7 +60473,7 @@
     "evolutions": []
   },
   {
-    "master_id": "マリルリex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マリルリex_270_psychic_none",
     "name": "マリルリex",
     "hp": 270,
     "type": "psychic",
@@ -60740,7 +60647,7 @@
     "evolutions": []
   },
   {
-    "master_id": "マッギョex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マッギョex_210_fighting_none",
     "name": "マッギョex",
     "hp": 210,
     "type": "fighting",
@@ -60830,7 +60737,7 @@
     ]
   },
   {
-    "master_id": "バルジーナex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バルジーナex_260_dark_none",
     "name": "バルジーナex",
     "hp": 260,
     "type": "dark",
@@ -60926,7 +60833,7 @@
     "evolutions": []
   },
   {
-    "master_id": "レジスチルex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジスチルex_230_steel_none",
     "name": "レジスチルex",
     "hp": 230,
     "type": "steel",
@@ -60973,7 +60880,7 @@
     "evolutions": []
   },
   {
-    "master_id": "トゲデマルex_190_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "トゲデマルex_190_steel_none",
     "name": "トゲデマルex",
     "hp": 190,
     "type": "steel",
@@ -61055,7 +60962,7 @@
     ]
   },
   {
-    "master_id": "アオキのノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アオキのノココッチex_270_none_none",
     "name": "アオキのノココッチex",
     "hp": 270,
     "type": "none",
@@ -61142,7 +61049,7 @@
     ]
   },
   {
-    "master_id": "ザングースex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ザングースex_200_none_none",
     "name": "ザングースex",
     "hp": 200,
     "type": "none",
@@ -61329,7 +61236,7 @@
     ]
   },
   {
-    "master_id": "メガタブンネex_270_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガタブンネex_270_none_none",
     "name": "メガタブンネex",
     "hp": 270,
     "type": "none",
@@ -61968,7 +61875,7 @@
     ]
   },
   {
-    "master_id": "ジュナイパーex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジュナイパーex_320_grass_none",
     "name": "ジュナイパーex",
     "hp": 320,
     "type": "grass",
@@ -62104,7 +62011,7 @@
     ]
   },
   {
-    "master_id": "エンニュートex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エンニュートex_260_fire_none",
     "name": "エンニュートex",
     "hp": 260,
     "type": "fire",
@@ -62194,7 +62101,7 @@
     ]
   },
   {
-    "master_id": "メガスターミーex_330_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガスターミーex_330_water_none",
     "name": "メガスターミーex",
     "hp": 330,
     "type": "water",
@@ -62557,7 +62464,7 @@
     ]
   },
   {
-    "master_id": "メガピクシーex_320_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガピクシーex_320_psychic_none",
     "name": "メガピクシーex",
     "hp": 320,
     "type": "psychic",
@@ -63032,7 +62939,7 @@
     ]
   },
   {
-    "master_id": "メガジガルデex_310_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガジガルデex_310_fighting_none",
     "name": "メガジガルデex",
     "hp": 310,
     "type": "fighting",
@@ -63213,7 +63120,7 @@
     ]
   },
   {
-    "master_id": "イベルタルex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イベルタルex_210_dark_none",
     "name": "イベルタルex",
     "hp": 210,
     "type": "dark",
@@ -63305,7 +63212,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガエアームドex_260_steel_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエアームドex_260_steel_none",
     "name": "メガエアームドex",
     "hp": 260,
     "type": "steel",
@@ -63558,7 +63465,7 @@
     ]
   },
   {
-    "master_id": "ニャースex_170_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャースex_170_none_none",
     "name": "ニャースex",
     "hp": 170,
     "type": "none",
@@ -64074,7 +63981,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガエルレイドex_350_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエルレイドex_350_fighting_none",
     "name": "メガエルレイドex",
     "hp": 350,
     "type": "fighting",
@@ -64129,47 +64036,7 @@
     ]
   },
   {
-    "master_id": "リーリエのピッピex_190_psychic_none",
-    "name": "リーリエのピッピex",
-    "hp": 190,
-    "type": "psychic",
-    "card_kind": "たね",
-    "abilities": [
-      {
-        "name": "フェアリーゾーン",
-        "text": "このポケモンがいるかぎり、相手の場のポケモン全員の弱点は、すべてタイプになる。［弱点は「×2」で計算する。］"
-      }
-    ],
-    "attacks": [
-      {
-        "name": "フルムーンロンド",
-        "damage": "20＋",
-        "cost": [
-          "psychic",
-          "none"
-        ],
-        "text": "おたがいのベンチポケモンの数×20ダメージ追加。"
-      }
-    ],
-    "rules": [],
-    "weakness": {
-      "type": "steel",
-      "value": "×2"
-    },
-    "resistance": {
-      "type": "",
-      "value": "--"
-    },
-    "retreatCost": 1,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "メガヤドランex_330_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガヤドランex_330_psychic_none",
     "name": "メガヤドランex",
     "hp": 330,
     "type": "psychic",

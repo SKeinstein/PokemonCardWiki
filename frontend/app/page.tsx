@@ -1,9 +1,12 @@
-import { getMasterCards, getCardVariants } from "../lib/data";
+import { getMasterCards, getCardVariants, getMasterCardTags } from "../lib/data";
 import CardSearch from "./components/CardSearch";
 
 export default async function Home() {
-  const masterCards = await getMasterCards();
-  const variants = await getCardVariants();
+  const [masterCards, variants, cardTags] = await Promise.all([
+    getMasterCards(),
+    getCardVariants(),
+    getMasterCardTags(),
+  ]);
 
   return (
     <main className="min-h-screen bg-gray-950 p-4 md:p-8 text-white overflow-hidden relative">
@@ -14,7 +17,7 @@ export default async function Home() {
       </div>
 
       <div className="relative z-10 w-full">
-        <CardSearch masterCards={masterCards} variants={variants} />
+        <CardSearch masterCards={masterCards} variants={variants} cardTags={cardTags} />
       </div>
     </main>
   );

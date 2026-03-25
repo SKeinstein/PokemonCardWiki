@@ -9,15 +9,35 @@ const OUTPUT_CARDS_PATH = path.join(DATA_DIR, "master_cards.json");
 const OUTPUT_VARIANTS_PATH = path.join(DATA_DIR, "card_variants.json");
 
 /**
+ * Rules that are printed as game-mechanic reminders on certain card types.
+ * Their presence varies between print runs of the same card (older prints often
+ * omit them while newer prints include them), so they must not influence the
+ * master-card key.
+ */
+const BOILERPLATE_RULES = new Set([
+    // Standard ex reminder
+    "ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    // Standard Mega-ex reminder
+    "メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    // Standard Pokémon Tool reminder
+    "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+    // Prism Energy effect text (omitted on later reprints of the same card)
+    "このカードは、エネルギー1個ぶんとしてはたらく。\nたねポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+]);
+
+/**
  * Normalizes scraped cards into Unique Master Cards and Variations.
- * We group by "Card Name", "HP", "Type" and "Rules" to define a Master Card.
+ * We group by "Card Name", "HP", "Type" and significant Rules to define a
+ * Master Card.  Boilerplate reminder rules are excluded from the key so that
+ * prints which omit them still map to the same master card.
  */
 function createMasterKey(card) {
     const hpStr = card.hp !== null ? String(card.hp) : "none";
     const typeStr = card.type || "none";
     let rulesStr = "none";
-    if (card.rules && card.rules.length > 0) {
-        rulesStr = card.rules.join("|");
+    const significantRules = (card.rules || []).filter(r => !BOILERPLATE_RULES.has(r));
+    if (significantRules.length > 0) {
+        rulesStr = significantRules.join("|");
     }
     return `${card.name}_${hpStr}_${typeStr}_${rulesStr}`;
 }
@@ -93,8 +113,12 @@ async function main() {
                 evolutions: card.evolutions || [],
             });
         } else {
-            // If this master already exists, merge evolutions (different prints may have same card)
+            // If this master already exists, merge data from this print
             const existing = masterCards.get(masterKey);
+            // Prefer the richer rules list (some prints omit boilerplate that others include)
+            if ((card.rules || []).length > existing.rules.length) {
+                existing.rules = card.rules;
+            }
             if (card.evolutions && card.evolutions.length > 0) {
                 for (const evo of card.evolutions) {
                     if (!existing.evolutions.includes(evo)) existing.evolutions.push(evo);

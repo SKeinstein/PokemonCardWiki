@@ -79,3 +79,43 @@ export async function getCardVariants(): Promise<CardVariant[]> {
     variantsCache = JSON.parse(fileContents) as CardVariant[];
     return variantsCache;
 }
+
+export type MasterCardTag = {
+    masterId: string;
+    tags: string[];
+};
+
+let masterCardTagsCache: MasterCardTag[] | null = null;
+
+export async function getMasterCardTags(): Promise<MasterCardTag[]> {
+    if (process.env.NODE_ENV === 'production' && masterCardTagsCache) {
+        return masterCardTagsCache;
+    }
+
+    const dataPath = path.join(process.cwd(), "data", "card_tags.json");
+    const fileContents = await fs.readFile(dataPath, "utf8");
+    const cardTagEntries = JSON.parse(fileContents) as { cardId: string; name: string; tags: string[] }[];
+
+    const variants = await getCardVariants();
+    const idMap = new Map<string, string>();
+    for (const v of variants) {
+        idMap.set(v.official_id, v.master_id);
+    }
+
+    const masterTagMap = new Map<string, Set<string>>();
+    for (const entry of cardTagEntries) {
+        if (entry.tags.length === 0) continue;
+        const masterId = idMap.get(entry.cardId);
+        if (!masterId) continue;
+        if (!masterTagMap.has(masterId)) masterTagMap.set(masterId, new Set());
+        for (const tag of entry.tags) {
+            masterTagMap.get(masterId)!.add(tag);
+        }
+    }
+
+    masterCardTagsCache = Array.from(masterTagMap.entries()).map(([masterId, tags]) => ({
+        masterId,
+        tags: Array.from(tags),
+    }));
+    return masterCardTagsCache;
+}

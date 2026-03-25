@@ -155,7 +155,7 @@
   },
   {
     "official_id": "50036",
-    "master_id": "メガヤドランex_330_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガヤドランex_330_psychic_none",
     "regulation": "M-P",
     "illustrator": "5ban Graphics",
     "set_name": "ポケモンカードゲーム MEGA　プロモカードパック第3弾",
@@ -183,7 +183,7 @@
   },
   {
     "official_id": "50034",
-    "master_id": "メガリザードンYex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンYex_360_fire_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -211,7 +211,7 @@
   },
   {
     "official_id": "50032",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "MC",
     "illustrator": "booota",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -225,7 +225,7 @@
   },
   {
     "official_id": "50031",
-    "master_id": "メガオーダイルex_370_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガオーダイルex_370_water_none",
     "regulation": "MC",
     "illustrator": "Souichirou Gunjima",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -239,7 +239,7 @@
   },
   {
     "official_id": "50030",
-    "master_id": "メガエンブオーex_380_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエンブオーex_380_fire_none",
     "regulation": "MC",
     "illustrator": "nagimiso",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -253,7 +253,7 @@
   },
   {
     "official_id": "50029",
-    "master_id": "メガメガニウムex_360_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガメガニウムex_360_grass_none",
     "regulation": "MC",
     "illustrator": "Tika Matsuno",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -281,7 +281,7 @@
   },
   {
     "official_id": "50027",
-    "master_id": "メガタブンネex_270_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガタブンネex_270_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -295,7 +295,7 @@
   },
   {
     "official_id": "50026",
-    "master_id": "マッギョex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マッギョex_210_fighting_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -309,7 +309,7 @@
   },
   {
     "official_id": "50025",
-    "master_id": "ニャオハex_200_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャオハex_200_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -967,7 +967,7 @@
   },
   {
     "official_id": "50006",
-    "master_id": "メガカイリューex_370_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガカイリューex_370_dragon_none",
     "regulation": "M2a",
     "illustrator": "DOM",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -981,7 +981,7 @@
   },
   {
     "official_id": "50005",
-    "master_id": "ダイゴのメタグロスex_340_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダイゴのメタグロスex_340_steel_none",
     "regulation": "M2a",
     "illustrator": "chibi",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -995,7 +995,7 @@
   },
   {
     "official_id": "50004",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "M2a",
     "illustrator": "SIE NANAHARA",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1009,7 +1009,7 @@
   },
   {
     "official_id": "50003",
-    "master_id": "マリィのオーロンゲex_320_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マリィのオーロンゲex_320_dark_none",
     "regulation": "M2a",
     "illustrator": "Ligton",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1023,7 +1023,7 @@
   },
   {
     "official_id": "50002",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "M2a",
     "illustrator": "Raita Kazama",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1037,7 +1037,7 @@
   },
   {
     "official_id": "50001",
-    "master_id": "メガズルズキンex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガズルズキンex_330_dark_none",
     "regulation": "M2a",
     "illustrator": "nagimiso",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1051,7 +1051,7 @@
   },
   {
     "official_id": "50000",
-    "master_id": "メガゲンガーex_350_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガゲンガーex_350_dark_none",
     "regulation": "M2a",
     "illustrator": "danciao",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1065,7 +1065,7 @@
   },
   {
     "official_id": "49999",
-    "master_id": "メガルチャブルex_250_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルチャブルex_250_fighting_none",
     "regulation": "M2a",
     "illustrator": "AKIRA EGAWA",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1079,7 +1079,7 @@
   },
   {
     "official_id": "49998",
-    "master_id": "メガディアンシーex_270_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガディアンシーex_270_psychic_none",
     "regulation": "M2a",
     "illustrator": "Narano",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1093,7 +1093,7 @@
   },
   {
     "official_id": "49997",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "M2a",
     "illustrator": "Mitsuhiro Arita",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1107,7 +1107,7 @@
   },
   {
     "official_id": "49996",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "M2a",
     "illustrator": "Akira Komayama",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1121,7 +1121,7 @@
   },
   {
     "official_id": "49995",
-    "master_id": "メガシビルドンex_350_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガシビルドンex_350_electric_none",
     "regulation": "M2a",
     "illustrator": "akagi",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1135,7 +1135,7 @@
   },
   {
     "official_id": "49994",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "M2a",
     "illustrator": "James Turner",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1149,7 +1149,7 @@
   },
   {
     "official_id": "49993",
-    "master_id": "メガユキメノコex_310_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキメノコex_310_water_none",
     "regulation": "M2a",
     "illustrator": "Teeziro",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1163,7 +1163,7 @@
   },
   {
     "official_id": "50010",
-    "master_id": "メガカイリューex_370_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガカイリューex_370_dragon_none",
     "regulation": "M2a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1177,7 +1177,7 @@
   },
   {
     "official_id": "49992",
-    "master_id": "メガカイリューex_370_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガカイリューex_370_dragon_none",
     "regulation": "M2a",
     "illustrator": "DOM",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1191,7 +1191,7 @@
   },
   {
     "official_id": "49991",
-    "master_id": "メガズルズキンex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガズルズキンex_330_dark_none",
     "regulation": "M2a",
     "illustrator": "Taiga Kasai",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1205,7 +1205,7 @@
   },
   {
     "official_id": "49990",
-    "master_id": "メガゲンガーex_350_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガゲンガーex_350_dark_none",
     "regulation": "M2a",
     "illustrator": "Taiga Kasai",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1219,7 +1219,7 @@
   },
   {
     "official_id": "49989",
-    "master_id": "メガルチャブルex_250_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルチャブルex_250_fighting_none",
     "regulation": "M2a",
     "illustrator": "Taiga Kasai",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1233,7 +1233,7 @@
   },
   {
     "official_id": "49988",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1247,7 +1247,7 @@
   },
   {
     "official_id": "49987",
-    "master_id": "メガディアンシーex_270_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガディアンシーex_270_psychic_none",
     "regulation": "M2a",
     "illustrator": "DOM",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1261,7 +1261,7 @@
   },
   {
     "official_id": "49986",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M2a",
     "illustrator": "Saboteri",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1275,7 +1275,7 @@
   },
   {
     "official_id": "49985",
-    "master_id": "メガシビルドンex_350_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガシビルドンex_350_electric_none",
     "regulation": "M2a",
     "illustrator": "DOM",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1289,7 +1289,7 @@
   },
   {
     "official_id": "49984",
-    "master_id": "メガユキメノコex_310_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキメノコex_310_water_none",
     "regulation": "M2a",
     "illustrator": "Saboteri",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1303,7 +1303,7 @@
   },
   {
     "official_id": "49983",
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "regulation": "M2a",
     "illustrator": "Saboteri",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -1331,7 +1331,7 @@
   },
   {
     "official_id": "49716",
-    "master_id": "メガエルレイドex_350_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエルレイドex_350_fighting_none",
     "regulation": "M-P",
     "illustrator": "5ban Graphics",
     "set_name": "スペシャルカードセット　メガエルレイドex",
@@ -2381,7 +2381,7 @@
   },
   {
     "official_id": "49694",
-    "master_id": "ニャースex_170_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャースex_170_none_none",
     "regulation": "M3",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2395,7 +2395,7 @@
   },
   {
     "official_id": "49687",
-    "master_id": "メガエアームドex_260_steel_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエアームドex_260_steel_none",
     "regulation": "M3",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2409,7 +2409,7 @@
   },
   {
     "official_id": "49685",
-    "master_id": "イベルタルex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イベルタルex_210_dark_none",
     "regulation": "M3",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2423,7 +2423,7 @@
   },
   {
     "official_id": "49679",
-    "master_id": "メガジガルデex_310_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガジガルデex_310_fighting_none",
     "regulation": "M3",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2437,7 +2437,7 @@
   },
   {
     "official_id": "49663",
-    "master_id": "メガピクシーex_320_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガピクシーex_320_psychic_none",
     "regulation": "M3",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2451,7 +2451,7 @@
   },
   {
     "official_id": "49654",
-    "master_id": "メガスターミーex_330_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガスターミーex_330_water_none",
     "regulation": "M3",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2465,7 +2465,7 @@
   },
   {
     "official_id": "49649",
-    "master_id": "エンニュートex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エンニュートex_260_fire_none",
     "regulation": "M3",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2479,7 +2479,7 @@
   },
   {
     "official_id": "49645",
-    "master_id": "ジュナイパーex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジュナイパーex_320_grass_none",
     "regulation": "M3",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ムニキスゼロ」",
@@ -2578,7 +2578,7 @@
   },
   {
     "official_id": "49615",
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "regulation": "SV-P",
     "illustrator": "akagi",
     "set_name": "シールド戦「熱風のアリーナ」",
@@ -2592,7 +2592,7 @@
   },
   {
     "official_id": "49614",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "SV-P",
     "illustrator": "5ban Graphics",
     "set_name": "シールド戦「熱風のアリーナ」",
@@ -2606,7 +2606,7 @@
   },
   {
     "official_id": "49613",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "SV-P",
     "illustrator": "aky CG Works",
     "set_name": "シールド戦「熱風のアリーナ」",
@@ -2872,7 +2872,7 @@
   },
   {
     "official_id": "49592",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "MP1",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション コロちゃおVer.",
@@ -4622,7 +4622,7 @@
   },
   {
     "official_id": "49346",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -4692,7 +4692,7 @@
   },
   {
     "official_id": "49341",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -4972,7 +4972,7 @@
   },
   {
     "official_id": "49321",
-    "master_id": "バッフロンex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バッフロンex_220_none_none",
     "regulation": "MC",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5014,7 +5014,7 @@
   },
   {
     "official_id": "49318",
-    "master_id": "メガタブンネex_270_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガタブンネex_270_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5210,7 +5210,7 @@
   },
   {
     "official_id": "49304",
-    "master_id": "ザングースex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ザングースex_200_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5280,7 +5280,7 @@
   },
   {
     "official_id": "49299",
-    "master_id": "ケッキングex_340_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケッキングex_340_none_none",
     "regulation": "MC",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5364,7 +5364,7 @@
   },
   {
     "official_id": "49293",
-    "master_id": "アオキのノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アオキのノココッチex_270_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5392,7 +5392,7 @@
   },
   {
     "official_id": "49291",
-    "master_id": "ノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ノココッチex_270_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5518,7 +5518,7 @@
   },
   {
     "official_id": "49282",
-    "master_id": "イーブイex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イーブイex_200_none_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5574,7 +5574,7 @@
   },
   {
     "official_id": "49278",
-    "master_id": "ハピナスex_300_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハピナスex_300_none_none",
     "regulation": "MC",
     "illustrator": "Iwamoto05",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5602,7 +5602,7 @@
   },
   {
     "official_id": "49276",
-    "master_id": "ロケット団のペルシアンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のペルシアンex_260_none_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5686,7 +5686,7 @@
   },
   {
     "official_id": "49270",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5700,7 +5700,7 @@
   },
   {
     "official_id": "49269",
-    "master_id": "ミライドンex_220_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミライドンex_220_dragon_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5728,7 +5728,7 @@
   },
   {
     "official_id": "49267",
-    "master_id": "コライドンex_230_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_dragon_none",
     "regulation": "MC",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5770,7 +5770,7 @@
   },
   {
     "official_id": "49264",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5882,7 +5882,7 @@
   },
   {
     "official_id": "49256",
-    "master_id": "ボーマンダex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボーマンダex_320_dragon_none",
     "regulation": "MC",
     "illustrator": "toriyufu",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5924,7 +5924,7 @@
   },
   {
     "official_id": "49253",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -5980,7 +5980,7 @@
   },
   {
     "official_id": "49249",
-    "master_id": "ミミズズex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミズズex_220_steel_none",
     "regulation": "MC",
     "illustrator": "PLANETA Yamashita",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6064,7 +6064,7 @@
   },
   {
     "official_id": "49243",
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6078,7 +6078,7 @@
   },
   {
     "official_id": "49242",
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6176,7 +6176,7 @@
   },
   {
     "official_id": "49235",
-    "master_id": "メルメタルex_280_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メルメタルex_280_steel_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6246,7 +6246,7 @@
   },
   {
     "official_id": "49230",
-    "master_id": "トゲデマルex_190_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "トゲデマルex_190_steel_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6274,7 +6274,7 @@
   },
   {
     "official_id": "49228",
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6456,7 +6456,7 @@
   },
   {
     "official_id": "49215",
-    "master_id": "レジスチルex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジスチルex_230_steel_none",
     "regulation": "MC",
     "illustrator": "toriyufu",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6554,7 +6554,7 @@
   },
   {
     "official_id": "49208",
-    "master_id": "ハッサムex_270_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハッサムex_270_steel_none",
     "regulation": "MC",
     "illustrator": "toriyufu",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6568,7 +6568,7 @@
   },
   {
     "official_id": "49207",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6596,7 +6596,7 @@
   },
   {
     "official_id": "49205",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6610,7 +6610,7 @@
   },
   {
     "official_id": "49204",
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6638,7 +6638,7 @@
   },
   {
     "official_id": "49202",
-    "master_id": "リキキリンex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リキキリンex_260_dark_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6666,7 +6666,7 @@
   },
   {
     "official_id": "49200",
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "regulation": "MC",
     "illustrator": "akagi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6750,7 +6750,7 @@
   },
   {
     "official_id": "49194",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6792,7 +6792,7 @@
   },
   {
     "official_id": "49191",
-    "master_id": "バルジーナex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バルジーナex_260_dark_none",
     "regulation": "MC",
     "illustrator": "Ultimateinudog",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -6862,7 +6862,7 @@
   },
   {
     "official_id": "49186",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7058,7 +7058,7 @@
   },
   {
     "official_id": "49172",
-    "master_id": "ダークライex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダークライex_210_dark_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7198,7 +7198,7 @@
   },
   {
     "official_id": "49162",
-    "master_id": "ブラッキーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラッキーex_280_dark_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7212,7 +7212,7 @@
   },
   {
     "official_id": "49161",
-    "master_id": "ゲンガーex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲンガーex_310_dark_none",
     "regulation": "MC",
     "illustrator": "Nisota Niso",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7282,7 +7282,7 @@
   },
   {
     "official_id": "49156",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7324,7 +7324,7 @@
   },
   {
     "official_id": "49153",
-    "master_id": "ロケット団のニドキングex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のニドキングex_330_dark_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7436,7 +7436,7 @@
   },
   {
     "official_id": "49145",
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7450,7 +7450,7 @@
   },
   {
     "official_id": "49144",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7492,7 +7492,7 @@
   },
   {
     "official_id": "49141",
-    "master_id": "コライドンex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_fighting_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -7926,7 +7926,7 @@
   },
   {
     "official_id": "49110",
-    "master_id": "マッギョex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マッギョex_210_fighting_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8024,7 +8024,7 @@
   },
   {
     "official_id": "49103",
-    "master_id": "ドリュウズex_270_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドリュウズex_270_fighting_none",
     "regulation": "MC",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8122,7 +8122,7 @@
   },
   {
     "official_id": "49096",
-    "master_id": "ルカリオex_250_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルカリオex_250_fighting_none",
     "regulation": "MC",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8150,7 +8150,7 @@
   },
   {
     "official_id": "49094",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8206,7 +8206,7 @@
   },
   {
     "official_id": "49090",
-    "master_id": "レジロックex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジロックex_230_fighting_none",
     "regulation": "MC",
     "illustrator": "Nisota Niso",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8262,7 +8262,7 @@
   },
   {
     "official_id": "49086",
-    "master_id": "チャーレムex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "チャーレムex_260_fighting_none",
     "regulation": "MC",
     "illustrator": "PLANETA Yamashita",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8346,7 +8346,7 @@
   },
   {
     "official_id": "49080",
-    "master_id": "マンムーex_340_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マンムーex_340_fighting_none",
     "regulation": "MC",
     "illustrator": "Nisota Niso",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8388,7 +8388,7 @@
   },
   {
     "official_id": "49077",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8500,7 +8500,7 @@
   },
   {
     "official_id": "49069",
-    "master_id": "サケブシッポex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サケブシッポex_190_psychic_none",
     "regulation": "MC",
     "illustrator": "akagi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8528,7 +8528,7 @@
   },
   {
     "official_id": "49067",
-    "master_id": "ハカドッグex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハカドッグex_260_psychic_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -8570,7 +8570,7 @@
   },
   {
     "official_id": "49064",
-    "master_id": "バウッツェルex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バウッツェルex_250_psychic_none",
     "regulation": "MC",
     "illustrator": "You Iribi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9074,7 +9074,7 @@
   },
   {
     "official_id": "49028",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9256,7 +9256,7 @@
   },
   {
     "official_id": "49015",
-    "master_id": "ニンフィアex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニンフィアex_270_psychic_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9270,7 +9270,7 @@
   },
   {
     "official_id": "49014",
-    "master_id": "エーフィex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エーフィex_270_psychic_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9284,7 +9284,7 @@
   },
   {
     "official_id": "49013",
-    "master_id": "マリルリex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マリルリex_270_psychic_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9382,7 +9382,7 @@
   },
   {
     "official_id": "49006",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9424,7 +9424,7 @@
   },
   {
     "official_id": "49003",
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9466,7 +9466,7 @@
   },
   {
     "official_id": "49000",
-    "master_id": "ミライドンex_220_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミライドンex_220_electric_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9494,7 +9494,7 @@
   },
   {
     "official_id": "48998",
-    "master_id": "テツノイバラex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイバラex_230_electric_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9606,7 +9606,7 @@
   },
   {
     "official_id": "48990",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9816,7 +9816,7 @@
   },
   {
     "official_id": "48975",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9872,7 +9872,7 @@
   },
   {
     "official_id": "48971",
-    "master_id": "デンチュラex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "デンチュラex_260_electric_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -9998,7 +9998,7 @@
   },
   {
     "official_id": "48962",
-    "master_id": "レントラーex_310_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レントラーex_310_electric_none",
     "regulation": "MC",
     "illustrator": "PLANETA Yamashita",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10110,7 +10110,7 @@
   },
   {
     "official_id": "48954",
-    "master_id": "サンダースex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サンダースex_260_electric_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10124,7 +10124,7 @@
   },
   {
     "official_id": "48953",
-    "master_id": "エレキブルex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エレキブルex_280_electric_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10180,7 +10180,7 @@
   },
   {
     "official_id": "48949",
-    "master_id": "ビリリダマex_170_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ビリリダマex_170_electric_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10264,7 +10264,7 @@
   },
   {
     "official_id": "48943",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10306,7 +10306,7 @@
   },
   {
     "official_id": "48940",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10334,7 +10334,7 @@
   },
   {
     "official_id": "48938",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10362,7 +10362,7 @@
   },
   {
     "official_id": "48936",
-    "master_id": "ヘイラッシャex_260_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヘイラッシャex_260_water_none",
     "regulation": "MC",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10418,7 +10418,7 @@
   },
   {
     "official_id": "48932",
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10530,7 +10530,7 @@
   },
   {
     "official_id": "48924",
-    "master_id": "ゲッコウガex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_300_water_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10572,7 +10572,7 @@
   },
   {
     "official_id": "48921",
-    "master_id": "ケルディオex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケルディオex_210_water_none",
     "regulation": "MC",
     "illustrator": "PLANETA Yamashita",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10586,7 +10586,7 @@
   },
   {
     "official_id": "48920",
-    "master_id": "ブラックキュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラックキュレムex_230_water_none",
     "regulation": "MC",
     "illustrator": "kawayoo",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10600,7 +10600,7 @@
   },
   {
     "official_id": "48919",
-    "master_id": "キュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キュレムex_230_water_none",
     "regulation": "MC",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10754,7 +10754,7 @@
   },
   {
     "official_id": "48908",
-    "master_id": "レジアイスex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジアイスex_230_water_none",
     "regulation": "MC",
     "illustrator": "akagi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -10852,7 +10852,7 @@
   },
   {
     "official_id": "48901",
-    "master_id": "ミロカロスex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミロカロスex_270_water_none",
     "regulation": "MC",
     "illustrator": "hncl",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11076,7 +11076,7 @@
   },
   {
     "official_id": "48885",
-    "master_id": "メガオーダイルex_370_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガオーダイルex_370_water_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11174,7 +11174,7 @@
   },
   {
     "official_id": "48878",
-    "master_id": "グレイシアex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレイシアex_270_water_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11188,7 +11188,7 @@
   },
   {
     "official_id": "48877",
-    "master_id": "シャワーズex_280_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャワーズex_280_water_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11286,7 +11286,7 @@
   },
   {
     "official_id": "48870",
-    "master_id": "キングドラex_310_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キングドラex_310_water_none",
     "regulation": "MC",
     "illustrator": "toriyufu",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11328,7 +11328,7 @@
   },
   {
     "official_id": "48867",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11356,7 +11356,7 @@
   },
   {
     "official_id": "48865",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11384,7 +11384,7 @@
   },
   {
     "official_id": "48863",
-    "master_id": "スコヴィランex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "スコヴィランex_260_fire_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11398,7 +11398,7 @@
   },
   {
     "official_id": "48862",
-    "master_id": "グレンアルマex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレンアルマex_260_fire_none",
     "regulation": "MC",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11496,7 +11496,7 @@
   },
   {
     "official_id": "48855",
-    "master_id": "エースバーンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エースバーンex_320_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11594,7 +11594,7 @@
   },
   {
     "official_id": "48848",
-    "master_id": "ガオガエンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガオガエンex_320_fire_none",
     "regulation": "MC",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11636,7 +11636,7 @@
   },
   {
     "official_id": "48845",
-    "master_id": "ボルケニオンex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボルケニオンex_220_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11678,7 +11678,7 @@
   },
   {
     "official_id": "48842",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -11860,7 +11860,7 @@
   },
   {
     "official_id": "48829",
-    "master_id": "メガエンブオーex_380_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガエンブオーex_380_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12098,7 +12098,7 @@
   },
   {
     "official_id": "48812",
-    "master_id": "マグカルゴex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マグカルゴex_270_fire_none",
     "regulation": "MC",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12126,7 +12126,7 @@
   },
   {
     "official_id": "48810",
-    "master_id": "ブースターex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブースターex_270_fire_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12252,7 +12252,7 @@
   },
   {
     "official_id": "48801",
-    "master_id": "メガリザードンYex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンYex_360_fire_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12294,7 +12294,7 @@
   },
   {
     "official_id": "48798",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12336,7 +12336,7 @@
   },
   {
     "official_id": "48795",
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "regulation": "MC",
     "illustrator": "aky CG Works",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12364,7 +12364,7 @@
   },
   {
     "official_id": "48793",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12448,7 +12448,7 @@
   },
   {
     "official_id": "48787",
-    "master_id": "オリーヴァex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オリーヴァex_310_grass_none",
     "regulation": "MC",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12490,7 +12490,7 @@
   },
   {
     "official_id": "48784",
-    "master_id": "ニャオハex_200_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャオハex_200_grass_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12546,7 +12546,7 @@
   },
   {
     "official_id": "48780",
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12714,7 +12714,7 @@
   },
   {
     "official_id": "48768",
-    "master_id": "アイアントex_190_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アイアントex_190_grass_none",
     "regulation": "MC",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12826,7 +12826,7 @@
   },
   {
     "official_id": "48760",
-    "master_id": "エルフーンex_230_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エルフーンex_230_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12854,7 +12854,7 @@
   },
   {
     "official_id": "48758",
-    "master_id": "ジャローダex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジャローダex_320_grass_none",
     "regulation": "MC",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12910,7 +12910,7 @@
   },
   {
     "official_id": "48754",
-    "master_id": "リーフィアex_270_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーフィアex_270_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -12938,7 +12938,7 @@
   },
   {
     "official_id": "48752",
-    "master_id": "ドダイトスex_340_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドダイトスex_340_grass_none",
     "regulation": "MC",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -13134,7 +13134,7 @@
   },
   {
     "official_id": "48738",
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "regulation": "MC",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -13190,7 +13190,7 @@
   },
   {
     "official_id": "48734",
-    "master_id": "メガメガニウムex_360_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガメガニウムex_360_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -13400,7 +13400,7 @@
   },
   {
     "official_id": "48719",
-    "master_id": "エリカのラフレシアex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エリカのラフレシアex_310_grass_none",
     "regulation": "MC",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキ100 バトルコレクション",
@@ -13442,7 +13442,7 @@
   },
   {
     "official_id": "48667",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13456,7 +13456,7 @@
   },
   {
     "official_id": "48656",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13470,7 +13470,7 @@
   },
   {
     "official_id": "48648",
-    "master_id": "メガカイリューex_370_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガカイリューex_370_dragon_none",
     "regulation": "M2a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13484,7 +13484,7 @@
   },
   {
     "official_id": "48645",
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "regulation": "M2a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13498,7 +13498,7 @@
   },
   {
     "official_id": "48644",
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13512,7 +13512,7 @@
   },
   {
     "official_id": "48641",
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13526,7 +13526,7 @@
   },
   {
     "official_id": "48636",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13554,7 +13554,7 @@
   },
   {
     "official_id": "48632",
-    "master_id": "メガズルズキンex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガズルズキンex_330_dark_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13568,7 +13568,7 @@
   },
   {
     "official_id": "48623",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13582,7 +13582,7 @@
   },
   {
     "official_id": "48616",
-    "master_id": "メガルチャブルex_250_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルチャブルex_250_fighting_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13596,7 +13596,7 @@
   },
   {
     "official_id": "48614",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13610,7 +13610,7 @@
   },
   {
     "official_id": "48612",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13624,7 +13624,7 @@
   },
   {
     "official_id": "48597",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13638,7 +13638,7 @@
   },
   {
     "official_id": "48593",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13652,7 +13652,7 @@
   },
   {
     "official_id": "48585",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "M2a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13666,7 +13666,7 @@
   },
   {
     "official_id": "48582",
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13680,7 +13680,7 @@
   },
   {
     "official_id": "48579",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13694,7 +13694,7 @@
   },
   {
     "official_id": "48573",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13708,7 +13708,7 @@
   },
   {
     "official_id": "48571",
-    "master_id": "メガシビルドンex_350_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガシビルドンex_350_electric_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13722,7 +13722,7 @@
   },
   {
     "official_id": "48566",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "M2a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13736,7 +13736,7 @@
   },
   {
     "official_id": "48558",
-    "master_id": "メガユキメノコex_310_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキメノコex_310_water_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13750,7 +13750,7 @@
   },
   {
     "official_id": "48553",
-    "master_id": "ソウブレイズex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ソウブレイズex_270_fire_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13764,7 +13764,7 @@
   },
   {
     "official_id": "48551",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13778,7 +13778,7 @@
   },
   {
     "official_id": "48543",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "M2a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13792,7 +13792,7 @@
   },
   {
     "official_id": "48539",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "M2a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -13806,7 +13806,7 @@
   },
   {
     "official_id": "48525",
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "regulation": "M2a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック 「MEGAドリームex」",
@@ -16424,7 +16424,7 @@
   },
   {
     "official_id": "48506",
-    "master_id": "メガミミロップex_330_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガミミロップex_330_none_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16438,7 +16438,7 @@
   },
   {
     "official_id": "48505",
-    "master_id": "エンペルトex_320_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エンペルトex_320_steel_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16452,7 +16452,7 @@
   },
   {
     "official_id": "48504",
-    "master_id": "メガサメハダーex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサメハダーex_330_dark_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16466,7 +16466,7 @@
   },
   {
     "official_id": "48503",
-    "master_id": "ムウマージex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ムウマージex_260_psychic_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16480,7 +16480,7 @@
   },
   {
     "official_id": "48502",
-    "master_id": "ロトムex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロトムex_190_electric_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16494,7 +16494,7 @@
   },
   {
     "official_id": "48501",
-    "master_id": "オドリドリex_190_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オドリドリex_190_fire_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16508,7 +16508,7 @@
   },
   {
     "official_id": "48500",
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "regulation": "M2",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「インフェルノX」",
@@ -16522,7 +16522,7 @@
   },
   {
     "official_id": "48499",
-    "master_id": "メガヘラクロスex_280_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガヘラクロスex_280_grass_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -16550,7 +16550,7 @@
   },
   {
     "official_id": "48520",
-    "master_id": "メガミミロップex_330_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガミミロップex_330_none_none",
     "regulation": "M2",
     "illustrator": "Kinu Nishimura",
     "set_name": "拡張パック「インフェルノX」",
@@ -16564,7 +16564,7 @@
   },
   {
     "official_id": "48519",
-    "master_id": "メガサメハダーex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサメハダーex_330_dark_none",
     "regulation": "M2",
     "illustrator": "nagimiso",
     "set_name": "拡張パック「インフェルノX」",
@@ -16578,7 +16578,7 @@
   },
   {
     "official_id": "48518",
-    "master_id": "ロトムex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロトムex_190_electric_none",
     "regulation": "M2",
     "illustrator": "Yoshimi Miyoshi",
     "set_name": "拡張パック「インフェルノX」",
@@ -16592,7 +16592,7 @@
   },
   {
     "official_id": "48517",
-    "master_id": "オドリドリex_190_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オドリドリex_190_fire_none",
     "regulation": "M2",
     "illustrator": "Shinji Kanda",
     "set_name": "拡張パック「インフェルノX」",
@@ -16606,7 +16606,7 @@
   },
   {
     "official_id": "48516",
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "regulation": "M2",
     "illustrator": "danciao",
     "set_name": "拡張パック「インフェルノX」",
@@ -16620,7 +16620,7 @@
   },
   {
     "official_id": "48522",
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "regulation": "M2",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「インフェルノX」",
@@ -16704,7 +16704,7 @@
   },
   {
     "official_id": "48481",
-    "master_id": "ワルビアルex_320_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ワルビアルex_320_dark_none",
     "regulation": "M-P",
     "illustrator": "5ban GraSV-Phics",
     "set_name": "ポケモンカードゲーム MEGA　プロモカードパック第2弾",
@@ -17782,7 +17782,7 @@
   },
   {
     "official_id": "48412",
-    "master_id": "メガミミロップex_330_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガミミロップex_330_none_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -17796,7 +17796,7 @@
   },
   {
     "official_id": "48398",
-    "master_id": "エンペルトex_320_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エンペルトex_320_steel_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -17810,7 +17810,7 @@
   },
   {
     "official_id": "48391",
-    "master_id": "メガサメハダーex_330_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサメハダーex_330_dark_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -17824,7 +17824,7 @@
   },
   {
     "official_id": "48376",
-    "master_id": "ムウマージex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ムウマージex_260_psychic_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -17838,7 +17838,7 @@
   },
   {
     "official_id": "48369",
-    "master_id": "ロトムex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロトムex_190_electric_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -17852,7 +17852,7 @@
   },
   {
     "official_id": "48358",
-    "master_id": "オドリドリex_190_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オドリドリex_190_fire_none",
     "regulation": "M2",
     "illustrator": "akagi",
     "set_name": "拡張パック「インフェルノX」",
@@ -17866,7 +17866,7 @@
   },
   {
     "official_id": "48353",
-    "master_id": "メガリザードンXex_360_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガリザードンXex_360_fire_none",
     "regulation": "M2",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「インフェルノX」",
@@ -17880,7 +17880,7 @@
   },
   {
     "official_id": "48344",
-    "master_id": "メガヘラクロスex_280_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガヘラクロスex_280_grass_none",
     "regulation": "M2",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「インフェルノX」",
@@ -18034,7 +18034,7 @@
   },
   {
     "official_id": "48330",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "M-P",
     "illustrator": "aky CG Works",
     "set_name": "ポケモンカードゲームチャンピオンシップシリーズ2026",
@@ -18216,7 +18216,7 @@
   },
   {
     "official_id": "48317",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "M-P",
     "illustrator": "takuyoa",
     "set_name": "ポケカジムエントリーキャンペーン2025年後期",
@@ -18608,7 +18608,7 @@
   },
   {
     "official_id": "48289",
-    "master_id": "メガディアンシーex_270_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガディアンシーex_270_psychic_none",
     "regulation": "MBD",
     "illustrator": "aky CG Works",
     "set_name": "スターターセットMEGA メガディアンシーex",
@@ -18958,7 +18958,7 @@
   },
   {
     "official_id": "48264",
-    "master_id": "メガゲンガーex_350_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガゲンガーex_350_dark_none",
     "regulation": "MBG",
     "illustrator": "5ban Graphics",
     "set_name": "スターターセットMEGA メガゲンガーex",
@@ -19182,7 +19182,7 @@
   },
   {
     "official_id": "48248",
-    "master_id": "ラプラスex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラプラスex_210_water_none",
     "regulation": "M-P",
     "illustrator": "5ban Graphics",
     "set_name": "ポケモンカードゲーム MEGA　プロモカードパック第1弾",
@@ -20246,7 +20246,7 @@
   },
   {
     "official_id": "48076",
-    "master_id": "バッフロンex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バッフロンex_220_none_none",
     "regulation": "SV11W",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20260,7 +20260,7 @@
   },
   {
     "official_id": "48075",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20274,7 +20274,7 @@
   },
   {
     "official_id": "48074",
-    "master_id": "ブルンゲルex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブルンゲルex_270_psychic_none",
     "regulation": "SV11W",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20288,7 +20288,7 @@
   },
   {
     "official_id": "48073",
-    "master_id": "ケルディオex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケルディオex_210_water_none",
     "regulation": "SV11W",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20302,7 +20302,7 @@
   },
   {
     "official_id": "48072",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20316,7 +20316,7 @@
   },
   {
     "official_id": "48071",
-    "master_id": "エルフーンex_230_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エルフーンex_230_grass_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20344,7 +20344,7 @@
   },
   {
     "official_id": "48084",
-    "master_id": "バッフロンex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バッフロンex_220_none_none",
     "regulation": "SV11W",
     "illustrator": "Rianti Hidayat",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20358,7 +20358,7 @@
   },
   {
     "official_id": "48083",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV11W",
     "illustrator": "Takumi Wada",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20372,7 +20372,7 @@
   },
   {
     "official_id": "48082",
-    "master_id": "ブルンゲルex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブルンゲルex_270_psychic_none",
     "regulation": "SV11W",
     "illustrator": "Narano",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20386,7 +20386,7 @@
   },
   {
     "official_id": "48081",
-    "master_id": "ケルディオex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケルディオex_210_water_none",
     "regulation": "SV11W",
     "illustrator": "Yuu Nishida",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20400,7 +20400,7 @@
   },
   {
     "official_id": "48080",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "SV11W",
     "illustrator": "kawayoo",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20414,7 +20414,7 @@
   },
   {
     "official_id": "48079",
-    "master_id": "エルフーンex_230_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エルフーンex_230_grass_none",
     "regulation": "SV11W",
     "illustrator": "mele",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -20428,7 +20428,7 @@
   },
   {
     "official_id": "48086",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -21478,7 +21478,7 @@
   },
   {
     "official_id": "47988",
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "regulation": "SV11B",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21492,7 +21492,7 @@
   },
   {
     "official_id": "47987",
-    "master_id": "ドリュウズex_270_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドリュウズex_270_fighting_none",
     "regulation": "SV11B",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21506,7 +21506,7 @@
   },
   {
     "official_id": "47986",
-    "master_id": "メロエッタex_200_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メロエッタex_200_psychic_none",
     "regulation": "SV11B",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21520,7 +21520,7 @@
   },
   {
     "official_id": "47985",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "SV11B",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21534,7 +21534,7 @@
   },
   {
     "official_id": "47984",
-    "master_id": "キュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キュレムex_230_water_none",
     "regulation": "SV11B",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21548,7 +21548,7 @@
   },
   {
     "official_id": "47983",
-    "master_id": "ジャローダex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジャローダex_320_grass_none",
     "regulation": "SV11B",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21576,7 +21576,7 @@
   },
   {
     "official_id": "47996",
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "regulation": "SV11B",
     "illustrator": "kantaro",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21590,7 +21590,7 @@
   },
   {
     "official_id": "47995",
-    "master_id": "ドリュウズex_270_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドリュウズex_270_fighting_none",
     "regulation": "SV11B",
     "illustrator": "Mitsuhiro Arita",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21604,7 +21604,7 @@
   },
   {
     "official_id": "47994",
-    "master_id": "メロエッタex_200_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メロエッタex_200_psychic_none",
     "regulation": "SV11B",
     "illustrator": "LINNE",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21618,7 +21618,7 @@
   },
   {
     "official_id": "47993",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "SV11B",
     "illustrator": "danciao",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21632,7 +21632,7 @@
   },
   {
     "official_id": "47992",
-    "master_id": "キュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キュレムex_230_water_none",
     "regulation": "SV11B",
     "illustrator": "chibi",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21646,7 +21646,7 @@
   },
   {
     "official_id": "47991",
-    "master_id": "ジャローダex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジャローダex_320_grass_none",
     "regulation": "SV11B",
     "illustrator": "Ryota Murayama",
     "set_name": "拡張パック「ブラックボルト」",
@@ -21660,7 +21660,7 @@
   },
   {
     "official_id": "47998",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "SV11B",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ブラックボルト」",
@@ -22132,7 +22132,7 @@
   },
   {
     "official_id": "47862",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "MA",
     "illustrator": "takuyoa",
     "set_name": "プレミアムトレーナーボックスMEGA",
@@ -22972,7 +22972,7 @@
   },
   {
     "official_id": "47847",
-    "master_id": "メガガルーラex_300_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガガルーラex_300_none_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -22986,7 +22986,7 @@
   },
   {
     "official_id": "47845",
-    "master_id": "メガラティアスex_280_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガラティアスex_280_dragon_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23000,7 +23000,7 @@
   },
   {
     "official_id": "47838",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M1S",
     "illustrator": "takuyoaサーナイトex",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23014,7 +23014,7 @@
   },
   {
     "official_id": "47828",
-    "master_id": "メガライボルトex_330_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガライボルトex_330_electric_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23028,7 +23028,7 @@
   },
   {
     "official_id": "47814",
-    "master_id": "メガユキノオーex_350_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキノオーex_350_water_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23294,7 +23294,7 @@
   },
   {
     "official_id": "48466",
-    "master_id": "メガガルーラex_300_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガガルーラex_300_none_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23308,7 +23308,7 @@
   },
   {
     "official_id": "48465",
-    "master_id": "メガラティアスex_280_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガラティアスex_280_dragon_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23322,7 +23322,7 @@
   },
   {
     "official_id": "48464",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M1S",
     "illustrator": "takuyoaサーナイトex",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23336,7 +23336,7 @@
   },
   {
     "official_id": "48463",
-    "master_id": "メガライボルトex_330_electric_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガライボルトex_330_electric_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23350,7 +23350,7 @@
   },
   {
     "official_id": "48462",
-    "master_id": "メガユキノオーex_350_water_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガユキノオーex_350_water_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23392,7 +23392,7 @@
   },
   {
     "official_id": "48475",
-    "master_id": "メガガルーラex_300_none_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガガルーラex_300_none_none",
     "regulation": "M1S",
     "illustrator": "GOTO minori",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23406,7 +23406,7 @@
   },
   {
     "official_id": "48474",
-    "master_id": "メガラティアスex_280_dragon_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガラティアスex_280_dragon_none",
     "regulation": "M1S",
     "illustrator": "AKIRA EGAWA",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23420,7 +23420,7 @@
   },
   {
     "official_id": "48473",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M1S",
     "illustrator": "Raita Kazamaサーナイトex",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -23434,7 +23434,7 @@
   },
   {
     "official_id": "48478",
-    "master_id": "メガサーナイトex_360_psychic_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガサーナイトex_360_psychic_none",
     "regulation": "M1S",
     "illustrator": "5ban Graphicsサーナイトex",
     "set_name": "拡張パック「メガシンフォニア」",
@@ -24260,7 +24260,7 @@
   },
   {
     "official_id": "47779",
-    "master_id": "メガクチートex_270_steel_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガクチートex_270_steel_none",
     "regulation": "M1L",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24274,7 +24274,7 @@
   },
   {
     "official_id": "47771",
-    "master_id": "メガアブソルex_280_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガアブソルex_280_dark_none",
     "regulation": "M1L",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24288,7 +24288,7 @@
   },
   {
     "official_id": "47762",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24302,7 +24302,7 @@
   },
   {
     "official_id": "47746",
-    "master_id": "メガバクーダex_340_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガバクーダex_340_fire_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24316,7 +24316,7 @@
   },
   {
     "official_id": "47736",
-    "master_id": "メガフシギバナex_380_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガフシギバナex_380_grass_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24554,7 +24554,7 @@
   },
   {
     "official_id": "48437",
-    "master_id": "メガクチートex_270_steel_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガクチートex_270_steel_none",
     "regulation": "M1L",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24568,7 +24568,7 @@
   },
   {
     "official_id": "48436",
-    "master_id": "メガアブソルex_280_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガアブソルex_280_dark_none",
     "regulation": "M1L",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24582,7 +24582,7 @@
   },
   {
     "official_id": "48435",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M1L",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24596,7 +24596,7 @@
   },
   {
     "official_id": "48434",
-    "master_id": "メガバクーダex_340_fire_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガバクーダex_340_fire_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24610,7 +24610,7 @@
   },
   {
     "official_id": "48433",
-    "master_id": "メガフシギバナex_380_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガフシギバナex_380_grass_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24652,7 +24652,7 @@
   },
   {
     "official_id": "48446",
-    "master_id": "メガアブソルex_280_dark_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガアブソルex_280_dark_none",
     "regulation": "M1L",
     "illustrator": "Mitsuhiro Arita",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24666,7 +24666,7 @@
   },
   {
     "official_id": "48445",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M1L",
     "illustrator": "Atsushi Furusawa",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24680,7 +24680,7 @@
   },
   {
     "official_id": "48444",
-    "master_id": "メガフシギバナex_380_grass_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガフシギバナex_380_grass_none",
     "regulation": "M1L",
     "illustrator": "mashu",
     "set_name": "拡張パック「メガブレイブ」",
@@ -24694,7 +24694,7 @@
   },
   {
     "official_id": "48449",
-    "master_id": "メガルカリオex_340_fighting_メガシンカexがきぜつしたとき、相手はサイドを3枚とる。",
+    "master_id": "メガルカリオex_340_fighting_none",
     "regulation": "M1L",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「メガブレイブ」",
@@ -26266,7 +26266,7 @@
   },
   {
     "official_id": "47697",
-    "master_id": "バッフロンex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バッフロンex_220_none_none",
     "regulation": "SV11W",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -26281,7 +26281,7 @@
   },
   {
     "official_id": "47684",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -26296,7 +26296,7 @@
   },
   {
     "official_id": "47664",
-    "master_id": "ブルンゲルex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブルンゲルex_270_psychic_none",
     "regulation": "SV11W",
     "illustrator": "PLANETA Igarashi",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -26311,7 +26311,7 @@
   },
   {
     "official_id": "47649",
-    "master_id": "ケルディオex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケルディオex_210_water_none",
     "regulation": "SV11W",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -26326,7 +26326,7 @@
   },
   {
     "official_id": "47639",
-    "master_id": "レシラムex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_230_fire_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -26341,7 +26341,7 @@
   },
   {
     "official_id": "47627",
-    "master_id": "エルフーンex_230_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エルフーンex_230_grass_none",
     "regulation": "SV11W",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ホワイトフレア」",
@@ -27541,7 +27541,7 @@
   },
   {
     "official_id": "47605",
-    "master_id": "ゲノセクトex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲノセクトex_220_steel_none",
     "regulation": "SV11B",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ブラックボルト」",
@@ -27556,7 +27556,7 @@
   },
   {
     "official_id": "47585",
-    "master_id": "ドリュウズex_270_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドリュウズex_270_fighting_none",
     "regulation": "SV11B",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ブラックボルト」",
@@ -27571,7 +27571,7 @@
   },
   {
     "official_id": "47583",
-    "master_id": "メロエッタex_200_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メロエッタex_200_psychic_none",
     "regulation": "SV11B",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ブラックボルト」",
@@ -27586,7 +27586,7 @@
   },
   {
     "official_id": "47573",
-    "master_id": "ゼクロムex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼクロムex_230_electric_none",
     "regulation": "SV11B",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ブラックボルト」",
@@ -27601,7 +27601,7 @@
   },
   {
     "official_id": "47567",
-    "master_id": "キュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キュレムex_230_water_none",
     "regulation": "SV11B",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「ブラックボルト」",
@@ -27616,7 +27616,7 @@
   },
   {
     "official_id": "47539",
-    "master_id": "ジャローダex_320_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ジャローダex_320_grass_none",
     "regulation": "SV11B",
     "illustrator": "PLANETA Igarashi",
     "set_name": "拡張パック「ブラックボルト」",
@@ -28415,7 +28415,7 @@
   },
   {
     "official_id": "47448",
-    "master_id": "レジロックex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジロックex_230_fighting_none",
     "regulation": "SV10",
     "illustrator": "Nisota Niso",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28429,7 +28429,7 @@
   },
   {
     "official_id": "47432",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "SV10",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28443,7 +28443,7 @@
   },
   {
     "official_id": "47425",
-    "master_id": "ハルクジラex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハルクジラex_300_water_none",
     "regulation": "SV10",
     "illustrator": "kawayoo",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28457,7 +28457,7 @@
   },
   {
     "official_id": "47408",
-    "master_id": "ロケット団のファイヤーex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のファイヤーex_220_fire_none",
     "regulation": "SV10",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28471,7 +28471,7 @@
   },
   {
     "official_id": "47405",
-    "master_id": "オリーヴァex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オリーヴァex_310_grass_none",
     "regulation": "SV10",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28723,7 +28723,7 @@
   },
   {
     "official_id": "47522",
-    "master_id": "ロケット団のペルシアンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のペルシアンex_260_none_none",
     "regulation": "SV10",
     "illustrator": "5ban GraphicsHideki Ishikawa",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28737,7 +28737,7 @@
   },
   {
     "official_id": "47521",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "SV10",
     "illustrator": "5ban GraphicsTaira Akitsu",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28751,7 +28751,7 @@
   },
   {
     "official_id": "47520",
-    "master_id": "ロケット団のニドキングex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のニドキングex_330_dark_none",
     "regulation": "SV10",
     "illustrator": "5ban GraphicsHideki Ishikawa",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28765,7 +28765,7 @@
   },
   {
     "official_id": "47519",
-    "master_id": "レジロックex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レジロックex_230_fighting_none",
     "regulation": "SV10",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28779,7 +28779,7 @@
   },
   {
     "official_id": "47518",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "SV10",
     "illustrator": "aky CG WorksHideki Ishikawa",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28793,7 +28793,7 @@
   },
   {
     "official_id": "47517",
-    "master_id": "ハルクジラex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハルクジラex_300_water_none",
     "regulation": "SV10",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28807,7 +28807,7 @@
   },
   {
     "official_id": "47516",
-    "master_id": "ロケット団のファイヤーex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のファイヤーex_220_fire_none",
     "regulation": "SV10",
     "illustrator": "5ban GraphicsHideki Ishikawa",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28821,7 +28821,7 @@
   },
   {
     "official_id": "47515",
-    "master_id": "オリーヴァex_310_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オリーヴァex_310_grass_none",
     "regulation": "SV10",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28863,7 +28863,7 @@
   },
   {
     "official_id": "47531",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "SV10",
     "illustrator": "cochi8i",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28877,7 +28877,7 @@
   },
   {
     "official_id": "47530",
-    "master_id": "ロケット団のニドキングex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のニドキングex_330_dark_none",
     "regulation": "SV10",
     "illustrator": "Uninori",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28891,7 +28891,7 @@
   },
   {
     "official_id": "47529",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "SV10",
     "illustrator": "Iwamoto05",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28905,7 +28905,7 @@
   },
   {
     "official_id": "47528",
-    "master_id": "ロケット団のファイヤーex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のファイヤーex_220_fire_none",
     "regulation": "SV10",
     "illustrator": "AKIRA EGAWA",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -28919,7 +28919,7 @@
   },
   {
     "official_id": "47534",
-    "master_id": "ロケット団のミュウツーex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のミュウツーex_280_psychic_none",
     "regulation": "SV10",
     "illustrator": "aky CG WorksHideki Ishikawa",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -29563,7 +29563,7 @@
   },
   {
     "official_id": "47472",
-    "master_id": "ロケット団のペルシアンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のペルシアンex_260_none_none",
     "regulation": "SV10",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -29577,7 +29577,7 @@
   },
   {
     "official_id": "47459",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "SV10",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -29591,7 +29591,7 @@
   },
   {
     "official_id": "47456",
-    "master_id": "ロケット団のニドキングex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のニドキングex_330_dark_none",
     "regulation": "SV10",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -29619,7 +29619,7 @@
   },
   {
     "official_id": "47535",
-    "master_id": "ロケット団のクロバットex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ロケット団のクロバットex_310_dark_none",
     "regulation": "SV10",
     "illustrator": "5ban GraphicsTaira Akitsu",
     "set_name": "拡張パック「ロケット団の栄光」",
@@ -29703,7 +29703,7 @@
   },
   {
     "official_id": "47382",
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "regulation": "SV9a",
     "illustrator": "PLANETA IgarashiHideki Ishikawa",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29717,7 +29717,7 @@
   },
   {
     "official_id": "47381",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "SV9a",
     "illustrator": "5ban GraphicsTaira Akitsu",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29731,7 +29731,7 @@
   },
   {
     "official_id": "47380",
-    "master_id": "エレキブルex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エレキブルex_280_electric_none",
     "regulation": "SV9a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29745,7 +29745,7 @@
   },
   {
     "official_id": "47379",
-    "master_id": "ヘイラッシャex_260_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヘイラッシャex_260_water_none",
     "regulation": "SV9a",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29759,7 +29759,7 @@
   },
   {
     "official_id": "47378",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "SV9a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29773,7 +29773,7 @@
   },
   {
     "official_id": "47377",
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "regulation": "SV9a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29801,7 +29801,7 @@
   },
   {
     "official_id": "47389",
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "regulation": "SV9a",
     "illustrator": "Yuriko Akase",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29815,7 +29815,7 @@
   },
   {
     "official_id": "47388",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "SV9a",
     "illustrator": "HICO KIM",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29829,7 +29829,7 @@
   },
   {
     "official_id": "47387",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "SV9a",
     "illustrator": "Atsushi Furusawa",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29843,7 +29843,7 @@
   },
   {
     "official_id": "47386",
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "regulation": "SV9a",
     "illustrator": "Tonji Matsuno",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29871,7 +29871,7 @@
   },
   {
     "official_id": "47392",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "SV9a",
     "illustrator": "5ban GraphicsTaira Akitsu",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29885,7 +29885,7 @@
   },
   {
     "official_id": "47391",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "SV9a",
     "illustrator": "aky CG WorksHideki Ishikawa",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -29899,7 +29899,7 @@
   },
   {
     "official_id": "47364",
-    "master_id": "ストリンダーex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ストリンダーex_260_electric_none",
     "regulation": "SV-P",
     "illustrator": "Anderson",
     "set_name": "Pokémon Trading Card Game イラストレーションコンテスト 2024",
@@ -30781,7 +30781,7 @@
   },
   {
     "official_id": "47347",
-    "master_id": "ペパーのマフィティフex_270_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ペパーのマフィティフex_270_dark_none",
     "regulation": "SV9a",
     "illustrator": "akagi",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -30795,7 +30795,7 @@
   },
   {
     "official_id": "47339",
-    "master_id": "シロナのガブリアスex_330_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロナのガブリアスex_330_fighting_none",
     "regulation": "SV9a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -30809,7 +30809,7 @@
   },
   {
     "official_id": "47330",
-    "master_id": "エレキブルex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エレキブルex_280_electric_none",
     "regulation": "SV9a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -30823,7 +30823,7 @@
   },
   {
     "official_id": "47327",
-    "master_id": "ヘイラッシャex_260_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヘイラッシャex_260_water_none",
     "regulation": "SV9a",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -30837,7 +30837,7 @@
   },
   {
     "official_id": "47315",
-    "master_id": "ヒビキのホウオウex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヒビキのホウオウex_230_fire_none",
     "regulation": "SV9a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -30851,7 +30851,7 @@
   },
   {
     "official_id": "47298",
-    "master_id": "メガヤンマex_280_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メガヤンマex_280_grass_none",
     "regulation": "SV9a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「熱風のアリーナ」",
@@ -31005,7 +31005,7 @@
   },
   {
     "official_id": "47295",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV-P",
     "illustrator": "aky CG Works",
     "set_name": "ポケカジムエントリーキャンペーン2025年前期",
@@ -31187,7 +31187,7 @@
   },
   {
     "official_id": "47278",
-    "master_id": "ダイゴのメタグロスex_340_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダイゴのメタグロスex_340_steel_none",
     "regulation": "SVOD",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スターターセットex ダイゴのダンバル＆メタグロスex",
@@ -31397,7 +31397,7 @@
   },
   {
     "official_id": "47259",
-    "master_id": "マリィのオーロンゲex_320_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マリィのオーロンゲex_320_dark_none",
     "regulation": "SVOM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スターターセットex マリィのモルペコ＆オーロンゲex",
@@ -31705,7 +31705,7 @@
   },
   {
     "official_id": "47240",
-    "master_id": "ノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ノココッチex_270_none_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31719,7 +31719,7 @@
   },
   {
     "official_id": "47239",
-    "master_id": "ボーマンダex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボーマンダex_320_dragon_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31733,7 +31733,7 @@
   },
   {
     "official_id": "47238",
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "regulation": "SV9",
     "illustrator": "aky CG WorksDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31747,7 +31747,7 @@
   },
   {
     "official_id": "47237",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "SV9",
     "illustrator": "takuyoaDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31761,7 +31761,7 @@
   },
   {
     "official_id": "47236",
-    "master_id": "マンムーex_340_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マンムーex_340_fighting_none",
     "regulation": "SV9",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31775,7 +31775,7 @@
   },
   {
     "official_id": "47235",
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "regulation": "SV9",
     "illustrator": "5ban GraphicsDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31789,7 +31789,7 @@
   },
   {
     "official_id": "47234",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "SV9",
     "illustrator": "5ban GraphicsDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31803,7 +31803,7 @@
   },
   {
     "official_id": "47233",
-    "master_id": "ボルケニオンex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボルケニオンex_220_fire_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31817,7 +31817,7 @@
   },
   {
     "official_id": "47249",
-    "master_id": "ボーマンダex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボーマンダex_320_dragon_none",
     "regulation": "SV9",
     "illustrator": "Tsuyoshi Nagano",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31831,7 +31831,7 @@
   },
   {
     "official_id": "47248",
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "regulation": "SV9",
     "illustrator": "DOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31845,7 +31845,7 @@
   },
   {
     "official_id": "47247",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "SV9",
     "illustrator": "Megumi Mizutani",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31859,7 +31859,7 @@
   },
   {
     "official_id": "47246",
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "regulation": "SV9",
     "illustrator": "Susumu Maeya",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31873,7 +31873,7 @@
   },
   {
     "official_id": "47245",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "SV9",
     "illustrator": "Yuu Nishida",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31887,7 +31887,7 @@
   },
   {
     "official_id": "47244",
-    "master_id": "ボルケニオンex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボルケニオンex_220_fire_none",
     "regulation": "SV9",
     "illustrator": "akagi",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31915,7 +31915,7 @@
   },
   {
     "official_id": "47251",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "SV9",
     "illustrator": "takuyoaDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -31929,7 +31929,7 @@
   },
   {
     "official_id": "47250",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "SV9",
     "illustrator": "5ban GraphicsDOM",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -32237,7 +32237,7 @@
   },
   {
     "official_id": "47177",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "SVN",
     "illustrator": "takuyoa",
     "set_name": "デッキビルドBOX「バトルパートナーズ」",
@@ -32632,7 +32632,7 @@
   },
   {
     "official_id": "47147",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV8a",
     "illustrator": "mashu",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32646,7 +32646,7 @@
   },
   {
     "official_id": "47146",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV8a",
     "illustrator": "Yano Keiji",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32660,7 +32660,7 @@
   },
   {
     "official_id": "47145",
-    "master_id": "イーブイex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イーブイex_200_none_none",
     "regulation": "SV8a",
     "illustrator": "N-DESIGNNatsuko Shoji été",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32674,7 +32674,7 @@
   },
   {
     "official_id": "47144",
-    "master_id": "イーブイex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イーブイex_200_none_none",
     "regulation": "SV8a",
     "illustrator": "tono",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32688,7 +32688,7 @@
   },
   {
     "official_id": "47143",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV8a",
     "illustrator": "Uninori",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32702,7 +32702,7 @@
   },
   {
     "official_id": "47142",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "SV8a",
     "illustrator": "Jerky",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32716,7 +32716,7 @@
   },
   {
     "official_id": "47140",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV8a",
     "illustrator": "osare",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32730,7 +32730,7 @@
   },
   {
     "official_id": "47138",
-    "master_id": "ブラッキーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラッキーex_280_dark_none",
     "regulation": "SV8a",
     "illustrator": "YASHIRO Nanaco",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32744,7 +32744,7 @@
   },
   {
     "official_id": "47137",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "SV8a",
     "illustrator": "Yukihiro Tada",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32758,7 +32758,7 @@
   },
   {
     "official_id": "47135",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV8a",
     "illustrator": "OKUBO",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32772,7 +32772,7 @@
   },
   {
     "official_id": "47133",
-    "master_id": "ニンフィアex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニンフィアex_270_psychic_none",
     "regulation": "SV8a",
     "illustrator": "Cona Nitanda",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32786,7 +32786,7 @@
   },
   {
     "official_id": "47132",
-    "master_id": "エーフィex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エーフィex_270_psychic_none",
     "regulation": "SV8a",
     "illustrator": "sui",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32800,7 +32800,7 @@
   },
   {
     "official_id": "47130",
-    "master_id": "サンダースex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サンダースex_260_electric_none",
     "regulation": "SV8a",
     "illustrator": "kantaro",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32814,7 +32814,7 @@
   },
   {
     "official_id": "47129",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "SV8a",
     "illustrator": "Yukihiro Tada",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32828,7 +32828,7 @@
   },
   {
     "official_id": "47128",
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "regulation": "SV8a",
     "illustrator": "Tetsuo Hara",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32842,7 +32842,7 @@
   },
   {
     "official_id": "47127",
-    "master_id": "グレイシアex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレイシアex_270_water_none",
     "regulation": "SV8a",
     "illustrator": "Kamome Shirahama",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32856,7 +32856,7 @@
   },
   {
     "official_id": "47126",
-    "master_id": "シャワーズex_280_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャワーズex_280_water_none",
     "regulation": "SV8a",
     "illustrator": "Narano",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32870,7 +32870,7 @@
   },
   {
     "official_id": "47125",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "SV8a",
     "illustrator": "Yukihiro Tada",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32884,7 +32884,7 @@
   },
   {
     "official_id": "47124",
-    "master_id": "ソウブレイズex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ソウブレイズex_270_fire_none",
     "regulation": "SV8a",
     "illustrator": "akagi",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32898,7 +32898,7 @@
   },
   {
     "official_id": "47123",
-    "master_id": "ブースターex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブースターex_270_fire_none",
     "regulation": "SV8a",
     "illustrator": "Nurikabe",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32912,7 +32912,7 @@
   },
   {
     "official_id": "47122",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV8a",
     "illustrator": "Yukihiro Tada",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32926,7 +32926,7 @@
   },
   {
     "official_id": "47121",
-    "master_id": "リーフィアex_270_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーフィアex_270_grass_none",
     "regulation": "SV8a",
     "illustrator": "Jiro Sasumo",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32940,7 +32940,7 @@
   },
   {
     "official_id": "47158",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32954,7 +32954,7 @@
   },
   {
     "official_id": "47157",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32968,7 +32968,7 @@
   },
   {
     "official_id": "47156",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32982,7 +32982,7 @@
   },
   {
     "official_id": "47155",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -32996,7 +32996,7 @@
   },
   {
     "official_id": "47154",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34298,7 +34298,7 @@
   },
   {
     "official_id": "47087",
-    "master_id": "ノココッチex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ノココッチex_270_none_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34312,7 +34312,7 @@
   },
   {
     "official_id": "47080",
-    "master_id": "ボーマンダex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボーマンダex_320_dragon_none",
     "regulation": "SV9",
     "illustrator": "toriyufu",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34326,7 +34326,7 @@
   },
   {
     "official_id": "47077",
-    "master_id": "ホップのザシアンex_230_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ホップのザシアンex_230_steel_none",
     "regulation": "SV9",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34340,7 +34340,7 @@
   },
   {
     "official_id": "47069",
-    "master_id": "Nのゾロアークex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "Nのゾロアークex_280_dark_none",
     "regulation": "SV9",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34354,7 +34354,7 @@
   },
   {
     "official_id": "47054",
-    "master_id": "マンムーex_340_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マンムーex_340_fighting_none",
     "regulation": "SV9",
     "illustrator": "Nisota Niso",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34368,7 +34368,7 @@
   },
   {
     "official_id": "47041",
-    "master_id": "リーリエのピッピex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーリエのピッピex_190_psychic_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34382,7 +34382,7 @@
   },
   {
     "official_id": "47038",
-    "master_id": "ナンジャモのハラバリーex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ナンジャモのハラバリーex_280_electric_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34396,7 +34396,7 @@
   },
   {
     "official_id": "47025",
-    "master_id": "ボルケニオンex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ボルケニオンex_220_fire_none",
     "regulation": "SV9",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「バトルパートナーズ」",
@@ -34452,7 +34452,7 @@
   },
   {
     "official_id": "46797",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34466,7 +34466,7 @@
   },
   {
     "official_id": "46795",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34480,7 +34480,7 @@
   },
   {
     "official_id": "46787",
-    "master_id": "イーブイex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イーブイex_200_none_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34494,7 +34494,7 @@
   },
   {
     "official_id": "46785",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV8a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34508,7 +34508,7 @@
   },
   {
     "official_id": "46781",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34522,7 +34522,7 @@
   },
   {
     "official_id": "46766",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34536,7 +34536,7 @@
   },
   {
     "official_id": "46765",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34550,7 +34550,7 @@
   },
   {
     "official_id": "46764",
-    "master_id": "マシマシラex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マシマシラex_210_dark_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34564,7 +34564,7 @@
   },
   {
     "official_id": "46763",
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34578,7 +34578,7 @@
   },
   {
     "official_id": "46754",
-    "master_id": "ブラッキーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラッキーex_280_dark_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34592,7 +34592,7 @@
   },
   {
     "official_id": "46752",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34606,7 +34606,7 @@
   },
   {
     "official_id": "46739",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34620,7 +34620,7 @@
   },
   {
     "official_id": "46730",
-    "master_id": "ニンフィアex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニンフィアex_270_psychic_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34634,7 +34634,7 @@
   },
   {
     "official_id": "46724",
-    "master_id": "エーフィex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エーフィex_270_psychic_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34648,7 +34648,7 @@
   },
   {
     "official_id": "46717",
-    "master_id": "テツノイバラex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイバラex_230_electric_none",
     "regulation": "SV8a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34662,7 +34662,7 @@
   },
   {
     "official_id": "46713",
-    "master_id": "サンダースex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サンダースex_260_electric_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34676,7 +34676,7 @@
   },
   {
     "official_id": "46711",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34690,7 +34690,7 @@
   },
   {
     "official_id": "46710",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV8a",
     "illustrator": "takuyoa",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34704,7 +34704,7 @@
   },
   {
     "official_id": "46707",
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "regulation": "SV8a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34718,7 +34718,7 @@
   },
   {
     "official_id": "46702",
-    "master_id": "グレイシアex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレイシアex_270_water_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34732,7 +34732,7 @@
   },
   {
     "official_id": "46692",
-    "master_id": "シャワーズex_280_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャワーズex_280_water_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34746,7 +34746,7 @@
   },
   {
     "official_id": "46688",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "SV8a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34760,7 +34760,7 @@
   },
   {
     "official_id": "46687",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34774,7 +34774,7 @@
   },
   {
     "official_id": "46683",
-    "master_id": "ブースターex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブースターex_270_fire_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34788,7 +34788,7 @@
   },
   {
     "official_id": "46681",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34802,7 +34802,7 @@
   },
   {
     "official_id": "46680",
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "regulation": "SV8a",
     "illustrator": "aky CG Works",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34816,7 +34816,7 @@
   },
   {
     "official_id": "46677",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34830,7 +34830,7 @@
   },
   {
     "official_id": "46671",
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -34844,7 +34844,7 @@
   },
   {
     "official_id": "46664",
-    "master_id": "リーフィアex_270_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リーフィアex_270_grass_none",
     "regulation": "SV8a",
     "illustrator": "5ban Graphics",
     "set_name": "ハイクラスパック「テラスタルフェスex」",
@@ -37420,7 +37420,7 @@
   },
   {
     "official_id": "46424",
-    "master_id": "ケッキングex_340_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケッキングex_340_none_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Igarashi",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37434,7 +37434,7 @@
   },
   {
     "official_id": "46421",
-    "master_id": "シャリタツex_160_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャリタツex_160_dragon_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37448,7 +37448,7 @@
   },
   {
     "official_id": "46412",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37462,7 +37462,7 @@
   },
   {
     "official_id": "46397",
-    "master_id": "シロデスナex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロデスナex_280_psychic_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37476,7 +37476,7 @@
   },
   {
     "official_id": "46373",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SV8",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37490,7 +37490,7 @@
   },
   {
     "official_id": "46366",
-    "master_id": "ミロカロスex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミロカロスex_270_water_none",
     "regulation": "SV8",
     "illustrator": "hncl",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37504,7 +37504,7 @@
   },
   {
     "official_id": "46363",
-    "master_id": "スコヴィランex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "スコヴィランex_260_fire_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37518,7 +37518,7 @@
   },
   {
     "official_id": "46343",
-    "master_id": "アイアントex_190_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アイアントex_190_grass_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37742,7 +37742,7 @@
   },
   {
     "official_id": "46649",
-    "master_id": "ケッキングex_340_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ケッキングex_340_none_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Igarashi",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37756,7 +37756,7 @@
   },
   {
     "official_id": "46648",
-    "master_id": "シャリタツex_160_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シャリタツex_160_dragon_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37770,7 +37770,7 @@
   },
   {
     "official_id": "46647",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37784,7 +37784,7 @@
   },
   {
     "official_id": "46646",
-    "master_id": "シロデスナex_280_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "シロデスナex_280_psychic_none",
     "regulation": "SV8",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37798,7 +37798,7 @@
   },
   {
     "official_id": "46645",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SV8",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37812,7 +37812,7 @@
   },
   {
     "official_id": "46644",
-    "master_id": "ミロカロスex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミロカロスex_270_water_none",
     "regulation": "SV8",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37826,7 +37826,7 @@
   },
   {
     "official_id": "46643",
-    "master_id": "スコヴィランex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "スコヴィランex_260_fire_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Igarashi",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37840,7 +37840,7 @@
   },
   {
     "official_id": "46642",
-    "master_id": "アイアントex_190_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アイアントex_190_grass_none",
     "regulation": "SV8",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37882,7 +37882,7 @@
   },
   {
     "official_id": "46656",
-    "master_id": "サザンドラex_330_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サザンドラex_330_dark_none",
     "regulation": "SV8",
     "illustrator": "AKIRA EGAWA",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37896,7 +37896,7 @@
   },
   {
     "official_id": "46655",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SV8",
     "illustrator": "GIDORA",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37910,7 +37910,7 @@
   },
   {
     "official_id": "46654",
-    "master_id": "ミロカロスex_270_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミロカロスex_270_water_none",
     "regulation": "SV8",
     "illustrator": "Kuroimori",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37924,7 +37924,7 @@
   },
   {
     "official_id": "46653",
-    "master_id": "アイアントex_190_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アイアントex_190_grass_none",
     "regulation": "SV8",
     "illustrator": "osare",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -37966,7 +37966,7 @@
   },
   {
     "official_id": "46659",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SV8",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「超電ブレイカー」",
@@ -38531,7 +38531,7 @@
   },
   {
     "official_id": "46567",
-    "master_id": "オンバーンex_270_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オンバーンex_270_none_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキGenerations ゼルネアスex・オンバーンex",
@@ -38726,7 +38726,7 @@
   },
   {
     "official_id": "46551",
-    "master_id": "ルギアex_220_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルギアex_220_none_none",
     "regulation": "SVM",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキGenerations ルギアex・バンギラスex",
@@ -38756,7 +38756,7 @@
   },
   {
     "official_id": "46548",
-    "master_id": "カビゴンex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カビゴンex_260_none_none",
     "regulation": "SVM",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキGenerations ピカチュウex・カビゴンex",
@@ -38816,7 +38816,7 @@
   },
   {
     "official_id": "46543",
-    "master_id": "ザシアンex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ザシアンex_220_steel_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキGenerations ザシアンex・マホイップex",
@@ -38906,7 +38906,7 @@
   },
   {
     "official_id": "46537",
-    "master_id": "ディアルガex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ディアルガex_220_steel_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキGenerations ディアルガex・ルカリオex",
@@ -38981,7 +38981,7 @@
   },
   {
     "official_id": "46532",
-    "master_id": "バンギラスex_340_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バンギラスex_340_dark_none",
     "regulation": "SVM",
     "illustrator": "5ban Graphics",
     "set_name": "スタートデッキGenerations ルギアex・バンギラスex",
@@ -39041,7 +39041,7 @@
   },
   {
     "official_id": "46528",
-    "master_id": "パルデア ドオーex_280_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "パルデア ドオーex_280_dark_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキGenerations コライドンex・パルデアドオーex",
@@ -39071,7 +39071,7 @@
   },
   {
     "official_id": "46526",
-    "master_id": "コライドンex_230_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_fighting_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキGenerations コライドンex・パルデアドオーex",
@@ -39146,7 +39146,7 @@
   },
   {
     "official_id": "46519",
-    "master_id": "ルカリオex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルカリオex_260_fighting_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Tsuji",
     "set_name": "スタートデッキGenerations ディアルガex・ルカリオex",
@@ -39221,7 +39221,7 @@
   },
   {
     "official_id": "46514",
-    "master_id": "マホイップex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マホイップex_250_psychic_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキGenerations ザシアンex・マホイップex",
@@ -39311,7 +39311,7 @@
   },
   {
     "official_id": "46508",
-    "master_id": "ミミッキュex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミッキュex_190_psychic_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキGenerations カプ・コケコex・ミミッキュex",
@@ -39341,7 +39341,7 @@
   },
   {
     "official_id": "46506",
-    "master_id": "ゼルネアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゼルネアスex_210_psychic_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキGenerations ゼルネアスex・オンバーンex",
@@ -39416,7 +39416,7 @@
   },
   {
     "official_id": "46500",
-    "master_id": "カプ・コケコex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カプ・コケコex_200_electric_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スタートデッキGenerations カプ・コケコex・ミミッキュex",
@@ -39506,7 +39506,7 @@
   },
   {
     "official_id": "46492",
-    "master_id": "ピカチュウex_190_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_190_electric_none",
     "regulation": "SVM",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スタートデッキGenerations ピカチュウex・カビゴンex",
@@ -39521,7 +39521,7 @@
   },
   {
     "official_id": "46491",
-    "master_id": "カイオーガex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カイオーガex_230_water_none",
     "regulation": "SVM",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキGenerations カイオーガex・バシャーモex",
@@ -39686,7 +39686,7 @@
   },
   {
     "official_id": "46476",
-    "master_id": "レシラムex_220_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レシラムex_220_fire_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキGenerations レシラムex・モロバレルex",
@@ -39776,7 +39776,7 @@
   },
   {
     "official_id": "46470",
-    "master_id": "バシャーモex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バシャーモex_320_fire_none",
     "regulation": "SVM",
     "illustrator": "takuyoa",
     "set_name": "スタートデッキGenerations カイオーガex・バシャーモex",
@@ -39866,7 +39866,7 @@
   },
   {
     "official_id": "46464",
-    "master_id": "モロバレルex_260_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モロバレルex_260_grass_none",
     "regulation": "SVM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スタートデッキGenerations レシラムex・モロバレルex",
@@ -40041,7 +40041,7 @@
   },
   {
     "official_id": "46447",
-    "master_id": "ベラカスex_250_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ベラカスex_250_grass_none",
     "regulation": "SV-P",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スカーレット＆バイオレット プロモカードパック第8弾",
@@ -40797,7 +40797,7 @@
   },
   {
     "official_id": "46256",
-    "master_id": "フライゴンex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "フライゴンex_310_fighting_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -40811,7 +40811,7 @@
   },
   {
     "official_id": "46248",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "SV7a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -40825,7 +40825,7 @@
   },
   {
     "official_id": "46240",
-    "master_id": "ブラックキュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラックキュレムex_230_water_none",
     "regulation": "SV7a",
     "illustrator": "kawayoo",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41063,7 +41063,7 @@
   },
   {
     "official_id": "46328",
-    "master_id": "モトトカゲex_210_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モトトカゲex_210_none_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41077,7 +41077,7 @@
   },
   {
     "official_id": "46327",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "SV7a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41091,7 +41091,7 @@
   },
   {
     "official_id": "46326",
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41105,7 +41105,7 @@
   },
   {
     "official_id": "46325",
-    "master_id": "フライゴンex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "フライゴンex_310_fighting_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41119,7 +41119,7 @@
   },
   {
     "official_id": "46324",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "SV7a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41133,7 +41133,7 @@
   },
   {
     "official_id": "46323",
-    "master_id": "ブラックキュレムex_230_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブラックキュレムex_230_water_none",
     "regulation": "SV7a",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41175,7 +41175,7 @@
   },
   {
     "official_id": "46335",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "SV7a",
     "illustrator": "Yuriko Akase",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41189,7 +41189,7 @@
   },
   {
     "official_id": "46334",
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "regulation": "SV7a",
     "illustrator": "Shinya Mizuno",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41203,7 +41203,7 @@
   },
   {
     "official_id": "46333",
-    "master_id": "ラティアスex_210_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラティアスex_210_psychic_none",
     "regulation": "SV7a",
     "illustrator": "OKACHEKE",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41231,7 +41231,7 @@
   },
   {
     "official_id": "46338",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "SV7a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41245,7 +41245,7 @@
   },
   {
     "official_id": "46310",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "SV-P",
     "illustrator": "aky CG Works",
     "set_name": "パックを開けて、すぐバトル！ シールド戦　楽園ドラゴーナ！",
@@ -41329,7 +41329,7 @@
   },
   {
     "official_id": "46304",
-    "master_id": "ハッサムex_270_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハッサムex_270_steel_none",
     "regulation": "SV-P",
     "illustrator": "PLANETA Tsuji",
     "set_name": "ポケモンカードゲームチャンピオンシップシリーズ2025",
@@ -41805,7 +41805,7 @@
   },
   {
     "official_id": "46280",
-    "master_id": "モトトカゲex_210_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モトトカゲex_210_none_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41819,7 +41819,7 @@
   },
   {
     "official_id": "46269",
-    "master_id": "アローラ ナッシーex_300_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "アローラ ナッシーex_300_dragon_none",
     "regulation": "SV7a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -41833,7 +41833,7 @@
   },
   {
     "official_id": "46266",
-    "master_id": "ブリジュラスex_300_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブリジュラスex_300_steel_none",
     "regulation": "SV7a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「楽園ドラゴーナ」",
@@ -42071,7 +42071,7 @@
   },
   {
     "official_id": "46210",
-    "master_id": "ニンフィアex_270_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニンフィアex_270_psychic_none",
     "regulation": "SVLN",
     "illustrator": "5ban Graphics",
     "set_name": "スターターセット テラスタイプ：ステラ ニンフィアex",
@@ -42295,7 +42295,7 @@
   },
   {
     "official_id": "46189",
-    "master_id": "ソウブレイズex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ソウブレイズex_270_fire_none",
     "regulation": "SVLS",
     "illustrator": "5ban Graphics",
     "set_name": "スターターセット テラスタイプ：ステラ ソウブレイズex",
@@ -42603,7 +42603,7 @@
   },
   {
     "official_id": "46170",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42617,7 +42617,7 @@
   },
   {
     "official_id": "46169",
-    "master_id": "ミミズズex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミズズex_220_steel_none",
     "regulation": "SV7",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42631,7 +42631,7 @@
   },
   {
     "official_id": "46168",
-    "master_id": "チャーレムex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "チャーレムex_260_fighting_none",
     "regulation": "SV7",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42645,7 +42645,7 @@
   },
   {
     "official_id": "46167",
-    "master_id": "バウッツェルex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バウッツェルex_250_psychic_none",
     "regulation": "SV7",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42659,7 +42659,7 @@
   },
   {
     "official_id": "46166",
-    "master_id": "デンチュラex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "デンチュラex_260_electric_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42673,7 +42673,7 @@
   },
   {
     "official_id": "46165",
-    "master_id": "ラプラスex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラプラスex_220_water_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42687,7 +42687,7 @@
   },
   {
     "official_id": "46164",
-    "master_id": "エースバーンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エースバーンex_320_fire_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42701,7 +42701,7 @@
   },
   {
     "official_id": "46163",
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42743,7 +42743,7 @@
   },
   {
     "official_id": "46178",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV7",
     "illustrator": "Saboteri",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42757,7 +42757,7 @@
   },
   {
     "official_id": "46177",
-    "master_id": "バウッツェルex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バウッツェルex_250_psychic_none",
     "regulation": "SV7",
     "illustrator": "Yuu Nishida",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42771,7 +42771,7 @@
   },
   {
     "official_id": "46176",
-    "master_id": "デンチュラex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "デンチュラex_260_electric_none",
     "regulation": "SV7",
     "illustrator": "MARINA Chikazawa",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42785,7 +42785,7 @@
   },
   {
     "official_id": "46175",
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "regulation": "SV7",
     "illustrator": "Teeziro",
     "set_name": "拡張パック「ステラミラクル」",
@@ -42813,7 +42813,7 @@
   },
   {
     "official_id": "46181",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -43037,7 +43037,7 @@
   },
   {
     "official_id": "46126",
-    "master_id": "ミガルーサex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミガルーサex_210_water_none",
     "regulation": "SV-P",
     "illustrator": "5ban Graphics",
     "set_name": "スカーレット＆バイオレット プロモカードパック第7弾",
@@ -43598,7 +43598,7 @@
   },
   {
     "official_id": "46059",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV6a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43612,7 +43612,7 @@
   },
   {
     "official_id": "46058",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43626,7 +43626,7 @@
   },
   {
     "official_id": "46057",
-    "master_id": "マシマシラex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マシマシラex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43640,7 +43640,7 @@
   },
   {
     "official_id": "46056",
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "regulation": "SV6a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43654,7 +43654,7 @@
   },
   {
     "official_id": "46055",
-    "master_id": "ブロロロームex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブロロロームex_280_electric_none",
     "regulation": "SV6a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43668,7 +43668,7 @@
   },
   {
     "official_id": "46054",
-    "master_id": "キングドラex_310_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キングドラex_310_water_none",
     "regulation": "SV6a",
     "illustrator": "PLANETA Igarashi",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43696,7 +43696,7 @@
   },
   {
     "official_id": "46067",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV6a",
     "illustrator": "kantaro",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43710,7 +43710,7 @@
   },
   {
     "official_id": "46066",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "kantaro",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43724,7 +43724,7 @@
   },
   {
     "official_id": "46065",
-    "master_id": "マシマシラex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マシマシラex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "kantaro",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43738,7 +43738,7 @@
   },
   {
     "official_id": "46064",
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "regulation": "SV6a",
     "illustrator": "kantaro",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -43766,7 +43766,7 @@
   },
   {
     "official_id": "46069",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV6a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -45054,7 +45054,7 @@
   },
   {
     "official_id": "46027",
-    "master_id": "テラパゴスex_230_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テラパゴスex_230_none_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45068,7 +45068,7 @@
   },
   {
     "official_id": "46013",
-    "master_id": "ミミズズex_220_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミミズズex_220_steel_none",
     "regulation": "SV7",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45082,7 +45082,7 @@
   },
   {
     "official_id": "45993",
-    "master_id": "チャーレムex_260_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "チャーレムex_260_fighting_none",
     "regulation": "SV7",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45096,7 +45096,7 @@
   },
   {
     "official_id": "45985",
-    "master_id": "バウッツェルex_250_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "バウッツェルex_250_psychic_none",
     "regulation": "SV7",
     "illustrator": "You Iribi",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45110,7 +45110,7 @@
   },
   {
     "official_id": "45972",
-    "master_id": "デンチュラex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "デンチュラex_260_electric_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45124,7 +45124,7 @@
   },
   {
     "official_id": "45958",
-    "master_id": "ラプラスex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ラプラスex_220_water_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45138,7 +45138,7 @@
   },
   {
     "official_id": "45957",
-    "master_id": "エースバーンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "エースバーンex_320_fire_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45152,7 +45152,7 @@
   },
   {
     "official_id": "45951",
-    "master_id": "カミツオロチex_330_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カミツオロチex_330_grass_none",
     "regulation": "SV7",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ステラミラクル」",
@@ -45978,7 +45978,7 @@
   },
   {
     "official_id": "45914",
-    "master_id": "モモワロウex_190_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "モモワロウex_190_dark_none",
     "regulation": "SV6a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -45992,7 +45992,7 @@
   },
   {
     "official_id": "45913",
-    "master_id": "キチキギスex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キチキギスex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -46006,7 +46006,7 @@
   },
   {
     "official_id": "45912",
-    "master_id": "マシマシラex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マシマシラex_210_dark_none",
     "regulation": "SV6a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -46020,7 +46020,7 @@
   },
   {
     "official_id": "45911",
-    "master_id": "イイネイヌex_250_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イイネイヌex_250_dark_none",
     "regulation": "SV6a",
     "illustrator": "takuyoa",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -46034,7 +46034,7 @@
   },
   {
     "official_id": "45890",
-    "master_id": "ブロロロームex_280_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ブロロロームex_280_electric_none",
     "regulation": "SV6a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -46048,7 +46048,7 @@
   },
   {
     "official_id": "45887",
-    "master_id": "キングドラex_310_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "キングドラex_310_water_none",
     "regulation": "SV6a",
     "illustrator": "toriyufu",
     "set_name": "強化拡張パック「ナイトワンダラー」",
@@ -46272,7 +46272,7 @@
   },
   {
     "official_id": "45863",
-    "master_id": "ハピナスex_300_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハピナスex_300_none_none",
     "regulation": "SV6",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46286,7 +46286,7 @@
   },
   {
     "official_id": "45862",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46300,7 +46300,7 @@
   },
   {
     "official_id": "45861",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46314,7 +46314,7 @@
   },
   {
     "official_id": "45860",
-    "master_id": "レントラーex_310_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レントラーex_310_electric_none",
     "regulation": "SV6",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46328,7 +46328,7 @@
   },
   {
     "official_id": "45859",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46342,7 +46342,7 @@
   },
   {
     "official_id": "45858",
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "regulation": "SV6",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46356,7 +46356,7 @@
   },
   {
     "official_id": "45857",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46370,7 +46370,7 @@
   },
   {
     "official_id": "45856",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46412,7 +46412,7 @@
   },
   {
     "official_id": "45870",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "SV6",
     "illustrator": "Yano Keiji",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46426,7 +46426,7 @@
   },
   {
     "official_id": "45869",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "SV6",
     "illustrator": "Yano Keiji",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46440,7 +46440,7 @@
   },
   {
     "official_id": "45868",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "SV6",
     "illustrator": "Yano Keiji",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46454,7 +46454,7 @@
   },
   {
     "official_id": "45867",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV6",
     "illustrator": "Yano Keiji",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46496,7 +46496,7 @@
   },
   {
     "official_id": "45873",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -46720,7 +46720,7 @@
   },
   {
     "official_id": "45794",
-    "master_id": "タイカイデンex_260_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タイカイデンex_260_electric_none",
     "regulation": "SV-P",
     "illustrator": "PLANETA Yamashita",
     "set_name": "スカーレット＆バイオレット プロモカードパック第6弾",
@@ -47966,7 +47966,7 @@
   },
   {
     "official_id": "45776",
-    "master_id": "ハピナスex_300_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハピナスex_300_none_none",
     "regulation": "SV6",
     "illustrator": "Iwamoto05",
     "set_name": "拡張パック「変幻の仮面」",
@@ -47980,7 +47980,7 @@
   },
   {
     "official_id": "45772",
-    "master_id": "ドラパルトex_320_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドラパルトex_320_dragon_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -47994,7 +47994,7 @@
   },
   {
     "official_id": "45756",
-    "master_id": "オーガポン いしずえのめんex_210_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いしずえのめんex_210_fighting_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48008,7 +48008,7 @@
   },
   {
     "official_id": "45732",
-    "master_id": "レントラーex_310_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "レントラーex_310_electric_none",
     "regulation": "SV6",
     "illustrator": "PLANETA Yamashita",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48022,7 +48022,7 @@
   },
   {
     "official_id": "45729",
-    "master_id": "オーガポン いどのめんex_210_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン いどのめんex_210_water_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48036,7 +48036,7 @@
   },
   {
     "official_id": "45727",
-    "master_id": "イルカマンex_340_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "イルカマンex_340_water_none",
     "regulation": "SV6",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48050,7 +48050,7 @@
   },
   {
     "official_id": "45713",
-    "master_id": "オーガポン かまどのめんex_210_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン かまどのめんex_210_fire_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48064,7 +48064,7 @@
   },
   {
     "official_id": "45707",
-    "master_id": "オーガポン みどりのめんex_210_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "オーガポン みどりのめんex_210_grass_none",
     "regulation": "SV6",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「変幻の仮面」",
@@ -48582,7 +48582,7 @@
   },
   {
     "official_id": "45589",
-    "master_id": "マグカルゴex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マグカルゴex_270_fire_none",
     "regulation": "SV5a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48596,7 +48596,7 @@
   },
   {
     "official_id": "45585",
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "regulation": "SV5a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48834,7 +48834,7 @@
   },
   {
     "official_id": "45679",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV5a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48848,7 +48848,7 @@
   },
   {
     "official_id": "45678",
-    "master_id": "ゲッコウガex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_310_fighting_none",
     "regulation": "SV5a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48862,7 +48862,7 @@
   },
   {
     "official_id": "45677",
-    "master_id": "サケブシッポex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サケブシッポex_190_psychic_none",
     "regulation": "SV5a",
     "illustrator": "PLANETA Hiiragi",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48876,7 +48876,7 @@
   },
   {
     "official_id": "45676",
-    "master_id": "テツノイバラex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイバラex_230_electric_none",
     "regulation": "SV5a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48890,7 +48890,7 @@
   },
   {
     "official_id": "45675",
-    "master_id": "マグカルゴex_270_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "マグカルゴex_270_fire_none",
     "regulation": "SV5a",
     "illustrator": "PLANETA Yamashita",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48904,7 +48904,7 @@
   },
   {
     "official_id": "45674",
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "regulation": "SV5a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48946,7 +48946,7 @@
   },
   {
     "official_id": "45686",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV5a",
     "illustrator": "MINAMINAMI Take",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48960,7 +48960,7 @@
   },
   {
     "official_id": "45685",
-    "master_id": "ゲッコウガex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_310_fighting_none",
     "regulation": "SV5a",
     "illustrator": "akagi",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -48974,7 +48974,7 @@
   },
   {
     "official_id": "45684",
-    "master_id": "ヤバソチャex_240_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ヤバソチャex_240_grass_none",
     "regulation": "SV5a",
     "illustrator": "Saboteri",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49002,7 +49002,7 @@
   },
   {
     "official_id": "45689",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV5a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49604,7 +49604,7 @@
   },
   {
     "official_id": "45628",
-    "master_id": "ガチグマ アカツキex_260_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガチグマ アカツキex_260_none_none",
     "regulation": "SV5a",
     "illustrator": "aky CG Works",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49618,7 +49618,7 @@
   },
   {
     "official_id": "45621",
-    "master_id": "ゲッコウガex_310_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_310_fighting_none",
     "regulation": "SV5a",
     "illustrator": "5ban Graphics",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49632,7 +49632,7 @@
   },
   {
     "official_id": "45616",
-    "master_id": "サケブシッポex_190_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "サケブシッポex_190_psychic_none",
     "regulation": "SV5a",
     "illustrator": "akagi",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49646,7 +49646,7 @@
   },
   {
     "official_id": "45609",
-    "master_id": "テツノイバラex_230_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイバラex_230_electric_none",
     "regulation": "SV5a",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "強化拡張パック「クリムゾンヘイズ」",
@@ -49702,7 +49702,7 @@
   },
   {
     "official_id": "45576",
-    "master_id": "グレンアルマex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレンアルマex_260_fire_none",
     "regulation": "SVI",
     "illustrator": "PLANETA Tsuji",
     "set_name": "いつでもどこでも バトルアカデミー",
@@ -49716,7 +49716,7 @@
   },
   {
     "official_id": "45575",
-    "master_id": "ニャオハex_200_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャオハex_200_grass_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "いつでもどこでも バトルアカデミー",
@@ -49730,7 +49730,7 @@
   },
   {
     "official_id": "45574",
-    "master_id": "ハカドッグex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハカドッグex_260_psychic_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "いつでもどこでも バトルアカデミー",
@@ -49744,7 +49744,7 @@
   },
   {
     "official_id": "45573",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "いつでもどこでも バトルアカデミー",
@@ -49968,7 +49968,7 @@
   },
   {
     "official_id": "45561",
-    "master_id": "ハッサムex_270_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハッサムex_270_steel_none",
     "regulation": "SV5M",
     "illustrator": "Eske Yoshinob",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -49982,7 +49982,7 @@
   },
   {
     "official_id": "45560",
-    "master_id": "リキキリンex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リキキリンex_260_dark_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -49996,7 +49996,7 @@
   },
   {
     "official_id": "45559",
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50010,7 +50010,7 @@
   },
   {
     "official_id": "45558",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50024,7 +50024,7 @@
   },
   {
     "official_id": "45557",
-    "master_id": "ガオガエンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガオガエンex_320_fire_none",
     "regulation": "SV5M",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50038,7 +50038,7 @@
   },
   {
     "official_id": "45556",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50080,7 +50080,7 @@
   },
   {
     "official_id": "45567",
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "regulation": "SV5M",
     "illustrator": "nagimiso",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50094,7 +50094,7 @@
   },
   {
     "official_id": "45566",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV5M",
     "illustrator": "nagimiso",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50108,7 +50108,7 @@
   },
   {
     "official_id": "45565",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV5M",
     "illustrator": "nagimiso",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50122,7 +50122,7 @@
   },
   {
     "official_id": "45572",
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50136,7 +50136,7 @@
   },
   {
     "official_id": "45571",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50150,7 +50150,7 @@
   },
   {
     "official_id": "45570",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -50374,7 +50374,7 @@
   },
   {
     "official_id": "45532",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV5K",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50388,7 +50388,7 @@
   },
   {
     "official_id": "45531",
-    "master_id": "ゲンガーex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲンガーex_310_dark_none",
     "regulation": "SV5K",
     "illustrator": "Satoshi Shirai",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50402,7 +50402,7 @@
   },
   {
     "official_id": "45530",
-    "master_id": "ウミトリオex_250_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウミトリオex_250_electric_none",
     "regulation": "SV5K",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50416,7 +50416,7 @@
   },
   {
     "official_id": "45529",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV5K",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50430,7 +50430,7 @@
   },
   {
     "official_id": "45528",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "SV5K",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50444,7 +50444,7 @@
   },
   {
     "official_id": "45527",
-    "master_id": "ドダイトスex_340_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドダイトスex_340_grass_none",
     "regulation": "SV5K",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50486,7 +50486,7 @@
   },
   {
     "official_id": "45538",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV5K",
     "illustrator": "Teeziro",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50500,7 +50500,7 @@
   },
   {
     "official_id": "45537",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV5K",
     "illustrator": "Teeziro",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50514,7 +50514,7 @@
   },
   {
     "official_id": "45536",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "SV5K",
     "illustrator": "Teeziro",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50528,7 +50528,7 @@
   },
   {
     "official_id": "45543",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV5K",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50542,7 +50542,7 @@
   },
   {
     "official_id": "45542",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV5K",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50556,7 +50556,7 @@
   },
   {
     "official_id": "45541",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "SV5K",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -50724,7 +50724,7 @@
   },
   {
     "official_id": "45498",
-    "master_id": "メルメタルex_280_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "メルメタルex_280_steel_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "バトルアカデミー",
@@ -50780,7 +50780,7 @@
   },
   {
     "official_id": "45494",
-    "master_id": "ルカリオex_250_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ルカリオex_250_fighting_none",
     "regulation": "SVI",
     "illustrator": "PLANETA Igarashi",
     "set_name": "バトルアカデミー",
@@ -51032,7 +51032,7 @@
   },
   {
     "official_id": "45472",
-    "master_id": "ダークライex_210_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ダークライex_210_dark_none",
     "regulation": "SVI",
     "illustrator": "5ban Graphics",
     "set_name": "バトルアカデミー",
@@ -51046,7 +51046,7 @@
   },
   {
     "official_id": "45471",
-    "master_id": "ゲッコウガex_300_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲッコウガex_300_water_none",
     "regulation": "SVI",
     "illustrator": "5ban Graphics",
     "set_name": "バトルアカデミー",
@@ -51265,7 +51265,7 @@
   },
   {
     "official_id": "45452",
-    "master_id": "ハカドッグex_260_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハカドッグex_260_psychic_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "バトルアカデミー",
@@ -51414,7 +51414,7 @@
   },
   {
     "official_id": "45442",
-    "master_id": "ピカチュウex_200_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ピカチュウex_200_electric_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "バトルアカデミー",
@@ -51578,7 +51578,7 @@
   },
   {
     "official_id": "45427",
-    "master_id": "グレンアルマex_260_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "グレンアルマex_260_fire_none",
     "regulation": "SVI",
     "illustrator": "PLANETA Tsuji",
     "set_name": "バトルアカデミー",
@@ -51712,7 +51712,7 @@
   },
   {
     "official_id": "45418",
-    "master_id": "ニャオハex_200_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ニャオハex_200_grass_none",
     "regulation": "SVI",
     "illustrator": "takuyoa",
     "set_name": "バトルアカデミー",
@@ -51910,7 +51910,7 @@
   },
   {
     "official_id": "45398",
-    "master_id": "カラミンゴex_200_none_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "カラミンゴex_200_none_none",
     "regulation": "SV-P",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "スカーレット＆バイオレット プロモカードパック第5弾",
@@ -52050,7 +52050,7 @@
   },
   {
     "official_id": "45352",
-    "master_id": "ミライドンex_220_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ミライドンex_220_dragon_none",
     "regulation": "SVHM",
     "illustrator": "PLANETA Mochizuki",
     "set_name": "スターターデッキ＆ビルドセット「未来のミライドンex」",
@@ -52246,7 +52246,7 @@
   },
   {
     "official_id": "45300",
-    "master_id": "コライドンex_230_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "コライドンex_230_dragon_none",
     "regulation": "SVHK",
     "illustrator": "PLANETA Igarashi",
     "set_name": "スターターデッキ＆ビルドセット「古代のコライドンex」",
@@ -53226,7 +53226,7 @@
   },
   {
     "official_id": "45261",
-    "master_id": "ハッサムex_270_steel_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ハッサムex_270_steel_none",
     "regulation": "SV5M",
     "illustrator": "toriyufu",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -53240,7 +53240,7 @@
   },
   {
     "official_id": "45259",
-    "master_id": "リキキリンex_260_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "リキキリンex_260_dark_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -53254,7 +53254,7 @@
   },
   {
     "official_id": "45258",
-    "master_id": "テツノイワオex_240_fighting_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイワオex_240_fighting_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -53268,7 +53268,7 @@
   },
   {
     "official_id": "45253",
-    "master_id": "テツノカシラex_220_psychic_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノカシラex_220_psychic_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -53282,7 +53282,7 @@
   },
   {
     "official_id": "45239",
-    "master_id": "ガオガエンex_320_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ガオガエンex_320_fire_none",
     "regulation": "SV5M",
     "illustrator": "N-DESIGN Inc.",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -53296,7 +53296,7 @@
   },
   {
     "official_id": "45233",
-    "master_id": "テツノイサハex_220_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "テツノイサハex_220_grass_none",
     "regulation": "SV5M",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「サイバージャッジ」",
@@ -54206,7 +54206,7 @@
   },
   {
     "official_id": "45199",
-    "master_id": "タケルライコex_240_dragon_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "タケルライコex_240_dragon_none",
     "regulation": "SV5K",
     "illustrator": "aky CG Works",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -54220,7 +54220,7 @@
   },
   {
     "official_id": "45193",
-    "master_id": "ゲンガーex_310_dark_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ゲンガーex_310_dark_none",
     "regulation": "SV5K",
     "illustrator": "Nisota Niso",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -54234,7 +54234,7 @@
   },
   {
     "official_id": "45171",
-    "master_id": "ウミトリオex_250_electric_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウミトリオex_250_electric_none",
     "regulation": "SV5K",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -54248,7 +54248,7 @@
   },
   {
     "official_id": "45170",
-    "master_id": "ウネルミナモex_220_water_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウネルミナモex_220_water_none",
     "regulation": "SV5K",
     "illustrator": "takuyoa",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -54262,7 +54262,7 @@
   },
   {
     "official_id": "45158",
-    "master_id": "ウガツホムラex_230_fire_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ウガツホムラex_230_fire_none",
     "regulation": "SV5K",
     "illustrator": "5ban Graphics",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -54276,7 +54276,7 @@
   },
   {
     "official_id": "45151",
-    "master_id": "ドダイトスex_340_grass_ポケモンexがきぜつしたとき、相手はサイドを2枚とる。",
+    "master_id": "ドダイトスex_340_grass_none",
     "regulation": "SV5K",
     "illustrator": "PLANETA Tsuji",
     "set_name": "拡張パック「ワイルドフォース」",
@@ -58651,7 +58651,7 @@
   },
   {
     "official_id": "40294",
-    "master_id": "ふうせん_none_none_ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+    "master_id": "ふうせん_none_none_none",
     "regulation": "S8b",
     "illustrator": "Yoshinobu Saito",
     "set_name": "ハイクラスパック「VMAXクライマックス」",
@@ -59349,7 +59349,7 @@
   },
   {
     "official_id": "39229",
-    "master_id": "ふうせん_none_none_ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+    "master_id": "ふうせん_none_none_none",
     "regulation": "SF",
     "illustrator": "Yoshinobu Saito",
     "set_name": "プレミアムトレーナーボックス ICHIGEKI、RENGEKI",
@@ -68661,7 +68661,7 @@
   },
   {
     "official_id": "28000",
-    "master_id": "プリズムエネルギー_none_none_このカードは、エネルギー1個ぶんとしてはたらく。\nたねポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+    "master_id": "プリズムエネルギー_none_none_none",
     "regulation": "BWP",
     "illustrator": "5ban Graphics",
     "set_name": "ポケモンカードゲーム プロモーションカードパック(2012/3)",
@@ -69543,7 +69543,7 @@
   },
   {
     "official_id": "27552",
-    "master_id": "プリズムエネルギー_none_none_このカードは、エネルギー1個ぶんとしてはたらく。\nたねポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。",
+    "master_id": "プリズムエネルギー_none_none_none",
     "regulation": "BW3-Bp",
     "illustrator": "5ban Graphics",
     "set_name": "ポケモンカードゲームBW 拡張パック「サイコドライブ」",

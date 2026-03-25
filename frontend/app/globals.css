@@ -24,3 +24,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Thin dark scrollbar for modal panels */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #374151 transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #374151;
+  border-radius: 4px;
+}
+
+/* Panel entry animation */
+@keyframes enter {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+.animate-in {
+  animation: enter 0.2s ease forwards;
+}
+
+/* Modal bottom-sheet slide-up on mobile, scale-in on sm+ */
+@keyframes slideUpFadeIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.modal-sheet {
+  animation: slideUpFadeIn 0.25s ease forwards;
+}
+@media (min-width: 640px) {
+  .modal-sheet {
+    animation: enter 0.2s ease forwards;
+  }
+}
