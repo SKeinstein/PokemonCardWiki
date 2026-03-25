@@ -3,3 +3,6 @@ node_modules
 .env
 
 /generated/prisma
+
+# Generated large data files (regenerate with scripts/build_qa_card_map.mjs)
+data/qa_card_map.json
