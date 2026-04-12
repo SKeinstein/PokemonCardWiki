@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useDeferredValue } from "react";
 import Image from "next/image";
 import { MasterCard, CardVariant, MasterCardTag } from "../../lib/data";
 import CardModal from "./CardModal";
@@ -71,6 +71,11 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     useEffect(() => {
         setDisplayLimit(100);
     }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, selectedTags]);
+
+    // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
+    const deferredQuery = useDeferredValue(query);
+    const deferredEffectQuery = useDeferredValue(effectQuery);
+    const isFilterStale = deferredQuery !== query || deferredEffectQuery !== effectQuery;
 
     // Normalize katakana→hiragana so kana search is script-agnostic
     const normalizeKana = (str: string) =>
@@ -175,7 +180,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const filteredCards = useMemo(() => {
         return masterCards.filter((card) => {
             // 1. Text Query (Name)
-            if (query && !evaluateQuery(card.name, query, isOrSearch)) {
+            if (deferredQuery && !evaluateQuery(card.name, deferredQuery, isOrSearch)) {
                 return false;
             }
 
@@ -217,7 +222,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
             if (retreatFilter && card.retreatCost !== parseInt(retreatFilter)) return false;
 
             // 5. Effect Text Query (Abilities, Attacks, Rules)
-            if (effectQuery) {
+            if (deferredEffectQuery) {
                 // Combine all searchable text on the card into one block
                 const searchableTextChunks = [
                     ...card.rules,
@@ -226,7 +231,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                 ];
                 const fullText = searchableTextChunks.join(" ");
 
-                if (!evaluateQuery(fullText, effectQuery, isOrSearch)) {
+                if (!evaluateQuery(fullText, deferredEffectQuery, isOrSearch)) {
                     return false;
                 }
             }
@@ -240,7 +245,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
 
             return true;
         });
-    }, [masterCards, query, typeFilter, categoryFilter, regFilter, effectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, variantsMap, selectedTags, tagCardMap]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, variantsMap, selectedTags, tagCardMap]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -566,8 +571,8 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
 
             {/* Grid */}
             <div
-                className="grid gap-1 sm:gap-2"
-                style={{ gridTemplateColumns: `repeat(${gridCols}, minmax(0, 1fr))` }}
+                className="grid gap-1 sm:gap-2 transition-opacity duration-150"
+                style={{ gridTemplateColumns: `repeat(${gridCols}, minmax(0, 1fr))`, opacity: isFilterStale ? 0.6 : 1 }}
             >
                 {filteredCards.slice(0, displayLimit).map((card) => {
                     const cardVariants = variantsMap.get(card.master_id) || [];
