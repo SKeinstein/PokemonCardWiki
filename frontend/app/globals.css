@@ -29,6 +29,7 @@ body {
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #374151 transparent;
+  -webkit-overflow-scrolling: touch;
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
@@ -39,6 +40,47 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #374151;
   border-radius: 4px;
+}
+
+/* Remove tap highlight on all interactive elements */
+button, a, [role="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Grid-column slider: 44px touch-friendly height on mobile */
+.grid-col-slider {
+  height: 44px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+.grid-col-slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #4b5563;
+  border-radius: 2px;
+}
+.grid-col-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3b82f6;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.grid-col-slider::-moz-range-track {
+  height: 4px;
+  background: #4b5563;
+  border-radius: 2px;
+}
+.grid-col-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: none;
+  cursor: pointer;
 }
 
 /* Panel entry animation */

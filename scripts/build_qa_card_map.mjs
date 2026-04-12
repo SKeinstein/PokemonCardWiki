@@ -1,287 +1,209 @@
+#!/usr/bin/env node
 /**
  * build_qa_card_map.mjs
+ * Builds data/qa_card_map.json with two mapping layers:
+ *   1. directQA   — Q&A entries that explicitly reference a card by cardId
+ *   2. relatedQA  — Q&A entries that reference another card sharing the same sub-group tag
  *
- * Generates data/qa_card_map.json with two mapping layers:
- *   1. directQA   — Q&A entries that explicitly reference the card by cardId
- *   2. relatedQA  — Q&A entries that reference another card sharing a sub-group tag
- *
- * Also generates docs/qa_mapping_stats.md summarising coverage.
+ * Output schema:
+ *   Array<{
+ *     cardId: string,
+ *     directQA: QAEntry[],
+ *     relatedQA: { entry: QAEntry, reason: string }[]
+ *   }>
  */
 
-import fs from 'fs';
-import path from 'path';
+import { readFileSync, writeFileSync } from 'fs';
+import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, '..');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const dataDir = join(__dirname, '..', 'data');
+const docsDir = join(__dirname, '..', 'docs');
 
 // ── Load data ──────────────────────────────────────────────────────────────
-const qaEntries = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_entries.json'), 'utf8'));
-const cardTags  = JSON.parse(fs.readFileSync(path.join(root, 'data/card_tags.json'),  'utf8'));
+const qaEntries = JSON.parse(readFileSync(join(dataDir, 'qa_entries.json'), 'utf8'));
+const cardTags = JSON.parse(readFileSync(join(dataDir, 'card_tags.json'), 'utf8'));
 
 // ── Build lookup maps ──────────────────────────────────────────────────────
 
-/** cardId → { name, tags } */
-const cardInfoMap = new Map();
+// cardId → { name, tags[] }
+const cardMap = new Map();
 for (const c of cardTags) {
-  cardInfoMap.set(c.cardId, { name: c.name, tags: c.tags });
+  cardMap.set(c.cardId, { name: c.name, tags: c.tags ?? [] });
 }
 
-/** tag → Set<cardId>  (only leaf/specific tags, e.g. "ベンチ狙撃>ダメージ型") */
+// tag → Set<cardId>
 const tagToCards = new Map();
 for (const c of cardTags) {
-  for (const tag of c.tags) {
+  for (const tag of c.tags ?? []) {
     if (!tagToCards.has(tag)) tagToCards.set(tag, new Set());
     tagToCards.get(tag).add(c.cardId);
   }
 }
 
-// ── Accumulate mappings ────────────────────────────────────────────────────
+// ── Build the mapping ──────────────────────────────────────────────────────
 
-/**
- * Per-card accumulator:
- *   directQA    : QAEntry[]
- *   relatedMap  : question → { entry: QAEntry, reasons: Set<string> }
- */
-const cardAccum = new Map();
+// Per-card accumulators
+// cardId → Set<qaIdx>
+const accDirect = new Map();
+// cardId → Map<qaIdx, Set<reason>>
+const accRelated = new Map();
 
-function getAccum(cardId) {
-  if (!cardAccum.has(cardId)) {
-    cardAccum.set(cardId, { directQA: [], relatedMap: new Map() });
-  }
-  return cardAccum.get(cardId);
+function ensureDirect(cardId) {
+  if (!accDirect.has(cardId)) accDirect.set(cardId, new Set());
+}
+function ensureRelated(cardId) {
+  if (!accRelated.has(cardId)) accRelated.set(cardId, new Map());
 }
 
-for (const entry of qaEntries) {
-  if (!entry.cards || entry.cards.length === 0) continue;
+for (let i = 0; i < qaEntries.length; i++) {
+  const entry = qaEntries[i];
+  const refCards = entry.cards ?? [];
+  if (refCards.length === 0) continue;
 
-  const refIds = new Set(entry.cards.map(c => c.cardId));
+  // Collect all tags mentioned by ANY directly referenced card in this entry
+  const entryTagSources = new Map(); // tag → [referenced cardIds that carry it]
+  const directIds = new Set(refCards.map(c => c.cardId));
 
-  // ── Layer 1: direct ───────────────────────────────────────────────────
-  for (const ref of entry.cards) {
-    getAccum(ref.cardId).directQA.push(entry);
+  for (const ref of refCards) {
+    const cid = ref.cardId;
+    ensureDirect(cid);
+    accDirect.get(cid).add(i);
+
+    const info = cardMap.get(cid);
+    if (!info) continue;
+    for (const tag of info.tags) {
+      if (!entryTagSources.has(tag)) entryTagSources.set(tag, []);
+      entryTagSources.get(tag).push(cid);
+    }
   }
 
-  // ── Layer 2: group-related ─────────────────────────────────────────────
-  // For every card explicitly referenced, propagate the QA to all other cards
-  // that share at least one tag with it.
-  for (const ref of entry.cards) {
-    const info = cardInfoMap.get(ref.cardId);
-    if (!info || info.tags.length === 0) continue;
+  // For each tag, propagate to all OTHER cards sharing that tag
+  for (const [tag, sourceCids] of entryTagSources) {
+    const siblingIds = tagToCards.get(tag) ?? new Set();
+    const srcNames = sourceCids.map(cid => cardMap.get(cid)?.name ?? cid).join('・');
+    const reason = `タグ「${tag}」を持つカード（${srcNames}）がQ&Aで参照されているため`;
 
-    for (const tag of info.tags) {
-      const siblings = tagToCards.get(tag);
-      if (!siblings) continue;
-
-      for (const sibId of siblings) {
-        if (refIds.has(sibId)) continue; // skip cards already in directQA
-
-        const accum = getAccum(sibId);
-        if (!accum.relatedMap.has(entry.question)) {
-          accum.relatedMap.set(entry.question, { entry, reasons: new Set() });
-        }
-        accum.relatedMap.get(entry.question).reasons.add(
-          `共通タグ: ${tag} (参照カード: ${ref.name} [${ref.cardId}])`
-        );
-      }
+    for (const sibling of siblingIds) {
+      if (directIds.has(sibling)) continue; // already direct — skip
+      ensureRelated(sibling);
+      const rMap = accRelated.get(sibling);
+      if (!rMap.has(i)) rMap.set(i, new Set());
+      rMap.get(i).add(reason);
     }
   }
 }
 
-// ── Build output array ─────────────────────────────────────────────────────
+// ── Assemble output ────────────────────────────────────────────────────────
+
+const allCardIds = new Set([...accDirect.keys(), ...accRelated.keys()]);
 
 const output = [];
+for (const cardId of [...allCardIds].sort((a, b) => Number(a) - Number(b))) {
+  const directIdxs = accDirect.get(cardId) ?? new Set();
+  const relatedMap = accRelated.get(cardId) ?? new Map();
 
-for (const [cardId, accum] of cardAccum) {
-  const info = cardInfoMap.get(cardId) || { name: '(unknown)', tags: [] };
+  const directQA = [...directIdxs].map(i => qaEntries[i]);
 
-  // De-duplicate directQA by question (guard against double-push if same card
-  // appears twice in a single entry's cards array — edge case)
-  const seenDirect = new Set();
-  const directQA = [];
-  for (const e of accum.directQA) {
-    if (!seenDirect.has(e.question)) {
-      seenDirect.add(e.question);
-      directQA.push(e);
-    }
-  }
+  const relatedQA = [...relatedMap.entries()].map(([i, reasons]) => ({
+    entry: qaEntries[i],
+    reason: [...reasons].join(' / '),
+  }));
 
-  // Build relatedQA, excluding any entry already in directQA
-  const relatedQA = [];
-  for (const [, rel] of accum.relatedMap) {
-    if (seenDirect.has(rel.entry.question)) continue; // already in direct
-    relatedQA.push({
-      entry: rel.entry,
-      reason: [...rel.reasons].join('; '),
-    });
-  }
-
-  output.push({ cardId, name: info.name, directQA, relatedQA });
+  output.push({ cardId, directQA, relatedQA });
 }
 
-// Sort by numeric cardId
-output.sort((a, b) => parseInt(a.cardId, 10) - parseInt(b.cardId, 10));
+writeFileSync(join(dataDir, 'qa_card_map.json'), JSON.stringify(output, null, 2), 'utf8');
+console.log(`Wrote qa_card_map.json — ${output.length} cards`);
 
-// ── Write qa_card_map.json ─────────────────────────────────────────────────
-const outPath = path.join(root, 'data/qa_card_map.json');
-fs.writeFileSync(outPath, JSON.stringify(output, null, 2), 'utf8');
-console.log(`Wrote ${outPath}  (${output.length} card entries)`);
+// ── Stats ──────────────────────────────────────────────────────────────────
 
-// ── Compute stats ──────────────────────────────────────────────────────────
+const totalQA = qaEntries.length;
+const qaWithCards = qaEntries.filter(e => e.cards?.length > 0).length;
+const cardsWithDirect = [...allCardIds].filter(id => (accDirect.get(id)?.size ?? 0) > 0).length;
+const cardsWithRelatedOnly = [...allCardIds].filter(
+  id => (accDirect.get(id)?.size ?? 0) === 0 && (accRelated.get(id)?.size ?? 0) > 0
+).length;
+const cardsWithBoth = [...allCardIds].filter(
+  id => (accDirect.get(id)?.size ?? 0) > 0 && (accRelated.get(id)?.size ?? 0) > 0
+).length;
 
-const totalCards       = cardTags.length;           // 5112 in card_tags
-const mappedCards      = output.length;
-const withDirect       = output.filter(c => c.directQA.length > 0).length;
-const withRelated      = output.filter(c => c.relatedQA.length > 0).length;
-const withBoth         = output.filter(c => c.directQA.length > 0 && c.relatedQA.length > 0).length;
-const withDirectOnly   = output.filter(c => c.directQA.length > 0 && c.relatedQA.length === 0).length;
-const withRelatedOnly  = output.filter(c => c.directQA.length === 0 && c.relatedQA.length > 0).length;
+const totalDirectLinks = [...accDirect.values()].reduce((s, v) => s + v.size, 0);
+const totalRelatedLinks = [...accRelated.values()].reduce((s, v) => s + v.size, 0);
 
-// QA coverage
-const qaWithCards    = qaEntries.filter(e => e.cards && e.cards.length > 0).length;
-const qaWithoutCards = qaEntries.length - qaWithCards;
-
-// Unique cardIds referenced in QA
-const referencedCardIds = new Set(
-  qaEntries.flatMap(e => (e.cards || []).map(c => c.cardId))
-);
-
-// directQA count distribution
-const directDist = new Map(); // count → number of cards
-for (const c of output) {
-  const n = c.directQA.length;
-  directDist.set(n, (directDist.get(n) || 0) + 1);
-}
-
-// relatedQA count buckets
-const relatedBuckets = { '0': 0, '1-5': 0, '6-20': 0, '21-50': 0, '51+': 0 };
-for (const c of output) {
-  const n = c.relatedQA.length;
-  if      (n === 0)  relatedBuckets['0']++;
-  else if (n <= 5)   relatedBuckets['1-5']++;
-  else if (n <= 20)  relatedBuckets['6-20']++;
-  else if (n <= 50)  relatedBuckets['21-50']++;
-  else               relatedBuckets['51+']++;
-}
-
-// Top tags by frequency in relatedQA reasons
-const tagFreq = new Map();
-for (const c of output) {
-  for (const rel of c.relatedQA) {
-    // extract tag name(s) from reason string
-    const matches = rel.reason.matchAll(/共通タグ: ([^(]+?) \(/g);
-    for (const m of matches) {
-      const tag = m[1].trim();
-      tagFreq.set(tag, (tagFreq.get(tag) || 0) + 1);
-    }
-  }
-}
-const topTags = [...tagFreq.entries()]
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 20);
-
-// Top cards by directQA count
-const topDirectCards = [...output]
-  .filter(c => c.directQA.length > 0)
+// Top-10 cards by direct QA count
+const topDirect = output
+  .filter(r => r.directQA.length > 0)
   .sort((a, b) => b.directQA.length - a.directQA.length)
-  .slice(0, 20);
+  .slice(0, 10)
+  .map(r => {
+    const name = cardMap.get(r.cardId)?.name ?? r.cardId;
+    return `| ${r.cardId} | ${name} | ${r.directQA.length} | ${r.relatedQA.length} |`;
+  });
 
-// ── Write stats markdown ───────────────────────────────────────────────────
+// Top-10 cards by related QA count
+const topRelated = output
+  .filter(r => r.relatedQA.length > 0)
+  .sort((a, b) => b.relatedQA.length - a.relatedQA.length)
+  .slice(0, 10)
+  .map(r => {
+    const name = cardMap.get(r.cardId)?.name ?? r.cardId;
+    return `| ${r.cardId} | ${name} | ${r.directQA.length} | ${r.relatedQA.length} |`;
+  });
 
-const docsDir = path.join(root, 'docs');
-if (!fs.existsSync(docsDir)) fs.mkdirSync(docsDir);
+// Coverage by tag
+const tagCoverage = [];
+for (const [tag, cardIds] of [...tagToCards.entries()].sort((a, b) => a[0].localeCompare(b[0]))) {
+  const covered = [...cardIds].filter(cid =>
+    (accDirect.get(cid)?.size ?? 0) > 0 || (accRelated.get(cid)?.size ?? 0) > 0
+  ).length;
+  tagCoverage.push(`| ${tag} | ${cardIds.size} | ${covered} | ${Math.round(covered / cardIds.size * 100)}% |`);
+}
 
-const statsPath = path.join(docsDir, 'qa_mapping_stats.md');
+const md = `# Q&A Card Mapping Stats
 
-const pct = (n, d) => d === 0 ? '0%' : `${((n / d) * 100).toFixed(1)}%`;
+Generated: ${new Date().toISOString()}
 
-const directDistTable = [...directDist.entries()]
-  .sort((a, b) => a[0] - b[0])
-  .map(([n, cnt]) => `| ${n} | ${cnt} |`)
-  .join('\n');
+## Overview
 
-const topTagsTable = topTags
-  .map(([tag, cnt]) => `| \`${tag}\` | ${cnt} |`)
-  .join('\n');
+| Metric | Count |
+|--------|-------|
+| Total Q&A entries | ${totalQA} |
+| Entries referencing at least one card | ${qaWithCards} (${Math.round(qaWithCards/totalQA*100)}%) |
+| Entries with no card reference | ${totalQA - qaWithCards} (${Math.round((totalQA-qaWithCards)/totalQA*100)}%) |
+| Total cards in card_tags.json | ${cardTags.length} |
+| Cards with ≥1 tag | ${cardTags.filter(c => c.tags?.length > 0).length} |
 
-const topDirectTable = topDirectCards
-  .map(c => `| ${c.cardId} | ${c.name} | ${c.directQA.length} |`)
-  .join('\n');
+## Mapping Output
 
-const md = `# Q&A カードマッピング統計
+| Metric | Count |
+|--------|-------|
+| Cards appearing in qa_card_map.json | ${output.length} |
+| Cards with directQA ≥ 1 | ${cardsWithDirect} |
+| Cards with relatedQA only (no directQA) | ${cardsWithRelatedOnly} |
+| Cards with both direct AND related QA | ${cardsWithBoth} |
+| Total direct card→QA links | ${totalDirectLinks} |
+| Total related card→QA links | ${totalRelatedLinks} |
 
-生成日: ${new Date().toISOString().slice(0, 10)}
+## Top 10 — Most Direct Q&A References
 
----
+| cardId | Name | directQA | relatedQA |
+|--------|------|----------|-----------|
+${topDirect.join('\n')}
 
-## 1. Q&A エントリ全体
+## Top 10 — Most Related Q&A Links
 
-| 項目 | 件数 |
-|------|------|
-| Q&A 総数 | ${qaEntries.length} |
-| カード参照あり | ${qaWithCards} (${pct(qaWithCards, qaEntries.length)}) |
-| カード参照なし | ${qaWithoutCards} (${pct(qaWithoutCards, qaEntries.length)}) |
-| Q&A から参照されたユニークcardId数 | ${referencedCardIds.size} |
+| cardId | Name | directQA | relatedQA |
+|--------|------|----------|-----------|
+${topRelated.join('\n')}
 
----
+## Coverage by Tag (cards with ≥1 QA / total cards in group)
 
-## 2. カードマッピング概要
-
-全カード数 (card_tags.json): **${totalCards}**
-
-| 区分 | 件数 | 全カードに対する割合 |
-|------|------|----------------------|
-| マッピングあり (directQA または relatedQA) | ${mappedCards} | ${pct(mappedCards, totalCards)} |
-| directQA のみ | ${withDirectOnly} | ${pct(withDirectOnly, totalCards)} |
-| relatedQA のみ | ${withRelatedOnly} | ${pct(withRelatedOnly, totalCards)} |
-| 両方あり | ${withBoth} | ${pct(withBoth, totalCards)} |
-| マッピングなし (タグなし・Q&A未参照) | ${totalCards - mappedCards} | ${pct(totalCards - mappedCards, totalCards)} |
-
----
-
-## 3. directQA 件数分布
-
-| directQA 件数 | カード数 |
-|--------------|---------|
-${directDistTable}
-
----
-
-## 4. relatedQA 件数バケット (マッピングあり ${mappedCards} 件中)
-
-| バケット | カード数 |
-|---------|---------|
-| 0件 | ${relatedBuckets['0']} |
-| 1〜5件 | ${relatedBuckets['1-5']} |
-| 6〜20件 | ${relatedBuckets['6-20']} |
-| 21〜50件 | ${relatedBuckets['21-50']} |
-| 51件以上 | ${relatedBuckets['51+']} |
-
----
-
-## 5. relatedQA で多用されたタグ TOP 20
-
-| タグ | relatedQA への貢献件数 |
-|------|----------------------|
-${topTagsTable}
-
----
-
-## 6. directQA 件数 TOP 20 カード
-
-| cardId | カード名 | directQA 件数 |
-|--------|---------|--------------|
-${topDirectTable}
-
----
-
-## 7. 備考
-
-- **直接マッピング (directQA)**: Q&A エントリの \`cards\` 配列に cardId として明示的にリンクされているもの。
-- **グループ関連マッピング (relatedQA)**: Q&A が参照するカードと同じサブグループタグを持つ別カードへの伝播。タグが階層的な場合 (\`親>子\` 形式) はリーフタグ単位で照合する。
-- directQA に既に含まれるエントリは relatedQA から除外している。
-- \`name\` フィールドはユーティリティ用に付加したもので、スキーマ上は省略可能。
+| Tag | Total Cards | Covered | % |
+|-----|-------------|---------|---|
+${tagCoverage.join('\n')}
 `;
 
-fs.writeFileSync(statsPath, md, 'utf8');
-console.log(`Wrote ${statsPath}`);
+writeFileSync(join(docsDir, 'qa_mapping_stats.md'), md, 'utf8');
+console.log('Wrote docs/qa_mapping_stats.md');

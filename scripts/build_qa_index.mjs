@@ -97,7 +97,7 @@ for (let i = 0; i < qaEntries.length; i++) {
           accum.relatedMap.set(i, new Set());
         }
         accum.relatedMap.get(i).add(
-          `共通タグ: ${tag} (参照カード: ${ref.name} [${ref.cardId}])`
+          `同じ『${tag}』グループ: ${ref.name} の裁定`
         );
       }
     }

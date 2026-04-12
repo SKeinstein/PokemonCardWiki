@@ -19,7 +19,8 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const [effectQuery, setEffectQuery] = useState("");
     const [categoryFilter, setCategoryFilter] = useState("");
     const [regFilter, setRegFilter] = useState("");
-    const [gridCols, setGridCols] = useState(8);
+    const [gridCols, setGridCols] = useState(2); // mobile-first default (375px); hydration sets correct value per breakpoint
+    const [maxGridCols, setMaxGridCols] = useState(15);
     const [isOrSearch, setIsOrSearch] = useState(false);
     const [showAdvanced, setShowAdvanced] = useState(false);
     const [selectedCard, setSelectedCard] = useState<MasterCard | null>(null);
@@ -28,6 +29,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const [resistanceFilter, setResistanceFilter] = useState("");
     const [retreatFilter, setRetreatFilter] = useState("");
     const [displayLimit, setDisplayLimit] = useState(100);
+    const [filtersExpanded, setFiltersExpanded] = useState(false);
 
     // Comparison state
     const [comparisonCards, setComparisonCards] = useState<MasterCard[]>([]);
@@ -48,12 +50,21 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const [expandedParents, setExpandedParents] = useState<Set<string>>(new Set());
     const [showTagPanel, setShowTagPanel] = useState(false);
 
-    // Set initial grid columns based on screen width for mobile-friendly defaults
+    // Set grid columns based on viewport on mount and update on resize
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            if (window.innerWidth < 640) setGridCols(3);
-            else if (window.innerWidth < 1024) setGridCols(5);
-        }
+        const getDefaultCols = (w: number) => w < 640 ? 2 : w < 1024 ? 5 : 4;
+        const getMaxCols = (w: number) => w < 640 ? 4 : w < 1024 ? 10 : 15;
+
+        setGridCols(getDefaultCols(window.innerWidth));
+        setMaxGridCols(getMaxCols(window.innerWidth));
+
+        const handleResize = () => {
+            const max = getMaxCols(window.innerWidth);
+            setMaxGridCols(max);
+            setGridCols(prev => Math.min(prev, max));
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     // Reset pagination when search parameters change
@@ -250,54 +261,73 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     }, [variants]);
 
     return (
-        <div className={`w-full px-2 py-2 sm:py-4 space-y-4 ${comparisonCards.length > 0 ? "pb-24" : ""}`}>
+        <div
+            className="w-full px-2 py-2 sm:py-4 space-y-4"
+            style={comparisonCards.length > 0 ? { paddingBottom: 'calc(6rem + env(safe-area-inset-bottom, 0px))' } : undefined}
+        >
             {/* Search Header */}
-            <div className="sticky top-2 z-40 bg-gray-900/95 p-3 sm:p-4 rounded-xl shadow-2xl backdrop-blur-md border border-gray-700/80 mb-4 transition-all max-h-[90svh] overflow-y-auto sm:max-h-none sm:overflow-y-visible custom-scrollbar">
-                <h1 className="text-xl sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-2 sm:mb-4">
+            <div className="sticky top-0 z-40 bg-gray-900/95 p-3 sm:p-4 rounded-xl shadow-2xl backdrop-blur-md border border-gray-700/80 mb-4 transition-all max-h-[60svh] overflow-y-auto overscroll-contain sm:max-h-none sm:overflow-y-visible custom-scrollbar">
+                <h1 className="text-lg sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-2 sm:mb-4">
                     Pokémon Card Advanced Search
                 </h1>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3">
+                {/* Filter grid:
+                     mobile  (< 640px)  — 2 cols: inputs span both cols; selects/slider 1 col each (2 per row)
+                     sm      (640–1024) — 4 cols: inputs share row, selects + slider on next row
+                     lg      (1024px+)  — 6 cols: all controls on a single row                   */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
                     <input
                         type="text"
+                        inputMode="search"
+                        enterKeyHint="search"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck={false}
                         placeholder="カード名で検索..."
-                        className="col-span-2 sm:col-span-1 px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
+                        className="col-span-2 sm:col-span-2 lg:col-span-1 px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                     />
 
                     <input
                         type="text"
+                        inputMode="search"
+                        enterKeyHint="search"
+                        autoComplete="off"
+                        autoCorrect="off"
+                        autoCapitalize="off"
+                        spellCheck={false}
                         placeholder="テキスト・ワザ検索..."
-                        className="px-3 py-2 min-h-[44px] text-base sm:text-sm border border-emerald-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition placeholder-emerald-400/70 touch-manipulation"
+                        className="col-span-2 sm:col-span-2 lg:col-span-1 px-3 py-2 min-h-[44px] text-base sm:text-sm border border-emerald-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition placeholder-emerald-400/70 touch-manipulation"
                         value={effectQuery}
                         onChange={(e) => setEffectQuery(e.target.value)}
                     />
 
                     <select
-                        className="px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
+                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
                         value={categoryFilter}
                         onChange={(e) => setCategoryFilter(e.target.value)}
                     >
-                        <option value="">すべてのカード</option>
+                        <option value="">カテゴリ</option>
                         <option value="pokemon">ポケモン</option>
                         <option value="trainer">トレーナーズ</option>
                         <option value="energy">エネルギー</option>
                     </select>
 
                     <select
-                        className="px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
+                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
                         value={typeFilter}
                         onChange={(e) => setTypeFilter(e.target.value)}
                     >
-                        <option value="">すべてのタイプ</option>
+                        <option value="">タイプ</option>
                         {allTypes.map(t => (
                             <option key={t} value={t}>{t}</option>
                         ))}
                     </select>
 
                     <select
-                        className="px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
+                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-2 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
                         value={regFilter}
                         onChange={(e) => setRegFilter(e.target.value)}
                     >
@@ -307,34 +337,49 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                         ))}
                     </select>
 
-                    <div className="col-span-2 sm:col-span-1 flex items-center space-x-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600">
-                        <label className="text-gray-300 text-xs font-bold whitespace-nowrap hidden sm:inline">サイズ:</label>
+                    {/* Slider: hidden on mobile until filter toggle is expanded; always visible on sm+ */}
+                    <div className={`col-span-2 sm:col-span-1 items-center gap-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600 ${filtersExpanded ? 'flex' : 'hidden sm:flex'}`}>
+                        <label className="text-gray-300 text-sm font-bold whitespace-nowrap">列:</label>
                         <input
                             type="range"
                             min="2"
-                            max="15"
-                            value={gridCols}
+                            max={maxGridCols}
+                            value={Math.min(gridCols, maxGridCols)}
                             onChange={(e) => setGridCols(parseInt(e.target.value))}
-                            className="w-full accent-blue-500 touch-manipulation"
+                            className="grid-col-slider w-full accent-blue-500 touch-manipulation cursor-pointer"
                         />
-                        <span className="text-gray-400 text-xs w-6 text-right">{gridCols}列</span>
+                        <span className="text-gray-400 text-sm w-8 text-right font-mono">{gridCols}</span>
                     </div>
                 </div>
 
+                {/* Mobile: filter expand/collapse toggle */}
+                <button
+                    onClick={() => setFiltersExpanded(prev => !prev)}
+                    className="sm:hidden w-full flex items-center justify-center gap-2 mt-2 py-2 min-h-[44px] text-sm font-medium text-gray-400 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-700 transition touch-manipulation"
+                >
+                    <span>{filtersExpanded ? '▲ フィルターを閉じる' : '▼ 絞り込みフィルター'}</span>
+                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter].some(Boolean) && (
+                        <span className="bg-blue-500/80 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
+                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter].filter(Boolean).length}
+                        </span>
+                    )}
+                </button>
+
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-3 gap-3">
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-row flex-wrap gap-2">
                         <button
                             onClick={() => setShowAdvanced(!showAdvanced)}
-                            className="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-center transition bg-emerald-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-emerald-800/50 flex-1 sm:flex-none touch-manipulation"
+                            className="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-center transition bg-emerald-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-emerald-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
                         >
-                            {showAdvanced ? "▼ 検索ヘルプを閉じる" : "▶ 高度な検索のコツを見る"}
+                            <span className="sm:hidden">{showAdvanced ? "▼ 検索ヒント" : "▶ 検索ヒント"}</span>
+                            <span className="hidden sm:inline">{showAdvanced ? "▼ 検索ヘルプを閉じる" : "▶ 高度な検索のコツを見る"}</span>
                         </button>
 
                         <button
                             onClick={() => setShowTagPanel(!showTagPanel)}
-                            className="text-sm font-medium text-violet-400 hover:text-violet-300 flex items-center justify-center gap-2 transition bg-violet-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-violet-800/50 flex-1 sm:flex-none touch-manipulation"
+                            className="text-sm font-medium text-violet-400 hover:text-violet-300 flex items-center justify-center gap-2 transition bg-violet-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-violet-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
                         >
-                            {showTagPanel ? "▼ タグ絞り込みを閉じる" : "▶ タグで絞り込む"}
+                            {showTagPanel ? "▼ タグ絞込" : "▶ タグ絞込"}
                             {selectedTags.size > 0 && (
                                 <span className="bg-violet-600 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
                                     {selectedTags.size}
@@ -345,24 +390,24 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
 
                     {/* AND / OR Toggle */}
                     <div className="flex items-center space-x-2 bg-gray-800/80 px-3 rounded-lg border border-gray-700 w-full sm:w-auto min-h-[44px]">
-                        <span className="text-xs font-bold text-gray-400 whitespace-nowrap">検索モード:</span>
+                        <span className="text-sm font-bold text-gray-400 whitespace-nowrap">検索モード:</span>
                         <label className="flex items-center space-x-1.5 cursor-pointer min-h-[44px] px-2 touch-manipulation">
                             <input type="radio" checked={!isOrSearch} onChange={() => setIsOrSearch(false)} className="accent-blue-500 w-4 h-4" />
-                            <span className={`text-xs ${!isOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>AND</span>
+                            <span className={`text-sm ${!isOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>AND</span>
                         </label>
                         <label className="flex items-center space-x-1.5 cursor-pointer min-h-[44px] px-2 touch-manipulation">
                             <input type="radio" checked={isOrSearch} onChange={() => setIsOrSearch(true)} className="accent-blue-500 w-4 h-4" />
-                            <span className={`text-xs ${isOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>OR</span>
+                            <span className={`text-sm ${isOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>OR</span>
                         </label>
                     </div>
                 </div>
 
                 {/* Advanced Panel */}
                 {showAdvanced && (
-                    <div className="mt-4 p-3 sm:p-4 bg-gray-900/60 border border-gray-700 rounded-lg text-sm text-gray-300 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[50vh] overflow-y-auto md:max-h-none">
+                    <div className="mt-4 p-3 sm:p-4 bg-gray-900/60 border border-gray-700 rounded-lg text-sm text-gray-300 space-y-3 animate-in duration-200">
                         <div>
                             <h3 className="font-bold text-emerald-400 mb-2 border-b border-gray-700 pb-1">🔍 検索テクニック (Googleスタイル)</h3>
-                            <ul className="list-disc leading-relaxed pl-5 space-y-1.5 text-xs text-gray-300">
+                            <ul className="list-disc leading-relaxed pl-5 space-y-1.5 text-sm text-gray-300">
                                 <li><strong className="text-white">スペース区切り:</strong> 複数の単語を入れると、右上のモードに従って掛け合わせ検索されます。</li>
                                 <li><strong className="text-white">AND検索:</strong> 「ベンチ ダメカン」で両方の言葉を含むカードを探します。（デフォルト）</li>
                                 <li><strong className="text-white">OR検索:</strong> モードをORにして「テツノ トドロク」と入れると、どちらかを含むカードを探します。</li>
@@ -370,11 +415,11 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                             </ul>
 
                             {/* Additional specialized filters */}
-                            <div className="mt-4 pt-4 border-t border-gray-700 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div className="mt-4 pt-4 border-t border-gray-700 grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                                 <div className="flex flex-col gap-1">
                                     <label className="text-xs text-gray-400 font-bold">弱点</label>
                                     <select
-                                        className="px-2 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
                                         value={weaknessFilter}
                                         onChange={e => setWeaknessFilter(e.target.value)}
                                     >
@@ -385,7 +430,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                 <div className="flex flex-col gap-1">
                                     <label className="text-xs text-gray-400 font-bold">抵抗力</label>
                                     <select
-                                        className="px-2 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
                                         value={resistanceFilter}
                                         onChange={e => setResistanceFilter(e.target.value)}
                                     >
@@ -396,7 +441,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                 <div className="flex flex-col gap-1">
                                     <label className="text-xs text-gray-400 font-bold">にげる</label>
                                     <select
-                                        className="px-2 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
                                         value={retreatFilter}
                                         onChange={e => setRetreatFilter(e.target.value)}
                                     >
@@ -411,7 +456,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
 
                 {/* Tag Filter Panel */}
                 {showTagPanel && (
-                    <div className="mt-3 p-3 bg-gray-900/60 border border-violet-800/40 rounded-lg space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 max-h-[50vh] overflow-y-auto md:max-h-none">
+                    <div className="mt-3 p-3 bg-gray-900/60 border border-violet-800/40 rounded-lg space-y-3 animate-in duration-200">
 
                         {/* Selected tag chips */}
                         {selectedTags.size > 0 && (
@@ -421,7 +466,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                     <button
                                         key={tag}
                                         onClick={() => toggleTag(tag)}
-                                        className="flex items-center gap-1 px-2.5 py-2 min-h-[44px] bg-violet-600 border border-violet-500 text-white text-xs rounded-full hover:bg-violet-700 transition touch-manipulation"
+                                        className="flex items-center gap-1 px-2.5 py-2 min-h-[44px] min-w-[44px] bg-violet-600 border border-violet-500 text-white text-sm sm:text-xs rounded-full hover:bg-violet-700 transition touch-manipulation"
                                     >
                                         <span>{tag.includes('>') ? tag.replace('>', ' › ') : tag}</span>
                                         <span className="text-violet-200 font-bold">×</span>
@@ -429,92 +474,99 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                 ))}
                                 <button
                                     onClick={() => setSelectedTags(new Set())}
-                                    className="text-xs text-violet-400 hover:text-violet-200 underline ml-1 py-2 min-h-[44px] px-1"
+                                    className="text-xs text-violet-400 hover:text-violet-200 underline ml-1 py-2 min-h-[44px] px-3"
                                 >
                                     全解除
                                 </button>
                             </div>
                         )}
 
-                        {/* Parent category chips */}
-                        <div className="flex flex-wrap gap-1.5">
-                            {sortedParents.map(parent => {
-                                const children = tagHierarchy.get(parent)!;
-                                const isSelected = selectedTags.has(parent);
-                                const isExpanded = expandedParents.has(parent);
-                                const hasChildren = children.length > 0;
+                        {/* Tag list — outer sticky header is already scrollable on mobile */}
+                        <div className="space-y-3 pr-0.5">
 
-                                return (
-                                    <div key={parent} className="inline-flex rounded-full overflow-hidden">
-                                        <button
-                                            onClick={() => toggleTag(parent)}
-                                            className={`px-2.5 min-h-[44px] text-xs font-medium border-y border-l transition touch-manipulation ${
-                                                hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
-                                            } ${
-                                                isSelected
-                                                    ? 'bg-violet-600 border-violet-500 text-white'
-                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
-                                            }`}
-                                        >
-                                            {parent}
-                                        </button>
-                                        {hasChildren && (
+                            {/* Parent category chips */}
+                            <div className="flex flex-wrap gap-1.5">
+                                {sortedParents.map(parent => {
+                                    const children = tagHierarchy.get(parent)!;
+                                    const isSelected = selectedTags.has(parent);
+                                    const isExpanded = expandedParents.has(parent);
+                                    const hasChildren = children.length > 0;
+
+                                    return (
+                                        <div key={parent} className="inline-flex rounded-full overflow-hidden">
                                             <button
-                                                onClick={() => toggleExpand(parent)}
-                                                className={`px-2 min-h-[44px] text-xs border-y border-r rounded-r-full transition touch-manipulation ${
+                                                onClick={() => toggleTag(parent)}
+                                                className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
+                                                    hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
+                                                } ${
                                                     isSelected
-                                                        ? 'bg-violet-700 border-violet-500 text-violet-200'
-                                                        : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
-                                                } ${isExpanded ? 'text-violet-300' : ''}`}
+                                                        ? 'bg-violet-600 border-violet-500 text-white'
+                                                        : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                                }`}
                                             >
-                                                {isExpanded ? '▲' : '▼'}
+                                                {parent}
                                             </button>
-                                        )}
+                                            {hasChildren && (
+                                                <button
+                                                    onClick={() => toggleExpand(parent)}
+                                                    className={`min-w-[44px] min-h-[44px] flex items-center justify-center text-xs border-y border-r rounded-r-full transition touch-manipulation ${
+                                                        isSelected
+                                                            ? 'bg-violet-700 border-violet-500 text-violet-200'
+                                                            : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
+                                                    } ${isExpanded ? 'text-violet-300' : ''}`}
+                                                >
+                                                    {isExpanded ? '▲' : '▼'}
+                                                </button>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Sub-tag rows for expanded parents */}
+                            {Array.from(expandedParents).map(parent => {
+                                const children = tagHierarchy.get(parent);
+                                if (!children || children.length === 0) return null;
+                                return (
+                                    <div key={parent} className="pl-3 border-l-2 border-violet-700/50">
+                                        <div className="flex flex-wrap items-center gap-1.5">
+                                            <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
+                                            {[...children].sort().map(child => {
+                                                const childLabel = child.substring(parent.length + 1);
+                                                const isChildSelected = selectedTags.has(child);
+                                                return (
+                                                    <button
+                                                        key={child}
+                                                        onClick={() => toggleTag(child)}
+                                                        className={`px-2.5 py-2 min-h-[44px] min-w-[44px] text-sm sm:text-xs rounded-full border transition touch-manipulation ${
+                                                            isChildSelected
+                                                                ? 'bg-violet-600 border-violet-500 text-white'
+                                                                : 'bg-gray-800/80 border-violet-900/50 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                                        }`}
+                                                    >
+                                                        {childLabel}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
                                 );
                             })}
-                        </div>
 
-                        {/* Sub-tag rows for expanded parents */}
-                        {Array.from(expandedParents).map(parent => {
-                            const children = tagHierarchy.get(parent);
-                            if (!children || children.length === 0) return null;
-                            return (
-                                <div key={parent} className="pl-3 border-l-2 border-violet-700/50">
-                                    <div className="flex flex-wrap items-center gap-1.5">
-                                        <span className="text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
-                                        {[...children].sort().map(child => {
-                                            const childLabel = child.substring(parent.length + 1);
-                                            const isChildSelected = selectedTags.has(child);
-                                            return (
-                                                <button
-                                                    key={child}
-                                                    onClick={() => toggleTag(child)}
-                                                    className={`px-2.5 py-2 min-h-[44px] text-xs rounded-full border transition touch-manipulation ${
-                                                        isChildSelected
-                                                            ? 'bg-violet-600 border-violet-500 text-white'
-                                                            : 'bg-gray-800/80 border-violet-900/50 text-gray-300 hover:border-violet-500 hover:text-violet-300'
-                                                    }`}
-                                                >
-                                                    {childLabel}
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            );
-                        })}
+                        </div>
                     </div>
                 )}
 
-                <p className="mt-3 text-xs text-gray-400 border-t border-gray-700/50 pt-3">
-                    Showing {filteredCards.length} {filteredCards.length === 1 ? 'result' : 'results'} out of {masterCards.length} unique cards.
-                </p>
             </div>
+
+            {/* Result count — outside the scrollable header so it's always visible on mobile */}
+            <p className="text-sm text-gray-400 px-1 -mt-2">
+                {filteredCards.length.toLocaleString()} / {masterCards.length.toLocaleString()} 件
+            </p>
 
             {/* Grid */}
             <div
-                className="grid gap-2"
+                className="grid gap-1 sm:gap-2"
                 style={{ gridTemplateColumns: `repeat(${gridCols}, minmax(0, 1fr))` }}
             >
                 {filteredCards.slice(0, displayLimit).map((card) => {
@@ -527,7 +579,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                         <div
                             key={card.master_id}
                             onClick={() => setSelectedCard(card)}
-                            className="relative group transition duration-300 hover:scale-[1.03] hover:z-20 cursor-pointer"
+                            className="relative group transition duration-300 hover:scale-[1.03] hover:z-20 cursor-pointer touch-manipulation select-none"
                         >
                             {/* Image */}
                             <div className={`w-full aspect-[63/88] rounded-md flex items-center justify-center overflow-hidden bg-transparent drop-shadow-lg relative ${inComparison ? "ring-2 ring-blue-500 ring-offset-1 ring-offset-gray-900" : ""}`}>
@@ -537,7 +589,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                         alt={card.name}
                                         fill
                                         className="object-contain"
-                                        sizes={`(max-width: 768px) ${Math.floor(100 / 3)}vw, (max-width: 1200px) ${Math.floor(100 / 6)}vw, ${Math.floor(100 / gridCols)}vw`}
+                                        sizes={`(max-width: 640px) ${Math.floor(100 / Math.max(gridCols, 2))}vw, (max-width: 1024px) ${Math.floor(100 / Math.max(gridCols, 3))}vw, ${Math.floor(100 / gridCols)}vw`}
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-gray-800 border border-gray-600 flex items-center justify-center">
@@ -549,7 +601,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                 <button
                                     onClick={(e) => toggleComparison(card, e)}
                                     disabled={comparisonFull}
-                                    className={`absolute top-1 right-1 w-9 h-9 sm:w-7 sm:h-7 rounded-full text-xs font-black flex items-center justify-center shadow-lg transition-all touch-manipulation
+                                    className={`absolute top-1 right-1 w-11 h-11 sm:w-7 sm:h-7 rounded-full text-xs font-black flex items-center justify-center shadow-lg transition-all touch-manipulation
                                         ${inComparison
                                             ? "bg-blue-600 text-white opacity-100"
                                             : comparisonFull
@@ -562,6 +614,8 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                     {inComparison ? "✓" : "+"}
                                 </button>
                             </div>
+                            {/* Card name label — mobile only, helps identify cards at a glance */}
+                            <p className="sm:hidden mt-0.5 text-center text-sm text-gray-400 leading-tight truncate px-0.5 select-none">{card.name}</p>
                         </div>
                     );
                 })}
@@ -571,7 +625,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                 <div className="pt-8 pb-12 flex justify-center px-4">
                     <button
                         onClick={() => setDisplayLimit(prev => prev + 100)}
-                        className="w-full sm:w-auto px-8 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-full shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-2 touch-manipulation"
+                        className="w-full sm:w-auto px-8 py-3 min-h-[44px] bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-full shadow-lg transition-transform hover:scale-105 flex items-center justify-center gap-2 touch-manipulation"
                     >
                         <span>もっと見る</span>
                         <span className="bg-emerald-800/50 px-2 py-0.5 rounded text-xs">({displayLimit} / {filteredCards.length})</span>

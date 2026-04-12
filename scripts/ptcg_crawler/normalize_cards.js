@@ -39,7 +39,15 @@ function createMasterKey(card) {
     if (significantRules.length > 0) {
         rulesStr = significantRules.join("|");
     }
-    return `${card.name}_${hpStr}_${typeStr}_${rulesStr}`;
+    const attackNames = (card.attacks || [])
+        .map(a => a.name || "")
+        .sort()
+        .join("|") || "none";
+    const abilityNames = (card.abilities || [])
+        .map(a => a.name || "")
+        .sort()
+        .join("|") || "none";
+    return `${card.name}_${hpStr}_${typeStr}_${rulesStr}_${attackNames}_${abilityNames}`;
 }
 
 function getRarityScore(rarity) {

@@ -1,5 +1,14 @@
 import fs from "fs/promises";
 import path from "path";
+import { fileURLToPath } from "url";
+
+// Resolve the repo-root `data/` directory relative to this file's location.
+// Using __dirname (derived from import.meta.url) instead of process.cwd() so
+// the path works both locally (cwd = repo root) and on Vercel (cwd = frontend/).
+// This file lives at frontend/lib/data.ts → ../../data = repo-root/data/
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const DATA_DIR = path.resolve(__dirname, "../../data");
 
 // Types based on the normalized JSON schema
 export type Ability = {
