@@ -17,7 +17,7 @@ type QAEntry = {
 
 type QAIndexEntry = {
     directQA: number[];
-    relatedQA: { idx: number; reason: string }[];
+    relatedQA: { idx: number; reason: string; sharedTags: string[] }[];
 };
 
 type QAIndex = Record<string, QAIndexEntry>;
@@ -50,15 +50,19 @@ export async function POST(req: NextRequest) {
     const [entries, index] = await Promise.all([getQAEntries(), getQAIndex()]);
 
     const directIdxSet = new Set<number>();
-    const relatedMap = new Map<number, string>(); // idx -> reason (first seen)
+    const relatedMap = new Map<number, { reason: string; sharedTags: Set<string> }>();
 
     for (const vid of variantIds) {
         const rec = index[vid];
         if (!rec) continue;
         for (const idx of rec.directQA) directIdxSet.add(idx);
-        for (const { idx, reason } of rec.relatedQA) {
-            if (!directIdxSet.has(idx) && !relatedMap.has(idx)) {
-                relatedMap.set(idx, reason);
+        for (const { idx, reason, sharedTags } of rec.relatedQA) {
+            if (directIdxSet.has(idx)) continue;
+            const existing = relatedMap.get(idx);
+            if (!existing) {
+                relatedMap.set(idx, { reason, sharedTags: new Set(sharedTags) });
+            } else {
+                for (const t of sharedTags) existing.sharedTags.add(t);
             }
         }
     }
@@ -73,7 +77,11 @@ export async function POST(req: NextRequest) {
     const relatedQA = Array.from(relatedMap.entries())
         .slice(0, RELATED_LIMIT)
         .filter(([i]) => i >= 0 && i < entries.length)
-        .map(([i, reason]) => ({ entry: entries[i], reason }));
+        .map(([i, { reason, sharedTags }]) => ({
+            entry: entries[i],
+            reason,
+            sharedTags: [...sharedTags].sort(),
+        }));
 
     return NextResponse.json({ directQA, relatedQA });
 }

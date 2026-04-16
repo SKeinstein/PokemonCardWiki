@@ -11,7 +11,7 @@ type QAEntry = {
 
 type QAData = {
     directQA: QAEntry[];
-    relatedQA: { entry: QAEntry; reason: string }[];
+    relatedQA: { entry: QAEntry; reason: string; sharedTags: string[] }[];
 };
 
 function QAItem({ q, a }: { q: string; a: string }) {
@@ -476,9 +476,13 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                         count={qaData.relatedQA.length}
                                         defaultOpen={false}
                                     >
-                                        {qaData.relatedQA.map(({ entry, reason }, i) => (
+                                        {qaData.relatedQA.map(({ entry, reason, sharedTags }, i) => (
                                             <div key={i} className="space-y-1">
-                                                <p className="text-xs text-amber-600/80 bg-amber-950/20 border border-amber-900/30 rounded px-2 py-1 leading-snug">{reason}</p>
+                                                <p className="text-xs text-amber-600/80 bg-amber-950/20 border border-amber-900/30 rounded px-2 py-1 leading-snug">
+                                                    {sharedTags && sharedTags.length > 0
+                                                        ? `共通タグ: ${sharedTags.join(' / ')}`
+                                                        : reason}
+                                                </p>
                                                 <QAItem q={entry.question} a={entry.answer} />
                                             </div>
                                         ))}

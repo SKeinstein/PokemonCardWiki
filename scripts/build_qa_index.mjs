@@ -7,14 +7,23 @@
  * qa_card_map.json to balloon to 92 MB), this script stores only integer
  * indices into qa_entries.json.
  *
- * Output schema: Record<cardId, { directQA: number[], relatedQA: { idx: number, reason: string }[] }>
+ * Output schema:
+ *   Record<cardId, {
+ *     directQA : number[],
+ *     relatedQA: { idx: number, reason: string, sharedTags: string[] }[],
+ *     tags     : string[]   // subtags (containing '>') for this card
+ *   }>
+ *
+ * relatedQA matching: a card is related to a QA entry when they share at least
+ * one subtag (a tag containing '>'), matched exactly between qa_entry_tags.json
+ * and card_tags.json.
  *
  * Frontend usage:
  *   import qaIndex   from '@/data/qa_index.json';
  *   import qaEntries from '@/data/qa_entries.json';
  *   const { directQA, relatedQA } = qaIndex[card.cardId] ?? { directQA: [], relatedQA: [] };
  *   const directEntries  = directQA.map(i => qaEntries[i]);
- *   const relatedEntries = relatedQA.map(({ idx, reason }) => ({ entry: qaEntries[idx], reason }));
+ *   const relatedEntries = relatedQA.map(({ idx, reason, sharedTags }) => ({ entry: qaEntries[idx], reason, sharedTags }));
  */
 
 import fs from 'fs';
@@ -29,6 +38,8 @@ console.log('Loading qa_entries.json...');
 const qaEntries = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_entries.json'), 'utf8'));
 console.log('Loading card_tags.json...');
 const cardTags  = JSON.parse(fs.readFileSync(path.join(root, 'data/card_tags.json'),  'utf8'));
+console.log('Loading qa_entry_tags.json...');
+const qaEntryTags = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_entry_tags.json'), 'utf8'));
 
 // Build index: question text → position in qaEntries array (for O(1) lookup)
 const questionToIdx = new Map();
@@ -38,18 +49,28 @@ for (let i = 0; i < qaEntries.length; i++) {
 
 // ── Build lookup maps ──────────────────────────────────────────────────────
 
-/** cardId → Set<tag> */
+/** cardId → Set<tag> (all tags, used for directQA path) */
 const cardTagMap = new Map();
 for (const c of cardTags) {
   cardTagMap.set(c.cardId, new Set(c.tags));
 }
 
-/** tag → Set<cardId> */
-const tagToCards = new Map();
+/** subtag → Set<cardId>  (subtags only: tags containing '>') */
+const subtagToCards = new Map();
 for (const c of cardTags) {
   for (const tag of c.tags) {
-    if (!tagToCards.has(tag)) tagToCards.set(tag, new Set());
-    tagToCards.get(tag).add(c.cardId);
+    if (!tag.includes('>')) continue;
+    if (!subtagToCards.has(tag)) subtagToCards.set(tag, new Set());
+    subtagToCards.get(tag).add(c.cardId);
+  }
+}
+
+/** qaIndex → Set<subtag>  (subtags only for each QA entry) */
+const entrySubTagMap = new Map();
+for (const e of qaEntryTags) {
+  const subtags = e.tags.filter(t => t.includes('>'));
+  if (subtags.length > 0) {
+    entrySubTagMap.set(e.qaIndex, new Set(subtags));
   }
 }
 
@@ -58,7 +79,7 @@ for (const c of cardTags) {
 /**
  * Per-card accumulator:
  *   directQA   : Set<qaIdx>
- *   relatedMap : qaIdx → Set<reason string>
+ *   relatedMap : qaIdx → Set<subtag string>  (shared subtags driving this match)
  */
 const cardAccum = new Map();
 
@@ -71,35 +92,33 @@ function getAccum(cardId) {
 
 for (let i = 0; i < qaEntries.length; i++) {
   const entry = qaEntries[i];
-  if (!entry.cards || entry.cards.length === 0) continue;
-
-  const refIds = new Set(entry.cards.map(c => c.cardId));
 
   // Layer 1: direct — card is explicitly referenced in QA
-  for (const ref of entry.cards) {
-    getAccum(ref.cardId).directQA.add(i);
+  if (entry.cards && entry.cards.length > 0) {
+    for (const ref of entry.cards) {
+      getAccum(ref.cardId).directQA.add(i);
+    }
   }
 
-  // Layer 2: group-related — propagate to cards sharing a tag with a referenced card
-  for (const ref of entry.cards) {
-    const tags = cardTagMap.get(ref.cardId);
-    if (!tags || tags.size === 0) continue;
+  // Layer 2: subtag-based relatedQA matching
+  //   QA entry subtag X ∩ card subtag X → related match, recording shared subtags
+  const entrySubtags = entrySubTagMap.get(i);
+  if (!entrySubtags || entrySubtags.size === 0) continue;
 
-    for (const tag of tags) {
-      const siblings = tagToCards.get(tag);
-      if (!siblings) continue;
+  const refIds = new Set((entry.cards ?? []).map(c => c.cardId));
 
-      for (const sibId of siblings) {
-        if (refIds.has(sibId)) continue; // already in directQA
+  for (const subtag of entrySubtags) {
+    const matchedCards = subtagToCards.get(subtag);
+    if (!matchedCards) continue;
 
-        const accum = getAccum(sibId);
-        if (!accum.relatedMap.has(i)) {
-          accum.relatedMap.set(i, new Set());
-        }
-        accum.relatedMap.get(i).add(
-          `同じ『${tag}』グループ: ${ref.name} の裁定`
-        );
+    for (const cardId of matchedCards) {
+      if (refIds.has(cardId)) continue; // already in directQA
+
+      const accum = getAccum(cardId);
+      if (!accum.relatedMap.has(i)) {
+        accum.relatedMap.set(i, new Set());
       }
+      accum.relatedMap.get(i).add(subtag);
     }
   }
 }
@@ -120,15 +139,19 @@ for (const cardId of sortedCardIds) {
 
   // Build relatedQA excluding entries already in directQA
   const relatedQA = [];
-  for (const [idx, reasons] of accum.relatedMap) {
+  for (const [idx, sharedTagSet] of accum.relatedMap) {
     if (accum.directQA.has(idx)) continue; // skip: already direct
-    relatedQA.push({ idx, reason: [...reasons].join('; ') });
+    const sharedTags = [...sharedTagSet].sort();
+    const reason = sharedTags.map(t => `同じ『${t}』タグ`).join('; ');
+    relatedQA.push({ idx, reason, sharedTags });
   }
   relatedQA.sort((a, b) => a.idx - b.idx);
 
-  if (directQA.length === 0 && relatedQA.length === 0) continue;
+  const tags = [...(cardTagMap.get(cardId) ?? [])].filter(t => t.includes('>')).sort();
 
-  output[cardId] = { directQA, relatedQA };
+  if (directQA.length === 0 && relatedQA.length === 0 && tags.length === 0) continue;
+
+  output[cardId] = { directQA, relatedQA, tags };
   totalDirect  += directQA.length;
   totalRelated += relatedQA.length;
 }
@@ -152,5 +175,5 @@ Usage in CardModal.tsx:
 
   const { directQA = [], relatedQA = [] } = qaIndex[card.cardId] ?? {};
   const directEntries  = directQA.map(i => qaEntries[i]);
-  const relatedEntries = relatedQA.map(({ idx, reason }) => ({ entry: qaEntries[idx], reason }));
+  const relatedEntries = relatedQA.map(({ idx, reason, sharedTags }) => ({ entry: qaEntries[idx], reason, sharedTags }));
 `);
