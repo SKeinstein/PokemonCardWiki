@@ -19,6 +19,9 @@ const INPUT_PATH = path.join(DATA_DIR, "card_ids.json");
 const OUTPUT_PATH = path.join(DATA_DIR, "card_details.json");
 const DELAY_MS = 1000; // Be polite: 1 second between page fetches
 
+// Card kinds whose effect text appears under a card-kind h2 section (not 特性/ワザ/特別なルール)
+const TRAINER_SECTIONS = new Set(['グッズ', 'サポート', 'スタジアム', 'ポケモンのどうぐ', '特殊エネルギー']);
+
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
@@ -226,6 +229,12 @@ function parseDetail(html, cardID) {
             const ruleText = $(el).text().trim();
             if (ruleText && !details.rules.includes(ruleText)) {
                 details.rules.push(ruleText);
+            }
+        }
+        else if (TRAINER_SECTIONS.has(currentSection) && tag === 'p') {
+            const effectText = $(el).text().trim();
+            if (effectText && !details.rules.includes(effectText)) {
+                details.rules.push(effectText);
             }
         }
     });
