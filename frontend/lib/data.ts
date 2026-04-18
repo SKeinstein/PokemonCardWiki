@@ -1,14 +1,10 @@
 import fs from "fs/promises";
 import path from "path";
-import { fileURLToPath } from "url";
 
-// Resolve the repo-root `data/` directory relative to this file's location.
-// Using __dirname (derived from import.meta.url) instead of process.cwd() so
-// the path works both locally (cwd = repo root) and on Vercel (cwd = frontend/).
-// This file lives at frontend/lib/data.ts → ../../data = repo-root/data/
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const DATA_DIR = path.resolve(__dirname, "../../data");
+// Resolves to <cwd>/data. On Vercel cwd is the Next.js app root (frontend/);
+// locally cwd is either repo root or frontend/. Either way, the sync-data
+// prebuild script guarantees frontend/data/ contains the latest JSON files.
+const DATA_DIR = path.join(process.cwd(), "data");
 
 // Types based on the normalized JSON schema
 export type Ability = {
@@ -72,7 +68,7 @@ export async function getMasterCards(): Promise<MasterCard[]> {
         return masterCardsCache;
     }
 
-    const dataPath = path.join(process.cwd(), "data", "master_cards.json");
+    const dataPath = path.join(DATA_DIR, "master_cards.json");
     const fileContents = await fs.readFile(dataPath, "utf8");
     masterCardsCache = JSON.parse(fileContents) as MasterCard[];
     return masterCardsCache;
@@ -83,7 +79,7 @@ export async function getCardVariants(): Promise<CardVariant[]> {
         return variantsCache;
     }
 
-    const dataPath = path.join(process.cwd(), "data", "card_variants.json");
+    const dataPath = path.join(DATA_DIR, "card_variants.json");
     const fileContents = await fs.readFile(dataPath, "utf8");
     variantsCache = JSON.parse(fileContents) as CardVariant[];
     return variantsCache;
@@ -101,7 +97,7 @@ export async function getMasterCardTags(): Promise<MasterCardTag[]> {
         return masterCardTagsCache;
     }
 
-    const dataPath = path.join(process.cwd(), "data", "card_tags.json");
+    const dataPath = path.join(DATA_DIR, "card_tags.json");
     const fileContents = await fs.readFile(dataPath, "utf8");
     const cardTagEntries = JSON.parse(fileContents) as { cardId: string; name: string; tags: string[] }[];
 

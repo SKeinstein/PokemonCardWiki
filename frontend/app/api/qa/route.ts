@@ -2,9 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import fs from "fs/promises";
 import path from "path";
 
-// Same resolution strategy as frontend/lib/data.ts reads:
-// next dev/start is invoked from repo root locally and from frontend/ on Vercel,
-// but data/ is always at the repo root. We try cwd-relative first.
+// Reads from <cwd>/data. The sync-data prebuild copies repo-root /data/ into
+// frontend/data/ so this works both locally and on Vercel.
 function dataPath(filename: string) {
     return path.join(process.cwd(), "data", filename);
 }
