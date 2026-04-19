@@ -199,9 +199,7 @@ const TAG_RULES = [
       /山札を上から.{1,20}エネルギー.{1,50}ポケモン.{1,30}つける/.test(all),
   },
   // §5-C  手札→ポケモン（手張りと別枠）
-  // 「ポケモンに(直接)つける」「好きなように(直接)つける」の隣接ケースに対応 ({1,20} → {0,20})
-  // 「~ポケモン」(かぎ括弧付きグループ名) に対応するため ポケモン.{0,5}に へ拡張
-  // 「エネルギー」を と かぎ括弧閉じ ｢」｣ 直後の を にも対応
+  // Branch 1: `を` なし自己付与 (このポケモン); Branch 2: ゼロギャップ直付け; Branch 3: 「~ポケモン」グループ名+」?を形式; Branch 4: 好きなように形式
   // — リーフィア / ラッキー / カミツオロチex / エンブオー / オドリドリex / ヒビキのホウオウex /
   //   ナンジャモのハラバリーex / アオキのネッコアラ / ガメノデス / ゴウカザル / エムリット 等
   // Exclusions:
@@ -475,7 +473,7 @@ const TAG_RULES = [
   // ── §B-10  被ダメージ時発動（カウンター）────────────────────────────────
   { tags: ['カウンター効果'], condition: (all) => /ワザのダメージを受けたとき/.test(all) },
   // きぜつ時カウンター: 「ワザのダメージを受けてきぜつしたとき」＋「ワザを使ったポケモン」に効果 (e.g. マラカッチ「さくれつばり」)
-  { tags: ['カウンター効果'], condition: (all) => /ワザのダメージを受けてきぜつしたとき.*ワザを使ったポケモン/.test(all) },
+  { tags: ['カウンター効果'], condition: (all) => /ワザのダメージを受けてきぜつしたとき[\s\S]*?ワザを使ったポケモン/.test(all) },
   // §B-10 name-based: energies that deal damage to attacker (D-2)
   // スパイクエネルギー: つけているポケモンがワザのダメージを受けたとき、相手のバトルポケモンにダメカンを3個のせる → カウンター効果
   { tags: ['カウンター効果'], condition: (all, atk, abl, name) => name === 'スパイクエネルギー' },
@@ -772,12 +770,12 @@ const TAG_RULES = [
   // 古びたはねの化石 (はねのまもり): ベンチにいるかぎりワザのダメージを受けない
   {
     tags: ['無効', '無効>ベンチへのワザダメージ'],
-    condition: (all, atk, abl) =>
+    condition: (all, _atk, abl) =>
       // Ability or stadium: bench can't have ダメカン placed (バトルコロシアム, etc.)
       /ベンチポケモン.{1,60}ダメカンがのらない/.test(all) ||
       // Ability or stadium: bench-wide damage protection (damage only, not effects)
       (/ベンチポケモン.{1,60}ワザのダメージを受けない/.test(all) && !/ワザのダメージや効果/.test(all)) ||
-      // Ability: self-protection when benched (damage only, not effects)
+      // abl-scoped: avoid cross-field false exclusion when attack text contains ワザのダメージや効果
       (/ベンチにいるかぎり.{1,60}ワザのダメージを受けない/.test(abl) && !/ワザのダメージや効果/.test(abl)),
   },
   // 無効>ベンチへの効果とダメージ: bench protected from BOTH attack damage AND effects
