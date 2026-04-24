@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
 import Image from "next/image";
-import { MasterCard, CardVariant, MasterCardTag } from "../../lib/data";
+import { MasterCard, CardVariant, MasterCardTag, CostEntry } from "../../lib/data";
 import CardModal from "./CardModal";
 import ComparisonTray from "./ComparisonTray";
 import ComparisonModal from "./ComparisonModal";
@@ -11,9 +11,10 @@ type Props = {
     masterCards: MasterCard[];
     variants: CardVariant[];
     cardTags: MasterCardTag[];
+    costIndex: CostEntry[];
 };
 
-export default function CardSearch({ masterCards, variants, cardTags }: Props) {
+export default function CardSearch({ masterCards, variants, cardTags, costIndex }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
     const [effectQuery, setEffectQuery] = useState("");
@@ -119,23 +120,14 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
         return map;
     }, [variants]);
 
-    // Map masterId → { minTotal, types } for energy cost filtering
+    // Map masterId → { minTotal, types } for energy cost filtering (built from pre-computed cost_index.json)
     const costMap = useMemo(() => {
         const map = new Map<string, { minTotal: number; types: Set<string> }>();
-        for (const card of masterCards) {
-            if (!card.attacks.length) continue;
-            let minTotal = Infinity;
-            const types = new Set<string>();
-            for (const atk of card.attacks) {
-                const real = atk.cost.filter(c => c !== 'void');
-                const total = real.length;
-                if (total < minTotal) minTotal = total;
-                for (const c of real) types.add(c);
-            }
-            map.set(card.master_id, { minTotal: minTotal === Infinity ? 0 : minTotal, types });
+        for (const entry of costIndex) {
+            map.set(entry.masterId, { minTotal: entry.minTotal, types: new Set(entry.types) });
         }
         return map;
-    }, [masterCards]);
+    }, [costIndex]);
 
     // Map masterId → Set of tags for O(1) lookup
     const tagCardMap = useMemo(() => {

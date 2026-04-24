@@ -90,6 +90,12 @@ export type MasterCardTag = {
     tags: string[];
 };
 
+export type CostEntry = {
+    masterId: string;
+    minTotal: number;
+    types: string[];
+};
+
 let masterCardTagsCache: MasterCardTag[] | null = null;
 
 export async function getMasterCardTags(): Promise<MasterCardTag[]> {
@@ -123,4 +129,17 @@ export async function getMasterCardTags(): Promise<MasterCardTag[]> {
         tags: Array.from(tags),
     }));
     return masterCardTagsCache;
+}
+
+let costIndexCache: CostEntry[] | null = null;
+
+export async function getCostIndex(): Promise<CostEntry[]> {
+    if (process.env.NODE_ENV === 'production' && costIndexCache) {
+        return costIndexCache;
+    }
+
+    const dataPath = path.join(DATA_DIR, "cost_index.json");
+    const fileContents = await fs.readFile(dataPath, "utf8");
+    costIndexCache = JSON.parse(fileContents) as CostEntry[];
+    return costIndexCache;
 }
