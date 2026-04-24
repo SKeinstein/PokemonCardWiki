@@ -28,6 +28,8 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const [weaknessFilter, setWeaknessFilter] = useState("");
     const [resistanceFilter, setResistanceFilter] = useState("");
     const [retreatFilter, setRetreatFilter] = useState("");
+    const [costTypeFilter, setCostTypeFilter] = useState("");
+    const [maxCostFilter, setMaxCostFilter] = useState("");
     const [displayLimit, setDisplayLimit] = useState(100);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
 
@@ -49,6 +51,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
     const [expandedParents, setExpandedParents] = useState<Set<string>>(new Set());
     const [showTagPanel, setShowTagPanel] = useState(false);
+    const [isTagOrSearch, setIsTagOrSearch] = useState(false);
 
     // Set grid columns based on viewport on mount and update on resize
     useEffect(() => {
@@ -70,7 +73,7 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, selectedTags]);
+    }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter, selectedTags, isTagOrSearch]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -115,6 +118,24 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
         }
         return map;
     }, [variants]);
+
+    // Map masterId → { minTotal, types } for energy cost filtering
+    const costMap = useMemo(() => {
+        const map = new Map<string, { minTotal: number; types: Set<string> }>();
+        for (const card of masterCards) {
+            if (!card.attacks.length) continue;
+            let minTotal = Infinity;
+            const types = new Set<string>();
+            for (const atk of card.attacks) {
+                const real = atk.cost.filter(c => c !== 'void');
+                const total = real.length;
+                if (total < minTotal) minTotal = total;
+                for (const c of real) types.add(c);
+            }
+            map.set(card.master_id, { minTotal: minTotal === Infinity ? 0 : minTotal, types });
+        }
+        return map;
+    }, [masterCards]);
 
     // Map masterId → Set of tags for O(1) lookup
     const tagCardMap = useMemo(() => {
@@ -221,6 +242,14 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
             // Retreat Cost Filter
             if (retreatFilter && card.retreatCost !== parseInt(retreatFilter)) return false;
 
+            // Energy Cost Filter
+            if (costTypeFilter || maxCostFilter !== '') {
+                const cost = costMap.get(card.master_id);
+                if (!cost) return false;
+                if (costTypeFilter && !cost.types.has(costTypeFilter)) return false;
+                if (maxCostFilter !== '' && cost.minTotal > parseInt(maxCostFilter)) return false;
+            }
+
             // 5. Effect Text Query (Abilities, Attacks, Rules)
             if (deferredEffectQuery) {
                 // Combine all searchable text on the card into one block
@@ -236,16 +265,24 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                 }
             }
 
-            // 6. Tag Filter (AND: card must match every selected tag)
+            // 6. Tag Filter
             if (selectedTags.size > 0) {
-                for (const tag of selectedTags) {
-                    if (!cardMatchesTag(card.master_id, tag)) return false;
+                if (isTagOrSearch) {
+                    let anyMatch = false;
+                    for (const tag of selectedTags) {
+                        if (cardMatchesTag(card.master_id, tag)) { anyMatch = true; break; }
+                    }
+                    if (!anyMatch) return false;
+                } else {
+                    for (const tag of selectedTags) {
+                        if (!cardMatchesTag(card.master_id, tag)) return false;
+                    }
                 }
             }
 
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, variantsMap, selectedTags, tagCardMap]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter, costMap, variantsMap, selectedTags, tagCardMap, isTagOrSearch]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -363,9 +400,9 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                     className="sm:hidden w-full flex items-center justify-center gap-2 mt-2 py-2 min-h-[44px] text-sm font-medium text-gray-400 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-700 transition touch-manipulation"
                 >
                     <span>{filtersExpanded ? '▲ フィルターを閉じる' : '▼ 絞り込みフィルター'}</span>
-                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter].some(Boolean) && (
+                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter].some(Boolean) && (
                         <span className="bg-blue-500/80 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter].filter(Boolean).length}
+                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter].filter(Boolean).length}
                         </span>
                     )}
                 </button>
@@ -455,6 +492,40 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                                     </select>
                                 </div>
                             </div>
+                            <div className="mt-2 grid grid-cols-2 gap-2 sm:gap-3">
+                                <div className="flex flex-col gap-1">
+                                    <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
+                                    <select
+                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                        value={costTypeFilter}
+                                        onChange={e => setCostTypeFilter(e.target.value)}
+                                    >
+                                        <option value="">すべて</option>
+                                        <option value="grass">くさ</option>
+                                        <option value="fire">ほのお</option>
+                                        <option value="water">みず</option>
+                                        <option value="electric">でんき</option>
+                                        <option value="psychic">ちょうしんり</option>
+                                        <option value="fighting">かくとう</option>
+                                        <option value="dark">あく</option>
+                                        <option value="steel">はがね</option>
+                                        <option value="none">無色</option>
+                                    </select>
+                                </div>
+                                <div className="flex flex-col gap-1">
+                                    <label className="text-xs text-gray-400 font-bold">最小ワザコスト</label>
+                                    <select
+                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                        value={maxCostFilter}
+                                        onChange={e => setMaxCostFilter(e.target.value)}
+                                    >
+                                        <option value="">すべて</option>
+                                        {[0, 1, 2, 3, 4].map(n => (
+                                            <option key={n} value={n}>{n}個以下</option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -462,6 +533,19 @@ export default function CardSearch({ masterCards, variants, cardTags }: Props) {
                 {/* Tag Filter Panel */}
                 {showTagPanel && (
                     <div className="mt-3 p-3 bg-gray-900/60 border border-violet-800/40 rounded-lg space-y-3 animate-in duration-200">
+
+                        {/* Tag AND/OR toggle — always visible in tag panel */}
+                        <div className="flex items-center gap-2">
+                            <span className="text-xs text-gray-400 font-bold whitespace-nowrap">タグ結合:</span>
+                            <label className="flex items-center gap-1 cursor-pointer min-h-[36px] px-2 touch-manipulation">
+                                <input type="radio" checked={!isTagOrSearch} onChange={() => setIsTagOrSearch(false)} className="accent-violet-500 w-3.5 h-3.5" />
+                                <span className={`text-xs ${!isTagOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>AND</span>
+                            </label>
+                            <label className="flex items-center gap-1 cursor-pointer min-h-[36px] px-2 touch-manipulation">
+                                <input type="radio" checked={isTagOrSearch} onChange={() => setIsTagOrSearch(true)} className="accent-violet-500 w-3.5 h-3.5" />
+                                <span className={`text-xs ${isTagOrSearch ? 'text-white font-bold' : 'text-gray-400'}`}>OR</span>
+                            </label>
+                        </div>
 
                         {/* Selected tag chips */}
                         {selectedTags.size > 0 && (

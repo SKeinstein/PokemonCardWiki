@@ -6,3 +6,6 @@ node_modules
 
 # Generated large data files (regenerate with scripts/build_qa_card_map.mjs)
 data/qa_card_map.json
+
+# Claude Code local settings
+.claude/
