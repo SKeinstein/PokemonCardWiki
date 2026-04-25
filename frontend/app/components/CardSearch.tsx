@@ -604,7 +604,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                     const hasChildren = children.length > 0;
 
                                     return (
-                                        <div key={parent} className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-1 ring-violet-500/60 shadow-[0_0_6px_rgba(139,92,246,0.3)]' : ''}`}>
+                                        <div key={parent} className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-2 ring-violet-400/90 shadow-[0_0_12px_rgba(167,139,250,0.55)]' : ''}`}>
                                             <button
                                                 onClick={() => toggleTag(parent)}
                                                 className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
@@ -613,7 +613,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                                     isSelected
                                                         ? 'bg-violet-600 border-violet-500 text-white'
                                                         : isExpanded
-                                                            ? 'bg-gray-800 border-violet-700 text-violet-200'
+                                                            ? 'bg-violet-900/70 border-violet-500 text-violet-100 font-bold'
                                                             : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
                                                 }`}
                                             >
@@ -626,7 +626,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                                         isSelected
                                                             ? 'bg-violet-700 border-violet-500 text-violet-200'
                                                             : isExpanded
-                                                                ? 'bg-violet-900 border-violet-700 text-violet-300'
+                                                                ? 'bg-violet-700 border-violet-500 text-violet-100'
                                                                 : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
                                                     }`}
                                                 >
@@ -643,7 +643,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                 const children = tagHierarchy.get(parent);
                                 if (!children || children.length === 0) return null;
                                 return (
-                                    <div key={parent} className="pl-3 border-l-2 border-violet-700/50">
+                                    <div key={parent} className="pl-3 border-l-2 border-violet-400/70">
                                         <div className="flex flex-wrap items-center gap-1.5">
                                             <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
                                             {[...children].sort((a, b) => a.localeCompare(b, 'ja')).map(child => {
