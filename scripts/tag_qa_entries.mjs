@@ -545,9 +545,9 @@ const QA_TAG_RULES = [
   },
 ];
 
-// ── キャラクター連動: detect from card names in cards[] array ─────────────────
+// ── 〜のポケモン: detect from card names in cards[] array ────────────────────
 const CHARACTER_PREFIXES = [
-  'MC', 'N', 'アイリス', 'アオキ', 'アクロマ', 'アセロラ', 'アンズ', 'インフルエンサー',
+  'MC', 'N', 'アイリス', 'アオキ', 'アクロマ', 'アセロラ', 'アンズ',
   'エリカ', 'カスミ', 'ギーマ', 'クセロシキ', 'シトロン', 'シロナ', 'スイレン',
   'ゼロ', 'タケシ', 'ダイゴ', 'ナンジャモ', 'ヒビキ', 'ベル', 'ペパー', 'ホップ',
   'ボス', 'マチス', 'マツバ', 'マリィ', 'ミカン', 'ミツル', 'メイ', 'リーリエ', 'ルチア',
@@ -562,7 +562,7 @@ function detectCharacterTags(entry) {
   for (const ch of CHARACTER_PREFIXES) {
     const prefix = ch + 'の';
     if (allNames.some(n => n.startsWith(prefix)) || text.includes(`「${prefix}`) || text.includes(`「${ch}`)) {
-      tags.push('キャラクター連動', `キャラクター連動>${ch}`);
+      tags.push('〜のポケモン', `〜のポケモン>${ch}`);
     }
   }
   // ロケット団 (handled by text rule above, but also check card names)

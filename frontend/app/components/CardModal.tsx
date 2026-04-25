@@ -74,12 +74,16 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
     const dragStartY = React.useRef(0);
     const [qaData, setQaData] = useState<QAData | null>(null);
     const [qaLoading, setQaLoading] = useState(false);
+    const [mainImgError, setMainImgError] = useState(false);
+    const [thumbErrors, setThumbErrors] = useState<Set<string>>(new Set());
 
     useBodyScrollLock();
 
     useEffect(() => {
         if (variants && variants.length > 0) {
             setSelectedVariant(variants[0]);
+            setMainImgError(false);
+            setThumbErrors(new Set());
         }
     }, [variants, isOpen]);
 
@@ -213,7 +217,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                             {/* Card image */}
                             <div className="p-2 sm:p-3 flex-shrink-0 flex sm:justify-center sm:border-b sm:border-gray-800/50 sm:bg-gray-900/20">
                                 <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-gray-800/50 drop-shadow-2xl w-[45vw] max-w-[180px] min-w-[120px] sm:w-full sm:max-w-[180px] md:max-w-[240px]">
-                                    {selectedVariant?.image_url ? (
+                                    {selectedVariant?.image_url && !mainImgError ? (
                                         <Image
                                             src={`https://www.pokemon-card.com${selectedVariant.image_url}`}
                                             alt={card.name}
@@ -222,6 +226,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                             style={{ width: '100%', height: 'auto' }}
                                             className="object-contain block"
                                             priority
+                                            onError={() => setMainImgError(true)}
                                         />
                                     ) : (
                                         <div className="w-full aspect-[63/88] flex items-center justify-center text-gray-500 text-xs text-center px-2">
@@ -264,17 +269,18 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                     {variants.map((v) => (
                                         <button
                                             key={v.official_id}
-                                            onClick={() => setSelectedVariant(v)}
+                                            onClick={() => { setSelectedVariant(v); setMainImgError(false); }}
                                             className={`relative flex-shrink-0 w-11 sm:w-12 md:w-14 aspect-[63/88] rounded-md overflow-hidden border-2 transition-all touch-manipulation ${selectedVariant?.official_id === v.official_id ? 'border-emerald-500 scale-110 shadow-[0_0_10px_rgba(16,185,129,0.5)] z-10' : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'}`}
                                             title={`${v.set_name} / ${v.rarity || 'No Rarity'}`}
                                         >
-                                            {v.image_url && (
+                                            {v.image_url && !thumbErrors.has(v.official_id) && (
                                                 <Image
                                                     src={`https://www.pokemon-card.com${v.image_url}`}
                                                     alt={v.set_name}
                                                     fill
                                                     className="object-cover"
                                                     sizes="60px"
+                                                    onError={() => setThumbErrors(prev => new Set(prev).add(v.official_id))}
                                                 />
                                             )}
                                             {v.rarity && (

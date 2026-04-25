@@ -25,6 +25,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     const [isOrSearch, setIsOrSearch] = useState(false);
     const [showAdvanced, setShowAdvanced] = useState(false);
     const [selectedCard, setSelectedCard] = useState<MasterCard | null>(null);
+    const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
     const [weaknessFilter, setWeaknessFilter] = useState("");
     const [resistanceFilter, setResistanceFilter] = useState("");
@@ -156,7 +157,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     }, [cardTags]);
 
     // Sorted parent tag keys
-    const sortedParents = useMemo(() => Array.from(tagHierarchy.keys()).sort(), [tagHierarchy]);
+    const sortedParents = useMemo(() => Array.from(tagHierarchy.keys()).sort((a, b) => a.localeCompare(b, 'ja')), [tagHierarchy]);
 
     // Check if a card matches a given tag (parent = prefix match, subtag = exact)
     const cardMatchesTag = (masterId: string, tag: string): boolean => {
@@ -574,7 +575,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                     const hasChildren = children.length > 0;
 
                                     return (
-                                        <div key={parent} className="inline-flex rounded-full overflow-hidden">
+                                        <div key={parent} className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-1 ring-violet-500/60 shadow-[0_0_6px_rgba(139,92,246,0.3)]' : ''}`}>
                                             <button
                                                 onClick={() => toggleTag(parent)}
                                                 className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
@@ -582,7 +583,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                                 } ${
                                                     isSelected
                                                         ? 'bg-violet-600 border-violet-500 text-white'
-                                                        : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                                        : isExpanded
+                                                            ? 'bg-gray-800 border-violet-700 text-violet-200'
+                                                            : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
                                                 }`}
                                             >
                                                 {parent}
@@ -593,8 +596,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                                     className={`min-w-[44px] min-h-[44px] flex items-center justify-center text-xs border-y border-r rounded-r-full transition touch-manipulation ${
                                                         isSelected
                                                             ? 'bg-violet-700 border-violet-500 text-violet-200'
-                                                            : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
-                                                    } ${isExpanded ? 'text-violet-300' : ''}`}
+                                                            : isExpanded
+                                                                ? 'bg-violet-900 border-violet-700 text-violet-300'
+                                                                : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
+                                                    }`}
                                                 >
                                                     {isExpanded ? '▲' : '▼'}
                                                 </button>
@@ -612,7 +617,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                     <div key={parent} className="pl-3 border-l-2 border-violet-700/50">
                                         <div className="flex flex-wrap items-center gap-1.5">
                                             <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
-                                            {[...children].sort().map(child => {
+                                            {[...children].sort((a, b) => a.localeCompare(b, 'ja')).map(child => {
                                                 const childLabel = child.substring(parent.length + 1);
                                                 const isChildSelected = selectedTags.has(child);
                                                 return (
@@ -664,13 +669,14 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                         >
                             {/* Image */}
                             <div className={`w-full aspect-[63/88] rounded-md flex items-center justify-center overflow-hidden bg-transparent drop-shadow-lg relative ${inComparison ? "ring-2 ring-blue-500 ring-offset-1 ring-offset-gray-900" : ""}`}>
-                                {displayVariant?.image_url ? (
+                                {displayVariant?.image_url && !failedImages.has(card.master_id) ? (
                                     <Image
                                         src={`https://www.pokemon-card.com${displayVariant.image_url}`}
                                         alt={card.name}
                                         fill
                                         className="object-contain"
                                         sizes={`(max-width: 640px) ${Math.floor(100 / Math.max(gridCols, 2))}vw, (max-width: 1024px) ${Math.floor(100 / Math.max(gridCols, 3))}vw, ${Math.floor(100 / gridCols)}vw`}
+                                        onError={() => setFailedImages(prev => new Set(prev).add(card.master_id))}
                                     />
                                 ) : (
                                     <div className="w-full h-full bg-gray-800 border border-gray-600 flex items-center justify-center">
