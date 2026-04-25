@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
+import { pickDefaultVariant } from '../../lib/variantUtils';
 
 type QAEntry = {
     question: string;
@@ -81,7 +82,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
 
     useEffect(() => {
         if (variants && variants.length > 0) {
-            setSelectedVariant(variants[0]);
+            setSelectedVariant(pickDefaultVariant(variants));
             setMainImgError(false);
             setThumbErrors(new Set());
         }

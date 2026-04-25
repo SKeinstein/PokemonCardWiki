@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import { MasterCard, CardVariant } from "../../lib/data";
+import { pickDefaultVariant } from "../../lib/variantUtils";
 import { useBodyScrollLock } from "../hooks/useBodyScrollLock";
 
 interface ComparisonModalProps {
@@ -100,7 +101,7 @@ export default function ComparisonModal({ cards, variantsMap, onClose, onRemoveC
                 >
                     {/* ── Row: Card image + remove button ── */}
                     {cards.map((card, ci) => {
-                        const dv = (variantsMap.get(card.master_id) || [])[0];
+                        const dv = pickDefaultVariant(variantsMap.get(card.master_id) || []);
                         return (
                             <div
                                 key={`img-${card.master_id}`}
@@ -136,7 +137,7 @@ export default function ComparisonModal({ cards, variantsMap, onClose, onRemoveC
                     {/* ── Section: 基本情報 ── */}
                     <SectionRow label="基本情報" cols={n} />
                     {cards.map((card, ci) => {
-                        const dv = (variantsMap.get(card.master_id) || [])[0];
+                        const dv = pickDefaultVariant(variantsMap.get(card.master_id) || []);
                         return (
                             <div key={`info-${card.master_id}`} className={cell(ci, "space-y-1.5")}>
                                 <div className="flex items-center gap-1.5 flex-wrap">

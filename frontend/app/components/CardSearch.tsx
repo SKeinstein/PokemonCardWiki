@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
 import Image from "next/image";
 import { MasterCard, CardVariant, MasterCardTag, CostEntry } from "../../lib/data";
+import { pickDefaultVariant } from "../../lib/variantUtils";
 import CardModal from "./CardModal";
 import ComparisonTray from "./ComparisonTray";
 import ComparisonModal from "./ComparisonModal";
@@ -31,7 +32,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     const [resistanceFilter, setResistanceFilter] = useState("");
     const [retreatFilter, setRetreatFilter] = useState("");
     const [costTypeFilter, setCostTypeFilter] = useState("");
-    const [maxCostFilter, setMaxCostFilter] = useState("");
+    const [costCountFilters, setCostCountFilters] = useState<Set<number>>(new Set());
     const [displayLimit, setDisplayLimit] = useState(100);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
 
@@ -75,7 +76,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter, selectedTags, isTagOrSearch]);
+    }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -236,11 +237,14 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
             if (retreatFilter && card.retreatCost !== parseInt(retreatFilter)) return false;
 
             // Energy Cost Filter
-            if (costTypeFilter || maxCostFilter !== '') {
+            if (costTypeFilter || costCountFilters.size > 0) {
                 const cost = costMap.get(card.master_id);
                 if (!cost) return false;
                 if (costTypeFilter && !cost.types.has(costTypeFilter)) return false;
-                if (maxCostFilter !== '' && cost.minTotal > parseInt(maxCostFilter)) return false;
+                if (costCountFilters.size > 0) {
+                    const bucket = Math.min(cost.minTotal, 5);
+                    if (!costCountFilters.has(bucket)) return false;
+                }
             }
 
             // 5. Effect Text Query (Abilities, Attacks, Rules)
@@ -275,7 +279,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
 
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter, costMap, variantsMap, selectedTags, tagCardMap, isTagOrSearch]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, variantsMap, selectedTags, tagCardMap, isTagOrSearch]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -393,9 +397,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                     className="sm:hidden w-full flex items-center justify-center gap-2 mt-2 py-2 min-h-[44px] text-sm font-medium text-gray-400 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-700 transition touch-manipulation"
                 >
                     <span>{filtersExpanded ? '▲ フィルターを閉じる' : '▼ 絞り込みフィルター'}</span>
-                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter].some(Boolean) && (
+                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters.size > 0 ? 'x' : ''].some(Boolean) && (
                         <span className="bg-blue-500/80 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, maxCostFilter].filter(Boolean).length}
+                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters.size > 0 ? 'x' : ''].filter(Boolean).length}
                         </span>
                     )}
                 </button>
@@ -506,17 +510,42 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                     </select>
                                 </div>
                                 <div className="flex flex-col gap-1">
-                                    <label className="text-xs text-gray-400 font-bold">最小ワザコスト</label>
-                                    <select
-                                        className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
-                                        value={maxCostFilter}
-                                        onChange={e => setMaxCostFilter(e.target.value)}
-                                    >
-                                        <option value="">すべて</option>
-                                        {[0, 1, 2, 3, 4].map(n => (
-                                            <option key={n} value={n}>{n}個以下</option>
-                                        ))}
-                                    </select>
+                                    <label className="text-xs text-gray-400 font-bold">
+                                        ワザコスト数
+                                        {costCountFilters.size > 0 && (
+                                            <button
+                                                type="button"
+                                                onClick={() => setCostCountFilters(new Set())}
+                                                className="ml-2 text-emerald-400 hover:text-emerald-200 underline font-normal"
+                                            >
+                                                解除
+                                            </button>
+                                        )}
+                                    </label>
+                                    <div className="flex flex-wrap gap-1.5 pt-1">
+                                        {[0, 1, 2, 3, 4, 5].map(n => {
+                                            const checked = costCountFilters.has(n);
+                                            return (
+                                                <button
+                                                    key={n}
+                                                    type="button"
+                                                    onClick={() => setCostCountFilters(prev => {
+                                                        const next = new Set(prev);
+                                                        if (next.has(n)) next.delete(n);
+                                                        else next.add(n);
+                                                        return next;
+                                                    })}
+                                                    className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                        checked
+                                                            ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                            : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                                    }`}
+                                                >
+                                                    {n === 5 ? '5+' : `${n}個`}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -657,7 +686,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
             >
                 {filteredCards.slice(0, displayLimit).map((card) => {
                     const cardVariants = variantsMap.get(card.master_id) || [];
-                    const displayVariant = cardVariants[0];
+                    const displayVariant = pickDefaultVariant(cardVariants);
                     const inComparison = comparisonCards.some(c => c.master_id === card.master_id);
                     const comparisonFull = comparisonCards.length >= 4 && !inComparison;
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MasterCard, CardVariant } from "../../lib/data";
+import { pickDefaultVariant } from "../../lib/variantUtils";
 
 interface ComparisonTrayProps {
     cards: MasterCard[];
@@ -26,7 +27,7 @@ export default function ComparisonTray({ cards, variantsMap, onRemoveCard, onCom
                 {/* Card thumbnails */}
                 <div className="flex gap-2 flex-1 overflow-x-auto py-0.5">
                     {cards.map((card) => {
-                        const displayVariant = (variantsMap.get(card.master_id) || [])[0];
+                        const displayVariant = pickDefaultVariant(variantsMap.get(card.master_id) || []);
                         return (
                             <div key={card.master_id} className="relative flex-shrink-0 group">
                                 <div className="w-12 aspect-[63/88] relative rounded overflow-hidden border border-blue-500/60 shadow-md">
