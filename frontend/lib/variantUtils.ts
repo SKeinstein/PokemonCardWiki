@@ -5,10 +5,10 @@ const RARITY_RANK: Record<string, number> = {
     U: 1,
     R: 2,
     RR: 3,
-    TR: 4,
-    SR: 5,
+    AR: 4,   // Art Rare — less rare than TR/SAR/SR in SV numbering
+    TR: 5,
     SAR: 6,
-    AR: 7,
+    SR: 7,
     UR: 8,
     MUR: 9,
     BWR: 10,
