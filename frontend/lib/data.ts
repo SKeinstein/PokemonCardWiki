@@ -92,8 +92,7 @@ export type MasterCardTag = {
 
 export type CostEntry = {
     masterId: string;
-    minTotal: number;
-    types: string[];
+    attacks: { total: number; types: string[] }[];
 };
 
 let masterCardTagsCache: MasterCardTag[] | null = null;

@@ -3,12 +3,12 @@
  * Reads data/master_cards.json and generates data/cost_index.json.
  *
  * Each entry:
- *   { masterId, minTotal, types }
+ *   { masterId, attacks: [{ total, types }] }
  *
- *   minTotal — smallest total energy cost across all attacks (0 if the card
- *              has a 0-cost attack; void in the cost array means 0-cost)
- *   types    — sorted union of distinct energy types required by any attack
- *              (excludes "void", which signals a 0-cost attack)
+ *   attacks — per-attack cost breakdown, enabling AND filters that require a
+ *             single attack to satisfy both type and count constraints simultaneously.
+ *   total   — number of non-void energy costs for that attack
+ *   types   — sorted distinct energy types for that attack (excludes "void")
  *
  * Run from project root: node scripts/build_cost_index.mjs
  */
@@ -30,22 +30,20 @@ for (const card of masterCards) {
     const attacks = card.attacks;
     if (!attacks || attacks.length === 0) continue;
 
-    let minTotal = Infinity;
-    const types = new Set();
-
+    const atkList = [];
     for (const atk of attacks) {
         const cost = atk.cost ?? [];
         // 'void' signals a 0-cost attack — exclude from energy type set
         const real = cost.filter(c => c !== 'void');
-        const total = real.length;
-        if (total < minTotal) minTotal = total;
-        for (const c of real) types.add(c);
+        atkList.push({
+            total: real.length,
+            types: Array.from(new Set(real)).sort(),
+        });
     }
 
     index.push({
         masterId: card.master_id,
-        minTotal: minTotal === Infinity ? 0 : minTotal,
-        types: Array.from(types).sort(),
+        attacks: atkList,
     });
 }
 

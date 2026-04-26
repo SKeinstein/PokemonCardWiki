@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
+import { typeLabel } from '../../lib/typeUtils';
 
 type QAEntry = {
     question: string;
@@ -230,8 +231,8 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                             onError={() => setMainImgError(true)}
                                         />
                                     ) : (
-                                        <div className="w-full aspect-[63/88] flex items-center justify-center text-gray-500 text-xs text-center px-2">
-                                            No Image Available
+                                        <div className="w-full aspect-[63/88] bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-500 text-xs text-center px-2">
+                                            {card.name}<br />No Image
                                         </div>
                                     )}
                                 </div>
@@ -246,7 +247,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                 <div className="flex items-center gap-2">
                                     {card.hp && <span className="text-red-400 font-bold text-xl leading-none">HP {card.hp}</span>}
                                     {card.type && (
-                                        <div className={`w-6 h-6 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0 ${getTypeColor(card.type)}`} title={card.type} />
+                                        <div className={`w-6 h-6 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0 ${getTypeColor(card.type)}`} title={typeLabel(card.type)} />
                                     )}
                                 </div>
                                 {selectedVariant && (
@@ -274,7 +275,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                             className={`relative flex-shrink-0 w-11 sm:w-12 md:w-14 aspect-[63/88] rounded-md overflow-hidden border-2 transition-all touch-manipulation ${selectedVariant?.official_id === v.official_id ? 'border-emerald-500 scale-110 shadow-[0_0_10px_rgba(16,185,129,0.5)] z-10' : 'border-transparent opacity-60 hover:opacity-100 hover:scale-105'}`}
                                             title={`${v.set_name} / ${v.rarity || 'No Rarity'}`}
                                         >
-                                            {v.image_url && !thumbErrors.has(v.official_id) && (
+                                            {v.image_url && !thumbErrors.has(v.official_id) ? (
                                                 <Image
                                                     src={`https://www.pokemon-card.com${v.image_url}`}
                                                     alt={v.set_name}
@@ -283,6 +284,10 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                                     sizes="60px"
                                                     onError={() => setThumbErrors(prev => new Set(prev).add(v.official_id))}
                                                 />
+                                            ) : (
+                                                <div className="w-full h-full bg-gray-800 flex items-center justify-center text-gray-600 text-[9px] text-center leading-tight px-0.5">
+                                                    No<br />Img
+                                                </div>
                                             )}
                                             {v.rarity && (
                                                 <div className="absolute bottom-0 inset-x-0 bg-black/70 text-[8px] text-center font-bold text-white py-0.5 pointer-events-none">
@@ -326,7 +331,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                             <div className="flex items-center gap-3 flex-shrink-0">
                                 {card.hp && <span className="text-xl font-bold text-red-400">HP {card.hp}</span>}
                                 {card.type && (
-                                    <div className={`w-8 h-8 rounded-full shadow-inner flex items-center justify-center border border-white/20 ${getTypeColor(card.type)}`} title={card.type}>
+                                    <div className={`w-8 h-8 rounded-full shadow-inner flex items-center justify-center border border-white/20 ${getTypeColor(card.type)}`} title={typeLabel(card.type)}>
                                     </div>
                                 )}
                             </div>
@@ -394,7 +399,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                         <div className="flex items-center gap-3 min-w-0">
                                             <div className="flex gap-0.5 shrink-0">
                                                 {attack.cost.length > 0 ? attack.cost.map((c, j) => (
-                                                    <div key={j} className={`w-5 h-5 rounded-full border border-white/20 shadow-inner ${getTypeColor(c)}`} title={c}></div>
+                                                    <div key={j} className={`w-5 h-5 rounded-full border border-white/20 shadow-inner ${getTypeColor(c)}`} title={typeLabel(c)}></div>
                                                 )) : (
                                                     <div className="w-5 h-5 rounded-full border border-gray-600 border-dashed"></div>
                                                 )}
@@ -422,7 +427,8 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                     <div className="flex items-center gap-2">
                                         {card.weakness?.type ? (
                                             <>
-                                                <div className={`w-5 h-5 rounded-full ${getTypeColor(card.weakness.type)}`}></div>
+                                                <div className={`w-5 h-5 rounded-full flex-shrink-0 ${getTypeColor(card.weakness.type)}`} title={typeLabel(card.weakness.type)}></div>
+                                                <span className="text-xs text-gray-300">{typeLabel(card.weakness.type)}</span>
                                                 <span className="font-bold">{card.weakness.value}</span>
                                             </>
                                         ) : <span className="text-gray-600">-</span>}
@@ -433,7 +439,8 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                     <div className="flex items-center gap-2">
                                         {card.resistance?.type ? (
                                             <>
-                                                <div className={`w-5 h-5 rounded-full ${getTypeColor(card.resistance.type)}`}></div>
+                                                <div className={`w-5 h-5 rounded-full flex-shrink-0 ${getTypeColor(card.resistance.type)}`} title={typeLabel(card.resistance.type)}></div>
+                                                <span className="text-xs text-gray-300">{typeLabel(card.resistance.type)}</span>
                                                 <span className="font-bold">{card.resistance.value}</span>
                                             </>
                                         ) : <span className="text-gray-600">-</span>}
