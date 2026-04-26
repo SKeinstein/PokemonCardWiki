@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
@@ -220,14 +219,10 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                             <div className="p-2 sm:p-3 flex-shrink-0 flex sm:justify-center sm:border-b sm:border-gray-800/50 sm:bg-gray-900/20">
                                 <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-gray-800/50 drop-shadow-2xl w-[45vw] max-w-[180px] min-w-[120px] sm:w-full sm:max-w-[180px] md:max-w-[240px]">
                                     {selectedVariant?.image_url && !mainImgError ? (
-                                        <Image
+                                        <img
                                             src={`https://www.pokemon-card.com${selectedVariant.image_url}`}
                                             alt={card.name}
-                                            width={176}
-                                            height={246}
-                                            style={{ width: '100%', height: 'auto' }}
-                                            className="object-contain block"
-                                            priority
+                                            className="w-full h-auto object-contain block"
                                             onError={() => setMainImgError(true)}
                                         />
                                     ) : (
@@ -276,12 +271,10 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                             title={`${v.set_name} / ${v.rarity || 'No Rarity'}`}
                                         >
                                             {v.image_url && !thumbErrors.has(v.official_id) ? (
-                                                <Image
+                                                <img
                                                     src={`https://www.pokemon-card.com${v.image_url}`}
                                                     alt={v.set_name}
-                                                    fill
-                                                    className="object-cover"
-                                                    sizes="60px"
+                                                    className="absolute inset-0 w-full h-full object-cover"
                                                     onError={() => setThumbErrors(prev => new Set(prev).add(v.official_id))}
                                                 />
                                             ) : (
