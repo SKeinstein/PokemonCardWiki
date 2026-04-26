@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
 import { MasterCard, CardVariant } from "../../lib/data";
 import { pickDefaultVariant } from "../../lib/variantUtils";
 import { useBodyScrollLock } from "../hooks/useBodyScrollLock";
@@ -117,12 +116,10 @@ export default function ComparisonModal({ cards, variantsMap, onClose, onRemoveC
                                 </button>
                                 <div className="w-28 sm:w-32 aspect-[63/88] relative rounded-lg overflow-hidden shadow-xl">
                                     {dv?.image_url ? (
-                                        <Image
+                                        <img
                                             src={`https://www.pokemon-card.com${dv.image_url}`}
                                             alt={card.name}
-                                            fill
-                                            className="object-contain"
-                                            sizes="128px"
+                                            className="w-full h-full object-contain"
                                         />
                                     ) : (
                                         <div className="w-full h-full bg-gray-800 flex items-center justify-center">

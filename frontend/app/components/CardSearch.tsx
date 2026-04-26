@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
-import Image from "next/image";
 import { MasterCard, CardVariant, MasterCardTag, CostEntry } from "../../lib/data";
 import { pickDefaultVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
@@ -694,12 +693,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             {/* Image */}
                             <div className={`w-full aspect-[63/88] rounded-md flex items-center justify-center overflow-hidden bg-transparent drop-shadow-lg relative ${inComparison ? "ring-2 ring-blue-500 ring-offset-1 ring-offset-gray-900" : ""}`}>
                                 {displayVariant?.image_url && !failedImages.has(card.master_id) ? (
-                                    <Image
+                                    <img
                                         src={`https://www.pokemon-card.com${displayVariant.image_url}`}
                                         alt={card.name}
-                                        fill
-                                        className="object-contain"
-                                        sizes={`(max-width: 640px) ${Math.floor(100 / Math.max(gridCols, 2))}vw, (max-width: 1024px) ${Math.floor(100 / Math.max(gridCols, 3))}vw, ${Math.floor(100 / gridCols)}vw`}
+                                        className="w-full h-full object-contain"
                                         onError={() => setFailedImages(prev => new Set(prev).add(card.master_id))}
                                     />
                                 ) : (

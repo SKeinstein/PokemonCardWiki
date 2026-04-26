@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { MasterCard, CardVariant } from "../../lib/data";
 import { pickDefaultVariant } from "../../lib/variantUtils";
 
@@ -32,12 +31,10 @@ export default function ComparisonTray({ cards, variantsMap, onRemoveCard, onCom
                             <div key={card.master_id} className="relative flex-shrink-0 group">
                                 <div className="w-12 aspect-[63/88] relative rounded overflow-hidden border border-blue-500/60 shadow-md">
                                     {displayVariant?.image_url ? (
-                                        <Image
+                                        <img
                                             src={`https://www.pokemon-card.com${displayVariant.image_url}`}
                                             alt={card.name}
-                                            fill
-                                            className="object-contain"
-                                            sizes="48px"
+                                            className="w-full h-full object-contain"
                                         />
                                     ) : (
                                         <div className="w-full h-full bg-gray-800 flex items-center justify-center">
