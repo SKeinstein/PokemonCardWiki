@@ -200,14 +200,16 @@
     "evolutions": []
   },
   {
-    "master_id": "エネルギーつけかえ_none_none_none_none_none",
+    "master_id": "エネルギーつけかえ_none_none_自分のポケモンの基本エネルギーを1個、自分の別のポケモンにつけ替える。_none_none",
     "name": "エネルギーつけかえ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモンの基本エネルギーを1個、自分の別のポケモンにつけ替える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -225,14 +227,16 @@
     "evolutions": []
   },
   {
-    "master_id": "エネルギー転送_none_none_none_none_none",
+    "master_id": "エネルギー転送_none_none_自分の山札の基本エネルギーを1枚、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。_none_none",
     "name": "エネルギー転送",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札の基本エネルギーを1枚、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -250,14 +254,16 @@
     "evolutions": []
   },
   {
-    "master_id": "きずぐすり_none_none_none_none_none",
+    "master_id": "きずぐすり_none_none_自分のポケモン1匹から、ダメージカウンターを2個とる。_none_none",
     "name": "きずぐすり",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモン1匹から、ダメージカウンターを2個とる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -275,14 +281,16 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケモンいれかえ_none_none_none_none_none",
+    "master_id": "ポケモンいれかえ_none_none_自分のバトルポケモン1匹を、自分のベンチポケモンと入れ替える。_none_none",
     "name": "ポケモンいれかえ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトルポケモン1匹を、自分のベンチポケモンと入れ替える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -300,14 +308,16 @@
     "evolutions": []
   },
   {
-    "master_id": "モンスターボール_none_none_none_none_none",
+    "master_id": "モンスターボール_none_none_コインを1回投げオモテなら、自分の山札のポケモンを1枚、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。_none_none",
     "name": "モンスターボール",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札のポケモンを1枚、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -325,14 +335,16 @@
     "evolutions": []
   },
   {
-    "master_id": "ダークボール_none_none_none_none_none",
+    "master_id": "ダークボール_none_none_自分の山札の下からカードを7枚見て、ポケモンを1枚選び、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。_none_none",
     "name": "ダークボール",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札の下からカードを7枚見て、ポケモンを1枚選び、相手プレイヤーに見せてから、手札に加える。その後、山札を切る。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -350,14 +362,43 @@
     "evolutions": []
   },
   {
-    "master_id": "ふしぎなアメ_none_none_none_none_none",
+    "master_id": "エネルギーつけかえ_none_none_自分のポケモンの基本エネルギーを1個選び、自分の別のポケモンにつけ替える。_none_none",
+    "name": "エネルギーつけかえ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモンの基本エネルギーを1個選び、自分の別のポケモンにつけ替える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふしぎなアメ_none_none_自分の「進化していないポケモン」を1匹選び、そのポケモンから進化する「1進化カード」、またはその上の「2進化カード」を、自分の手札から1枚選ぶ。その後、選んだ「進化カード」をそのポケモンの上にのせ、進化させる。_none_none",
     "name": "ふしぎなアメ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の「進化していないポケモン」を1匹選び、そのポケモンから進化する「1進化カード」、またはその上の「2進化カード」を、自分の手札から1枚選ぶ。その後、選んだ「進化カード」をそのポケモンの上にのせ、進化させる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -375,14 +416,101 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケギア3.0_none_none_none_none_none",
+    "master_id": "エネルギーつけかえ_none_none_自分のポケモンについている基本エネルギーを1個、自分の別のポケモンにつけ替える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーつけかえ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモンについている基本エネルギーを1個、自分の別のポケモンにつけ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケモンいれかえ_none_none_自分のバトルポケモンをベンチポケモンと入れ替える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ポケモンいれかえ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のバトルポケモンをベンチポケモンと入れ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "モンスターボール_none_none_コインを1回投げオモテなら、自分の山札のポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "モンスターボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札のポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケギア3.0_none_none_自分の山札を上から7枚見て、その中の「サポーター」を1枚、相手に見せてから、手札に加える。残りのカードは山札にもどし、山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ポケギア3.0",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から7枚見て、その中の「サポーター」を1枚、相手に見せてから、手札に加える。残りのカードは山札にもどし、山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -400,14 +528,45 @@
     "evolutions": []
   },
   {
-    "master_id": "ジャッジマン_none_none_none_none_none",
+    "master_id": "ふしぎなアメ_none_none_自分のポケモン1匹から進化するポケモン、またはその上のポケモンを、手札から1枚選び、そのポケモンにのせて進化させる。[ポケモンを選んだ場合、ポケモンをとばして進化させる。］|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモン1匹から進化するポケモン、またはその上のポケモンを、手札から1枚選び、そのポケモンにのせて進化させる。[ポケモンを選んだ場合、ポケモンをとばして進化させる。］",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ジャッジマン_none_none_おたがいのプレイヤーは、それぞれ、手札をすべて山札にもどし、山札を切る。その後、それぞれの山札からカードを4枚引く。|サポーターは、自分の番に1枚だけ使える。使ったら、自分のバトル場の横におき、自分の番の終わりにトラッシュ。_none_none",
     "name": "ジャッジマン",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ、手札をすべて山札にもどし、山札を切る。その後、それぞれの山札からカードを4枚引く。",
+      "サポーターは、自分の番に1枚だけ使える。使ったら、自分のバトル場の横におき、自分の番の終わりにトラッシュ。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -425,14 +584,101 @@
     "evolutions": []
   },
   {
-    "master_id": "エネルギー回収_none_none_none_none_none",
+    "master_id": "ふしぎなアメ_none_none_自分のポケモン1匹から進化するポケモン、またはその上のポケモンを、手札から1枚選び、そのポケモンにのせて進化させる。［ポケモンを選んだ場合、ポケモンをとばして進化させる。］|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモン1匹から進化するポケモン、またはその上のポケモンを、手札から1枚選び、そのポケモンにのせて進化させる。［ポケモンを選んだ場合、ポケモンをとばして進化させる。］",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "きずぐすり_none_none_自分のポケモン1匹のHPを「30」回復する。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "きずぐすり",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモン1匹のHPを「30」回復する。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "モンスターボール_none_none_コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "モンスターボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギー回収_none_none_自分のトラッシュから基本エネルギーを2枚選び、相手に見せてから、手札に加える。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "エネルギー回収",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュから基本エネルギーを2枚選び、相手に見せてから、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -450,14 +696,17 @@
     "evolutions": []
   },
   {
-    "master_id": "クラッシュハンマー_none_none_none_none_none",
+    "master_id": "クラッシュハンマー_none_none_コインを1回投げオモテなら、相手のポケモンについているエネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "クラッシュハンマー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げオモテなら、相手のポケモンについているエネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -475,14 +724,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケモンキャッチャー_none_none_none_none_none",
+    "master_id": "ポケモンキャッチャー_none_none_相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ポケモンキャッチャー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -500,14 +752,45 @@
     "evolutions": []
   },
   {
-    "master_id": "チェレン_none_none_none_none_none",
+    "master_id": "チェレン_none_none_自分の山札を3枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "チェレン",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を3枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギー転送_none_none_自分の山札から基本エネルギーを1枚選び、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギー転送",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札から基本エネルギーを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -552,14 +835,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハイパーボール_none_none_none_none_none",
+    "master_id": "ハイパーボール_none_none_このカードは、自分の手札を2枚トラッシュしなければ使えない。\n自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ハイパーボール",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札を2枚トラッシュしなければ使えない。\n自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -577,14 +863,17 @@
     "evolutions": []
   },
   {
-    "master_id": "改造ハンマー_none_none_none_none_none",
+    "master_id": "改造ハンマー_none_none_相手のポケモンについている特殊エネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "改造ハンマー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -602,14 +891,45 @@
     "evolutions": []
   },
   {
-    "master_id": "ツールスクラッパー_none_none_none_none_none",
+    "master_id": "ふしぎなアメ_none_none_自分のたねポケモン1匹から進化する1進化の上の2進化ポケモンを、手札から1枚選び、そのたねポケモンにのせて進化させる。[最初の自分の番と、この番出したばかりのたねポケモンには使えない。]|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のたねポケモン1匹から進化する1進化の上の2進化ポケモンを、手札から1枚選び、そのたねポケモンにのせて進化させる。[最初の自分の番と、この番出したばかりのたねポケモンには使えない。]",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ツールスクラッパー_none_none_おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ツールスクラッパー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "おたがいの場のポケモンについている「ポケモンのどうぐ」を2枚まで選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -627,7 +947,35 @@
     "evolutions": []
   },
   {
-    "master_id": "スクランブルスイッチ_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "きずぐすり_none_none_自分のポケモンを1匹選び、HPを「30」回復する。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "きずぐすり",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモンを1匹選び、HPを「30」回復する。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "スクランブルスイッチ_none_none_自分のバトルポケモンをベンチポケモンと入れ替える。その後、入れ替えたポケモンについているエネルギーを好きなだけ選び、新しくバトル場に出したポケモンにつけ替える。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "スクランブルスイッチ",
     "hp": null,
     "type": "",
@@ -635,6 +983,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分のバトルポケモンをベンチポケモンと入れ替える。その後、入れ替えたポケモンについているエネルギーを好きなだけ選び、新しくバトル場に出したポケモンにつけ替える。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -654,7 +1004,35 @@
     "evolutions": []
   },
   {
-    "master_id": "マスターボール_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ハイパーボール_none_none_このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ハイパーボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "マスターボール_none_none_自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|※このカードは、過去の同名のカードで代用できませんのでご注意ください。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "マスターボール",
     "hp": null,
     "type": "",
@@ -662,6 +1040,9 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札からポケモンを1枚選び、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
+      "※このカードは、過去の同名のカードで代用できませんのでご注意ください。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -681,7 +1062,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケモン回収サイクロン_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ポケモン回収サイクロン_none_none_自分の場のポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ポケモン回収サイクロン",
     "hp": null,
     "type": "",
@@ -689,6 +1070,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の場のポケモンを1匹選び、そのポケモンと、ついているすべてのカードを、手札にもどす。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -708,190 +1091,16 @@
     "evolutions": []
   },
   {
-    "master_id": "いいきずぐすり_none_none_none_none_none",
-    "name": "いいきずぐすり",
+    "master_id": "クラッシュハンマー_none_none_コインを1回投げオモテなら、相手の場のポケモンについているエネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "クラッシュハンマー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "せいなるはい_none_none_none_none_none",
-    "name": "せいなるはい",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ポケモンセンターのお姉さん_none_none_none_none_none",
-    "name": "ポケモンセンターのお姉さん",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "エネルギーリサイクル_none_none_none_none_none",
-    "name": "エネルギーリサイクル",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ラッキーメット_none_none_none_none_none",
-    "name": "ラッキーメット",
-    "hp": null,
-    "type": "",
-    "card_kind": "ポケモンのどうぐ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "むしよけスプレー_none_none_none_none_none",
-    "name": "むしよけスプレー",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "カウンターゲイン_none_none_none_none_none",
-    "name": "カウンターゲイン",
-    "hp": null,
-    "type": "",
-    "card_kind": "ポケモンのどうぐ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ふうせん_none_none_none_none_none",
-    "name": "ふうせん",
-    "hp": null,
-    "type": "",
-    "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
     "rules": [
-      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+      "コインを1回投げオモテなら、相手の場のポケモンについているエネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
     ],
     "weakness": {
       "type": "",
@@ -910,14 +1119,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ボスの指令_none_none_none_none_none",
-    "name": "ボスの指令",
+    "master_id": "ポケモンキャッチャー_none_none_コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ポケモンキャッチャー",
     "hp": null,
     "type": "",
-    "card_kind": "サポート",
+    "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げオモテなら、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -935,11 +1147,854 @@
     "evolutions": []
   },
   {
-    "master_id": "コック_none_none_none_none_none",
+    "master_id": "いいきずぐすり_none_none_自分のポケモンを1匹選び、HPを「60」回復する。回復した場合、そのポケモンについているエネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "いいきずぐすり",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモンを1匹選び、HPを「60」回復する。回復した場合、そのポケモンについているエネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギーつけかえ_none_none_自分の場のポケモンについている基本エネルギーを1個選び、自分の別のポケモンにつけ替える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーつけかえ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の場のポケモンについている基本エネルギーを1個選び、自分の別のポケモンにつけ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "せいなるはい_none_none_自分のトラッシュからポケモンを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "せいなるはい",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュからポケモンを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケモンセンターのお姉さん_none_none_自分のポケモンを1匹選び、そのポケモンのHPを「60」回復し、特殊状態もすべて回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
+    "name": "ポケモンセンターのお姉さん",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモンを1匹選び、そのポケモンのHPを「60」回復し、特殊状態もすべて回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふしぎなアメ_none_none_自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせて進化させる。（最初の自分の番と、この番出したばかりのたねポケモンには使えない。）|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせて進化させる。（最初の自分の番と、この番出したばかりのたねポケモンには使えない。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギーリサイクル_none_none_自分のトラッシュから基本エネルギーを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーリサイクル",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュから基本エネルギーを5枚選び、相手に見せてから、山札にもどす。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ラッキーメット_none_none_このカードをつけているポケモンが、バトル場で相手のワザのダメージを受けるたび、自分の山札を2枚引く。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ラッキーメット",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+      "このカードをつけているポケモンが、バトル場で相手のワザのダメージを受けるたび、自分の山札を2枚引く。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ジャッジマン_none_none_おたがいのプレイヤーは、それぞれ、手札をすべて山札にもどし、山札を切る。その後、それぞれの山札を4枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
+    "name": "ジャッジマン",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ、手札をすべて山札にもどし、山札を切る。その後、それぞれの山札を4枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "クラッシュハンマー_none_none_コインを1回投げオモテなら、相手の場のポケモンについているエネルギーを、1個トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "クラッシュハンマー",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "コインを1回投げオモテなら、相手の場のポケモンについているエネルギーを、1個トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "むしよけスプレー_none_none_相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "むしよけスプレー",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギー回収_none_none_自分のトラッシュにある基本エネルギーを2枚、相手に見せてから、手札に加える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギー回収",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュにある基本エネルギーを2枚、相手に見せてから、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギーつけかえ_none_none_自分の場のポケモンについている基本エネルギーを1個、自分の別のポケモンにつけ替える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーつけかえ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の場のポケモンについている基本エネルギーを1個、自分の別のポケモンにつけ替える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ハイパーボール_none_none_このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札にあるポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ハイパーボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札にあるポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふしぎなアメ_none_none_自分の手札にある2進化ポケモンを1枚、そのポケモンへと進化する自分の場のたねポケモンにのせて進化させる。（最初の自分の番と、この番出したばかりのたねポケモンには使えない。）|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の手札にある2進化ポケモンを1枚、そのポケモンへと進化する自分の場のたねポケモンにのせて進化させる。（最初の自分の番と、この番出したばかりのたねポケモンには使えない。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "モンスターボール_none_none_コインを1回投げオモテなら、自分の山札にあるポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "モンスターボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札にあるポケモンを1枚、相手に見せてから、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギーリサイクル_none_none_自分のトラッシュにある基本エネルギーを5枚、相手に見せてから、山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーリサイクル",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュにある基本エネルギーを5枚、相手に見せてから、山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "改造ハンマー_none_none_相手の場のポケモンについている特殊エネルギーを、1個トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "改造ハンマー",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "相手の場のポケモンについている特殊エネルギーを、1個トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ジャッジマン_none_none_おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、それぞれ山札を4枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
+    "name": "ジャッジマン",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、それぞれ山札を4枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "カウンターゲイン_none_none_自分のサイドの残り枚数が、相手より多いなら、このカードをつけているポケモンが使うワザに必要なエネルギーは、エネルギー1個ぶん少なくなる。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "カウンターゲイン",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+      "自分のサイドの残り枚数が、相手より多いなら、このカードをつけているポケモンが使うワザに必要なエネルギーは、エネルギー1個ぶん少なくなる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケギア3.0_none_none_自分の山札を上から7枚見る。その中にあるサポートを1枚、相手に見せてから、手札に加えてよい。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ポケギア3.0",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札を上から7枚見る。その中にあるサポートを1枚、相手に見せてから、手札に加えてよい。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケモンセンターのお姉さん_none_none_自分のポケモン1匹のHPを「60」回復し、特殊状態もすべて回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
+    "name": "ポケモンセンターのお姉さん",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモン1匹のHPを「60」回復し、特殊状態もすべて回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギー転送_none_none_自分の山札から基本エネルギーを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギー転送",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札から基本エネルギーを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケギア3.0_none_none_自分の山札を上から7枚見る。その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ポケギア3.0",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札を上から7枚見る。その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふしぎなアメ_none_none_自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせ、1進化をとばして進化させる。（最初の自分の番と、この番出したばかりのポケモンには使えない。）|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせ、1進化をとばして進化させる。（最初の自分の番と、この番出したばかりのポケモンには使えない。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギー回収_none_none_自分のトラッシュから基本エネルギーを2枚まで選び、相手に見せて、手札に加える。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギー回収",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュから基本エネルギーを2枚まで選び、相手に見せて、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふうせん_none_none_このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふうせん",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+      "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "モンスターボール_none_none_コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "モンスターボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ボスの指令_none_none_相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。|サポートは、自分の番に1枚しか使えない。_none_none",
+    "name": "ボスの指令",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "エネルギーリサイクル_none_none_自分のトラッシュから基本エネルギーを5枚まで選び、相手に見せて、山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "エネルギーリサイクル",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュから基本エネルギーを5枚まで選び、相手に見せて、山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "コック_none_none_自分のバトルポケモンのHPを「70」回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "コック",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のバトルポケモンのHPを「70」回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "きずぐすり_none_none_none_none_none",
+    "name": "きずぐすり",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
     "rules": [],
@@ -988,14 +2043,101 @@
     "evolutions": []
   },
   {
-    "master_id": "勝利のしるし_none_none_none_none_none",
+    "master_id": "ハイパーボール_none_none_このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ハイパーボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、自分の手札を2枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ふしぎなアメ_none_none_自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせ、1進化をとばして進化させる。（最初の自分の番や、出したばかりのポケモンには使えない。）|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ふしぎなアメ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の手札から2進化ポケモンを1枚選び、そのポケモンへと進化する自分の場のたねポケモンにのせ、1進化をとばして進化させる。（最初の自分の番や、出したばかりのポケモンには使えない。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ポケギア3.0_none_none_自分の山札を上から7枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ポケギア3.0",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札を上から7枚見て、その中からサポートを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "勝利のしるし_none_none_コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "勝利のしるし",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3732,14 +4874,17 @@
     ]
   },
   {
-    "master_id": "おとりよせボックス_none_none_none_none_none",
+    "master_id": "おとりよせボックス_none_none_このカードを使ったら、自分の番は終わる。\n\n自分の山札からグッズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "おとりよせボックス",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードを使ったら、自分の番は終わる。\n\n自分の山札からグッズを2枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3757,7 +4902,7 @@
     "evolutions": []
   },
   {
-    "master_id": "覚醒のドラム_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "覚醒のドラム_none_none_自分の場の「古代」のポケモンの数ぶん、山札を引く。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "覚醒のドラム",
     "hp": null,
     "type": "",
@@ -3765,6 +4910,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の場の「古代」のポケモンの数ぶん、山札を引く。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -3784,14 +4931,17 @@
     "evolutions": []
   },
   {
-    "master_id": "なかよしポフィン_none_none_none_none_none",
+    "master_id": "なかよしポフィン_none_none_自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "なかよしポフィン",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から、HPが「70」以下のたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3809,14 +4959,17 @@
     "evolutions": []
   },
   {
-    "master_id": "緊急ボード_none_none_none_none_none",
+    "master_id": "緊急ボード_none_none_このカードをつけているポケモンは、にげるためのエネルギーが1個ぶん少なくなる。そのポケモンの残りHPが「30」以下なら、にげるためのエネルギーは、すべてなくなる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "緊急ボード",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンは、にげるためのエネルギーが1個ぶん少なくなる。そのポケモンの残りHPが「30」以下なら、にげるためのエネルギーは、すべてなくなる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3834,7 +4987,7 @@
     "evolutions": []
   },
   {
-    "master_id": "マキシマムベルト_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "マキシマムベルト_none_none_このカードをつけているポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "マキシマムベルト",
     "hp": null,
     "type": "",
@@ -3842,6 +4995,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけているポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -3861,14 +5016,17 @@
     "evolutions": []
   },
   {
-    "master_id": "探検家の先導_none_none_none_none_none",
+    "master_id": "探検家の先導_none_none_自分の山札を上から6枚見て、その中からカードを2枚選び、手札に加える。残りのカードはトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "探検家の先導",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から6枚見て、その中からカードを2枚選び、手札に加える。残りのカードはトラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3886,14 +5044,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ビワ_none_none_none_none_none",
+    "master_id": "ビワ_none_none_相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ビワ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手の手札を見て、その中からグッズを2枚まで選び、トラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3911,14 +5072,17 @@
     "evolutions": []
   },
   {
-    "master_id": "マツバの確信_none_none_none_none_none",
+    "master_id": "マツバの確信_none_none_このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n相手のベンチポケモンの数ぶん、自分の山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "マツバの確信",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n相手のベンチポケモンの数ぶん、自分の山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -3964,7 +5128,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ネオアッパーエネルギー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ネオアッパーエネルギー_none_none_このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\n2進化ポケモンについているなら、すべてのタイプのエネルギー2個ぶんとしてはたらく。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ネオアッパーエネルギー",
     "hp": null,
     "type": "",
@@ -3972,6 +5136,7 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\n2進化ポケモンについているなら、すべてのタイプのエネルギー2個ぶんとしてはたらく。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -6706,14 +7871,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハンドトリマー_none_none_none_none_none",
+    "master_id": "ハンドトリマー_none_none_おたがいのプレイヤーは、それぞれ自分の手札が5枚になるようにトラッシュする。（トラッシュは相手から行う。手札が5枚以下のプレイヤーはトラッシュしない。）|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ハンドトリマー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ自分の手札が5枚になるようにトラッシュする。（トラッシュは相手から行う。手札が5枚以下のプレイヤーはトラッシュしない。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -6731,7 +7899,7 @@
     "evolutions": []
   },
   {
-    "master_id": "プライムキャッチャー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "プライムキャッチャー_none_none_相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、自分のバトルポケモンをベンチポケモンと入れ替える。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "プライムキャッチャー",
     "hp": null,
     "type": "",
@@ -6739,6 +7907,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。その後、自分のバトルポケモンをベンチポケモンと入れ替える。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -6758,7 +7928,7 @@
     "evolutions": []
   },
   {
-    "master_id": "リブートポッド_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "リブートポッド_none_none_自分の「未来」のポケモン全員に、トラッシュから基本エネルギーを1枚ずつつける。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "リブートポッド",
     "hp": null,
     "type": "",
@@ -6766,6 +7936,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の「未来」のポケモン全員に、トラッシュから基本エネルギーを1枚ずつつける。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -6785,7 +7957,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ヒーローマント_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ヒーローマント_none_none_このカードをつけているポケモンの最大HPは「＋100」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ヒーローマント",
     "hp": null,
     "type": "",
@@ -6793,6 +7965,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけているポケモンの最大HPは「＋100」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -6812,14 +7986,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ヘビーバトン_none_none_none_none_none",
+    "master_id": "ヘビーバトン_none_none_このカードをつけているにげるためのエネルギーが4個のポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、そのポケモンについている基本エネルギーを3枚まで選び、自分のベンチポケモンに好きなようにつけ替える。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ヘビーバトン",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているにげるためのエネルギーが4個のポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、そのポケモンについている基本エネルギーを3枚まで選び、自分のベンチポケモンに好きなようにつけ替える。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -6837,14 +8014,17 @@
     "evolutions": []
   },
   {
-    "master_id": "暗号マニアの解読_none_none_none_none_none",
+    "master_id": "暗号マニアの解読_none_none_自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "暗号マニアの解読",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から好きなカードを2枚選ぶ。残りの山札を切り、選んだカードを好きな順番に入れ替えて、山札の上にもどす。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -6862,14 +8042,17 @@
     "evolutions": []
   },
   {
-    "master_id": "セイジ_none_none_none_none_none",
+    "master_id": "セイジ_none_none_自分の場のポケモン1匹から進化するカード（特性を持つポケモンをのぞく）を、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。（対戦準備で出したポケモンや、この番出したばかりのポケモンにも使える。）|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "セイジ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の場のポケモン1匹から進化するカード（特性を持つポケモンをのぞく）を、自分の山札から1枚選び、そのポケモンにのせて進化させる。そして山札を切る。（対戦準備で出したポケモンや、この番出したばかりのポケモンにも使える。）",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -6887,14 +8070,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ベルのまごころ_none_none_none_none_none",
+    "master_id": "ベルのまごころ_none_none_残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ベルのまごころ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "残りHPが「30」以下の自分のポケモン1匹のHPを、すべて回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -7352,6 +8538,35 @@
       "value": "--"
     },
     "retreatCost": 2,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "マスターボール_none_none_自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "name": "マスターボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
+      "ACE SPECのカードは、デッキに1枚しか入れられない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
     "pokedexNo": "",
     "pokedexCategory": "",
     "height": "",
@@ -7870,14 +9085,17 @@
     "evolutions": []
   },
   {
-    "master_id": "タイム_none_none_none_none_none",
+    "master_id": "タイム_none_none_自分の手札からポケモンを1枚選び、そのポケモンの名前を相手に伝えてから、ウラにして置く。相手はそのポケモンのHPを答える。ウラにしたポケモンをオモテにして、正解なら、相手は山札を4枚引く。不正解なら、自分は山札を4枚引く。その後、置いたカードを自分の手札にもどす。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "タイム",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札からポケモンを1枚選び、そのポケモンの名前を相手に伝えてから、ウラにして置く。相手はそのポケモンのHPを答える。ウラにしたポケモンをオモテにして、正解なら、相手は山札を4枚引く。不正解なら、自分は山札を4枚引く。その後、置いたカードを自分の手札にもどす。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -8435,14 +9653,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ピクニックガール_none_none_none_none_none",
+    "master_id": "ピクニックガール_none_none_コインを1回投げる。オモテなら4枚、ウラなら2枚、自分の山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ピクニックガール",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げる。オモテなら4枚、ウラなら2枚、自分の山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12352,14 +13573,45 @@
     "evolutions": []
   },
   {
-    "master_id": "ラブラブボール_none_none_none_none_none",
+    "master_id": "改造ハンマー_none_none_相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "改造ハンマー",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "相手の場のポケモンについている特殊エネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ラブラブボール_none_none_自分の山札から、相手の場のポケモンと同じ名前のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ラブラブボール",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から、相手の場のポケモンと同じ名前のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12377,14 +13629,45 @@
     "evolutions": []
   },
   {
-    "master_id": "管理人_none_none_none_none_none",
+    "master_id": "ラッキーメット_none_none_このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を2枚引く。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
+    "name": "ラッキーメット",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を2枚引く。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "管理人_none_none_自分の山札を2枚引く。その後、場に「公民館」が出ているなら、この「管理人」はトラッシュせず、山札にもどして切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "管理人",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を2枚引く。その後、場に「公民館」が出ているなら、この「管理人」はトラッシュせず、山札にもどして切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12402,14 +13685,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ゴヨウ_none_none_none_none_none",
+    "master_id": "ゴヨウ_none_none_おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、おたがいのプレイヤーは、それぞれコインを1回投げ、オモテなら6枚、ウラなら3枚、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ゴヨウ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ自分の手札をすべてウラにして切り、山札の下にもどす。その後、おたがいのプレイヤーは、それぞれコインを1回投げ、オモテなら6枚、ウラなら3枚、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12427,14 +13713,17 @@
     "evolutions": []
   },
   {
-    "master_id": "サザレ_none_none_none_none_none",
+    "master_id": "サザレ_none_none_自分の手札からポケモンを2枚まで選び、相手に見せて、山札にもどす。その後、もどした枚数ぶんまで、自分の山札からポケモンを選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "サザレ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札からポケモンを2枚まで選び、相手に見せて、山札にもどす。その後、もどした枚数ぶんまで、自分の山札からポケモンを選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12452,14 +13741,17 @@
     "evolutions": []
   },
   {
-    "master_id": "スイレンのお世話_none_none_none_none_none",
+    "master_id": "スイレンのお世話_none_none_自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "スイレンのお世話",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュからポケモン（「ルールを持つポケモン」をのぞく）と基本エネルギーを合計3枚まで選び、相手に見せて、手札に加える。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -12532,7 +13824,7 @@
     "evolutions": []
   },
   {
-    "master_id": "アンフェアスタンプ_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "アンフェアスタンプ_none_none_このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は2枚、山札を引く。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "アンフェアスタンプ",
     "hp": null,
     "type": "",
@@ -12540,6 +13832,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は2枚、山札を引く。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -12559,7 +13853,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ハイパーアロマ_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ハイパーアロマ_none_none_自分の山札から1進化ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ハイパーアロマ",
     "hp": null,
     "type": "",
@@ -12567,6 +13861,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札から1進化ポケモンを3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -12586,7 +13882,7 @@
     "evolutions": []
   },
   {
-    "master_id": "サバイブギプス_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "サバイブギプス_none_none_このカードをつけているポケモンのHPがまんたんの状態で、相手のポケモンからワザのダメージを受けてきぜつするとき、そのポケモンはきぜつせず、残りHPが「10」の状態で場に残る。その後、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "サバイブギプス",
     "hp": null,
     "type": "",
@@ -12594,6 +13890,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけているポケモンのHPがまんたんの状態で、相手のポケモンからワザのダメージを受けてきぜつするとき、そのポケモンはきぜつせず、残りHPが「10」の状態で場に残る。その後、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -16536,14 +17834,17 @@
     ]
   },
   {
-    "master_id": "鬼の仮面_none_none_none_none_none",
+    "master_id": "鬼の仮面_none_none_自分のトラッシュから、名前に「オーガポン」とつく「ポケモンex」を1枚選び、自分の場の、名前に「オーガポン」とつく「ポケモンex」1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "鬼の仮面",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュから、名前に「オーガポン」とつく「ポケモンex」を1枚選び、自分の場の、名前に「オーガポン」とつく「ポケモンex」1匹と入れ替える（ついているカード・ダメカン・特殊状態・効果などは、すべて引きつぐ）。入れ替えたポケモンはトラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16561,14 +17862,17 @@
     "evolutions": []
   },
   {
-    "master_id": "おはやし笛_none_none_none_none_none",
+    "master_id": "おはやし笛_none_none_相手の山札を上から5枚オモテにして、その中からたねポケモンを好きなだけ選び、相手のベンチに出す。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "おはやし笛",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手の山札を上から5枚オモテにして、その中からたねポケモンを好きなだけ選び、相手のベンチに出す。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16586,7 +17890,7 @@
     "evolutions": []
   },
   {
-    "master_id": "シークレットボックス_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "シークレットボックス_none_none_このカードは、自分の手札を3枚トラッシュしなければ使えない。\n \n自分の山札から「グッズ」「ポケモンのどうぐ」「サポート」「スタジアム」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "シークレットボックス",
     "hp": null,
     "type": "",
@@ -16594,6 +17898,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードは、自分の手札を3枚トラッシュしなければ使えない。\n \n自分の山札から「グッズ」「ポケモンのどうぐ」「サポート」「スタジアム」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -16613,14 +17919,17 @@
     "evolutions": []
   },
   {
-    "master_id": "むしとりセット_none_none_none_none_none",
+    "master_id": "むしとりセット_none_none_自分の山札を上から7枚見て、その中からポケモンと「基本エネルギー」を合計2枚まで選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "むしとりセット",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から7枚見て、その中からポケモンと「基本エネルギー」を合計2枚まで選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16638,14 +17947,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハンディサーキュレーター_none_none_none_none_none",
+    "master_id": "ハンディサーキュレーター_none_none_このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ハンディサーキュレーター",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンについているエネルギーを1個選び、相手のベンチポケモンにつけ替える。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16663,14 +17975,17 @@
     "evolutions": []
   },
   {
-    "master_id": "スグリ_none_none_none_none_none",
+    "master_id": "スグリ_none_none_このカードは、2つの効果から1つを選んで使う。\n\n◆自分のバトルポケモンをベンチポケモンと入れ替える。\n\n◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "スグリ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、2つの効果から1つを選んで使う。\n\n◆自分のバトルポケモンをベンチポケモンと入れ替える。\n\n◆この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex・V」へのダメージは「+30」される。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16688,14 +18003,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ゼイユ_none_none_none_none_none",
+    "master_id": "ゼイユ_none_none_このカードは、先攻プレイヤーの最初の番でも使える。\n\n自分の手札をすべてトラッシュし、山札を5枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ゼイユ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、先攻プレイヤーの最初の番でも使える。\n\n自分の手札をすべてトラッシュし、山札を5枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16713,14 +18031,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハッサク_none_none_none_none_none",
+    "master_id": "ハッサク_none_none_このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\n自分の山札を上から8枚見て、その中からカードを3枚まで選び、手札に加える。残りのカードは山札にもどして切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ハッサク",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\n自分の山札を上から8枚見て、その中からカードを3枚まで選び、手札に加える。残りのカードは山札にもどして切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -16794,7 +18115,7 @@
     "evolutions": []
   },
   {
-    "master_id": "レガシーエネルギー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "レガシーエネルギー_none_none_このカードは、ポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。\n \nこのカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。対戦中、自分の「レガシーエネルギー」のこの効果は、1回しかはたらかない。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "レガシーエネルギー",
     "hp": null,
     "type": "",
@@ -16802,6 +18123,7 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードは、ポケモンについているかぎり、すべてのタイプのエネルギー1個ぶんとしてはたらく。\n \nこのカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。対戦中、自分の「レガシーエネルギー」のこの効果は、1回しかはたらかない。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -16956,14 +18278,17 @@
     ]
   },
   {
-    "master_id": "ロトりぼう_none_none_none_none_none",
+    "master_id": "ロトりぼう_none_none_自分の山札を上から4枚見て、その中からサポートを好きなだけ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ロトりぼう",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から4枚見て、その中からサポートを好きなだけ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19460,7 +20785,7 @@
     ]
   },
   {
-    "master_id": "デンジャラス光線_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "デンジャラス光線_none_none_相手のバトルポケモンをやけどとこんらんにする。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "デンジャラス光線",
     "hp": null,
     "type": "",
@@ -19468,6 +20793,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "相手のバトルポケモンをやけどとこんらんにする。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -19487,7 +20814,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケバイタルA_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ポケバイタルA_none_none_自分のポケモン1匹のHPを「150」回復する。\n\nこのカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ポケバイタルA",
     "hp": null,
     "type": "",
@@ -19495,6 +20822,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分のポケモン1匹のHPを「150」回復する。\n\nこのカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -19514,14 +20843,17 @@
     "evolutions": []
   },
   {
-    "master_id": "夜のタンカ_none_none_none_none_none",
+    "master_id": "夜のタンカ_none_none_自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "夜のタンカ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュからポケモンまたは基本エネルギーを1枚選び、相手に見せて、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19539,14 +20871,17 @@
     "evolutions": []
   },
   {
-    "master_id": "くさりもち_none_none_none_none_none",
+    "master_id": "くさりもち_none_none_このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "くさりもち",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているどくのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+40」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19564,14 +20899,17 @@
     "evolutions": []
   },
   {
-    "master_id": "力の砂時計_none_none_none_none_none",
+    "master_id": "力の砂時計_none_none_自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "力の砂時計",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の番の終わりに、このカードをつけているポケモンがバトル場にいるなら、自分のトラッシュから基本エネルギーを1枚選び、そのポケモンにつけてよい。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19589,14 +20927,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アクロマの執念_none_none_none_none_none",
+    "master_id": "アクロマの執念_none_none_自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アクロマの執念",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からスタジアムとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19614,14 +20955,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アンズの秘技_none_none_none_none_none",
+    "master_id": "アンズの秘技_none_none_自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アンズの秘技",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモンを2匹まで選び、自分の山札から「基本エネルギー」を1枚ずつつける。そして山札を切る。バトルポケモンにつけた場合、そのポケモンをどくにする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19639,14 +20983,17 @@
     "evolutions": []
   },
   {
-    "master_id": "カシオペア_none_none_none_none_none",
+    "master_id": "カシオペア_none_none_このカードは、自分の手札がこのカード1枚だけのときにしか使えない。\n\n自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "カシオペア",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。\n\n自分の山札から好きなカードを2枚まで選び、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19664,14 +21011,17 @@
     "evolutions": []
   },
   {
-    "master_id": "クセロシキのたくらみ_none_none_none_none_none",
+    "master_id": "クセロシキのたくらみ_none_none_相手は相手自身の手札を、3枚になるようにトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "クセロシキのたくらみ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手は相手自身の手札を、3枚になるようにトラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -19689,7 +21039,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ニュートラルセンター_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ニュートラルセンター_none_none_おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。\n\nこのカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。|スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ニュートラルセンター",
     "hp": null,
     "type": "",
@@ -19697,6 +21047,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "おたがいのポケモン（「ルールを持つポケモン」をのぞく）全員は、相手の「ポケモンex・V」からワザのダメージを受けない。\n\nこのカードは、トラッシュにあるかぎり、手札に加えられず、山札にもどせない。",
+      "スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -23548,14 +24900,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ガラスのラッパ_none_none_none_none_none",
+    "master_id": "ガラスのラッパ_none_none_このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。\n\n自分のベンチのポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ガラスのラッパ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の場に「テラスタル」のポケモンがいるときにしか使えない。\n\n自分のベンチのポケモンを2匹まで選び、トラッシュから基本エネルギーを1枚ずつつける。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23573,7 +24928,7 @@
     "evolutions": []
   },
   {
-    "master_id": "古びたねっこの化石_60_none_none_none_げんしのねっこ",
+    "master_id": "古びたねっこの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。_none_げんしのねっこ",
     "name": "古びたねっこの化石",
     "hp": 60,
     "type": "",
@@ -23585,7 +24940,9 @@
       }
     ],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23603,7 +24960,7 @@
     "evolutions": []
   },
   {
-    "master_id": "古びたふたの化石_60_none_none_none_ふたのまもり",
+    "master_id": "古びたふたの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。_none_ふたのまもり",
     "name": "古びたふたの化石",
     "hp": 60,
     "type": "",
@@ -23615,7 +24972,9 @@
       }
     ],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23633,14 +24992,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ウタンのみ_none_none_none_none_none",
+    "master_id": "ウタンのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ウタンのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23658,14 +25020,17 @@
     "evolutions": []
   },
   {
-    "master_id": "オッカのみ_none_none_none_none_none",
+    "master_id": "オッカのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "オッカのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23683,7 +25048,7 @@
     "evolutions": []
   },
   {
-    "master_id": "きらめく結晶_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "きらめく結晶_none_none_このカードをつけている「テラスタル」のポケモンがワザを使うとき、そのワザを使うためのエネルギーは、1個ぶん少なくなる。（少なくなるのは、どのタイプのエネルギーでもよい。）|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "きらめく結晶",
     "hp": null,
     "type": "",
@@ -23691,6 +25056,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけている「テラスタル」のポケモンがワザを使うとき、そのワザを使うためのエネルギーは、1個ぶん少なくなる。（少なくなるのは、どのタイプのエネルギーでもよい。）",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -23710,14 +25077,17 @@
     "evolutions": []
   },
   {
-    "master_id": "重力玉_none_none_none_none_none",
+    "master_id": "重力玉_none_none_このカードをつけているポケモンがバトル場にいるかぎり、おたがいのバトルポケモンのにげるためのエネルギーは、それぞれ1個ぶん多くなる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "重力玉",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンがバトル場にいるかぎり、おたがいのバトルポケモンのにげるためのエネルギーは、それぞれ1個ぶん多くなる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23735,7 +25105,7 @@
     "evolutions": []
   },
   {
-    "master_id": "デラックスボム_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "デラックスボム_none_none_このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "デラックスボム",
     "hp": null,
     "type": "",
@@ -23743,6 +25113,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -23762,14 +25134,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アカマツ_none_none_none_none_none",
+    "master_id": "アカマツ_none_none_自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アカマツ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から、それぞれちがうタイプの基本エネルギーを2枚まで選び、相手に見せて、どちらか1枚を手札に加え、残りのエネルギーを自分のポケモンにつける。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23787,14 +25162,17 @@
     "evolutions": []
   },
   {
-    "master_id": "タロ_none_none_none_none_none",
+    "master_id": "タロ_none_none_自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "タロ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札をすべて山札にもどして切る。その後、山札を4枚引く。相手のサイドの残り枚数が3枚以下なら、引く枚数は8枚になる。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23812,14 +25190,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハイダイ_none_none_none_none_none",
+    "master_id": "ハイダイ_none_none_自分の手札を2枚選び、好きな順番に入れ替えて、山札の下にもどす。その後、山札を4枚引く。（自分の手札を2枚もどせないなら、このカードは使えない。）|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ハイダイ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札を2枚選び、好きな順番に入れ替えて、山札の下にもどす。その後、山札を4枚引く。（自分の手札を2枚もどせないなら、このカードは使えない。）",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23837,14 +25218,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ブライア_none_none_none_none_none",
+    "master_id": "ブライア_none_none_このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ブライア",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、相手のサイドの残り枚数が2枚のときにしか使えない。\n\nこの番、自分の「テラスタル」のポケモンが使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを1枚多くとる。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -23862,7 +25246,7 @@
     "evolutions": []
   },
   {
-    "master_id": "偉大な大樹_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "偉大な大樹_none_none_おたがいのプレイヤーは、自分の番ごとに1回、自分の場のたねポケモン1匹から進化する1進化ポケモンを、自分の山札から1枚選び、そのポケモンにのせて進化させてよい。進化したなら、続けて2進化ポケモンを1枚選び、進化させてよい。そして山札を切る。（最初の自分の番や、出したばかりのたねポケモンは進化させられない。）|スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "偉大な大樹",
     "hp": null,
     "type": "",
@@ -23870,6 +25254,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "おたがいのプレイヤーは、自分の番ごとに1回、自分の場のたねポケモン1匹から進化する1進化ポケモンを、自分の山札から1枚選び、そのポケモンにのせて進化させてよい。進化したなら、続けて2進化ポケモンを1枚選び、進化させてよい。そして山札を切る。（最初の自分の番や、出したばかりのたねポケモンは進化させられない。）",
+      "スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -24044,14 +25430,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ビリオとネア_none_none_none_none_none",
+    "master_id": "ビリオとネア_none_none_自分の山札を2枚引く。その後、自分の手札が10枚以上あるなら、さらに2枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ビリオとネア",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を2枚引く。その後、自分の手札が10枚以上あるなら、さらに2枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -24408,14 +25797,17 @@
     "evolutions": []
   },
   {
-    "master_id": "テラスタルオーブ_none_none_none_none_none",
+    "master_id": "テラスタルオーブ_none_none_自分の山札から「テラスタル」のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "テラスタルオーブ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「テラスタル」のポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -24433,7 +25825,7 @@
     "evolutions": []
   },
   {
-    "master_id": "パーフェクトミキサー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "パーフェクトミキサー_none_none_自分の山札から好きなカードを5枚まで選び、トラッシュする。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "パーフェクトミキサー",
     "hp": null,
     "type": "",
@@ -24441,6 +25833,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札から好きなカードを5枚まで選び、トラッシュする。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -24907,7 +26301,7 @@
     "evolutions": []
   },
   {
-    "master_id": "プレシャスキャリー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "プレシャスキャリー_none_none_自分の山札からたねポケモンを好きなだけ選び、ベンチに出す。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "プレシャスキャリー",
     "hp": null,
     "type": "",
@@ -24915,6 +26309,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札からたねポケモンを好きなだけ選び、ベンチに出す。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -27162,7 +28558,7 @@
     "evolutions": []
   },
   {
-    "master_id": "エネルギー転送PRO_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "エネルギー転送PRO_none_none_自分の山札から、それぞれちがうタイプの基本エネルギーを好きなだけ選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "エネルギー転送PRO",
     "hp": null,
     "type": "",
@@ -27170,6 +28566,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札から、それぞれちがうタイプの基本エネルギーを好きなだけ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -27189,14 +28587,17 @@
     "evolutions": []
   },
   {
-    "master_id": "おたすけベル_none_none_none_none_none",
+    "master_id": "おたすけベル_none_none_このカードは、後攻プレイヤーの最初の番しか使えない。\n\n自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "おたすけベル",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、後攻プレイヤーの最初の番しか使えない。\n\n自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27214,14 +28615,45 @@
     "evolutions": []
   },
   {
-    "master_id": "ぼうがいレター_none_none_none_none_none",
+    "master_id": "ダークボール_none_none_自分の山札を下から7枚見て、その中からポケモンを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "ダークボール",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の山札を下から7枚見て、その中からポケモンを1枚選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ぼうがいレター_none_none_相手は相手自身の手札を数えたあと、すべてウラにして切り、山札の下にもどす。その後、相手はもどした枚数ぶん、山札を引く。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ぼうがいレター",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手は相手自身の手札を数えたあと、すべてウラにして切り、山札の下にもどす。その後、相手はもどした枚数ぶん、山札を引く。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27239,7 +28671,7 @@
     "evolutions": []
   },
   {
-    "master_id": "メガトンブロアー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "メガトンブロアー_none_none_相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」と、場に出ている「スタジアム」を、すべてトラッシュする。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "メガトンブロアー",
     "hp": null,
     "type": "",
@@ -27247,6 +28679,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "相手のポケモン全員についている「ポケモンのどうぐ」と「特殊エネルギー」と、場に出ている「スタジアム」を、すべてトラッシュする。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -27266,14 +28700,17 @@
     "evolutions": []
   },
   {
-    "master_id": "竜の秘薬_none_none_none_none_none",
+    "master_id": "竜の秘薬_none_none_自分のバトル場のポケモンのHPを「60」回復する。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "竜の秘薬",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトル場のポケモンのHPを「60」回復する。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27291,14 +28728,17 @@
     "evolutions": []
   },
   {
-    "master_id": "イトケのみ_none_none_none_none_none",
+    "master_id": "イトケのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "イトケのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27316,14 +28756,45 @@
     "evolutions": []
   },
   {
-    "master_id": "カキツバタ_none_none_none_none_none",
+    "master_id": "カウンターゲイン_none_none_自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
+    "name": "カウンターゲイン",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のサイドの残り枚数が、相手のサイドの残り枚数より多いなら、このカードをつけているポケモンがワザを使うためのエネルギーは、エネルギー1個ぶん少なくなる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "カキツバタ_none_none_自分の山札を上から7枚見て、その中からポケモンとトレーナーズを1枚ずつ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "カキツバタ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から7枚見て、その中からポケモンとトレーナーズを1枚ずつ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27341,14 +28812,17 @@
     "evolutions": []
   },
   {
-    "master_id": "サーファー_none_none_none_none_none",
+    "master_id": "サーファー_none_none_自分のバトルポケモンをベンチポケモンと入れ替える。その後、自分の手札が5枚になるように、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "サーファー",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトルポケモンをベンチポケモンと入れ替える。その後、自分の手札が5枚になるように、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27366,14 +28840,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ドラセナ_none_none_none_none_none",
+    "master_id": "ドラセナ_none_none_自分の手札をすべて山札にもどして切る。その後、コインを1回投げ、オモテなら8枚、ウラなら3枚、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ドラセナ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札をすべて山札にもどして切る。その後、コインを1回投げ、オモテなら8枚、ウラなら3枚、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27391,14 +28868,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ルチアのアピール_none_none_none_none_none",
+    "master_id": "ルチアのアピール_none_none_相手のベンチのたねポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンをこんらんにする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ルチアのアピール",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手のベンチのたねポケモンを1匹選び、バトルポケモンと入れ替える。その後、新しく出てきたポケモンをこんらんにする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -27416,7 +28896,7 @@
     "evolutions": []
   },
   {
-    "master_id": "リッチエネルギー_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "リッチエネルギー_none_none_このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 \n\nこのカードを手札からポケモンにつけたとき、自分の山札を4枚引く。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "リッチエネルギー",
     "hp": null,
     "type": "",
@@ -27424,6 +28904,7 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。 \n\nこのカードを手札からポケモンにつけたとき、自分の山札を4枚引く。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -31532,14 +33013,17 @@
     "evolutions": []
   },
   {
-    "master_id": "推理セット_none_none_none_none_none",
+    "master_id": "推理セット_none_none_自分の山札を上から3枚見て、好きな順番に入れ替えて、山札の上にもどす。または、そのカードをすべてウラにして切り、山札の下にもどす。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "推理セット",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から3枚見て、好きな順番に入れ替えて、山札の上にもどす。または、そのカードをすべてウラにして切り、山札の下にもどす。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31557,14 +33041,46 @@
     "evolutions": []
   },
   {
-    "master_id": "のんびりじゃらし_none_none_none_none_none",
+    "master_id": "スクランブルスイッチ_none_none_自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを好きなだけ選び、新しいバトルポケモンにつけ替える。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "name": "スクランブルスイッチ",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のバトルポケモンをベンチポケモンと入れ替える。その後、ベンチに入れ替えたポケモンについているエネルギーを好きなだけ選び、新しいバトルポケモンにつけ替える。",
+      "グッズは、自分の番に何枚でも使える。",
+      "ACE SPECのカードは、デッキに1枚しか入れられない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "のんびりじゃらし_none_none_このカードは、後攻プレイヤーの最初の番しか使えない。\n\n相手の場のポケモンについているエネルギーを1個選び、相手の手札にもどす。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "のんびりじゃらし",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、後攻プレイヤーの最初の番しか使えない。\n\n相手の場のポケモンについているエネルギーを1個選び、相手の手札にもどす。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31582,7 +33098,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ミラクルインカム_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "ミラクルインカム_none_none_自分のトラッシュからサポートを2枚まで選び、相手に見せて、手札に加える。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "ミラクルインカム",
     "hp": null,
     "type": "",
@@ -31590,6 +33106,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分のトラッシュからサポートを2枚まで選び、相手に見せて、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -31609,7 +33127,7 @@
     "evolutions": []
   },
   {
-    "master_id": "希望のアミュレット_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "希望のアミュレット_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "希望のアミュレット",
     "hp": null,
     "type": "",
@@ -31617,6 +33135,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けてきぜつしたとき、自分の山札から好きなカードを3枚まで選び、手札に加える。そして山札を切る。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -31636,14 +33156,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ナモのみ_none_none_none_none_none",
+    "master_id": "ナモのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ナモのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31661,14 +33184,17 @@
     "evolutions": []
   },
   {
-    "master_id": "リリバのみ_none_none_none_none_none",
+    "master_id": "リリバのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "リリバのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31686,7 +33212,7 @@
     "evolutions": []
   },
   {
-    "master_id": "ワザマシン フローライト_none_none_none_フローライト_none",
+    "master_id": "ワザマシン フローライト_none_none_このカードをつけているポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］ ポケモンについているこのカードは、自分の番の終わりにトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_フローライト_none",
     "name": "ワザマシン フローライト",
     "hp": null,
     "type": "",
@@ -31704,7 +33230,10 @@
         "text": "このポケモンについているエネルギーをすべてトラッシュし、自分の「テラスタル」のポケモン全員のHPを、すべて回復する。"
       }
     ],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンは、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］ ポケモンについているこのカードは、自分の番の終わりにトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31722,14 +33251,17 @@
     "evolutions": []
   },
   {
-    "master_id": "シアノ_none_none_none_none_none",
+    "master_id": "シアノ_none_none_自分の山札から「ポケモンex」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "シアノ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「ポケモンex」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31747,14 +33279,17 @@
     "evolutions": []
   },
   {
-    "master_id": "シトロンの機転_none_none_none_none_none",
+    "master_id": "シトロンの機転_none_none_自分のポケモン全員のHPを、それぞれ「60」回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "シトロンの機転",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモン全員のHPを、それぞれ「60」回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31772,14 +33307,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ミカンのまなざし_none_none_none_none_none",
+    "master_id": "ミカンのまなざし_none_none_次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ミカンのまなざし",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -31988,14 +33526,17 @@
     ]
   },
   {
-    "master_id": "わざマシンマシン_none_none_none_none_none",
+    "master_id": "わざマシンマシン_none_none_自分の山札から、名前に「ワザマシン」とつく「ポケモンのどうぐ」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "わざマシンマシン",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から、名前に「ワザマシン」とつく「ポケモンのどうぐ」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -36039,14 +37580,17 @@
     "evolutions": []
   },
   {
-    "master_id": "からておうの稽古_none_none_none_none_none",
+    "master_id": "からておうの稽古_none_none_この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+40」される。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "からておうの稽古",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "この番、自分のポケモンが使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+40」される。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -36782,7 +38326,7 @@
     "evolutions": []
   },
   {
-    "master_id": "つりざおMAX_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "つりざおMAX_none_none_自分のトラッシュからポケモンと基本エネルギーを合計5枚まで選び、相手に見せて、手札に加える。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "つりざおMAX",
     "hp": null,
     "type": "",
@@ -36790,6 +38334,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分のトラッシュからポケモンと基本エネルギーを合計5枚まで選び、相手に見せて、手札に加える。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -36809,7 +38355,7 @@
     "evolutions": []
   },
   {
-    "master_id": "トレジャーガジェット_none_none_ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
+    "master_id": "トレジャーガジェット_none_none_自分の山札から「ポケモンのどうぐ」を5枚まで選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。|ACE SPECのカードは、デッキに1枚しか入れられない。_none_none",
     "name": "トレジャーガジェット",
     "hp": null,
     "type": "",
@@ -36817,6 +38363,8 @@
     "abilities": [],
     "attacks": [],
     "rules": [
+      "自分の山札から「ポケモンのどうぐ」を5枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。",
       "ACE SPECのカードは、デッキに1枚しか入れられない。"
     ],
     "weakness": {
@@ -36836,14 +38384,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ハバンのみ_none_none_none_none_none",
+    "master_id": "ハバンのみ_none_none_このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ハバンのみ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンからワザのダメージを受けるとき、そのダメージは「-60」され、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -36861,14 +38412,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アオキの手際_none_none_none_none_none",
+    "master_id": "アオキの手際_none_none_自分の手札をすべてトラッシュし、自分の山札から「ポケモン」「サポート」「基本エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アオキの手際",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札をすべてトラッシュし、自分の山札から「ポケモン」「サポート」「基本エネルギー」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -36886,14 +38440,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ネリネ_none_none_none_none_none",
+    "master_id": "ネリネ_none_none_自分の山札を4枚引く。このカードを使った番の終わりに、自分の手札が5枚以上あるなら、自分の手札をすべてトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ネリネ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を4枚引く。このカードを使った番の終わりに、自分の手札が5枚以上あるなら、自分の手札をすべてトラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -36911,14 +38468,17 @@
     "evolutions": []
   },
   {
-    "master_id": "パルデアの仲間たち_none_none_none_none_none",
+    "master_id": "パルデアの仲間たち_none_none_自分の山札を3枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "パルデアの仲間たち",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を3枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40697,14 +42257,45 @@
     "evolutions": []
   },
   {
-    "master_id": "Nのポイントアップ_none_none_none_none_none",
+    "master_id": "いいきずぐすり_none_none_自分のポケモン1匹のHPを「60」回復する。その後、回復したポケモンについているエネルギーを1個選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "いいきずぐすり",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のポケモン1匹のHPを「60」回復する。その後、回復したポケモンについているエネルギーを1個選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "Nのポイントアップ_none_none_自分のトラッシュから基本エネルギーを1枚選び、ベンチの「Nのポケモン」につける。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "Nのポイントアップ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュから基本エネルギーを1枚選び、ベンチの「Nのポケモン」につける。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40722,14 +42313,17 @@
     "evolutions": []
   },
   {
-    "master_id": "とりかえチケット_none_none_none_none_none",
+    "master_id": "とりかえチケット_none_none_自分のサイドを数えたあと、すべてウラにして切り、山札の下にもどす。その後、もどした枚数ぶん、山札を上からサイドとして置く。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "とりかえチケット",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のサイドを数えたあと、すべてウラにして切り、山札の下にもどす。その後、もどした枚数ぶん、山札を上からサイドとして置く。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40747,14 +42341,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ホップのバッグ_none_none_none_none_none",
+    "master_id": "ホップのバッグ_none_none_自分の山札からたねポケモンの「ホップのポケモン」を2枚まで選び、ベンチに出す。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ホップのバッグ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からたねポケモンの「ホップのポケモン」を2枚まで選び、ベンチに出す。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40772,14 +42369,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ホップのこだわりハチマキ_none_none_none_none_none",
+    "master_id": "ホップのこだわりハチマキ_none_none_このカードをつけている「ホップのポケモン」は、ワザを使うためのエネルギーがエネルギー1個ぶん少なくなり、そのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ホップのこだわりハチマキ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「ホップのポケモン」は、ワザを使うためのエネルギーがエネルギー1個ぶん少なくなり、そのポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40797,14 +42397,17 @@
     "evolutions": []
   },
   {
-    "master_id": "リーリエのしんじゅ_none_none_none_none_none",
+    "master_id": "リーリエのしんじゅ_none_none_このカードをつけている「リーリエのポケモン」が、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "リーリエのしんじゅ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「リーリエのポケモン」が、相手のポケモンからワザのダメージを受けてきぜつしたとき、とられるサイドは1枚少なくなる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40822,14 +42425,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アイリスの闘志_none_none_none_none_none",
+    "master_id": "アイリスの闘志_none_none_このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n自分の手札が6枚になるように、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アイリスの闘志",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n自分の手札が6枚になるように、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40847,14 +42453,17 @@
     "evolutions": []
   },
   {
-    "master_id": "怖いお兄さん_none_none_none_none_none",
+    "master_id": "怖いお兄さん_none_none_相手のポケモンを1匹選び、そのポケモンについている「ポケモンのどうぐ」と「特殊エネルギー」を1枚ずつトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "怖いお兄さん",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手のポケモンを1匹選び、そのポケモンについている「ポケモンのどうぐ」と「特殊エネルギー」を1枚ずつトラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -40872,14 +42481,17 @@
     "evolutions": []
   },
   {
-    "master_id": "タケシのスカウト_none_none_none_none_none",
+    "master_id": "タケシのスカウト_none_none_自分の山札からたねポケモンを2枚まで、または進化ポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "タケシのスカウト",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からたねポケモンを2枚まで、または進化ポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -44255,14 +45867,45 @@
     ]
   },
   {
-    "master_id": "ペパーのサンドウィッチ_none_none_none_none_none",
+    "master_id": "せいなるはい_none_none_自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
+    "name": "せいなるはい",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ペパーのサンドウィッチ_none_none_自分のバトルポケモンのHPを「30」回復する。そのポケモンが「ペパーのポケモン」なら、回復するHPは「100」になる。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ペパーのサンドウィッチ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトルポケモンのHPを「30」回復する。そのポケモンが「ペパーのポケモン」なら、回復するHPは「100」になる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -44280,14 +45923,17 @@
     "evolutions": []
   },
   {
-    "master_id": "シロナのパワーウエイト_none_none_none_none_none",
+    "master_id": "シロナのパワーウエイト_none_none_このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "シロナのパワーウエイト",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -44305,14 +45951,17 @@
     "evolutions": []
   },
   {
-    "master_id": "MCの盛り上げ_none_none_none_none_none",
+    "master_id": "MCの盛り上げ_none_none_自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "MCの盛り上げ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を2枚引く。相手のサイドの残り枚数が3枚以下なら、さらに2枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -44330,14 +45979,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ヒビキの冒険_none_none_none_none_none",
+    "master_id": "ヒビキの冒険_none_none_自分の山札から「ヒビキのポケモン」と「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ヒビキの冒険",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「ヒビキのポケモン」と「基本エネルギー」を合計3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48198,14 +49850,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のおじゃまロボ_none_none_none_none_none",
+    "master_id": "ロケット団のおじゃまロボ_none_none_ウラになっている相手のサイド1枚と、相手の手札からオモテを見ないで1枚選び、それぞれオモテを見る。のぞむなら、選んだカードを相手に入れ替えさせる。（対戦が終わるまで、そのサイドはオモテのまま。）|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ロケット団のおじゃまロボ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "ウラになっている相手のサイド1枚と、相手の手札からオモテを見ないで1枚選び、それぞれオモテを見る。のぞむなら、選んだカードを相手に入れ替えさせる。（対戦が終わるまで、そのサイドはオモテのまま。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48223,14 +49878,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のスーパーボール_none_none_none_none_none",
+    "master_id": "ロケット団のスーパーボール_none_none_コインを1回投げる。オモテなら進化ポケモンの「ロケット団のポケモン」、ウラならたねポケモンの「ロケット団のポケモン」を自分の山札から1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ロケット団のスーパーボール",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げる。オモテなら進化ポケモンの「ロケット団のポケモン」、ウラならたねポケモンの「ロケット団のポケモン」を自分の山札から1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48248,14 +49906,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のびっくりボム_none_none_none_none_none",
+    "master_id": "ロケット団のびっくりボム_none_none_コインを1回投げオモテなら、相手のポケモン1匹に、ダメカンを2個のせる。ウラなら、自分のバトルポケモンに、ダメカンを2個のせる。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ロケット団のびっくりボム",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを1回投げオモテなら、相手のポケモン1匹に、ダメカンを2個のせる。ウラなら、自分のバトルポケモンに、ダメカンを2個のせる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48273,14 +49934,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のレシーバー_none_none_none_none_none",
+    "master_id": "ロケット団のレシーバー_none_none_自分の山札から、名前に「ロケット団」とつくサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ロケット団のレシーバー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から、名前に「ロケット団」とつくサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48298,14 +49962,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のアテナ_none_none_none_none_none",
+    "master_id": "ロケット団のアテナ_none_none_自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ロケット団のアテナ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札が5枚になるように、山札を引く。自分の場のポケモン全員が「ロケット団のポケモン」なら、8枚になるように引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48323,14 +49990,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のアポロ_none_none_none_none_none",
+    "master_id": "ロケット団のアポロ_none_none_このカードは、前の相手の番に、自分の「ロケット団のポケモン」がきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は3枚、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ロケット団のアポロ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、前の相手の番に、自分の「ロケット団のポケモン」がきぜつしていなければ使えない。\n\nおたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分は5枚、相手は3枚、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48348,14 +50018,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のサカキ_none_none_none_none_none",
+    "master_id": "ロケット団のサカキ_none_none_自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ロケット団のサカキ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトル場の「ロケット団のポケモン」を、ベンチの「ロケット団のポケモン」と入れ替える。その後、相手のベンチポケモンを1匹選び、バトルポケモンと入れ替える。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48373,14 +50046,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のラムダ_none_none_none_none_none",
+    "master_id": "ロケット団のラムダ_none_none_自分の山札からトレーナーズを1枚選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ロケット団のラムダ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からトレーナーズを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48398,14 +50074,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のランス_none_none_none_none_none",
+    "master_id": "ロケット団のランス_none_none_このカードは、先攻プレイヤーの最初の番でも使える。\n\n自分の山札からたねポケモンの「ロケット団のポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ロケット団のランス",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、先攻プレイヤーの最初の番でも使える。\n\n自分の山札からたねポケモンの「ロケット団のポケモン」を3枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -48640,14 +50319,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ロケット団のさいみん装置_none_none_none_none_none",
+    "master_id": "ロケット団のさいみん装置_none_none_このカードをつけている「ロケット団のポケモン」が、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをねむりにする。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ロケット団のさいみん装置",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「ロケット団のポケモン」が、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンをねむりにする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -52059,14 +53741,17 @@
     ]
   },
   {
-    "master_id": "エネルギーコイン_none_none_none_none_none",
+    "master_id": "エネルギーコイン_none_none_コインを2回投げ、すべてオモテなら、自分の山札から基本エネルギーを1枚選び、自分のポケモンにつける。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "エネルギーコイン",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "コインを2回投げ、すべてオモテなら、自分の山札から基本エネルギーを1枚選び、自分のポケモンにつける。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -52084,14 +53769,45 @@
     "evolutions": []
   },
   {
-    "master_id": "Nの筋書き_none_none_none_none_none",
+    "master_id": "ふうせん_none_none_このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
+    "name": "ふうせん",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードをつけているポケモンは、にげるためのエネルギーが2個ぶん少なくなる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "Nの筋書き_none_none_自分のベンチポケモンについているエネルギーを2個まで選び、バトルポケモンにつけ替える。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "Nの筋書き",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のベンチポケモンについているエネルギーを2個まで選び、バトルポケモンにつけ替える。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -52109,14 +53825,17 @@
     "evolutions": []
   },
   {
-    "master_id": "マコモ_none_none_none_none_none",
+    "master_id": "マコモ_none_none_自分のポケモン全員のHPを、それぞれ「40」回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "マコモ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモン全員のHPを、それぞれ「40」回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -55607,7 +57326,7 @@
     "evolutions": []
   },
   {
-    "master_id": "古びたはねの化石_60_none_none_none_はねのまもり",
+    "master_id": "古びたはねの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。_none_はねのまもり",
     "name": "古びたはねの化石",
     "hp": 60,
     "type": "",
@@ -55619,7 +57338,9 @@
       }
     ],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -55637,14 +57358,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ブレイブバングル_none_none_none_none_none",
+    "master_id": "ブレイブバングル_none_none_このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ブレイブバングル",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+30」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -55662,14 +57386,17 @@
     "evolutions": []
   },
   {
-    "master_id": "クラウン_none_none_none_none_none",
+    "master_id": "クラウン_none_none_おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分はコインを1回投げ、オモテなら自分は5枚、相手は3枚、山札を引く。ウラなら自分は3枚、相手は5枚、山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "クラウン",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "おたがいのプレイヤーは、それぞれ手札をすべて山札にもどして切る。その後、自分はコインを1回投げ、オモテなら自分は5枚、相手は3枚、山札を引く。ウラなら自分は3枚、相手は5枚、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -55687,14 +57414,17 @@
     "evolutions": []
   },
   {
-    "master_id": "トウコ_none_none_none_none_none",
+    "master_id": "トウコ_none_none_自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "トウコ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から進化ポケモンとエネルギーを1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -58167,14 +59897,17 @@
     ]
   },
   {
-    "master_id": "アイアンディフェンダー_none_none_none_none_none",
+    "master_id": "アイアンディフェンダー_none_none_次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "アイアンディフェンダー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "次の相手の番、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-30」される。（新しく場に出したポケモンもふくむ。）",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -58192,14 +59925,17 @@
     "evolutions": []
   },
   {
-    "master_id": "パワープロテイン_none_none_none_none_none",
+    "master_id": "パワープロテイン_none_none_この番、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "パワープロテイン",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "この番、自分のポケモンが使うワザの、相手のバトルポケモンへのダメージは「+30」される。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -58217,14 +59953,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ファイトゴング_none_none_none_none_none",
+    "master_id": "ファイトゴング_none_none_自分の山札からタイプのたねポケモンまたは「基本エネルギー」を1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ファイトゴング",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からタイプのたねポケモンまたは「基本エネルギー」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -58242,14 +59981,17 @@
     "evolutions": []
   },
   {
-    "master_id": "マチスの取引_none_none_none_none_none",
+    "master_id": "マチスの取引_none_none_「おたがいのプレイヤーは、それぞれサイドを1枚とる。」をのぞむか、相手にたずねる。相手がのぞむなら、おたがいのプレイヤーは、それぞれサイドを1枚とる。のぞまないなら、自分は山札を4枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "マチスの取引",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "「おたがいのプレイヤーは、それぞれサイドを1枚とる。」をのぞむか、相手にたずねる。相手がのぞむなら、おたがいのプレイヤーは、それぞれサイドを1枚とる。のぞまないなら、自分は山札を4枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -58267,14 +60009,17 @@
     "evolutions": []
   },
   {
-    "master_id": "リーリエの決心_none_none_none_none_none",
+    "master_id": "リーリエの決心_none_none_自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "リーリエの決心",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。自分のサイドの残り枚数が6枚なら、引く枚数は8枚になる。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -60734,14 +62479,17 @@
     ]
   },
   {
-    "master_id": "あやしい時計_none_none_none_none_none",
+    "master_id": "あやしい時計_none_none_自分の進化しているポケモンを1匹選び、「進化カード」を好きなだけはがして退化させる。はがしたカードは、手札にもどす。［退化したポケモンは、その番に進化できない。］|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "あやしい時計",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の進化しているポケモンを1匹選び、「進化カード」を好きなだけはがして退化させる。はがしたカードは、手札にもどす。［退化したポケモンは、その番に進化できない。］",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -60759,14 +62507,17 @@
     "evolutions": []
   },
   {
-    "master_id": "メガシグナル_none_none_none_none_none",
+    "master_id": "メガシグナル_none_none_自分の山札から「メガシンカex」を1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "メガシグナル",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「メガシンカex」を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -60784,14 +62535,17 @@
     "evolutions": []
   },
   {
-    "master_id": "アセロラのいたずら_none_none_none_none_none",
+    "master_id": "アセロラのいたずら_none_none_このカードは、相手のサイドの残り枚数が2枚以下のときにしか使えない。\n \n 自分の場のポケモンを1匹選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "アセロラのいたずら",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、相手のサイドの残り枚数が2枚以下のときにしか使えない。\n \n 自分の場のポケモンを1匹選ぶ。次の相手の番、そのポケモンは相手の「ポケモンex」からワザのダメージや効果を受けない。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -60809,14 +62563,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ミツルの思いやり_none_none_none_none_none",
+    "master_id": "ミツルの思いやり_none_none_自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ミツルの思いやり",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の「メガシンカex」1匹のHPを、すべて回復する。その後、回復したポケモンについているエネルギーを、すべて手札にもどす。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -60964,14 +62721,17 @@
     "evolutions": []
   },
   {
-    "master_id": "あなあけスコップ_none_none_none_none_none",
+    "master_id": "あなあけスコップ_none_none_自分の山札を上から2枚トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "あなあけスコップ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から2枚トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -61325,14 +63085,17 @@
     "evolutions": []
   },
   {
-    "master_id": "パンクメット_none_none_none_none_none",
+    "master_id": "パンクメット_none_none_このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを4個のせる。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "パンクメット",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを4個のせる。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -61683,14 +63446,17 @@
     ]
   },
   {
-    "master_id": "ワンダーパッチ_none_none_none_none_none",
+    "master_id": "ワンダーパッチ_none_none_自分のトラッシュから「基本エネルギー」を1枚選び、ベンチのポケモンにつける。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ワンダーパッチ",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュから「基本エネルギー」を1枚選び、ベンチのポケモンにつける。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64816,14 +66582,17 @@
     ]
   },
   {
-    "master_id": "ジャンボアイス_none_none_none_none_none",
+    "master_id": "ジャンボアイス_none_none_エネルギーが3個以上ついている自分のバトルポケモンのHPを「80」回復する。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ジャンボアイス",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "エネルギーが3個以上ついている自分のバトルポケモンのHPを「80」回復する。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64841,14 +66610,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ヒートバーナー_none_none_none_none_none",
+    "master_id": "ヒートバーナー_none_none_このカードは、自分の手札から「基本エネルギー」を1枚トラッシュしなければ使えない。\n\n相手の場のポケモンについている「ポケモンのどうぐ」「特殊エネルギー」と場に出ている「スタジアム」の中から1枚選び、トラッシュする。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ヒートバーナー",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札から「基本エネルギー」を1枚トラッシュしなければ使えない。\n\n相手の場のポケモンについている「ポケモンのどうぐ」「特殊エネルギー」と場に出ている「スタジアム」の中から1枚選び、トラッシュする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64866,14 +66638,17 @@
     "evolutions": []
   },
   {
-    "master_id": "せいなるおまもり_none_none_none_none_none",
+    "master_id": "せいなるおまもり_none_none_このカードをつけているポケモンが、相手の特性を持つポケモンから受けるワザのダメージは「-30」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "せいなるおまもり",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手の特性を持つポケモンから受けるワザのダメージは「-30」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64891,14 +66666,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ギーマの一手_none_none_none_none_none",
+    "master_id": "ギーマの一手_none_none_自分の山札を上から7枚見て、その中からポケモンを1枚選び、ベンチに出す。残りのカードはすべてウラにして切り、山札の下にもどす。（最初の自分の番には使えない。）|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ギーマの一手",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から7枚見て、その中からポケモンを1枚選び、ベンチに出す。残りのカードはすべてウラにして切り、山札の下にもどす。（最初の自分の番には使えない。）",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64916,14 +66694,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ヒカリ_none_none_none_none_none",
+    "master_id": "ヒカリ_none_none_自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ヒカリ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -64941,14 +66722,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ひふきやろう_none_none_none_none_none",
+    "master_id": "ひふきやろう_none_none_自分の山札から「基本エネルギー」を7枚まで選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ひふきやろう",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札から「基本エネルギー」を7枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -65074,14 +66858,17 @@
     ]
   },
   {
-    "master_id": "逆境ほけん_none_none_none_none_none",
+    "master_id": "逆境ほけん_none_none_このカードをつけているポケモンの弱点のタイプと、相手のバトルポケモンのタイプが同じなら、このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を3枚引く。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "逆境ほけん",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンの弱点のタイプと、相手のバトルポケモンのタイプが同じなら、このカードをつけているポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、自分の山札を3枚引く。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -67578,14 +69365,17 @@
     ]
   },
   {
-    "master_id": "でんきだま_none_none_none_none_none",
+    "master_id": "でんきだま_none_none_このカードをつけている「ピカチュウex」が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "でんきだま",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「ピカチュウex」が使うワザの、相手のバトル場の「ポケモンex」へのダメージは「+50」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -67603,14 +69393,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ぶあついうろこ_none_none_none_none_none",
+    "master_id": "ぶあついうろこ_none_none_このカードをつけているポケモンが、相手のポケモンから受けるワザのダメージは「-50」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
     "name": "ぶあついうろこ",
     "hp": null,
     "type": "",
     "card_kind": "ポケモンのどうぐ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードをつけているポケモンが、相手のポケモンから受けるワザのダメージは「-50」される。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -67628,14 +69421,17 @@
     "evolutions": []
   },
   {
-    "master_id": "カナリィ_none_none_none_none_none",
+    "master_id": "カナリィ_none_none_このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "カナリィ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の手札を1枚トラッシュしなければ使えない。\n\n自分の山札からポケモンを4枚まで選び、相手に見せて、手札に加える。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -67653,14 +69449,17 @@
     "evolutions": []
   },
   {
-    "master_id": "バーベナとヘレナ_none_none_none_none_none",
+    "master_id": "バーベナとヘレナ_none_none_このカードは、自分の場に「Nのヒヒダルマ」「Nのゾロアークex」「Nのバイバニラ」「Nのギギギアル」「Nのレシラム」「Nのゼクロム」がいなければ使えない。\n\nこの番、自分の「Nのポケモン」が使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを3枚多くとる。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "バーベナとヘレナ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分の場に「Nのヒヒダルマ」「Nのゾロアークex」「Nのバイバニラ」「Nのギギギアル」「Nのレシラム」「Nのゼクロム」がいなければ使えない。\n\nこの番、自分の「Nのポケモン」が使うワザのダメージで、相手のバトルポケモンがきぜつしたなら、サイドを3枚多くとる。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -69983,14 +71782,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ポケパッド_none_none_none_none_none",
+    "master_id": "ポケパッド_none_none_自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ポケパッド",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -70008,14 +71810,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ウエートレス_none_none_none_none_none",
+    "master_id": "ウエートレス_none_none_自分の山札を上から6枚見て、その中から基本エネルギーを1枚選び、自分のポケモンにつける。残りのカードは山札にもどして切る。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ウエートレス",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を上から6枚見て、その中から基本エネルギーを1枚選び、自分のポケモンにつける。残りのカードは山札にもどして切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -70033,14 +71838,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ガイ_none_none_none_none_none",
+    "master_id": "ガイ_none_none_自分の山札を3枚引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ガイ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の山札を3枚引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -70096,14 +71904,17 @@
     "evolutions": []
   },
   {
-    "master_id": "インフルエンサーの紹介_none_none_none_none_none",
+    "master_id": "インフルエンサーの紹介_none_none_好きなポケモンを相手に紹介しながら、自分の山札を3枚引く。相手は、好きな気持ちが伝わったなら、「いいね！」と言ってもよい。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "インフルエンサーの紹介",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "好きなポケモンを相手に紹介しながら、自分の山札を3枚引く。相手は、好きな気持ちが伝わったなら、「いいね！」と言ってもよい。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73122,14 +74933,17 @@
     "evolutions": []
   },
   {
-    "master_id": "エネはたき_none_none_none_none_none",
+    "master_id": "エネはたき_none_none_相手の手札を見て、その中からエネルギーを1枚選び、相手の山札の下にもどす。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "エネはたき",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手の手札を見て、その中からエネルギーを1枚選び、相手の山札の下にもどす。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73147,7 +74961,7 @@
     "evolutions": []
   },
   {
-    "master_id": "古びたアゴの化石_60_none_none_none_いかくのアゴ",
+    "master_id": "古びたアゴの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。_none_いかくのアゴ",
     "name": "古びたアゴの化石",
     "hp": 60,
     "type": "",
@@ -73159,7 +74973,9 @@
       }
     ],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73177,7 +74993,7 @@
     "evolutions": []
   },
   {
-    "master_id": "古びたヒレの化石_60_none_none_none_ヒレのまもり",
+    "master_id": "古びたヒレの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。_none_ヒレのまもり",
     "name": "古びたヒレの化石",
     "hp": 60,
     "type": "",
@@ -73189,7 +75005,9 @@
       }
     ],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73207,14 +75025,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ミアレガレット_none_none_none_none_none",
+    "master_id": "ミアレガレット_none_none_自分のバトルポケモンのHPを「20」回復し、特殊状態も1つ回復する。|グッズは、自分の番に何枚でも使える。_none_none",
     "name": "ミアレガレット",
     "hp": null,
     "type": "",
     "card_kind": "グッズ",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のバトルポケモンのHPを「20」回復し、特殊状態も1つ回復する。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73232,7 +75053,7 @@
     "evolutions": []
   },
   {
-    "master_id": "コアメモリ_none_none_none_ジオバスター_none",
+    "master_id": "コアメモリ_none_none_このカードをつけている「メガジガルデex」は、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_ジオバスター_none",
     "name": "コアメモリ",
     "hp": null,
     "type": "",
@@ -73251,7 +75072,10 @@
         "text": "このポケモンについているエネルギーを、すべてトラッシュする。"
       }
     ],
-    "rules": [],
+    "rules": [
+      "このカードをつけている「メガジガルデex」は、このカードに書かれているワザを使える。［ワザを使うためのエネルギーは必要。］",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73269,14 +75093,17 @@
     "evolutions": []
   },
   {
-    "master_id": "タラゴン_none_none_none_none_none",
+    "master_id": "タラゴン_none_none_自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "タラゴン",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73294,14 +75121,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ピュール_none_none_none_none_none",
+    "master_id": "ピュール_none_none_自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ピュール",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73319,14 +75149,17 @@
     "evolutions": []
   },
   {
-    "master_id": "メイのはげまし_none_none_none_none_none",
+    "master_id": "メイのはげまし_none_none_このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。\n\n自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "メイのはげまし",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。\n\n自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73344,14 +75177,17 @@
     "evolutions": []
   },
   {
-    "master_id": "ユカリ_none_none_none_none_none",
+    "master_id": "ユカリ_none_none_自分のポケモン1匹のHPを「150」回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ユカリ",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "自分のポケモン1匹のHPを「150」回復する。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73624,14 +75460,17 @@
     ]
   },
   {
-    "master_id": "ジェット_none_none_none_none_none",
+    "master_id": "ジェット_none_none_相手の場の「メガシンカex」の数ぶん、自分の山札を引く。|サポートは、自分の番に1枚しか使えない。_none_none",
     "name": "ジェット",
     "hp": null,
     "type": "",
     "card_kind": "サポート",
     "abilities": [],
     "attacks": [],
-    "rules": [],
+    "rules": [
+      "相手の場の「メガシンカex」の数ぶん、自分の山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
     "weakness": {
       "type": "",
       "value": ""
@@ -73688,258 +75527,6 @@
       "カミッチュ",
       "カジッチュ"
     ]
-  },
-  {
-    "master_id": "シロナのパワーウエイト_none_none_このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。|ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。_none_none",
-    "name": "シロナのパワーウエイト",
-    "hp": null,
-    "type": "",
-    "card_kind": "ポケモンのどうぐ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "このカードをつけている「シロナのポケモン」の最大HPは「＋70」される。",
-      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "エネルギーリサイクル_none_none_自分のトラッシュから基本エネルギーを5枚まで選び、相手に見せて、山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
-    "name": "エネルギーリサイクル",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分のトラッシュから基本エネルギーを5枚まで選び、相手に見せて、山札にもどして切る。",
-      "グッズは、自分の番に何枚でも使える。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "せいなるはい_none_none_自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。|グッズは、自分の番に何枚でも使える。_none_none",
-    "name": "せいなるはい",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分のトラッシュからポケモンを5枚まで選び、相手に見せて、山札にもどして切る。",
-      "グッズは、自分の番に何枚でも使える。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ポケパッド_none_none_自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
-    "name": "ポケパッド",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分の山札からポケモン（「ルールを持つポケモン」をのぞく）を1枚選び、相手に見せて、手札に加える。そして山札を切る。",
-      "グッズは、自分の番に何枚でも使える。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ワンダーパッチ_none_none_自分のトラッシュから「基本エネルギー」を1枚選び、ベンチのポケモンにつける。|グッズは、自分の番に何枚でも使える。_none_none",
-    "name": "ワンダーパッチ",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分のトラッシュから「基本エネルギー」を1枚選び、ベンチのポケモンにつける。",
-      "グッズは、自分の番に何枚でも使える。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "タラゴン_none_none_自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。|サポートは、自分の番に1枚しか使えない。_none_none",
-    "name": "タラゴン",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分のトラッシュからポケモンと「基本エネルギー」を合計4枚まで選び、相手に見せて、手札に加える。",
-      "サポートは、自分の番に1枚しか使えない。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ピュール_none_none_自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。|サポートは、自分の番に1枚しか使えない。_none_none",
-    "name": "ピュール",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分の手札が5枚になるように、山札を引く。のぞむなら、山札を引く前に、自分の手札を好きなだけトラッシュする。",
-      "サポートは、自分の番に1枚しか使えない。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "メイのはげまし_none_none_このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。\n\n自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。|サポートは、自分の番に1枚しか使えない。_none_none",
-    "name": "メイのはげまし",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "このカードは、自分のサイドの残り枚数が、相手のサイドの残り枚数より多いときにしか使えない。\n\n自分のトラッシュから基本エネルギーを2枚まで選び、自分の2進化ポケモン1匹につける。",
-      "サポートは、自分の番に1枚しか使えない。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ユカリ_none_none_自分のポケモン1匹のHPを「150」回復する。|サポートは、自分の番に1枚しか使えない。_none_none",
-    "name": "ユカリ",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分のポケモン1匹のHPを「150」回復する。",
-      "サポートは、自分の番に1枚しか使えない。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
   },
   {
     "master_id": "ビードル_50_grass_none_ふいをつく_none",
@@ -77337,34 +78924,6 @@
     "evolutions": []
   },
   {
-    "master_id": "勝利のしるし_none_none_コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。|グッズは、自分の番に何枚でも使える。_none_none",
-    "name": "勝利のしるし",
-    "hp": null,
-    "type": "",
-    "card_kind": "グッズ",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "コインを1回投げオモテなら、自分の山札からポケモンを1枚選び、相手に見せて、手札に加える。そして山札を切る。",
-      "グッズは、自分の番に何枚でも使える。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
     "master_id": "メガマフォクシーex_350_fire_none_あやしいともしび|トリックポータル_none",
     "name": "メガマフォクシーex",
     "hp": 350,
@@ -77426,34 +78985,6 @@
     "attacks": [],
     "rules": [
       "おたがいのポケモン全員のHPを、それぞれ「50」回復する。",
-      "サポートは、自分の番に1枚しか使えない。"
-    ],
-    "weakness": {
-      "type": "",
-      "value": ""
-    },
-    "resistance": {
-      "type": "",
-      "value": ""
-    },
-    "retreatCost": 0,
-    "pokedexNo": "",
-    "pokedexCategory": "",
-    "height": "",
-    "weight": "",
-    "flavor_text": "",
-    "evolutions": []
-  },
-  {
-    "master_id": "ヒカリ_none_none_自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。|サポートは、自分の番に1枚しか使えない。_none_none",
-    "name": "ヒカリ",
-    "hp": null,
-    "type": "",
-    "card_kind": "サポート",
-    "abilities": [],
-    "attacks": [],
-    "rules": [
-      "自分の山札から「たねポケモン」「1進化ポケモン」「2進化ポケモン」を1枚ずつ選び、相手に見せて、手札に加える。そして山札を切る。",
       "サポートは、自分の番に1枚しか使えない。"
     ],
     "weakness": {
