@@ -260,7 +260,7 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
 
                         {/* Variant thumbnails: horizontal scroll on mobile, wrap on desktop */}
                         {variants.length > 1 && (
-                            <div className="px-2 pb-2 sm:p-4 bg-gray-950 sm:flex-grow sm:overflow-y-auto custom-scrollbar border-t border-gray-800/40 sm:border-t-0 overflow-hidden">
+                            <div className="px-2 pb-2 sm:p-4 bg-gray-950 sm:flex-grow sm:overflow-y-auto custom-scrollbar border-t border-gray-800/40 sm:border-t-0 overflow-hidden sm:min-h-0">
                                 <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider my-1 sm:mb-3 text-center">Other Variants</h4>
                                 <div className="flex gap-1 sm:gap-2 overflow-x-auto pb-1 sm:flex-wrap sm:justify-center overscroll-x-contain isolate">
                                     {variants.map((v) => (
