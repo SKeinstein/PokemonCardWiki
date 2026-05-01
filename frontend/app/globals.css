@@ -83,6 +83,62 @@ button, a, [role="button"] {
   cursor: pointer;
 }
 
+/* HP dual-handle range slider: two transparent <input type=range> overlap.
+   Track is hidden; only the thumb is visible and grabbable. */
+.hp-range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+}
+.hp-range-input:focus {
+  outline: none;
+}
+.hp-range-input::-webkit-slider-runnable-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+}
+.hp-range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #0a0a0a;
+  box-shadow: 0 0 0 1px #4b5563;
+  margin-top: -7px;
+  cursor: grab;
+}
+.hp-range-input::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background: #60a5fa;
+}
+.hp-range-input::-moz-range-track {
+  height: 4px;
+  background: transparent;
+  border: none;
+}
+.hp-range-input::-moz-range-thumb {
+  pointer-events: auto;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #3b82f6;
+  border: 2px solid #0a0a0a;
+  box-shadow: 0 0 0 1px #4b5563;
+  cursor: grab;
+}
+.hp-range-input::-moz-range-thumb:active {
+  cursor: grabbing;
+  background: #60a5fa;
+}
+
 /* Panel entry animation */
 @keyframes enter {
   from { opacity: 0; transform: scale(0.97); }

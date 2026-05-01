@@ -1,12 +1,13 @@
-import { getMasterCards, getCardVariants, getMasterCardTags, getCostIndex } from "../lib/data";
+import { getMasterCards, getCardVariants, getMasterCardTags, getCostIndex, getRuleTypeIndex } from "../lib/data";
 import CardSearch from "./components/CardSearch";
 
 export default async function Home() {
-  const [masterCards, variants, cardTags, costIndex] = await Promise.all([
+  const [masterCards, variants, cardTags, costIndex, ruleTypeIndex] = await Promise.all([
     getMasterCards(),
     getCardVariants(),
     getMasterCardTags(),
     getCostIndex(),
+    getRuleTypeIndex(),
   ]);
 
   return (
@@ -18,7 +19,7 @@ export default async function Home() {
       </div>
 
       <div className="relative z-10 w-full">
-        <CardSearch masterCards={masterCards} variants={variants} cardTags={cardTags} costIndex={costIndex} />
+        <CardSearch masterCards={masterCards} variants={variants} cardTags={cardTags} costIndex={costIndex} ruleTypeIndex={ruleTypeIndex} />
       </div>
     </main>
   );

@@ -1,26 +1,39 @@
 "use client";
 
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
-import { MasterCard, CardVariant, MasterCardTag, CostEntry } from "../../lib/data";
+import { MasterCard, CardVariant, MasterCardTag, CostEntry, RuleTypeIndex, RuleType } from "../../lib/data";
 import { pickDefaultVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
 import CardModal from "./CardModal";
 import ComparisonTray from "./ComparisonTray";
 import ComparisonModal from "./ComparisonModal";
+import HpRangeSlider, { HpRange } from "./HpRangeSlider";
 
 type Props = {
     masterCards: MasterCard[];
     variants: CardVariant[];
     cardTags: MasterCardTag[];
     costIndex: CostEntry[];
+    ruleTypeIndex: RuleTypeIndex;
 };
 
-export default function CardSearch({ masterCards, variants, cardTags, costIndex }: Props) {
+const HP_MIN = 30;
+const HP_MAX = 380;
+
+// Tag parent categories whose chips render in the 公式フィルター panel rather than 独自タグ.
+const OFFICIAL_TAG_PARENTS = new Set(["〜のポケモン", "特殊連動"]);
+
+const RULE_TYPE_OPTIONS: { value: RuleType; label: string }[] = [
+    { value: "ex", label: "ex" },
+    { value: "terastal", label: "テラスタル" },
+    { value: "acespec", label: "ACE SPEC" },
+];
+
+export default function CardSearch({ masterCards, variants, cardTags, costIndex, ruleTypeIndex }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
     const [effectQuery, setEffectQuery] = useState("");
     const [categoryFilter, setCategoryFilter] = useState("");
-    const [regFilter, setRegFilter] = useState("");
     const [gridCols, setGridCols] = useState(2); // mobile-first default (375px); hydration sets correct value per breakpoint
     const [maxGridCols, setMaxGridCols] = useState(15);
     const [isOrSearch, setIsOrSearch] = useState(false);
@@ -28,6 +41,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     const [selectedCard, setSelectedCard] = useState<MasterCard | null>(null);
     const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
+    const [hpRange, setHpRange] = useState<HpRange>({ min: HP_MIN, max: HP_MAX });
+    const [selectedRuleTypes, setSelectedRuleTypes] = useState<Set<RuleType>>(new Set());
     const [weaknessFilter, setWeaknessFilter] = useState("");
     const [resistanceFilter, setResistanceFilter] = useState("");
     const [retreatFilter, setRetreatFilter] = useState("");
@@ -76,7 +91,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, effectQuery, categoryFilter, regFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch]);
+    }, [query, typeFilter, effectQuery, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedRuleTypes]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -85,7 +100,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
 
     // Normalize katakana→hiragana so kana search is script-agnostic
     const normalizeKana = (str: string) =>
-        str.replace(/[\u30A1-\u30F6]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
+        str.replace(/[ァ-ヶ]/g, (ch) => String.fromCharCode(ch.charCodeAt(0) - 0x60));
 
     // Helper to evaluate AND / OR / NOT search logic
     const evaluateQuery = (text: string, query: string, isOr: boolean) => {
@@ -157,8 +172,15 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
         return hierarchy;
     }, [cardTags]);
 
-    // Sorted parent tag keys
-    const sortedParents = useMemo(() => Array.from(tagHierarchy.keys()).sort((a, b) => a.localeCompare(b, 'ja')), [tagHierarchy]);
+    // Sorted parent tag keys, split into 公式フィルター side vs 独自タグ side
+    const officialTagParents = useMemo(
+        () => Array.from(tagHierarchy.keys()).filter(p => OFFICIAL_TAG_PARENTS.has(p)).sort((a, b) => a.localeCompare(b, 'ja')),
+        [tagHierarchy]
+    );
+    const customTagParents = useMemo(
+        () => Array.from(tagHierarchy.keys()).filter(p => !OFFICIAL_TAG_PARENTS.has(p)).sort((a, b) => a.localeCompare(b, 'ja')),
+        [tagHierarchy]
+    );
 
     // Check if a card matches a given tag (parent = prefix match, subtag = exact)
     const cardMatchesTag = (masterId: string, tag: string): boolean => {
@@ -192,6 +214,41 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
         });
     };
 
+    const toggleRuleType = (rt: RuleType) => {
+        setSelectedRuleTypes(prev => {
+            const next = new Set(prev);
+            if (next.has(rt)) next.delete(rt);
+            else next.add(rt);
+            return next;
+        });
+    };
+
+    const hpFilterActive = hpRange.min > HP_MIN || hpRange.max < HP_MAX;
+
+    const anyFilterActive = !!(
+        query || effectQuery || typeFilter || categoryFilter ||
+        weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
+        costCountFilters.size > 0 || hpFilterActive || selectedRuleTypes.size > 0 || selectedTags.size > 0 ||
+        isOrSearch
+    );
+
+    const resetAllFilters = () => {
+        setQuery('');
+        setEffectQuery('');
+        setTypeFilter('');
+        setCategoryFilter('');
+        setWeaknessFilter('');
+        setResistanceFilter('');
+        setRetreatFilter('');
+        setCostTypeFilter('');
+        setCostCountFilters(new Set());
+        setHpRange({ min: HP_MIN, max: HP_MAX });
+        setSelectedRuleTypes(new Set());
+        setSelectedTags(new Set());
+        setIsOrSearch(false);
+        setIsTagOrSearch(false);
+    };
+
     const filteredCards = useMemo(() => {
         return masterCards.filter((card) => {
             // 1. Text Query (Name)
@@ -206,25 +263,35 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
 
             // 3. Category Filter (uses card_kind from official HTML)
             if (categoryFilter) {
-                const trainerKinds = ['グッズ', 'サポート', 'スタジアム', 'ポケモンのどうぐ'];
-                const energyKinds = ['エネルギー'];
-                const pokemonKinds = ['たね', '1進化', '2進化', 'たたかう', 'VSTAR', 'VMAX', 'ex', 'GX', 'EX'];
-
                 const kind = card.card_kind || '';
-                const isTrainer = trainerKinds.includes(kind);
-                const isEnergy = energyKinds.includes(kind) || (!kind && card.hp === null && card.attacks.length === 0 && card.abilities.length === 0 && card.name.includes('エネルギー'));
-                const isPokemon = pokemonKinds.some(k => kind.includes(k)) || (!isTrainer && !isEnergy && card.hp !== null);
+                const trainerKinds = ['グッズ', 'サポート', 'スタジアム', 'ポケモンのどうぐ'];
+                const energyKinds = ['基本エネルギー', '特殊エネルギー'];
+                const pokemonKinds = ['たね', '1 進化', '2 進化'];
 
-                if (categoryFilter === 'pokemon' && !isPokemon) return false;
-                if (categoryFilter === 'trainer' && !isTrainer) return false;
-                if (categoryFilter === 'energy' && !isEnergy) return false;
+                if (categoryFilter === 'pokemon') {
+                    if (!pokemonKinds.includes(kind)) return false;
+                } else if (categoryFilter === 'energy') {
+                    if (!energyKinds.includes(kind)) return false;
+                } else if (trainerKinds.includes(categoryFilter)) {
+                    // Specific trainer kind selected (グッズ/サポート/スタジアム/ポケモンのどうぐ)
+                    if (kind !== categoryFilter) return false;
+                }
             }
 
+            // 4. HP Filter (only when slider moved off defaults; null-HP cards excluded)
+            if (hpFilterActive) {
+                if (card.hp === null) return false;
+                if (card.hp < hpRange.min || card.hp > hpRange.max) return false;
+            }
 
-            // 4. Regulation Filter
-            if (regFilter) {
-                const cardVariants = variantsMap.get(card.master_id) || [];
-                if (!cardVariants.some((v) => v.regulation === regFilter)) return false;
+            // 5. Rule Type Filter (ex / terastal / acespec). Multiple = OR.
+            if (selectedRuleTypes.size > 0) {
+                const cardRuleTypes = ruleTypeIndex[card.master_id] || [];
+                let match = false;
+                for (const rt of selectedRuleTypes) {
+                    if (cardRuleTypes.includes(rt)) { match = true; break; }
+                }
+                if (!match) return false;
             }
 
             // Weakness Filter
@@ -248,7 +315,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                 if (!hasMatch) return false;
             }
 
-            // 5. Effect Text Query (Abilities, Attacks, Rules)
+            // 6. Effect Text Query (Abilities, Attacks, Rules)
             if (deferredEffectQuery) {
                 // Combine all searchable text on the card into one block
                 const searchableTextChunks = [
@@ -263,7 +330,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                 }
             }
 
-            // 6. Tag Filter
+            // 7. Tag Filter — official tag parents (〜のポケモン / 特殊連動) AND custom tags share
+            //    the same selectedTags set. Within selectedTags AND/OR is governed by isTagOrSearch.
             if (selectedTags.size > 0) {
                 if (isTagOrSearch) {
                     let anyMatch = false;
@@ -280,7 +348,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
 
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, regFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, variantsMap, selectedTags, tagCardMap, isTagOrSearch]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedRuleTypes, ruleTypeIndex]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -289,16 +357,97 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
         return Array.from(types).sort();
     }, [masterCards]);
 
-    // Unique regulation marks
-    const allRegulations = useMemo(() => {
-        const regSet = new Set<string>();
-        variants.forEach(v => {
-            if (v.regulation && v.regulation.match(/^[A-Z]$/i)) { // Only A-Z regulations
-                regSet.add(v.regulation.toUpperCase());
-            }
-        });
-        return Array.from(regSet).sort();
-    }, [variants]);
+    // Render a parent tag chip + expand button (parent name click = toggle expand, never filter)
+    const renderParentChip = (parent: string) => {
+        const children = tagHierarchy.get(parent) || [];
+        const isSelected = selectedTags.has(parent);
+        const isExpanded = expandedParents.has(parent);
+        const hasChildren = children.length > 0;
+
+        return (
+            <div
+                key={parent}
+                className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-2 ring-violet-400/90 shadow-[0_0_12px_rgba(167,139,250,0.55)]' : ''}`}
+            >
+                <button
+                    onClick={() => hasChildren ? toggleExpand(parent) : toggleTag(parent)}
+                    className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
+                        hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
+                    } ${
+                        isSelected
+                            ? 'bg-violet-600 border-violet-500 text-white'
+                            : isExpanded
+                                ? 'bg-violet-900/70 border-violet-500 text-violet-100 font-bold'
+                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                    }`}
+                >
+                    {parent}
+                </button>
+                {hasChildren && (
+                    <button
+                        onClick={() => toggleExpand(parent)}
+                        aria-label={isExpanded ? `${parent} を閉じる` : `${parent} を開く`}
+                        className={`min-w-[44px] min-h-[44px] flex items-center justify-center text-xs border-y border-r rounded-r-full transition touch-manipulation ${
+                            isSelected
+                                ? 'bg-violet-700 border-violet-500 text-violet-200'
+                                : isExpanded
+                                    ? 'bg-violet-700 border-violet-500 text-violet-100'
+                                    : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
+                        }`}
+                    >
+                        {isExpanded ? '▲' : '▶'}
+                    </button>
+                )}
+            </div>
+        );
+    };
+
+    const renderSubtagRow = (parent: string) => {
+        const children = tagHierarchy.get(parent);
+        if (!children || children.length === 0) return null;
+        if (!expandedParents.has(parent)) return null;
+        return (
+            <div key={parent} className="pl-3 border-l-2 border-violet-400/70">
+                <div className="flex flex-wrap items-center gap-1.5">
+                    <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
+                    {[...children].sort((a, b) => a.localeCompare(b, 'ja')).map(child => {
+                        const childLabel = child.substring(parent.length + 1);
+                        const isChildSelected = selectedTags.has(child);
+                        return (
+                            <button
+                                key={child}
+                                onClick={() => toggleTag(child)}
+                                className={`px-2.5 py-2 min-h-[44px] min-w-[44px] text-sm sm:text-xs rounded-full border transition touch-manipulation ${
+                                    isChildSelected
+                                        ? 'bg-violet-600 border-violet-500 text-white'
+                                        : 'bg-gray-800/80 border-violet-900/50 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                }`}
+                            >
+                                {childLabel}
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
+        );
+    };
+
+    const officialFilterCount = [
+        weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter,
+        costCountFilters.size > 0 ? 'x' : '',
+        hpFilterActive ? 'x' : '',
+        selectedRuleTypes.size > 0 ? 'x' : '',
+        // tags belonging to the official side (parent + subtags whose parent is official)
+        ...Array.from(selectedTags).filter(t => {
+            const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
+            return OFFICIAL_TAG_PARENTS.has(p);
+        }).map(() => 'x'),
+    ].filter(Boolean).length;
+
+    const customTagSelectedCount = Array.from(selectedTags).filter(t => {
+        const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
+        return !OFFICIAL_TAG_PARENTS.has(p);
+    }).length;
 
     return (
         <div
@@ -307,12 +456,23 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
         >
             {/* Search Header */}
             <div className="sticky top-0 z-40 bg-gray-900/95 p-3 sm:p-4 rounded-xl shadow-2xl backdrop-blur-md border border-gray-700/80 mb-4 transition-all max-h-[60svh] overflow-y-auto overscroll-contain sm:max-h-none sm:overflow-y-visible custom-scrollbar">
-                <h1 className="text-lg sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 mb-2 sm:mb-4">
-                    Pokémon Card Advanced Search
-                </h1>
+                <div className="flex items-center justify-between mb-2 sm:mb-4">
+                    <h1 className="text-lg sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                        Pokémon Card Advanced Search
+                    </h1>
+                    {anyFilterActive && (
+                        <button
+                            type="button"
+                            onClick={resetAllFilters}
+                            className="text-xs font-bold text-red-400 hover:text-red-200 bg-red-900/30 hover:bg-red-900/50 border border-red-800/60 px-3 py-1.5 min-h-[36px] rounded-lg transition touch-manipulation whitespace-nowrap"
+                        >
+                            ✕ リセット
+                        </button>
+                    )}
+                </div>
 
-                {/* Filter grid:
-                     mobile  (< 640px)  — 2 cols: inputs span both cols; selects/slider 1 col each (2 per row)
+                {/* Top filter grid:
+                     mobile  (< 640px)  — 2 cols: inputs span both cols; selects/slider 1 col each
                      sm      (640–1024) — 4 cols: inputs share row, selects + slider on next row
                      lg      (1024px+)  — 6 cols: all controls on a single row                   */}
                 <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-3">
@@ -325,7 +485,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                         autoCapitalize="off"
                         spellCheck={false}
                         placeholder="カード名で検索..."
-                        className="col-span-2 sm:col-span-2 lg:col-span-1 px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation"
+                        className={`col-span-2 sm:col-span-2 lg:col-span-2 px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation ${query ? 'border-blue-400 bg-blue-900/20' : 'border-gray-600 bg-gray-800'}`}
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
                     />
@@ -339,24 +499,27 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                         autoCapitalize="off"
                         spellCheck={false}
                         placeholder="テキスト・ワザ検索..."
-                        className="col-span-2 sm:col-span-2 lg:col-span-1 px-3 py-2 min-h-[44px] text-base sm:text-sm border border-emerald-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition placeholder-emerald-400/70 touch-manipulation"
+                        className={`col-span-2 sm:col-span-2 lg:col-span-2 px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition placeholder-emerald-400/70 touch-manipulation ${effectQuery ? 'border-emerald-400 bg-emerald-900/30' : 'border-emerald-600 bg-gray-800'}`}
                         value={effectQuery}
                         onChange={(e) => setEffectQuery(e.target.value)}
                     />
 
                     <select
-                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
+                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation ${categoryFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                         value={categoryFilter}
                         onChange={(e) => setCategoryFilter(e.target.value)}
                     >
                         <option value="">カテゴリ</option>
                         <option value="pokemon">ポケモン</option>
-                        <option value="trainer">トレーナーズ</option>
+                        <option value="グッズ">グッズ</option>
+                        <option value="サポート">サポート</option>
+                        <option value="スタジアム">スタジアム</option>
+                        <option value="ポケモンのどうぐ">ポケモンのどうぐ</option>
                         <option value="energy">エネルギー</option>
                     </select>
 
                     <select
-                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
+                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation ${typeFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                         value={typeFilter}
                         onChange={(e) => setTypeFilter(e.target.value)}
                     >
@@ -366,19 +529,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                         ))}
                     </select>
 
-                    <select
-                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-2 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded-lg bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation`}
-                        value={regFilter}
-                        onChange={(e) => setRegFilter(e.target.value)}
-                    >
-                        <option value="">全レギュ</option>
-                        {allRegulations.map(r => (
-                            <option key={r} value={r}>[{r}] マーク</option>
-                        ))}
-                    </select>
-
-                    {/* Slider: hidden on mobile until filter toggle is expanded; always visible on sm+ */}
-                    <div className={`col-span-2 sm:col-span-1 items-center gap-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600 ${filtersExpanded ? 'flex' : 'hidden sm:flex'}`}>
+                    {/* Grid columns slider: hidden on mobile until filter toggle is expanded; always visible on sm+ */}
+                    <div className={`col-span-2 sm:col-span-2 lg:col-span-2 items-center gap-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600 ${filtersExpanded ? 'flex' : 'hidden sm:flex'}`}>
                         <label className="text-gray-300 text-sm font-bold whitespace-nowrap">列:</label>
                         <input
                             type="range"
@@ -398,9 +550,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                     className="sm:hidden w-full flex items-center justify-center gap-2 mt-2 py-2 min-h-[44px] text-sm font-medium text-gray-400 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-700 transition touch-manipulation"
                 >
                     <span>{filtersExpanded ? '▲ フィルターを閉じる' : '▼ 絞り込みフィルター'}</span>
-                    {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters.size > 0 ? 'x' : ''].some(Boolean) && (
+                    {[typeFilter, categoryFilter].some(Boolean) && (
                         <span className="bg-blue-500/80 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                            {[typeFilter, categoryFilter, regFilter, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters.size > 0 ? 'x' : ''].filter(Boolean).length}
+                            {[typeFilter, categoryFilter].filter(Boolean).length}
                         </span>
                     )}
                 </button>
@@ -411,10 +563,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             onClick={() => setShowAdvanced(!showAdvanced)}
                             className="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-center gap-2 transition bg-emerald-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-emerald-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
                         >
-                            {showAdvanced ? "▼ 詳細フィルター" : "▶ 詳細フィルター"}
-                            {(weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter || costCountFilters.size > 0) && (
+                            {showAdvanced ? "▼ 公式フィルター" : "▶ 公式フィルター"}
+                            {officialFilterCount > 0 && (
                                 <span className="bg-emerald-600 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                                    {[weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters.size > 0 ? 'x' : ''].filter(Boolean).length}
+                                    {officialFilterCount}
                                 </span>
                             )}
                         </button>
@@ -423,10 +575,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             onClick={() => setShowTagPanel(!showTagPanel)}
                             className="text-sm font-medium text-violet-400 hover:text-violet-300 flex items-center justify-center gap-2 transition bg-violet-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-violet-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
                         >
-                            {showTagPanel ? "▼ タグ絞込" : "▶ タグ絞込"}
-                            {selectedTags.size > 0 && (
+                            {showTagPanel ? "▼ 独自タグ" : "▶ 独自タグ"}
+                            {customTagSelectedCount > 0 && (
                                 <span className="bg-violet-600 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                                    {selectedTags.size}
+                                    {customTagSelectedCount}
                                 </span>
                             )}
                         </button>
@@ -446,10 +598,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                     </div>
                 </div>
 
-                {/* Advanced Panel */}
+                {/* 公式フィルター Panel (HP / ルール種別 / 弱点 / 抵抗力 / にげる / コスト / 〜のポケモン / 特殊連動) */}
                 {showAdvanced && (
-                    <div className="mt-4 p-3 sm:p-4 bg-gray-900/60 border border-gray-700 rounded-lg text-sm text-gray-300 space-y-3 animate-in duration-200">
-                        {(weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter || costCountFilters.size > 0) && (
+                    <div className="mt-4 p-3 sm:p-4 bg-gray-900/60 border border-emerald-800/40 rounded-lg text-sm text-gray-300 space-y-4 animate-in duration-200">
+                        {officialFilterCount > 0 && (
                             <div className="flex justify-end -mt-1">
                                 <button
                                     type="button"
@@ -459,6 +611,17 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                         setRetreatFilter('');
                                         setCostTypeFilter('');
                                         setCostCountFilters(new Set());
+                                        setHpRange({ min: HP_MIN, max: HP_MAX });
+                                        setSelectedRuleTypes(new Set());
+                                        // Drop only official-side selected tags
+                                        setSelectedTags(prev => {
+                                            const next = new Set(prev);
+                                            for (const t of prev) {
+                                                const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
+                                                if (OFFICIAL_TAG_PARENTS.has(p)) next.delete(t);
+                                            }
+                                            return next;
+                                        });
                                     }}
                                     className="text-xs text-emerald-400 hover:text-emerald-200 underline py-1"
                                 >
@@ -466,11 +629,45 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                 </button>
                             </div>
                         )}
+
+                        {/* HP slider */}
+                        <div className={`max-w-sm transition ${hpFilterActive ? 'rounded-lg p-1 border border-violet-500/60 bg-violet-900/10' : ''}`}>
+                            <HpRangeSlider value={hpRange} onChange={setHpRange} />
+                        </div>
+
+                        {/* Rule Type checkboxes */}
+                        <div className="flex flex-col gap-1">
+                            <label className="text-xs text-gray-400 font-bold">ルール種別</label>
+                            <div className="flex flex-wrap gap-1.5 pt-1">
+                                {RULE_TYPE_OPTIONS.map(opt => {
+                                    const checked = selectedRuleTypes.has(opt.value);
+                                    return (
+                                        <label
+                                            key={opt.value}
+                                            className={`inline-flex items-center gap-1.5 px-3 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation cursor-pointer ${
+                                                checked
+                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                            }`}
+                                        >
+                                            <input
+                                                type="checkbox"
+                                                checked={checked}
+                                                onChange={() => toggleRuleType(opt.value)}
+                                                className="accent-emerald-500 w-3.5 h-3.5"
+                                            />
+                                            <span>{opt.label}</span>
+                                        </label>
+                                    );
+                                })}
+                            </div>
+                        </div>
+
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">弱点</label>
                                 <select
-                                    className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${weaknessFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                                     value={weaknessFilter}
                                     onChange={e => setWeaknessFilter(e.target.value)}
                                 >
@@ -481,7 +678,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">抵抗力</label>
                                 <select
-                                    className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${resistanceFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                                     value={resistanceFilter}
                                     onChange={e => setResistanceFilter(e.target.value)}
                                 >
@@ -492,7 +689,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">にげる</label>
                                 <select
-                                    className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${retreatFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                                     value={retreatFilter}
                                     onChange={e => setRetreatFilter(e.target.value)}
                                 >
@@ -505,7 +702,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
                                 <select
-                                    className="w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border border-gray-600 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation"
+                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${costTypeFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
                                     value={costTypeFilter}
                                     onChange={e => setCostTypeFilter(e.target.value)}
                                 >
@@ -543,10 +740,20 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                                 </div>
                             </div>
                         </div>
+
+                        {/* Official tag parents (〜のポケモン / 特殊連動) — same chip UX as 独自タグ panel */}
+                        {officialTagParents.length > 0 && (
+                            <div className="space-y-3 pt-2 border-t border-emerald-900/40">
+                                <div className="flex flex-wrap gap-1.5">
+                                    {officialTagParents.map(parent => renderParentChip(parent))}
+                                </div>
+                                {officialTagParents.map(parent => renderSubtagRow(parent))}
+                            </div>
+                        )}
                     </div>
                 )}
 
-                {/* Tag Filter Panel */}
+                {/* 独自タグ Panel */}
                 {showTagPanel && (
                     <div className="mt-3 p-3 bg-gray-900/60 border border-violet-800/40 rounded-lg space-y-3 animate-in duration-200">
 
@@ -589,78 +796,13 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex 
                         {/* Tag list — outer sticky header is already scrollable on mobile */}
                         <div className="space-y-3 pr-0.5">
 
-                            {/* Parent category chips */}
+                            {/* Parent category chips (custom side only — 〜のポケモン / 特殊連動 are rendered in 公式フィルター) */}
                             <div className="flex flex-wrap gap-1.5">
-                                {sortedParents.map(parent => {
-                                    const children = tagHierarchy.get(parent)!;
-                                    const isSelected = selectedTags.has(parent);
-                                    const isExpanded = expandedParents.has(parent);
-                                    const hasChildren = children.length > 0;
-
-                                    return (
-                                        <div key={parent} className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-2 ring-violet-400/90 shadow-[0_0_12px_rgba(167,139,250,0.55)]' : ''}`}>
-                                            <button
-                                                onClick={() => toggleTag(parent)}
-                                                className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
-                                                    hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
-                                                } ${
-                                                    isSelected
-                                                        ? 'bg-violet-600 border-violet-500 text-white'
-                                                        : isExpanded
-                                                            ? 'bg-violet-900/70 border-violet-500 text-violet-100 font-bold'
-                                                            : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
-                                                }`}
-                                            >
-                                                {parent}
-                                            </button>
-                                            {hasChildren && (
-                                                <button
-                                                    onClick={() => toggleExpand(parent)}
-                                                    className={`min-w-[44px] min-h-[44px] flex items-center justify-center text-xs border-y border-r rounded-r-full transition touch-manipulation ${
-                                                        isSelected
-                                                            ? 'bg-violet-700 border-violet-500 text-violet-200'
-                                                            : isExpanded
-                                                                ? 'bg-violet-700 border-violet-500 text-violet-100'
-                                                                : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
-                                                    }`}
-                                                >
-                                                    {isExpanded ? '▲' : '▼'}
-                                                </button>
-                                            )}
-                                        </div>
-                                    );
-                                })}
+                                {customTagParents.map(parent => renderParentChip(parent))}
                             </div>
 
-                            {/* Sub-tag rows for expanded parents */}
-                            {Array.from(expandedParents).map(parent => {
-                                const children = tagHierarchy.get(parent);
-                                if (!children || children.length === 0) return null;
-                                return (
-                                    <div key={parent} className="pl-3 border-l-2 border-violet-400/70">
-                                        <div className="flex flex-wrap items-center gap-1.5">
-                                            <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
-                                            {[...children].sort((a, b) => a.localeCompare(b, 'ja')).map(child => {
-                                                const childLabel = child.substring(parent.length + 1);
-                                                const isChildSelected = selectedTags.has(child);
-                                                return (
-                                                    <button
-                                                        key={child}
-                                                        onClick={() => toggleTag(child)}
-                                                        className={`px-2.5 py-2 min-h-[44px] min-w-[44px] text-sm sm:text-xs rounded-full border transition touch-manipulation ${
-                                                            isChildSelected
-                                                                ? 'bg-violet-600 border-violet-500 text-white'
-                                                                : 'bg-gray-800/80 border-violet-900/50 text-gray-300 hover:border-violet-500 hover:text-violet-300'
-                                                        }`}
-                                                    >
-                                                        {childLabel}
-                                                    </button>
-                                                );
-                                            })}
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                            {/* Sub-tag rows for expanded parents (custom side only) */}
+                            {customTagParents.map(parent => renderSubtagRow(parent))}
 
                         </div>
                     </div>
