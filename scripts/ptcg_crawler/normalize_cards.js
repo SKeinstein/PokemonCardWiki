@@ -32,6 +32,12 @@ const BOILERPLATE_RULES = new Set([
  * prints which omit them still map to the same master card.
  */
 function createMasterKey(card) {
+    const hasNoStats = card.hp === null &&
+        (card.attacks || []).length === 0 &&
+        (card.abilities || []).length === 0;
+    if (hasNoStats) {
+        return `${card.name}_none_none_none_none_none`;
+    }
     const hpStr = card.hp !== null ? String(card.hp) : "none";
     const typeStr = card.type || "none";
     let rulesStr = "none";
