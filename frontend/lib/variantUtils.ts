@@ -14,11 +14,12 @@ function rarityRank(rarity: string): number {
 }
 
 function genRank(setCode: string): number {
-    if (/^SV/.test(setCode)) return 6;  // Scarlet & Violet
-    if (/^S\d/.test(setCode)) return 5; // Sword & Shield (S1a, S2, …)
-    if (/^SM/.test(setCode)) return 4;  // Sun & Moon
-    if (/^XY/.test(setCode)) return 3;  // XY
-    if (/^BW/.test(setCode)) return 2;  // Black & White
+    if (/^SV/.test(setCode)) return 6;      // Scarlet & Violet
+    if (/^SM/.test(setCode)) return 4;      // Sun & Moon (SM より先に判定)
+    if (/^S/.test(setCode)) return 5;       // Sword & Shield (S系 MC/MP 含む SV/SM 除外済)
+    if (/^MC|^MP/.test(setCode)) return 5;  // スタートデッキ100 / バトルコレクション
+    if (/^XY/.test(setCode)) return 3;      // XY
+    if (/^BW/.test(setCode)) return 2;      // Black & White
     return 1;
 }
 
