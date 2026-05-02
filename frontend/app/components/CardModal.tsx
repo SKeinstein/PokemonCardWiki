@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
-import { typeLabel } from '../../lib/typeUtils';
 
 type QAEntry = {
     question: string;
@@ -69,7 +68,7 @@ interface CardModalProps {
     onEvolutionsClick?: (evoName: string) => void;
 }
 
-export default function CardModal({ card, variants, isOpen, onClose, onEvolutionsClick }: CardModalProps) {
+export default function CardModal({ card, variants, isOpen, onClose }: CardModalProps) {
     const [selectedVariant, setSelectedVariant] = React.useState<CardVariant | null>(null);
     const [dragOffset, setDragOffset] = React.useState(0);
     const dragStartY = React.useRef(0);
@@ -113,23 +112,6 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
     }, [isOpen, onClose]);
 
     if (!isOpen || !card) return null;
-
-    const getTypeColor = (type: string) => {
-        const colors: Record<string, string> = {
-            'grass': 'bg-green-600',
-            'fire': 'bg-red-500',
-            'water': 'bg-blue-500',
-            'lightning': 'bg-yellow-400',
-            'psychic': 'bg-purple-500',
-            'fighting': 'bg-orange-600',
-            'dark': 'bg-gray-800',
-            'steel': 'bg-slate-400',
-            'fairy': 'bg-pink-400',
-            'dragon': 'bg-yellow-600',
-            'colorless': 'bg-gray-400',
-        };
-        return colors[type] || 'bg-gray-600';
-    };
 
     const onSwipeStart = (e: React.TouchEvent) => {
         dragStartY.current = e.touches[0].clientY;
@@ -209,15 +191,15 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                 <div className="flex flex-col sm:flex-row flex-1 min-h-0 overflow-y-auto overscroll-contain sm:overflow-hidden custom-scrollbar">
 
                     {/* Left: Image + Variants */}
-                    <div className="w-full sm:w-5/12 bg-gray-950 border-b sm:border-b-0 sm:border-r border-gray-800 sm:flex-shrink-0 sm:overflow-hidden sm:flex sm:flex-col sm:min-h-0">
+                    <div className="w-full sm:w-1/2 bg-gray-950 border-b sm:border-b-0 sm:border-r border-gray-800 sm:flex-shrink-0 sm:overflow-hidden sm:flex sm:flex-col sm:min-h-0">
 
                         {/* Mobile: compact horizontal row (image left, quick meta right) */}
                         {/* SM+: vertically stacked (image centered, then variants) */}
-                        <div className="flex flex-row sm:flex-col sm:flex-1 sm:min-h-0">
+                        <div className="flex flex-row sm:flex-col sm:flex-shrink-0">
 
                             {/* Card image */}
-                            <div className="p-2 sm:p-3 flex-shrink-0 flex sm:justify-center sm:border-b sm:border-gray-800/50 sm:bg-gray-900/20">
-                                <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-gray-800/50 drop-shadow-2xl w-[45vw] max-w-[180px] min-w-[120px] sm:w-full sm:max-w-[180px] md:max-w-[240px]">
+                            <div className="p-2 sm:p-4 flex-shrink-0 flex sm:justify-center sm:border-b sm:border-gray-800/50 sm:bg-gray-900/20">
+                                <div className="rounded-lg sm:rounded-xl overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)] bg-gray-800/50 drop-shadow-2xl w-[45vw] max-w-[180px] min-w-[120px] sm:w-full sm:max-w-[220px] md:max-w-[300px] lg:max-w-[340px]">
                                     {selectedVariant?.image_url && !mainImgError ? (
                                         <img
                                             src={`https://www.pokemon-card.com${selectedVariant.image_url}`}
@@ -233,26 +215,13 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                                 </div>
                             </div>
 
-                            {/* Mobile-only: key meta to the right of image */}
-                            <div className="sm:hidden flex-1 min-w-0 px-2 py-2 flex flex-col gap-1.5 justify-center">
-                                <div className="flex items-center gap-1.5 flex-wrap">
-                                    <span className="text-gray-400 text-xs font-bold px-1.5 py-0.5 bg-gray-800 rounded leading-tight">{card.card_kind || 'Unknown'}</span>
-                                    {card.pokedexNo && <span className="text-gray-500 text-xs">No.{card.pokedexNo}</span>}
-                                </div>
-                                <div className="flex items-center gap-2">
-                                    {card.hp && <span className="text-red-400 font-bold text-xl leading-none">HP {card.hp}</span>}
-                                    {card.type && (
-                                        <div className={`w-6 h-6 rounded-full border border-white/20 flex items-center justify-center flex-shrink-0 ${getTypeColor(card.type)}`} title={typeLabel(card.type)} />
-                                    )}
-                                </div>
+                            {/* Mobile-only: minimal meta to the right of image */}
+                            <div className="sm:hidden flex-1 min-w-0 px-3 py-2 flex flex-col gap-2 justify-center">
+                                <h2 className="text-base font-black text-white leading-tight break-words">{card.name}</h2>
                                 {selectedVariant && (
-                                    <div className="space-y-1">
-                                        <p className="text-sm text-gray-300 line-clamp-2 leading-tight">{selectedVariant.set_name}{selectedVariant.set_number && ` (${selectedVariant.set_number})`}</p>
-                                        <div className="flex gap-1 flex-wrap items-center">
-                                            {selectedVariant.rarity && <span className="text-sm text-yellow-400 font-semibold leading-tight">{selectedVariant.rarity}</span>}
-                                            {selectedVariant.regulation && <span className="text-sm font-mono bg-gray-800 px-1 py-0.5 rounded text-gray-300">[{selectedVariant.regulation}]</span>}
-                                        </div>
-                                        {selectedVariant.illustrator && <p className="text-sm text-emerald-400 truncate">{selectedVariant.illustrator}</p>}
+                                    <div className="flex gap-1 flex-wrap items-center">
+                                        {selectedVariant.rarity && <span className="text-xs text-yellow-400 font-semibold">{selectedVariant.rarity}</span>}
+                                        {selectedVariant.regulation && <span className="text-xs font-mono bg-gray-800 px-1.5 py-0.5 rounded text-gray-300">[{selectedVariant.regulation}]</span>}
                                     </div>
                                 )}
                             </div>
@@ -294,170 +263,13 @@ export default function CardModal({ card, variants, isOpen, onClose, onEvolution
                         )}
                     </div>
 
-                    {/* Right: Card Data — scrolls independently on sm+; flows naturally on mobile */}
-                    <div className="flex-1 min-w-0 p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col bg-gray-900 sm:overflow-y-auto sm:overscroll-contain custom-scrollbar text-base leading-relaxed text-gray-300" style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}>
+                    {/* Right: Q&A only — scrolls independently on sm+; flows naturally on mobile */}
+                    <div className="flex-1 min-w-0 p-4 sm:p-5 md:p-6 flex flex-col bg-gray-900 sm:overflow-y-auto sm:overscroll-contain custom-scrollbar text-base leading-relaxed text-gray-300" style={{ paddingBottom: 'max(1.5rem, env(safe-area-inset-bottom))' }}>
 
-                        {/* Mobile-only: card name shown in scroll area (top bar only has truncated name) */}
-                        <div className="sm:hidden mb-3 pb-3 border-b border-gray-800">
-                            <h2 className="text-lg font-black text-white leading-tight break-words">{card.name}</h2>
-                            {card.pokedexCategory && (
-                                <p className="text-gray-500 text-sm mt-0.5">
-                                    {card.pokedexCategory}
-                                    {(card.height || card.weight) && ` / 高さ: ${card.height} / 重さ: ${card.weight}`}
-                                </p>
-                            )}
+                        {/* Card name header */}
+                        <div className="mb-4 sm:mb-6 pb-4 border-b border-gray-800 pt-2 sm:pt-4 pr-14">
+                            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-tight break-words">{card.name}</h2>
                         </div>
-
-                        {/* Header: Name, HP, Type — shown at sm+ */}
-                        {/* pr-14 reserves space for the absolute-positioned close button (right-3 + w-11 = 56px) */}
-                        <div className="hidden sm:flex flex-row items-start justify-between gap-4 mb-6 pb-4 border-b border-gray-800 pt-2 sm:pt-4 pr-14">
-                            <div className="min-w-0">
-                                <div className="flex items-center gap-2 mb-1 flex-wrap">
-                                    <span className="text-gray-400 text-xs font-bold px-2 py-0.5 bg-gray-800 rounded">{card.card_kind || 'Unknown'}</span>
-                                    {card.pokedexNo && <span className="text-gray-500 text-xs">No.{card.pokedexNo}</span>}
-                                </div>
-                                <h2 className="text-2xl lg:text-3xl font-black text-white tracking-tight leading-tight break-words">{card.name}</h2>
-                                {card.pokedexCategory && (
-                                    <p className="text-gray-400 text-xs mt-1 leading-snug">{card.pokedexCategory} / 高さ: {card.height} / 重さ: {card.weight}</p>
-                                )}
-                            </div>
-                            <div className="flex items-center gap-3 flex-shrink-0">
-                                {card.hp && <span className="text-xl font-bold text-red-400">HP {card.hp}</span>}
-                                {card.type && (
-                                    <div className={`w-8 h-8 rounded-full shadow-inner flex items-center justify-center border border-white/20 ${getTypeColor(card.type)}`} title={typeLabel(card.type)}>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-
-                        {/* Meta: set, rarity, illustrator, regulation — shown at sm+ */}
-                        <div className="hidden sm:flex flex-wrap gap-x-6 gap-y-2 bg-gray-950 rounded-lg p-4 mb-6 border border-gray-800 text-xs">
-                            {selectedVariant && (
-                                <>
-                                    <div className="flex flex-col min-w-0">
-                                        <span className="text-gray-500">収録</span>
-                                        <span className="text-white font-medium break-words">{selectedVariant.set_name} {selectedVariant.set_number && `(${selectedVariant.set_number})`}</span>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <span className="text-gray-500">レアリティ</span>
-                                        <span className="text-yellow-400 font-bold">{selectedVariant.rarity || 'N/A'}</span>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <span className="text-gray-500">イラスト</span>
-                                        <span className="text-emerald-400 font-medium">{selectedVariant.illustrator || 'Unknown'}</span>
-                                    </div>
-                                    {selectedVariant.regulation && (
-                                        <div className="flex flex-col">
-                                            <span className="text-gray-500">レギュ</span>
-                                            <span className="text-white font-bold bg-gray-800 px-2 rounded mt-0.5 w-max">{selectedVariant.regulation}</span>
-                                        </div>
-                                    )}
-                                </>
-                            )}
-                        </div>
-
-                        {/* Evolutions */}
-                        {card.evolutions && card.evolutions.length > 0 && (
-                            <div className="mb-4 sm:mb-6">
-                                <h3 className="text-xs font-bold text-gray-500 mb-2 uppercase tracking-wider">進化ツリー</h3>
-                                <div className="flex flex-wrap gap-2">
-                                    {card.evolutions.map(evo => (
-                                        <button
-                                            key={evo}
-                                            onClick={() => onEvolutionsClick && onEvolutionsClick(evo)}
-                                            className={`px-3 py-2 min-h-[44px] text-sm rounded-full border transition-colors touch-manipulation ${evo === card.name ? 'border-emerald-500 bg-emerald-500/10 text-emerald-400 font-bold' : 'border-gray-700 bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'}`}
-                                        >
-                                            {evo}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Abilities, Attacks, Rules */}
-                        <div className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
-                            {card.abilities.map((ability, i) => (
-                                <div key={`ab-${i}`} className="bg-emerald-950/30 border border-emerald-900/50 rounded-lg p-4">
-                                    <h3 className="font-bold text-emerald-400 flex items-center gap-2 mb-2 text-base">
-                                        <span className="bg-emerald-600 text-white text-xs px-1.5 py-0.5 rounded tracking-wider">特性</span>
-                                        {ability.name}
-                                    </h3>
-                                    <p className="text-gray-300 leading-relaxed text-base">{ability.text}</p>
-                                </div>
-                            ))}
-
-                            {card.attacks.map((attack, i) => (
-                                <div key={`at-${i}`} className="border-b border-gray-800 pb-4 last:border-0 last:pb-0">
-                                    <div className="flex justify-between items-start mb-2 gap-2">
-                                        <div className="flex items-center gap-3 min-w-0">
-                                            <div className="flex gap-0.5 shrink-0">
-                                                {attack.cost.length > 0 ? attack.cost.map((c, j) => (
-                                                    <div key={j} className={`w-5 h-5 rounded-full border border-white/20 shadow-inner ${getTypeColor(c)}`} title={typeLabel(c)}></div>
-                                                )) : (
-                                                    <div className="w-5 h-5 rounded-full border border-gray-600 border-dashed"></div>
-                                                )}
-                                            </div>
-                                            <h3 className="font-bold text-blue-300 text-base break-words min-w-0">{attack.name}</h3>
-                                        </div>
-                                        <span className="font-black text-xl text-white shrink-0">{attack.damage}</span>
-                                    </div>
-                                    <p className="text-gray-300 leading-relaxed text-base">{attack.text}</p>
-                                </div>
-                            ))}
-
-                            {card.rules.map((rule, i) => (
-                                <div key={`ru-${i}`} className="bg-purple-950/20 border border-purple-900/50 rounded-lg p-3">
-                                    <p className="text-purple-300 text-base leading-relaxed font-medium">{rule}</p>
-                                </div>
-                            ))}
-                        </div>
-
-                        {/* Stats: Weakness, Resistance, Retreat */}
-                        {(card.weakness?.type || card.resistance?.type || card.retreatCost > 0) && (
-                            <div className="grid grid-cols-3 gap-2 mb-4 sm:mb-6 border-t border-gray-800 pt-4 sm:pt-6">
-                                <div className="flex flex-col items-center p-2 sm:p-3 bg-gray-950 rounded-lg border border-gray-800">
-                                    <span className="text-xs text-gray-500 font-bold mb-2">弱点</span>
-                                    <div className="flex items-center gap-2">
-                                        {card.weakness?.type ? (
-                                            <>
-                                                <div className={`w-5 h-5 rounded-full flex-shrink-0 ${getTypeColor(card.weakness.type)}`} title={typeLabel(card.weakness.type)}></div>
-                                                <span className="text-xs text-gray-300">{typeLabel(card.weakness.type)}</span>
-                                                <span className="font-bold">{card.weakness.value}</span>
-                                            </>
-                                        ) : <span className="text-gray-600">-</span>}
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center p-2 sm:p-3 bg-gray-950 rounded-lg border border-gray-800">
-                                    <span className="text-xs text-gray-500 font-bold mb-2">抵抗力</span>
-                                    <div className="flex items-center gap-2">
-                                        {card.resistance?.type ? (
-                                            <>
-                                                <div className={`w-5 h-5 rounded-full flex-shrink-0 ${getTypeColor(card.resistance.type)}`} title={typeLabel(card.resistance.type)}></div>
-                                                <span className="text-xs text-gray-300">{typeLabel(card.resistance.type)}</span>
-                                                <span className="font-bold">{card.resistance.value}</span>
-                                            </>
-                                        ) : <span className="text-gray-600">-</span>}
-                                    </div>
-                                </div>
-                                <div className="flex flex-col items-center p-2 sm:p-3 bg-gray-950 rounded-lg border border-gray-800">
-                                    <span className="text-xs text-gray-500 font-bold mb-2">にげる</span>
-                                    <div className="flex flex-wrap gap-0.5 mt-1 justify-center">
-                                        {card.retreatCost > 0 ? (
-                                            [...Array(card.retreatCost)].map((_, i) => (
-                                                <div key={i} className="w-4 h-4 rounded-full bg-gray-400 border border-white/20"></div>
-                                            ))
-                                        ) : <span className="text-gray-600">-</span>}
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-
-                        {/* Flavor Text */}
-                        {card.flavor_text && (
-                            <div className="mt-6 italic text-gray-400 bg-gray-950 p-4 rounded-lg border-l-4 border-gray-800">
-                                {card.flavor_text}
-                            </div>
-                        )}
 
                         {/* Q&A Section */}
                         {(qaLoading || (qaData && (qaData.directQA.length > 0 || qaData.relatedQA.length > 0))) && (
