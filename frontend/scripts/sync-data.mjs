@@ -20,6 +20,7 @@ const FILES = [
     "qa_index.json",
     "cost_index.json",
     "card_rule_type_index.json",
+    "deck_index.json",
 ];
 
 await mkdir(DEST_DIR, { recursive: true });

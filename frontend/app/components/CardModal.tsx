@@ -3,6 +3,14 @@ import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
 
+type DeckEntry = {
+    archetype: string;
+    count: number;
+    total: number;
+    share: number;
+    url: string;
+};
+
 type QAEntry = {
     question: string;
     answer: string;
@@ -74,6 +82,7 @@ export default function CardModal({ card, variants, isOpen, onClose }: CardModal
     const dragStartY = React.useRef(0);
     const [qaData, setQaData] = useState<QAData | null>(null);
     const [qaLoading, setQaLoading] = useState(false);
+    const [deckData, setDeckData] = useState<DeckEntry[] | null>(null);
     const [mainImgError, setMainImgError] = useState(false);
     const [thumbErrors, setThumbErrors] = useState<Set<string>>(new Set());
 
@@ -85,7 +94,20 @@ export default function CardModal({ card, variants, isOpen, onClose }: CardModal
             setMainImgError(false);
             setThumbErrors(new Set());
         }
+        setDeckData(null);
     }, [variants, isOpen]);
+
+    useEffect(() => {
+        if (!isOpen || !card) return;
+        fetch('/api/decks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ masterId: card.master_id }),
+        })
+            .then(r => r.json())
+            .then(data => setDeckData(data))
+            .catch(() => setDeckData([]));
+    }, [isOpen, card]);
 
     useEffect(() => {
         if (!isOpen || !variants || variants.length === 0) return;
@@ -270,6 +292,39 @@ export default function CardModal({ card, variants, isOpen, onClose }: CardModal
                         <div className="mb-4 sm:mb-6 pb-4 border-b border-gray-800 pt-2 sm:pt-4 pr-14">
                             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-tight break-words">{card.name}</h2>
                         </div>
+
+                        {/* 採用デッキ Section */}
+                        {deckData && deckData.length > 0 && (
+                            <div className="mt-6 space-y-2">
+                                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">採用デッキ</h3>
+                                <div className="space-y-1.5">
+                                    {deckData.map((deck, i) => (
+                                        <div key={i} className="flex items-center gap-2">
+                                            <div className="flex-1 min-w-0">
+                                                <div className="flex items-center justify-between mb-0.5">
+                                                    <span className="text-sm text-gray-200 truncate">{deck.archetype}</span>
+                                                    <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{deck.share.toFixed(1)}%</span>
+                                                </div>
+                                                <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+                                                    <div
+                                                        className="h-full bg-emerald-500 rounded-full"
+                                                        style={{ width: `${Math.min(deck.share, 100)}%` }}
+                                                    />
+                                                </div>
+                                            </div>
+                                            <a
+                                                href={deck.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex-shrink-0 text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 text-blue-400 hover:text-blue-300 transition-colors border border-gray-700"
+                                            >
+                                                デッキ一覧
+                                            </a>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
 
                         {/* Q&A Section */}
                         {(qaLoading || (qaData && (qaData.directQA.length > 0 || qaData.relatedQA.length > 0))) && (
