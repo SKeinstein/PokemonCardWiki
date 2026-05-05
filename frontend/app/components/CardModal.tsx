@@ -294,37 +294,40 @@ export default function CardModal({ card, variants, isOpen, onClose }: CardModal
                         </div>
 
                         {/* 採用デッキ Section */}
-                        {deckData && deckData.length > 0 && (
-                            <div className="mt-6 space-y-2">
-                                <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">採用デッキ</h3>
-                                <div className="space-y-1.5">
-                                    {deckData.map((deck, i) => (
-                                        <div key={i} className="flex items-center gap-2">
-                                            <div className="flex-1 min-w-0">
-                                                <div className="flex items-center justify-between mb-0.5">
-                                                    <span className="text-sm text-gray-200 truncate">{deck.archetype}</span>
-                                                    <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{deck.share.toFixed(1)}%</span>
+                        {deckData && deckData.length > 0 && (() => {
+                            const maxShare = Math.max(...deckData.map(d => d.share));
+                            return (
+                                <div className="mt-6 space-y-2">
+                                    <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider">採用デッキ</h3>
+                                    <div className="space-y-1.5">
+                                        {deckData.map((deck, i) => (
+                                            <div key={i} className="flex items-center gap-2">
+                                                <div className="flex-1 min-w-0">
+                                                    <div className="flex items-center justify-between mb-0.5">
+                                                        <span className="text-sm text-gray-200 truncate">{deck.archetype}</span>
+                                                        <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{deck.share.toFixed(1)}%</span>
+                                                    </div>
+                                                    <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+                                                        <div
+                                                            className="h-full bg-emerald-500 rounded-full"
+                                                            style={{ width: `${(deck.share / maxShare) * 100}%` }}
+                                                        />
+                                                    </div>
                                                 </div>
-                                                <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">
-                                                    <div
-                                                        className="h-full bg-emerald-500 rounded-full"
-                                                        style={{ width: `${Math.min(deck.share, 100)}%` }}
-                                                    />
-                                                </div>
+                                                <a
+                                                    href={deck.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex-shrink-0 text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 text-blue-400 hover:text-blue-300 transition-colors border border-gray-700"
+                                                >
+                                                    デッキ一覧
+                                                </a>
                                             </div>
-                                            <a
-                                                href={deck.url}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="flex-shrink-0 text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 text-blue-400 hover:text-blue-300 transition-colors border border-gray-700"
-                                            >
-                                                デッキ一覧
-                                            </a>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            );
+                        })()}
 
                         {/* Q&A Section */}
                         {(qaLoading || (qaData && (qaData.directQA.length > 0 || qaData.relatedQA.length > 0))) && (
