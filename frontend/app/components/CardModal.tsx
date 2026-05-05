@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MasterCard, CardVariant } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
+import { getOfficialTagColor } from '../../lib/tagColors';
 
 type DeckEntry = {
     archetype: string;
@@ -73,10 +74,12 @@ interface CardModalProps {
     variants: CardVariant[];
     isOpen: boolean;
     onClose: () => void;
+    tags?: string[];
+    officialTags?: string[];
     onEvolutionsClick?: (evoName: string) => void;
 }
 
-export default function CardModal({ card, variants, isOpen, onClose }: CardModalProps) {
+export default function CardModal({ card, variants, isOpen, onClose, tags = [], officialTags = [] }: CardModalProps) {
     const [selectedVariant, setSelectedVariant] = React.useState<CardVariant | null>(null);
     const [dragOffset, setDragOffset] = React.useState(0);
     const dragStartY = React.useRef(0);
@@ -292,6 +295,35 @@ export default function CardModal({ card, variants, isOpen, onClose }: CardModal
                         <div className="mb-4 sm:mb-6 pb-4 border-b border-gray-800 pt-2 sm:pt-4 pr-14">
                             <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-white tracking-tight leading-tight break-words">{card.name}</h2>
                         </div>
+
+                        {/* Tags section */}
+                        {(officialTags.length > 0 || tags.length > 0) && (
+                            <div className="mb-4 flex flex-wrap gap-1.5">
+                                {officialTags.map(tag => (
+                                    <span
+                                        key={tag}
+                                        className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getOfficialTagColor(tag)}`}
+                                    >
+                                        {tag}
+                                    </span>
+                                ))}
+                                {tags.map(tag => {
+                                    const gtIdx = tag.indexOf('>');
+                                    const parent = gtIdx >= 0 ? tag.substring(0, gtIdx) : null;
+                                    const label = gtIdx >= 0 ? tag.substring(gtIdx + 1) : tag;
+                                    return (
+                                        <span
+                                            key={tag}
+                                            title={tag}
+                                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium border bg-violet-900/60 border-violet-700 text-violet-200"
+                                        >
+                                            {parent && <span className="text-violet-400/70">{parent} ›</span>}
+                                            {label}
+                                        </span>
+                                    );
+                                })}
+                            </div>
+                        )}
 
                         {/* 採用デッキ Section */}
                         {deckData && deckData.length > 0 && (() => {

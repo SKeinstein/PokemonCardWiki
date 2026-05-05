@@ -10,7 +10,3 @@ A project to build an advanced search database for Pokemon Card Game (PTCG), ena
 
 ## Context
 Initial phase involves harvesting `cardID`s from the official Pokemon Card Game site using `resultAPI.php`.
-
-## Reference docs for Claude Code
-- `PokemonCardWiki.md` (Design Draft)
-- `HarvestingTasks.md` (Tasks)

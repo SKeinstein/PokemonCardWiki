@@ -19,7 +19,7 @@ const FILES = [
     "qa_entries.json",
     "qa_index.json",
     "cost_index.json",
-    "card_rule_type_index.json",
+    "official_class_index.json",
     "deck_index.json",
 ];
 

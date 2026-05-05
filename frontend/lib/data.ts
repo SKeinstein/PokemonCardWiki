@@ -143,18 +143,17 @@ export async function getCostIndex(): Promise<CostEntry[]> {
     return costIndexCache;
 }
 
-export type RuleType = "ex" | "terastal" | "acespec";
-export type RuleTypeIndex = Record<string, RuleType[]>;
+export type OfficialClassIndex = Record<string, string[]>;
 
-let ruleTypeIndexCache: RuleTypeIndex | null = null;
+let officialClassIndexCache: OfficialClassIndex | null = null;
 
-export async function getRuleTypeIndex(): Promise<RuleTypeIndex> {
-    if (process.env.NODE_ENV === 'production' && ruleTypeIndexCache) {
-        return ruleTypeIndexCache;
+export async function getOfficialClassIndex(): Promise<OfficialClassIndex> {
+    if (process.env.NODE_ENV === 'production' && officialClassIndexCache) {
+        return officialClassIndexCache;
     }
 
-    const dataPath = path.join(DATA_DIR, "card_rule_type_index.json");
+    const dataPath = path.join(DATA_DIR, "official_class_index.json");
     const fileContents = await fs.readFile(dataPath, "utf8");
-    ruleTypeIndexCache = JSON.parse(fileContents) as RuleTypeIndex;
-    return ruleTypeIndexCache;
+    officialClassIndexCache = JSON.parse(fileContents) as OfficialClassIndex;
+    return officialClassIndexCache;
 }

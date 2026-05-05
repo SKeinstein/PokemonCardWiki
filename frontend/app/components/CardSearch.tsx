@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
-import { MasterCard, CardVariant, MasterCardTag, CostEntry, RuleTypeIndex, RuleType } from "../../lib/data";
+import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex } from "../../lib/data";
 import { pickDefaultVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
+import { OfficialClassGroup, OFFICIAL_CLASS_GROUPS } from "../../lib/tagColors";
 import CardModal from "./CardModal";
 import ComparisonTray from "./ComparisonTray";
 import ComparisonModal from "./ComparisonModal";
@@ -14,22 +15,14 @@ type Props = {
     variants: CardVariant[];
     cardTags: MasterCardTag[];
     costIndex: CostEntry[];
-    ruleTypeIndex: RuleTypeIndex;
+    officialClassIndex: OfficialClassIndex;
 };
 
 const HP_MIN = 30;
 const HP_MAX = 380;
 
-// Tag parent categories whose chips render in the 公式フィルター panel rather than 独自タグ.
-const OFFICIAL_TAG_PARENTS = new Set(["〜のポケモン", "特殊連動"]);
 
-const RULE_TYPE_OPTIONS: { value: RuleType; label: string }[] = [
-    { value: "ex", label: "ex" },
-    { value: "terastal", label: "テラスタル" },
-    { value: "acespec", label: "ACE SPEC" },
-];
-
-export default function CardSearch({ masterCards, variants, cardTags, costIndex, ruleTypeIndex }: Props) {
+export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
     const [effectQuery, setEffectQuery] = useState("");
@@ -42,7 +35,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const [failedImages, setFailedImages] = useState<Set<string>>(new Set());
 
     const [hpRange, setHpRange] = useState<HpRange>({ min: HP_MIN, max: HP_MAX });
-    const [selectedRuleTypes, setSelectedRuleTypes] = useState<Set<RuleType>>(new Set());
     const [weaknessFilter, setWeaknessFilter] = useState("");
     const [resistanceFilter, setResistanceFilter] = useState("");
     const [retreatFilter, setRetreatFilter] = useState("");
@@ -71,6 +63,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const [showTagPanel, setShowTagPanel] = useState(false);
     const [isTagOrSearch, setIsTagOrSearch] = useState(false);
 
+    // Official classification filter state
+    const [selectedOfficialTags, setSelectedOfficialTags] = useState<Set<string>>(new Set());
+
     // Set grid columns based on viewport on mount and update on resize
     useEffect(() => {
         const getDefaultCols = (w: number) => w < 640 ? 2 : w < 1024 ? 5 : 4;
@@ -91,7 +86,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, effectQuery, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedRuleTypes]);
+    }, [query, typeFilter, effectQuery, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -146,6 +141,16 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         return map;
     }, [costIndex]);
 
+    // Map masterId → Set of official class tags (joined by card name)
+    const officialClassMap = useMemo(() => {
+        const map = new Map<string, Set<string>>();
+        for (const card of masterCards) {
+            const tags = officialClassIndex[card.name];
+            if (tags && tags.length > 0) map.set(card.master_id, new Set(tags));
+        }
+        return map;
+    }, [masterCards, officialClassIndex]);
+
     // Map masterId → Set of tags for O(1) lookup
     const tagCardMap = useMemo(() => {
         const map = new Map<string, Set<string>>();
@@ -172,13 +177,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         return hierarchy;
     }, [cardTags]);
 
-    // Sorted parent tag keys, split into 公式フィルター side vs 独自タグ side
-    const officialTagParents = useMemo(
-        () => Array.from(tagHierarchy.keys()).filter(p => OFFICIAL_TAG_PARENTS.has(p)).sort((a, b) => a.localeCompare(b, 'ja')),
-        [tagHierarchy]
-    );
     const customTagParents = useMemo(
-        () => Array.from(tagHierarchy.keys()).filter(p => !OFFICIAL_TAG_PARENTS.has(p)).sort((a, b) => a.localeCompare(b, 'ja')),
+        () => Array.from(tagHierarchy.keys()).sort((a, b) => a.localeCompare(b, 'ja')),
         [tagHierarchy]
     );
 
@@ -214,11 +214,11 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         });
     };
 
-    const toggleRuleType = (rt: RuleType) => {
-        setSelectedRuleTypes(prev => {
+    const toggleOfficialTag = (tag: string) => {
+        setSelectedOfficialTags(prev => {
             const next = new Set(prev);
-            if (next.has(rt)) next.delete(rt);
-            else next.add(rt);
+            if (next.has(tag)) next.delete(tag);
+            else next.add(tag);
             return next;
         });
     };
@@ -228,7 +228,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const anyFilterActive = !!(
         query || effectQuery || typeFilter || categoryFilter ||
         weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
-        costCountFilters.size > 0 || hpFilterActive || selectedRuleTypes.size > 0 || selectedTags.size > 0 ||
+        costCountFilters.size > 0 || hpFilterActive || selectedOfficialTags.size > 0 || selectedTags.size > 0 ||
         isOrSearch
     );
 
@@ -243,8 +243,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         setCostTypeFilter('');
         setCostCountFilters(new Set());
         setHpRange({ min: HP_MIN, max: HP_MAX });
-        setSelectedRuleTypes(new Set());
         setSelectedTags(new Set());
+        setSelectedOfficialTags(new Set());
         setIsOrSearch(false);
         setIsTagOrSearch(false);
     };
@@ -284,16 +284,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 if (card.hp < hpRange.min || card.hp > hpRange.max) return false;
             }
 
-            // 5. Rule Type Filter (ex / terastal / acespec). Multiple = OR.
-            if (selectedRuleTypes.size > 0) {
-                const cardRuleTypes = ruleTypeIndex[card.master_id] || [];
-                let match = false;
-                for (const rt of selectedRuleTypes) {
-                    if (cardRuleTypes.includes(rt)) { match = true; break; }
-                }
-                if (!match) return false;
-            }
-
             // Weakness Filter
             if (weaknessFilter && card.weakness?.type !== weaknessFilter) return false;
 
@@ -330,8 +320,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 }
             }
 
-            // 7. Tag Filter — official tag parents (〜のポケモン / 特殊連動) AND custom tags share
-            //    the same selectedTags set. Within selectedTags AND/OR is governed by isTagOrSearch.
+            // 7. Tag Filter — all tags share the same selectedTags set.
+            //    AND/OR is governed by isTagOrSearch.
             if (selectedTags.size > 0) {
                 if (isTagOrSearch) {
                     let anyMatch = false;
@@ -346,9 +336,19 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 }
             }
 
+            // 8. Official Classification Filter — OR across selected tags
+            if (selectedOfficialTags.size > 0) {
+                const tags = officialClassMap.get(card.master_id);
+                let match = false;
+                for (const t of selectedOfficialTags) {
+                    if (tags?.has(t)) { match = true; break; }
+                }
+                if (!match) return false;
+            }
+
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedRuleTypes, ruleTypeIndex]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -436,18 +436,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter,
         costCountFilters.size > 0 ? 'x' : '',
         hpFilterActive ? 'x' : '',
-        selectedRuleTypes.size > 0 ? 'x' : '',
-        // tags belonging to the official side (parent + subtags whose parent is official)
-        ...Array.from(selectedTags).filter(t => {
-            const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
-            return OFFICIAL_TAG_PARENTS.has(p);
-        }).map(() => 'x'),
+        selectedOfficialTags.size > 0 ? 'x' : '',
     ].filter(Boolean).length;
 
-    const customTagSelectedCount = Array.from(selectedTags).filter(t => {
-        const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
-        return !OFFICIAL_TAG_PARENTS.has(p);
-    }).length;
+    const customTagSelectedCount = selectedTags.size;
 
     return (
         <div
@@ -561,7 +553,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     <div className="flex flex-row flex-wrap gap-2">
                         <button
                             onClick={() => setShowAdvanced(!showAdvanced)}
-                            className="text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-center gap-2 transition bg-emerald-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-emerald-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
+                            className={`text-sm font-medium text-emerald-400 hover:text-emerald-300 flex items-center justify-center gap-2 transition px-3 py-2 min-h-[44px] rounded-lg border flex-1 sm:flex-none sm:w-auto touch-manipulation ${officialFilterCount > 0 ? 'bg-emerald-900/50 border-emerald-500/70' : 'bg-emerald-900/30 border-emerald-800/50'}`}
                         >
                             {showAdvanced ? "▼ 公式フィルター" : "▶ 公式フィルター"}
                             {officialFilterCount > 0 && (
@@ -573,7 +565,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
                         <button
                             onClick={() => setShowTagPanel(!showTagPanel)}
-                            className="text-sm font-medium text-violet-400 hover:text-violet-300 flex items-center justify-center gap-2 transition bg-violet-900/30 px-3 py-2 min-h-[44px] rounded-lg border border-violet-800/50 flex-1 sm:flex-none sm:w-auto touch-manipulation"
+                            className={`text-sm font-medium text-violet-400 hover:text-violet-300 flex items-center justify-center gap-2 transition px-3 py-2 min-h-[44px] rounded-lg border flex-1 sm:flex-none sm:w-auto touch-manipulation ${customTagSelectedCount > 0 ? 'bg-violet-900/50 border-violet-500/70' : 'bg-violet-900/30 border-violet-800/50'}`}
                         >
                             {showTagPanel ? "▼ 独自タグ" : "▶ 独自タグ"}
                             {customTagSelectedCount > 0 && (
@@ -585,7 +577,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     </div>
 
                     {/* AND / OR Toggle */}
-                    <div className="flex items-center space-x-2 bg-gray-800/80 px-3 rounded-lg border border-gray-700 w-full sm:w-auto min-h-[44px]">
+                    <div className={`flex items-center space-x-2 px-3 rounded-lg border w-full sm:w-auto min-h-[44px] transition ${isOrSearch ? 'bg-violet-900/20 border-violet-600/60' : 'bg-gray-800/80 border-gray-700'}`}>
                         <span className="text-sm font-bold text-gray-400 whitespace-nowrap">検索モード:</span>
                         <label className="flex items-center space-x-1.5 cursor-pointer min-h-[44px] px-2 touch-manipulation">
                             <input type="radio" checked={!isOrSearch} onChange={() => setIsOrSearch(false)} className="accent-blue-500 w-4 h-4" />
@@ -612,16 +604,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                         setCostTypeFilter('');
                                         setCostCountFilters(new Set());
                                         setHpRange({ min: HP_MIN, max: HP_MAX });
-                                        setSelectedRuleTypes(new Set());
-                                        // Drop only official-side selected tags
-                                        setSelectedTags(prev => {
-                                            const next = new Set(prev);
-                                            for (const t of prev) {
-                                                const p = t.includes('>') ? t.substring(0, t.indexOf('>')) : t;
-                                                if (OFFICIAL_TAG_PARENTS.has(p)) next.delete(t);
-                                            }
-                                            return next;
-                                        });
+                                        setSelectedOfficialTags(new Set());
                                     }}
                                     className="text-xs text-emerald-400 hover:text-emerald-200 underline py-1"
                                 >
@@ -633,34 +616,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         {/* HP slider */}
                         <div className={`max-w-sm transition ${hpFilterActive ? 'rounded-lg p-1 border border-violet-500/60 bg-violet-900/10' : ''}`}>
                             <HpRangeSlider value={hpRange} onChange={setHpRange} />
-                        </div>
-
-                        {/* Rule Type checkboxes */}
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs text-gray-400 font-bold">ルール種別</label>
-                            <div className="flex flex-wrap gap-1.5 pt-1">
-                                {RULE_TYPE_OPTIONS.map(opt => {
-                                    const checked = selectedRuleTypes.has(opt.value);
-                                    return (
-                                        <label
-                                            key={opt.value}
-                                            className={`inline-flex items-center gap-1.5 px-3 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation cursor-pointer ${
-                                                checked
-                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                            }`}
-                                        >
-                                            <input
-                                                type="checkbox"
-                                                checked={checked}
-                                                onChange={() => toggleRuleType(opt.value)}
-                                                className="accent-emerald-500 w-3.5 h-3.5"
-                                            />
-                                            <span>{opt.label}</span>
-                                        </label>
-                                    );
-                                })}
-                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
@@ -741,15 +696,32 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             </div>
                         </div>
 
-                        {/* Official tag parents (〜のポケモン / 特殊連動) — same chip UX as 独自タグ panel */}
-                        {officialTagParents.length > 0 && (
-                            <div className="space-y-3 pt-2 border-t border-emerald-900/40">
-                                <div className="flex flex-wrap gap-1.5">
-                                    {officialTagParents.map(parent => renderParentChip(parent))}
+                        {/* 公式分類チップ */}
+                        <div className="space-y-3 pt-2 border-t border-emerald-900/40">
+                            {OFFICIAL_CLASS_GROUPS.map(group => (
+                                <div key={group.label} className="space-y-1.5">
+                                    <label className="text-xs text-gray-400 font-bold">{group.label}</label>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {group.tags.map(tag => {
+                                            const isSelected = selectedOfficialTags.has(tag);
+                                            return (
+                                                <button
+                                                    key={tag}
+                                                    type="button"
+                                                    onClick={() => toggleOfficialTag(tag)}
+                                                    className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                        isSelected ? group.token.active : group.token.inactive
+                                                    }`}
+                                                >
+                                                    {tag}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                                {officialTagParents.map(parent => renderSubtagRow(parent))}
-                            </div>
-                        )}
+                            ))}
+                        </div>
+
                     </div>
                 )}
 
@@ -796,7 +768,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         {/* Tag list — outer sticky header is already scrollable on mobile */}
                         <div className="space-y-3 pr-0.5">
 
-                            {/* Parent category chips (custom side only — 〜のポケモン / 特殊連動 are rendered in 公式フィルター) */}
                             <div className="flex flex-wrap gap-1.5">
                                 {customTagParents.map(parent => renderParentChip(parent))}
                             </div>
@@ -890,6 +861,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     variants={variantsMap.get(selectedCard.master_id) || []}
                     isOpen={!!selectedCard}
                     onClose={() => setSelectedCard(null)}
+                    tags={[...(tagCardMap.get(selectedCard.master_id) || [])]}
+                    officialTags={[...(officialClassMap.get(selectedCard.master_id) || [])]}
                     onEvolutionsClick={(evoName) => {
                         setQuery(evoName);
                         setSelectedCard(null);
