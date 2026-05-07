@@ -25,9 +25,9 @@ const HP_MAX = 380;
 export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
-    const [effectQuery, setEffectQuery] = useState("");
+    // const [effectQuery, setEffectQuery] = useState(""); // 20-1 廃止
     const [categoryFilter, setCategoryFilter] = useState("");
-    const [gridCols, setGridCols] = useState(2); // mobile-first default (375px); hydration sets correct value per breakpoint
+    const [gridCols, setGridCols] = useState(4); // mobile-first default (375px); hydration sets correct value per breakpoint
     const [maxGridCols, setMaxGridCols] = useState(15);
     const [isOrSearch, setIsOrSearch] = useState(false);
     const [showAdvanced, setShowAdvanced] = useState(false);
@@ -68,8 +68,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
     // Set grid columns based on viewport on mount and update on resize
     useEffect(() => {
-        const getDefaultCols = (w: number) => w < 640 ? 2 : w < 1024 ? 5 : 4;
-        const getMaxCols = (w: number) => w < 640 ? 4 : w < 1024 ? 10 : 15;
+        const getDefaultCols = (w: number) => w < 640 ? 4 : w < 1024 ? 5 : 4;
+        const getMaxCols = (w: number) => w < 640 ? 6 : w < 1024 ? 10 : 15;
 
         setGridCols(getDefaultCols(window.innerWidth));
         setMaxGridCols(getMaxCols(window.innerWidth));
@@ -86,12 +86,12 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, effectQuery, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
+    }, [query, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
-    const deferredEffectQuery = useDeferredValue(effectQuery);
-    const isFilterStale = deferredQuery !== query || deferredEffectQuery !== effectQuery;
+    // const deferredEffectQuery = useDeferredValue(effectQuery); // 20-1 廃止
+    const isFilterStale = deferredQuery !== query;
 
     // Normalize katakana→hiragana so kana search is script-agnostic
     const normalizeKana = (str: string) =>
@@ -226,7 +226,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const hpFilterActive = hpRange.min > HP_MIN || hpRange.max < HP_MAX;
 
     const anyFilterActive = !!(
-        query || effectQuery || typeFilter || categoryFilter ||
+        query || typeFilter || categoryFilter ||
         weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
         costCountFilters.size > 0 || hpFilterActive || selectedOfficialTags.size > 0 || selectedTags.size > 0 ||
         isOrSearch
@@ -234,7 +234,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
     const resetAllFilters = () => {
         setQuery('');
-        setEffectQuery('');
+        // setEffectQuery(''); // 20-1 廃止
         setTypeFilter('');
         setCategoryFilter('');
         setWeaknessFilter('');
@@ -305,20 +305,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 if (!hasMatch) return false;
             }
 
-            // 6. Effect Text Query (Abilities, Attacks, Rules)
-            if (deferredEffectQuery) {
-                // Combine all searchable text on the card into one block
-                const searchableTextChunks = [
-                    ...card.rules,
-                    ...card.abilities.map(a => `${a.name} ${a.text}`),
-                    ...card.attacks.map(a => `${a.name} ${a.text}`)
-                ];
-                const fullText = searchableTextChunks.join(" ");
-
-                if (!evaluateQuery(fullText, deferredEffectQuery, isOrSearch)) {
-                    return false;
-                }
-            }
+            // 6. Effect Text Query — 20-1 廃止
+            // if (deferredEffectQuery) { ... }
 
             // 7. Tag Filter — all tags share the same selectedTags set.
             //    AND/OR is governed by isTagOrSearch.
@@ -348,7 +336,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, deferredEffectQuery, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
+    }, [masterCards, deferredQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -433,6 +421,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     };
 
     const officialFilterCount = [
+        categoryFilter, typeFilter,
         weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter,
         costCountFilters.size > 0 ? 'x' : '',
         hpFilterActive ? 'x' : '',
@@ -482,6 +471,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         onChange={(e) => setQuery(e.target.value)}
                     />
 
+                    {/* テキスト・ワザ検索 — 20-1 廃止
                     <input
                         type="text"
                         inputMode="search"
@@ -495,31 +485,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         value={effectQuery}
                         onChange={(e) => setEffectQuery(e.target.value)}
                     />
-
-                    <select
-                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation ${categoryFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                        value={categoryFilter}
-                        onChange={(e) => setCategoryFilter(e.target.value)}
-                    >
-                        <option value="">カテゴリ</option>
-                        <option value="pokemon">ポケモン</option>
-                        <option value="グッズ">グッズ</option>
-                        <option value="サポート">サポート</option>
-                        <option value="スタジアム">スタジアム</option>
-                        <option value="ポケモンのどうぐ">ポケモンのどうぐ</option>
-                        <option value="energy">エネルギー</option>
-                    </select>
-
-                    <select
-                        className={`${!filtersExpanded ? 'hidden' : ''} col-span-1 sm:col-span-1 sm:block px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition touch-manipulation ${typeFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                        value={typeFilter}
-                        onChange={(e) => setTypeFilter(e.target.value)}
-                    >
-                        <option value="">タイプ</option>
-                        {allTypes.map(t => (
-                            <option key={t} value={t}>{typeLabel(t)}</option>
-                        ))}
-                    </select>
+                    */}
 
                     {/* Grid columns slider: hidden on mobile until filter toggle is expanded; always visible on sm+ */}
                     <div className={`col-span-2 sm:col-span-2 lg:col-span-2 items-center gap-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600 ${filtersExpanded ? 'flex' : 'hidden sm:flex'}`}>
@@ -541,12 +507,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     onClick={() => setFiltersExpanded(prev => !prev)}
                     className="sm:hidden w-full flex items-center justify-center gap-2 mt-2 py-2 min-h-[44px] text-sm font-medium text-gray-400 bg-gray-800/50 border border-gray-700 rounded-lg hover:bg-gray-700 transition touch-manipulation"
                 >
-                    <span>{filtersExpanded ? '▲ フィルターを閉じる' : '▼ 絞り込みフィルター'}</span>
-                    {[typeFilter, categoryFilter].some(Boolean) && (
-                        <span className="bg-blue-500/80 text-white text-xs px-1.5 py-0.5 rounded-full font-bold">
-                            {[typeFilter, categoryFilter].filter(Boolean).length}
-                        </span>
-                    )}
+                    <span>{filtersExpanded ? '▲ 列数スライダー' : '▼ 列数スライダー'}</span>
                 </button>
 
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between mt-3 gap-3">
@@ -598,6 +559,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                 <button
                                     type="button"
                                     onClick={() => {
+                                        setCategoryFilter('');
+                                        setTypeFilter('');
                                         setWeaknessFilter('');
                                         setResistanceFilter('');
                                         setRetreatFilter('');
@@ -612,6 +575,55 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                 </button>
                             </div>
                         )}
+
+                        {/* カテゴリ・タイプ チップ */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                            <div className="flex flex-col gap-1">
+                                <label className="text-xs text-gray-400 font-bold">カテゴリ</label>
+                                <div className="flex flex-wrap gap-1.5">
+                                    {[
+                                        { value: 'pokemon', label: 'ポケモン' },
+                                        { value: 'グッズ', label: 'グッズ' },
+                                        { value: 'サポート', label: 'サポート' },
+                                        { value: 'スタジアム', label: 'スタジアム' },
+                                        { value: 'ポケモンのどうぐ', label: 'ポケモンのどうぐ' },
+                                        { value: 'energy', label: 'エネルギー' },
+                                    ].map(o => (
+                                        <button
+                                            key={o.value}
+                                            type="button"
+                                            onClick={() => setCategoryFilter(categoryFilter === o.value ? '' : o.value)}
+                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                categoryFilter === o.value
+                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                            }`}
+                                        >
+                                            {o.label}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="text-xs text-gray-400 font-bold">タイプ</label>
+                                <div className="flex flex-wrap gap-1.5">
+                                    {allTypes.map(t => (
+                                        <button
+                                            key={t}
+                                            type="button"
+                                            onClick={() => setTypeFilter(typeFilter === t ? '' : t)}
+                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                typeFilter === t
+                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                            }`}
+                                        >
+                                            {typeLabel(t)}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
 
                         {/* HP slider */}
                         <div className={`max-w-sm transition ${hpFilterActive ? 'rounded-lg p-1 border border-violet-500/60 bg-violet-900/10' : ''}`}>
