@@ -320,10 +320,15 @@ Maintained by Foreman/Scribe.
 
 ## Unreported
 
-(Foremanが完了・Gardenerがまだユーザーへ報告していないタスク)
+---
+
+## Archive (Phase 21)
 
 - [x] **21-4** `frontend/app/components/CardModal.tsx` の右パネルに「採用デッキ」セクションを追加。`data/deck_index.json` を fetch し、表示中カードの master_id に対応するアーキタイプ上位5件を採用率降順で表示する。各行: アーキタイプ名・採用率バー（%）・limitlesstcg リンクボタン。採用デッキがない場合はセクション自体を非表示。表示位置は Q&A セクションの上。`npm run build` → `git add` → `git commit` → `git push`。**採用率バーの仕様**: バー幅は絶対値（100%=満幅）ではなく、表示中の上位5件の最高値を満幅とする相対スケール（例: 最高82%なら82%のバーが満幅、64%は64/82≈78%幅）。これにより差異が視覚的に強調される。
 > [!success] 2026-05-05 — 完了。変更点は1箇所のみ — バー幅の計算を `Math.min(deck.share, 100)%` から `(deck.share / maxShare) * 100%` に変更しました。上位5件の最高採用率が常に満幅になり、差異...
+
+- [x] **21-5** Phase 21 総合レビュー
+> [!success] 2026-05-08 — レビュー完了。ビルド正常。データ整合性OK（orphaned keys 0件）。カバレッジ 360/1860 (19.4%) — EN→JPマッピング555件の制約上、想定内。「デッキ一覧」ラベルを「デッキ例」に修正（リンク先が1デッキのため）。
 
 #### Phase 18-2（改）: tag_cards.mjs タグ体系刷新
 
@@ -444,4 +449,9 @@ Maintained by Foreman/Scribe.
 
 - [x] **20-3** カテゴリ・タイプのフラット化 #claude/queue
 > [!success] 2026-05-08 — カテゴリ・タイプの `<select>` を主フィルターバーから削除し、公式フィルターパネル内にチップボタンとして移動。`officialFilterCount` に追加、全解除ボタンにリセット追加。モバイルトグルのバッジも整理（列数スライダー専用に）。
+
+#### Phase 20-4: Phase 20 レビュー・修正・commit/push
+
+- [x] **20-4** Phase 20 レビュー・修正・commit/push #claude/queue
+> [!success] 2026-05-07 — 完了。Phase 20の3タスクをまとめてコミット・プッシュしました。
 

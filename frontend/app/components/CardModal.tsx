@@ -352,7 +352,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                                                     rel="noopener noreferrer"
                                                     className="flex-shrink-0 text-xs px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 text-blue-400 hover:text-blue-300 transition-colors border border-gray-700"
                                                 >
-                                                    デッキ一覧
+                                                    デッキ例
                                                 </a>
                                             </div>
                                         ))}
