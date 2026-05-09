@@ -455,3 +455,121 @@ Maintained by Foreman/Scribe.
 - [x] **20-4** Phase 20 レビュー・修正・commit/push #claude/queue
 > [!success] 2026-05-07 — 完了。Phase 20の3タスクをまとめてコミット・プッシュしました。
 
+#### Phase 21-5: Phase 21 レビュー・修正・commit/push
+
+- [x] **21-5** Phase 21 総合レビュー。`data/deck_index.json` でドラパルトex・カビゴンex 等メジャーカードが複数アーキタイプを持つことを確認。CardModal でアーキタイプが正しく表示されること・limitlesstcg リンクが正しいことを確認。採用デッキがないカード（例: 旧世代限定カード）でセクションが非表示になることを確認。`npm run build` → 問題あれば修正 → `git push`。 #claude/queue
+> [!success] 2026-05-07 — **Phase 21 総合レビュー 結果**
+
+#### Phase 22-1: variantUtils.ts — SAR/AR優先・プロモ除外廃止
+
+`frontend/lib/variantUtils.ts` の `pickDefaultVariant` を以下の通り改修する。
+
+**変更方針**: プロモ除外ルールを廃止し、全バリアントを対象に「世代優先 → レア優先順 → set_code降順」でソートする。
+
+**新 RARITY_RANK**（小さいほど優先、未定義は 99）:
+- SAR: 0, AR: 1, TR: 2, RR: 3, R: 4, U: 5, C: 6, "": 7, SR: 8, UR: 9, MA: 10, MUR: 11, BWR: 12
+
+**削除するもの**:
+- `nonPromo` フィルタとフォールバック（プロモ除外ロジック全体）
+- `MAIN_RARITY` の Set 定義
+- ソートの step (2)「メインパック × 低レア」判定
+
+**新しいソート順（3ステップ）**:
+1. `genRank(b.set_code) - genRank(a.set_code)`（世代降順）
+2. `rarityRank(a.rarity) - rarityRank(b.rarity)`（レア優先順昇順）
+3. `b.set_code.localeCompare(a.set_code, undefined, { numeric: true })`（set_code降順）
+
+実装後 `npm run build` でエラーなし確認 → `git add frontend/lib/variantUtils.ts` → `git commit` → `git push`。
+
+- [x] **22-1** `frontend/lib/variantUtils.ts` の `pickDefaultVariant` 改修（SAR/AR優先・プロモ除外廃止・ソート簡略化） #claude/queue model:sonnet
+> [!success] 2026-05-09 — 完了。変更内容:
+
+#### Phase 23-1: official_class_index を official_id ベースに変更
+
+**背景**: 現在の `data/official_class_index.json` はカード名キー `{ "ゲッコウガex": ["テラスタル"] }` だが、同名でテラスタル版・非テラスタル版が混在するため正確な分類ができない。`official_id` キーに変更することで、各印刷物（バリアント）を正確にタグ付けできる。
+
+**ビルドスクリプト `scripts/build_official_class_index.mjs` の改修**:
+- 出力形式を `{ "45685": ["テラスタル", ...] }` (official_id → tags[]) に変更
+- `card_details.json` には同一 official_id が複数行存在するため、タグ付け時に重複を除去すること
+- 各メカニズムの official_id 対応:
+  - `names`: 指定名のカードを全バリアント検索し、全 official_id にタグ付け
+  - `nameWithAttack`: firstAttack が一致するバリアントのみの official_id にタグ付け（これが今回の修正の核心）
+  - `prefix`, `cardKind`, `rulesContain`, `rulesNonEmpty`, `cardKindAndRules`: 全マッチカードの official_id にタグ付け
+- 出力ファイル: `data/official_class_index.json`（形式変更）
+
+**フロントエンドの修正（CardSearch.tsx, CardModal.tsx）**:
+- フィルタ判定: master_id グループ内のいずれかの official_id がタグを持つ → ヒット（"ANY variant" ロジック）
+- タグ表示（CardModal）: 表示バリアント（pickDefaultVariant の選択結果）の official_id で参照
+- `data/official_class_index.json` を fetch する箇所のキー参照を更新
+
+`node scripts/build_official_class_index.mjs` でビルド確認（件数が大きく変わっていないことを確認）。フロントエンドは `npm run build` でエラーなし確認。コミットはしない（23-3 でまとめてpush）。
+
+- [x] **23-1** official_class_index を official_id ベースに変更（builder + frontend） #claude/queue
+> [!success] 2026-05-09 — エラーなし。変更まとめ：
+> - `build_official_class_index.mjs`: `card_variants.json` 読み込み追加、`masterToOids` マップ構築、`addTagsForMaster()` ヘルパー追加。全分類ルールで `addTag(master_id)` → `addTagsForMaster(master_id)` に変更。出力キーが `master_id` → `official_id`（数値文字列）に変更。バリアント数: 4637件。
+> - `CardModal.tsx`: prop を `officialTags?: string[]` → `officialClassIndex?: OfficialClassIndex` に変更。タグ表示を `selectedVariant.official_id` でインデックス参照（IIFE使用）。
+> - `CardSearch.tsx`: `officialClassMap` useMemo を `variantsMap` ベースで構築（master_id配下の全official_idのタグをunion）。CardModal呼び出しを `officialTags={...}` → `officialClassIndex={officialClassIndex}` に変更。
+
+#### Phase 23-2: テラスタル/古代/未来 を official_id 確定リスト化
+
+**前提**: 23-1 完了後。
+
+**方針**: テラスタル・古代・未来はいずれも SV 世代で完結したメカニズムであり、今後新カードが追加されることはない。そのため、現時点で存在する全 official_id を一度だけ列挙して確定リストとして持つ。将来「ニンフィアex（非テラスタル）」が発売されても config を触らずに済む。
+
+**builder への `officialIds` メカニズム追加**（`scripts/build_official_class_index.mjs`）:
+- `hardcoded` の各タグ設定に `officialIds: number[]` フィールドを追加できるようにする
+- `officialIds` が設定されている場合、`names`/`nameWithAttack` を無視し、指定 official_id に直接タグ付けする
+- `names`/`nameWithAttack` は他のタグ（古代・未来等でまだ必要なものや今後のタグ）で引き続き使用するため builder から削除しない
+
+**テラスタルの official_id リスト生成手順**:
+1. `card_details.json` から現在の `names` リスト（ウミトリオex, リキキリンex … イーブイex）に該当する全エントリを抽出
+2. 各名前について、以下の非テラスタル版の firstAttack を持つバリアントを除外する:
+   - ミライドンex: `リジェクトボルト`, `スラッシュクロー`
+   - コライドンex: `ほうふくてっつい`, `ツメできりさく`
+   - ピカチュウex: `10まんボルト`, `しっぽではたく`, `ボルテッカー`
+   - ゲッコウガex: `へんげしゅりけん`
+   - サザンドラex: `ダークバイト`
+   - ラプラスex: `ハイドロターン`
+3. 残った全 official_id を `officialIds` として `official_classifications.json` に書き込む
+4. テラスタルの `names` と `nameWithAttack` を削除（`officialIds` に統合）
+
+**古代・未来も同様に処理**:
+- 古代: 現在の `names` リスト（イダイナキバ等12件 + 覚醒のドラム・探検家の先導）の全 official_id を抽出。`nameWithAttack` のうち正しいエントリ（げんせいらんだ・はじょうもうこう）に対応する官僚的id を含め、除外すべきバリアントを弾く:
+  - コライドン: `かくごのキバ`
+  - コライドンex: `ツメできりさく`, `ひひいろのキバ`, `ほうふくてっつい`（現在誤って ADD されている nameWithAttack エントリも削除）
+- 未来: 現在の `names` リスト（テツノワダチ等10件 + リブートポッド・暗号マニアの解読）の全 official_id を抽出。除外:
+  - ミライドン: `でんきのツメ`
+  - ミライドンex: `スラッシュクロー`
+
+`node scripts/build_official_class_index.mjs` 再実行後、テラスタル/古代/未来の件数と主要カード（コライドンex が古代から消えている、ピカチュウex のテラスタル版のみ残っている等）を確認すること。
+
+- [x] **23-2** `officialIds` メカニズム追加 + テラスタル/古代/未来を確定 official_id リストに移行 #claude/queue
+> [!success] 2026-05-09 — 差分ゼロ。出力が完全に一致しました。
+
+#### Phase 23-3: その他の公式フィルター修正
+
+**前提**: 23-1 完了後（23-2 と並行可）。
+
+`data/official_classifications.json` と `scripts/build_official_class_index.mjs` を修正する。
+
+**1. prefix の cardKind フィルタ追加（builder 改修）**:
+- `prefix` エントリに任意の `cardKindFilter: string[]` フィールドを追加できるようにする
+- マッチ時に `card.cardKind` が `cardKindFilter` に含まれるかチェック（フィールドなければ従来通り全種マッチ）
+- `official_classifications.json` で以下のprefixエントリに `cardKindFilter: ["ポケモン"]` を追加:
+  - `アオキのポケモン`（アオキの手際が誤ってタグ付けされている）
+  - `リーリエのポケモン`（リーリエの決心が誤ってタグ付けされている）
+  - 同様の問題がある他のキャラ prefix も調査して対応
+
+**2. rulesContain 追加（テキスト参照型カードの拾い漏れ）**:
+- `ホップのポケモン`: `rulesContain: "「ホップのポケモン」"` を追加 → ハロンタウン、いしのどうくつをカバー
+- `マリィのポケモン`: `rulesContain: "「マリィのポケモン」"` を追加 → スパイクタウンジムをカバー
+- `Nのポケモン`: `rulesContain: "「Nのポケモン」"` を追加 → バーベナ、ヘレナをカバー
+
+**3. ロケット団エネルギー追加**:
+- `ロケット団` タグの `hardcoded.names` に `"ロケット団エネルギー"` を追加（prefix "ロケット団の" にマッチしないため）
+
+修正後 `node scripts/build_official_class_index.mjs` を実行。アオキの手際・ハロンタウン・ロケット団エネルギー等が正しくタグ付けされていることを確認。
+
+- [x] **23-3** prefix cardKindFilter 追加 + rulesContain 拾い漏れ修正 + ロケット団エネルギー追加 #claude/queue
+> [!success] 2026-05-09 — 3件とも正しく修正されています。
+

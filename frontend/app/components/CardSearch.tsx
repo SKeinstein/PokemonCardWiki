@@ -141,15 +141,19 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         return map;
     }, [costIndex]);
 
-    // Map masterId → Set of official class tags (joined by card name)
     const officialClassMap = useMemo(() => {
         const map = new Map<string, Set<string>>();
         for (const card of masterCards) {
-            const tags = officialClassIndex[card.name];
-            if (tags && tags.length > 0) map.set(card.master_id, new Set(tags));
+            const cardVariants = variantsMap.get(card.master_id) ?? [];
+            const tagSet = new Set<string>();
+            for (const v of cardVariants) {
+                const tags = officialClassIndex[v.official_id];
+                if (tags) for (const t of tags) tagSet.add(t);
+            }
+            if (tagSet.size > 0) map.set(card.master_id, tagSet);
         }
         return map;
-    }, [masterCards, officialClassIndex]);
+    }, [masterCards, variantsMap, officialClassIndex]);
 
     // Map masterId → Set of tags for O(1) lookup
     const tagCardMap = useMemo(() => {
@@ -874,7 +878,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     isOpen={!!selectedCard}
                     onClose={() => setSelectedCard(null)}
                     tags={[...(tagCardMap.get(selectedCard.master_id) || [])]}
-                    officialTags={[...(officialClassMap.get(selectedCard.master_id) || [])]}
+                    officialClassIndex={officialClassIndex}
                     onEvolutionsClick={(evoName) => {
                         setQuery(evoName);
                         setSelectedCard(null);

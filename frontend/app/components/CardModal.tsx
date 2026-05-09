@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { MasterCard, CardVariant } from '../../lib/data';
+import { MasterCard, CardVariant, OfficialClassIndex } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDefaultVariant } from '../../lib/variantUtils';
 import { getOfficialTagColor } from '../../lib/tagColors';
@@ -75,11 +75,11 @@ interface CardModalProps {
     isOpen: boolean;
     onClose: () => void;
     tags?: string[];
-    officialTags?: string[];
+    officialClassIndex?: OfficialClassIndex;
     onEvolutionsClick?: (evoName: string) => void;
 }
 
-export default function CardModal({ card, variants, isOpen, onClose, tags = [], officialTags = [] }: CardModalProps) {
+export default function CardModal({ card, variants, isOpen, onClose, tags = [], officialClassIndex }: CardModalProps) {
     const [selectedVariant, setSelectedVariant] = React.useState<CardVariant | null>(null);
     const [dragOffset, setDragOffset] = React.useState(0);
     const dragStartY = React.useRef(0);
@@ -297,7 +297,9 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                         </div>
 
                         {/* Tags section */}
-                        {(officialTags.length > 0 || tags.length > 0) && (
+                        {(() => {
+                            const officialTags = officialClassIndex?.[selectedVariant?.official_id ?? ''] ?? [];
+                            return (officialTags.length > 0 || tags.length > 0) && (
                             <div className="mb-4 flex flex-wrap gap-1.5">
                                 {officialTags.map(tag => (
                                     <span
@@ -323,7 +325,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                                     );
                                 })}
                             </div>
-                        )}
+                        ); })()}
 
                         {/* 採用デッキ Section */}
                         {deckData && deckData.length > 0 && (() => {
