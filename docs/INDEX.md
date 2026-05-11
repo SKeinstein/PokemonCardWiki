@@ -14,6 +14,7 @@ Read the relevant doc **before** starting a task in the corresponding area.
 | Q&A matching — coverage & known gaps | `qa_coverage_analysis.md` | Working on `build_qa_index.mjs`, `tag_qa_entries.mjs`, or any Q&A feature |
 | FAQ scraping — endpoints, pagination, schema | `faq_scraping_findings.md` | Re-scraping FAQ, adding Q&A data, modifying `scrape_faq.mjs` |
 | Tag coverage statistics (2026-05-01 baseline) | `tagging_stats.md` | Verifying tag counts or assessing coverage changes after a tagging run |
+| Phase 25 baseline: tag counts, ダメカン操作分類案, 条件ダメージ漏れ | `tag_phase25_baseline.md` | Before modifying tag rules for ダメカン操作 or 条件ダメージ subtags |
 | Competitive positioning & feature scope | `pnote_comparison.md` | Feature design decisions or UI direction |
 
 ## How to maintain this index
