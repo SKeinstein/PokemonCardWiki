@@ -823,3 +823,29 @@ VALID_TAGS 更新。リビルド。
 - [x] **25-4** ベースラインとの差分比較・スポットチェック・廃止タグ確認を実施し docs/tag_phase25_verification.md に出力 #claude/queue
 > [!success] 2026-05-11 — `docs/tag_phase25_verification.md` を作成しました。
 
+#### Phase 25-5: レビュー・commit/push
+
+- [x] **25-5** Phase 25 総合レビュー。`npm run build` エラーなし確認 → `git add` → `git commit` → `git push` #claude/queue
+> [!success] 2026-05-11 — Phase 25 総合レビュー完了。ビルドエラーなし、9ファイル変更（`card_tags.json`, `qa_entry_tags.json`, スクリプト2本, ドキュメント5件）をコミット・プッシュしました。
+
+#### Phase 26-1: variantUtils.ts 改修（新しさ優先・同世代ノーマル優先）
+
+`frontend/lib/variantUtils.ts` の `pickDefaultVariant` を改修する。
+
+**現状（Phase 22 実装）**: 世代降順 → レア優先（SAR=0, AR=1, TR=2, …）→ set_code降順
+
+**新しい方針**:
+- **第1ソートキー**: セットの発売日（新しい順）。`set_code` から発売日を引くマップを用意するか、既存の `genRank` を発売日順に対応させる
+- **第2ソートキー**: 同世代内ではノーマル寄りを優先（SAR/AR/UR/SR を後回し）。具体的には `rarityRank` を逆転させ、C/U/R 等を小さい値（優先）、SAR/AR を大きい値（後回し）にする
+- **第3ソートキー**: `set_code` 降順（タイブレーク）
+
+実装後、以下のカードで期待通りの表示になることを確認:
+- ボスの指令: カラスバ版（デッキコード mC 収録）が表示されること
+- ポケモンセンターのお姉さん: 最新版が表示されること
+- モンスターボール: 最新版が表示されること
+
+`npm run build` → `git commit` → `git push`
+
+- [x] **26-1** variantUtils.ts 改修（発売日ベース新しさ優先・同世代ノーマル優先）。npm run build 確認 → git commit → git push #claude/queue
+> [!success] 2026-05-13 — 完了しました。
+
