@@ -445,15 +445,13 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                     <h1 className="text-lg sm:text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
                         Pokémon Card Advanced Search
                     </h1>
-                    {anyFilterActive && (
-                        <button
-                            type="button"
-                            onClick={resetAllFilters}
-                            className="text-xs font-bold text-red-400 hover:text-red-200 bg-red-900/30 hover:bg-red-900/50 border border-red-800/60 px-3 py-1.5 min-h-[36px] rounded-lg transition touch-manipulation whitespace-nowrap"
-                        >
-                            ✕ リセット
-                        </button>
-                    )}
+                    <button
+                        type="button"
+                        onClick={resetAllFilters}
+                        className={`text-xs font-bold text-red-400 hover:text-red-200 bg-red-900/30 hover:bg-red-900/50 border border-red-800/60 px-3 py-1.5 min-h-[36px] rounded-lg transition touch-manipulation whitespace-nowrap${anyFilterActive ? '' : ' invisible pointer-events-none'}`}
+                    >
+                        ✕ リセット
+                    </button>
                 </div>
 
                 {/* Top filter grid:
