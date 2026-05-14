@@ -25,7 +25,7 @@ const HP_MAX = 380;
 export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
-    // const [effectQuery, setEffectQuery] = useState(""); // 20-1 廃止
+    const [effectQuery, setEffectQuery] = useState("");
     const [categoryFilter, setCategoryFilter] = useState("");
     const [gridCols, setGridCols] = useState(4); // mobile-first default (375px); hydration sets correct value per breakpoint
     const [maxGridCols, setMaxGridCols] = useState(15);
@@ -86,12 +86,12 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
+    }, [query, effectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
-    // const deferredEffectQuery = useDeferredValue(effectQuery); // 20-1 廃止
-    const isFilterStale = deferredQuery !== query;
+    const deferredEffectQuery = useDeferredValue(effectQuery);
+    const isFilterStale = deferredQuery !== query || deferredEffectQuery !== effectQuery;
 
     // Normalize katakana→hiragana so kana search is script-agnostic
     const normalizeKana = (str: string) =>
@@ -230,7 +230,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const hpFilterActive = hpRange.min > HP_MIN || hpRange.max < HP_MAX;
 
     const anyFilterActive = !!(
-        query || typeFilter || categoryFilter ||
+        query || effectQuery || typeFilter || categoryFilter ||
         weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
         costCountFilters.size > 0 || hpFilterActive || selectedOfficialTags.size > 0 || selectedTags.size > 0 ||
         isOrSearch
@@ -238,7 +238,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
     const resetAllFilters = () => {
         setQuery('');
-        // setEffectQuery(''); // 20-1 廃止
+        setEffectQuery('');
         setTypeFilter('');
         setCategoryFilter('');
         setWeaknessFilter('');
@@ -309,8 +309,14 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 if (!hasMatch) return false;
             }
 
-            // 6. Effect Text Query — 20-1 廃止
-            // if (deferredEffectQuery) { ... }
+            // 6. Effect Text Query — 特性名/ワザ名/テキスト全結合
+            if (deferredEffectQuery) {
+                const effectText = [
+                    ...card.abilities.map(a => `${a.name} ${a.text}`),
+                    ...card.attacks.map(a => `${a.name} ${a.text}`),
+                ].join(' ');
+                if (!evaluateQuery(effectText, deferredEffectQuery, isOrSearch)) return false;
+            }
 
             // 7. Tag Filter — all tags share the same selectedTags set.
             //    AND/OR is governed by isTagOrSearch.
@@ -340,7 +346,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
             return true;
         });
-    }, [masterCards, deferredQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
+    }, [masterCards, deferredQuery, deferredEffectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -473,7 +479,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         onChange={(e) => setQuery(e.target.value)}
                     />
 
-                    {/* テキスト・ワザ検索 — 20-1 廃止
                     <input
                         type="text"
                         inputMode="search"
@@ -482,12 +487,11 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         autoCorrect="off"
                         autoCapitalize="off"
                         spellCheck={false}
-                        placeholder="テキスト・ワザ検索..."
+                        placeholder="特性名・ワザ名・テキスト検索..."
                         className={`col-span-2 sm:col-span-2 lg:col-span-2 px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-emerald-500 transition placeholder-emerald-400/70 touch-manipulation ${effectQuery ? 'border-emerald-400 bg-emerald-900/30' : 'border-emerald-600 bg-gray-800'}`}
                         value={effectQuery}
                         onChange={(e) => setEffectQuery(e.target.value)}
                     />
-                    */}
 
                     {/* Grid columns slider: hidden on mobile until filter toggle is expanded; always visible on sm+ */}
                     <div className={`col-span-2 sm:col-span-2 lg:col-span-2 items-center gap-2 bg-gray-800 px-3 py-2 min-h-[44px] rounded-lg border border-gray-600 ${filtersExpanded ? 'flex' : 'hidden sm:flex'}`}>
