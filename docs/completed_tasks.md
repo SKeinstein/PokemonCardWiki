@@ -872,3 +872,45 @@ VALID_TAGS 更新。リビルド。
 
 - [x] **28-3** 最大HP強化タグ新設（§B-29）。tag_cards.mjs + tag_qa_entries.mjs 同期・リビルド → git push #claude/queue
 > [!success] 2026-05-14 — 完了。24カード・2 QAエントリーに最大HP強化タグ付与。
+#### Phase 28-3: 最大HP強化タグ 新設
+
+`scripts/tag_cards.mjs` に新規タグ `最大HP強化` を追加する。
+
+**対象**: カードテキストに「最大HPは「＋N」される」「最大HPが「＋N」される」「最大HPが「+N」される」のいずれかの形式を含むカード。
+
+**確認済みカード（10件）**: アノホラグサ、ヒーローマント、イイネイヌ、エキサイトスタジアム、ルンパッパ、シロナのパワーウエイト、ローブシン、ガチゴラス、グロウ草エネルギー、アンジュフラエッテ
+
+サブタグは不要（10件程度のため）。VALID_TAGS に `最大HP強化` を追加。`tag_qa_entries.mjs` にも同期。リビルド後、上記10件が確実にタグを持つことを確認。`git commit` → `git push`。
+
+- [x] **28-3** 最大HP強化タグ新設（最大HP+N パターン追加）。tag_cards.mjs + tag_qa_entries.mjs 同期・VALID_TAGS更新・リビルド → git push #claude/queue
+> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+
+#### Phase 29-1: テキスト検索復活（特性名・ワザ名・効果テキスト）
+
+`frontend/app/components/CardSearch.tsx` を改修する。
+
+**コメントアウト解除**:
+- 行28: `// const [effectQuery, setEffectQuery] = useState("");` → アンコメント
+- 行93: `// const deferredEffectQuery = useDeferredValue(effectQuery);` → アンコメント
+- 行478〜492: テキスト検索 input 要素のコメントブロック → アンコメント。placeholder を `"特性名・ワザ名・テキスト..."` に変更
+
+**フィルターロジック実装**（行313の `// if (deferredEffectQuery) { ... }` を置き換え）:
+```
+if (deferredEffectQuery) {
+  const q = deferredEffectQuery.toLowerCase();
+  const searchTarget = [
+    ...card.abilities.map(a => a.name + ' ' + (a.text ?? '')),
+    ...card.attacks.map(a => a.name + ' ' + (a.text ?? '')),
+    ...card.rules,
+  ].join(' ').toLowerCase();
+  if (!searchTarget.includes(q)) return false;
+}
+```
+
+検索対象: 特性名・特性テキスト、ワザ名・ワザテキスト、rules テキスト（ex/V のルールボックス等含む）。カード名は既存の名前検索が担当するため対象外。
+
+`npm run build` エラーなし確認 → `git commit` → `git push`
+
+- [x] **29-1** テキスト検索復活（effectQuery アンコメント + 特性名/ワザ名/テキスト検索ロジック実装）。npm run build 確認 → git commit → git push #claude/queue
+> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+

@@ -42,6 +42,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const [costCountFilters, setCostCountFilters] = useState<Set<number>>(new Set());
     const [displayLimit, setDisplayLimit] = useState(100);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
+    const [finalEvoOnly, setFinalEvoOnly] = useState(false);
 
     // Comparison state
     const [comparisonCards, setComparisonCards] = useState<MasterCard[]>([]);
@@ -86,7 +87,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, effectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags]);
+    }, [query, effectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags, finalEvoOnly]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -140,6 +141,27 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         }
         return map;
     }, [costIndex]);
+
+    const finalEvoSet = useMemo(() => {
+        const stageOf = (kind: string) => kind === '2 進化' ? 2 : kind === '1 進化' ? 1 : kind === 'たね' ? 0 : -1;
+        const nameToMaxStage = new Map<string, number>();
+        for (const card of masterCards) {
+            const s = stageOf(card.card_kind);
+            if (s < 0) continue;
+            for (const evoName of card.evolutions) {
+                const cur = nameToMaxStage.get(evoName) ?? -1;
+                if (s > cur) nameToMaxStage.set(evoName, s);
+            }
+        }
+        const result = new Set<string>();
+        for (const card of masterCards) {
+            const s = stageOf(card.card_kind);
+            if (s < 0) continue;
+            const maxS = nameToMaxStage.get(card.name) ?? s;
+            if (s >= maxS) result.add(card.master_id);
+        }
+        return result;
+    }, [masterCards]);
 
     const officialClassMap = useMemo(() => {
         const map = new Map<string, Set<string>>();
@@ -233,7 +255,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         query || effectQuery || typeFilter || categoryFilter ||
         weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
         costCountFilters.size > 0 || hpFilterActive || selectedOfficialTags.size > 0 || selectedTags.size > 0 ||
-        isOrSearch
+        isOrSearch || finalEvoOnly
     );
 
     const resetAllFilters = () => {
@@ -251,6 +273,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         setSelectedOfficialTags(new Set());
         setIsOrSearch(false);
         setIsTagOrSearch(false);
+        setFinalEvoOnly(false);
     };
 
     const filteredCards = useMemo(() => {
@@ -344,9 +367,12 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 if (!match) return false;
             }
 
+            // 9. Final Evolution Filter
+            if (finalEvoOnly && !finalEvoSet.has(card.master_id)) return false;
+
             return true;
         });
-    }, [masterCards, deferredQuery, deferredEffectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap]);
+    }, [masterCards, deferredQuery, deferredEffectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap, finalEvoOnly, finalEvoSet]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -436,6 +462,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         costCountFilters.size > 0 ? 'x' : '',
         hpFilterActive ? 'x' : '',
         selectedOfficialTags.size > 0 ? 'x' : '',
+        finalEvoOnly ? 'x' : '',
     ].filter(Boolean).length;
 
     const customTagSelectedCount = selectedTags.size;
@@ -574,6 +601,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                         setCostCountFilters(new Set());
                                         setHpRange({ min: HP_MIN, max: HP_MAX });
                                         setSelectedOfficialTags(new Set());
+                                        setFinalEvoOnly(false);
                                     }}
                                     className="text-xs text-emerald-400 hover:text-emerald-200 underline py-1"
                                 >
@@ -608,6 +636,19 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                             {o.label}
                                         </button>
                                     ))}
+                                </div>
+                                <div className="flex flex-wrap gap-1.5 mt-1">
+                                    <button
+                                        type="button"
+                                        onClick={() => setFinalEvoOnly(prev => !prev)}
+                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                            finalEvoOnly
+                                                ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                        }`}
+                                    >
+                                        最終進化のみ
+                                    </button>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-1">
