@@ -4,6 +4,7 @@ import path from "path";
 
 type DeckEntry = {
     archetype: string;
+    jpArchetype?: string;
     count: number;
     total: number;
     share: number;

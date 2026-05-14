@@ -6,6 +6,7 @@ import { getOfficialTagColor } from '../../lib/tagColors';
 
 type DeckEntry = {
     archetype: string;
+    jpArchetype?: string;
     count: number;
     total: number;
     share: number;
@@ -338,7 +339,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                                             <div key={i} className="flex items-center gap-2">
                                                 <div className="flex-1 min-w-0">
                                                     <div className="flex items-center justify-between mb-0.5">
-                                                        <span className="text-sm text-gray-200 truncate">{deck.archetype}</span>
+                                                        <span className="text-sm text-gray-200 truncate">{deck.jpArchetype ?? deck.archetype}</span>
                                                         <span className="text-xs text-gray-400 flex-shrink-0 ml-2">{deck.share.toFixed(1)}%</span>
                                                     </div>
                                                     <div className="h-1.5 bg-gray-800 rounded-full overflow-hidden">

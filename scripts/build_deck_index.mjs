@@ -62,6 +62,7 @@ console.log(`  JP lookup entries: ${jpLookup.size}`);
 // ── Build master_id validation set ───────────────────────────────────────────
 
 const masterSet = new Set(masters.map(m => m.master_id));
+const masterById = new Map(masters.map(m => [m.master_id, m]));
 console.log(`  Master cards: ${masterSet.size}`);
 
 // ── Resolve EN card → master_id ──────────────────────────────────────────────
@@ -143,6 +144,62 @@ for (const [arch, ids] of Object.entries(archetypeDecks)) {
   archetypeTotals[arch] = ids.size;
 }
 
+// ── Build EN card name → JP card name lookup for archetype translation ────────
+
+const enToJpName = new Map(); // lowercase EN name → JP card name
+for (const deck of decks) {
+  for (const card of deck.cards) {
+    const key = card.name.toLowerCase();
+    if (enToJpName.has(key)) continue;
+    const mid = resolveCard(card.setCode, card.number);
+    if (!mid) continue;
+    const mc = masterById.get(mid);
+    if (!mc) continue;
+    enToJpName.set(key, mc.name);
+  }
+}
+
+const stripSuffix = name => name.replace(/\s+(ex|V|VSTAR|VMAX|GX|EX)$/i, '').trim();
+
+const baseEnToJp = new Map();
+for (const [en, jp] of enToJpName) {
+  const base = stripSuffix(en);
+  if (!baseEnToJp.has(base)) baseEnToJp.set(base, stripSuffix(jp));
+}
+
+const archetypeTerms = {
+  box: '型', control: 'コントロール', mill: 'ミル',
+  ancient: '古代', future: '未来', mega: 'メガ', tera: 'テラ', poison: 'どく',
+};
+
+function translateArchetype(archetype) {
+  const words = archetype.split(' ');
+  const result = [];
+  let i = 0;
+  while (i < words.length) {
+    let matched = false;
+    for (let len = words.length - i; len >= 1; len--) {
+      const phrase = words.slice(i, i + len).join(' ');
+      const lower = phrase.toLowerCase();
+      if (enToJpName.has(lower)) {
+        result.push(stripSuffix(enToJpName.get(lower)));
+        i += len; matched = true; break;
+      }
+      const base = stripSuffix(lower);
+      if (baseEnToJp.has(base)) {
+        result.push(baseEnToJp.get(base));
+        i += len; matched = true; break;
+      }
+    }
+    if (!matched) {
+      result.push(archetypeTerms[words[i].toLowerCase()] ?? words[i]);
+      i++;
+    }
+  }
+  const translated = result.join(' ');
+  return translated !== archetype ? translated : null;
+}
+
 // ── Build output ──────────────────────────────────────────────────────────────
 
 const deckIndex = {};
@@ -152,8 +209,10 @@ for (const [masterId, archetypeData] of Object.entries(cardArchetype)) {
     .map(([archetype, data]) => {
       const total = archetypeTotals[archetype] || 1;
       const share = Math.round((data.count / total) * 1000) / 10;
+      const jp = translateArchetype(archetype);
       return {
         archetype,
+        ...(jp ? { jpArchetype: jp } : {}),
         count: data.count,
         total,
         share,
