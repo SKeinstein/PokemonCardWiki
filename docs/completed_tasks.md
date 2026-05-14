@@ -849,3 +849,26 @@ VALID_TAGS 更新。リビルド。
 - [x] **26-1** variantUtils.ts 改修（発売日ベース新しさ優先・同世代ノーマル優先）。npm run build 確認 → git commit → git push #claude/queue
 > [!success] 2026-05-13 — 完了しました。
 
+#### Phase 27-1: リセット・全解除のUIずれ修正
+
+`frontend/app/components/CardSearch.tsx` のリセット/全解除ボタン表示時のレイアウトずれを修正する。フィルター項目を選択するとリセットボタンが出現してレイアウトがずれる現象。ボタン領域の高さをあらかじめ確保し（例: `min-h` や invisible なプレースホルダー）、選択時にボタンをアクティブ化する方式で対応。`npm run build` で確認。
+
+- [x] **27-1** リセット・全解除ボタン出現によるUIずれ修正（事前に領域確保）。npm run build 確認 #claude/queue
+> [!success] 2026-05-13 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.140[1C──────────────────...
+
+#### Phase 27-2: セレビィのタグ修正
+
+`scripts/tag_cards.mjs` でセレビィが `サーチ>スタジアム` にのみ分類されているが、`サーチ>ポケモン` も持つべきかカードテキストを確認し、必要であれば追加する。`node scripts/tag_cards.mjs` → `node scripts/tag_qa_entries.mjs` → `node scripts/build_qa_index.mjs` でリビルド。`git commit` → `git push`。
+
+- [x] **27-2** セレビィのタグ確認・修正（サーチ>ポケモン追加検討）。リビルド → git push #claude/queue
+> [!success] 2026-05-13 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.140
+
+
+
+
+#### Phase 28-3: 最大HP強化タグ新設
+
+`scripts/tag_cards.mjs` に §B-29 最大HP強化 タグを新設。パターン: `最大HP.{0,20}「[＋+]\d+」`（全角・半角プラス両対応）。グラビティーマウンテン「-30」は自然除外。`scripts/tag_qa_entries.mjs` にも同一パターンを追加。GROUP_ORDER / SECTION_MAP も更新。リビルド後 24件（card_tags）・2件（qa_entry_tags）ヒット確認。
+
+- [x] **28-3** 最大HP強化タグ新設（§B-29）。tag_cards.mjs + tag_qa_entries.mjs 同期・リビルド → git push #claude/queue
+> [!success] 2026-05-14 — 完了。24カード・2 QAエントリーに最大HP強化タグ付与。
