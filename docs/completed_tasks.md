@@ -1042,3 +1042,15 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - [x] **28-4** 進化加速整理（>山札から廃止 + イーブイ確認）。同期更新・リビルド → git push #claude/queue
 > [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
 
+#### Phase 28-5: 特性無効 → ロック>特性 統合
+
+`scripts/tag_cards.mjs` と `scripts/tag_qa_entries.mjs` の両方に適用する。
+
+- 新サブタグ `ロック>特性` を VALID_TAGS に追加
+- `特性無効` タグを持つカードに `ロック>特性` を付与
+- `特性無効` タグを全削除し、VALID_TAGS からも削除
+- リビルド → `npm run build` 確認 → `git commit` → `git push`
+
+- [x] **28-5** 特性無効→ロック>特性 統合（新サブタグ追加・特性無効廃止）。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+
