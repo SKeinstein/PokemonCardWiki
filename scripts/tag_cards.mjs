@@ -901,7 +901,7 @@ const TAG_RULES = [
       /にげるためのエネルギーが.{1,10}なくなる/.test(all),
   },
   // ワザコピー（C-18）
-  { tags: ['ワザコピー'], condition: (all) => /このワザの効果として使う/.test(all) },
+  { tags: ['ワザコピー'], condition: (all) => /このワザの効果として使う|このワザとして使う/.test(all) },
   // 退化（C-13）
   { tags: ['退化'], condition: (all) => /退化させる|進化前のカードにもどす|はがして退化/.test(all) },
 
