@@ -914,3 +914,56 @@ if (deferredEffectQuery) {
 - [x] **29-1** テキスト検索復活（effectQuery アンコメント + 特性名/ワザ名/テキスト検索ロジック実装）。npm run build 確認 → git commit → git push #claude/queue
 > [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
 
+#### Phase 30-1: 最終進化フィルター実装
+
+`frontend/app/components/CardSearch.tsx` に「進化先がいないポケモンのみ表示」するトグルフィルターを追加する。
+
+**判定ロジック** (`MasterCard` の `card_kind` と `evolutions` を使用):
+```
+// nameToKind map を useMemo で構築（masterCards から）
+// name: string → card_kind: string
+
+const isFinalEvolution = (card: MasterCard): boolean => {
+  const kind = card.card_kind;
+  const evo = card.evolutions ?? [];
+  if (kind === '2 進化') return true;
+  if (evo.length === 0) return ['たね', '1 進化', '2 進化'].includes(kind);
+  const groupKinds = evo.map(n => nameToKind.get(n)).filter(Boolean);
+  if (kind === '1 進化') return !groupKinds.includes('2 進化');
+  if (kind === 'たね') return !groupKinds.includes('1 進化') && !groupKinds.includes('2 進化');
+  return false;
+};
+```
+
+期待値（設計時に確認済み）: 2進化153件 + 1進化385件 + たね405件 = 943件。実装後にこの件数と概ね一致することを確認。
+
+**UI**: 公式フィルターパネル内またはカテゴリフィルターの近くに「最終進化のみ」チェックボックス/トグルを追加。ポケモンカテゴリ選択中のみ表示しても良いし、常時表示でも可（実装しやすい方で）。
+
+**フィルター連携**: `finalEvoOnly` state（boolean）を追加し、`filteredCards` の useMemo 内で `if (finalEvoOnly && !isFinalEvolution(card)) return false;` を追加。
+
+`npm run build` エラーなし確認 → `git commit` → `git push`
+
+- [x] **30-1** 最終進化フィルター実装（isFinalEvolution ロジック + finalEvoOnly トグル UI）。npm run build 確認 → git commit → git push #claude/queue
+> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+
+#### Phase 30-2: 採用デッキ表示を日本語化
+
+`frontend/app/components/CardModal.tsx` の採用デッキセクションのラベルを日本語にする。現状は英語表記になっている箇所を確認し、日本語に変更。`npm run build` で確認。
+
+- [x] **30-2** CardModal 採用デッキセクションのラベルを日本語化。npm run build 確認 #claude/queue
+> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.141[1C──────────────────...
+
+#### Phase 27-3: ワザコピー — ヤドキング調査・追加
+
+`data/card_tags.json` で `ワザコピー` タグを持つカードを確認し、ヤドキングが含まれていなければカードテキストを調査して含めるべきか判断する。他にも `ワザコピー` に含まれるべきで漏れているカードがあれば合わせて追加する。`node scripts/tag_cards.mjs` → リビルド → `git commit` → `git push`。
+
+- [x] **27-3** ワザコピータグ：ヤドキング調査・追加、他漏れ確認。リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.141[1C──────────────────...
+
+
+#### Phase 27-4: 総合レビュー
+
+`npm run build` エラーなし確認 → `git push`（未push分があれば）
+
+- [x] **27-4** Phase 27 総合レビュー。`npm run build` エラーなし確認 → `git push` #claude/queue
+> [!success] 2026-05-16 — Phase 27 総合レビュー完了。ビルドエラーなし（TypeScript OK、静的ページ生成 8/8）。全 Phase 27 コミット（27-1〜27-3）はpush済み。
