@@ -8,6 +8,12 @@ Maintained by Foreman/Scribe.
 
 ## Unreported
 
+#### Phase 28-1: ワザロック廃止・ロック付与導入
+
+`ワザロック>自己ロック`（強力技デメリット型）廃止、`ワザロック>相手ロック` → `ロック付与` へリネーム。`scripts/tag_cards.mjs` 更新 → `card_tags.json` リビルド → docs 同期 → git push。
+
+- [x] **28-1** ワザロック廃止（>相手ロック→ロック付与、>自己ロック削除）。リビルド → git push
+
 ---
 
 ## Archive
@@ -318,11 +324,7 @@ Maintained by Foreman/Scribe.
 
 ---
 
-## Unreported
-
----
-
-## Archive (Phase 21)
+## Unreported (Phase 21)
 
 - [x] **21-4** `frontend/app/components/CardModal.tsx` の右パネルに「採用デッキ」セクションを追加。`data/deck_index.json` を fetch し、表示中カードの master_id に対応するアーキタイプ上位5件を採用率降順で表示する。各行: アーキタイプ名・採用率バー（%）・limitlesstcg リンクボタン。採用デッキがない場合はセクション自体を非表示。表示位置は Q&A セクションの上。`npm run build` → `git add` → `git commit` → `git push`。**採用率バーの仕様**: バー幅は絶対値（100%=満幅）ではなく、表示中の上位5件の最高値を満幅とする相対スケール（例: 最高82%なら82%のバーが満幅、64%は64/82≈78%幅）。これにより差異が視覚的に強調される。
 > [!success] 2026-05-05 — 完了。変更点は1箇所のみ — バー幅の計算を `Math.min(deck.share, 100)%` から `(deck.share / maxShare) * 100%` に変更しました。上位5件の最高採用率が常に満幅になり、差異...
@@ -967,3 +969,23 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 
 - [x] **27-4** Phase 27 総合レビュー。`npm run build` エラーなし確認 → `git push` #claude/queue
 > [!success] 2026-05-16 — Phase 27 総合レビュー完了。ビルドエラーなし（TypeScript OK、静的ページ生成 8/8）。全 Phase 27 コミット（27-1〜27-3）はpush済み。
+#### Phase 27-4: Phase 27 レビュー・commit/push
+
+27-1〜27-3 の各タスクが個別に push 済みであれば不要。まとめて push する場合はここで。
+
+- [x] **27-4** Phase 27 総合レビュー。`npm run build` エラーなし確認 → `git push`（未push分があれば） #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.143[1C──────────────────...
+
+#### Phase 27-5: 軽減・無効タグ クリーンアップ
+
+`scripts/tag_cards.mjs` と `scripts/tag_qa_entries.mjs` の両方に適用する。
+
+1. **グロウ草エネルギーの誤タグ削除**: `軽減>その他条件付き` からグロウ草エネルギーを除外する。テキスト「最大HPが＋20される」は damage reduction ではなく HP 増加であり、`軽減` に含めるべきではない。name-based rule を修正するか、条件文から除外する
+2. **dead tag 削除**: `軽減>exVGXから` のパターン定義と VALID_TAGS エントリを削除（現在マッチするカードが0件）
+3. **リネーム**: `無効>条件付きその他` → `無効>条件付き`（`tag_cards.mjs` のタグ名・VALID_TAGS・`tag_qa_entries.mjs` を同期）
+
+リビルド後、グロウ草エネルギーに `軽減` タグが残っていないこと、`軽減>exVGXから` がどのカードにも残っていないことを確認。`node scripts/tag_cards.mjs` → `node scripts/tag_qa_entries.mjs` → `node scripts/build_qa_index.mjs` → `git commit` → `git push`
+
+- [x] **27-5** グロウ草エネルギー誤タグ削除・軽減>exVGXから dead tag削除・無効>条件付きその他→条件付きリネーム。リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+
