@@ -8,6 +8,14 @@ Maintained by Foreman/Scribe.
 
 ## Unreported
 
+#### Phase 28-4: 進化加速整理（>山札から廃止・イーブイ確認）
+
+`進化加速>山札から` サブタグ廃止（105件→サブタグなし `進化加速` に統合）。ルール制限解除 regex を修正し、タマタマ（3件）・イーブイ ブーストしんか（4件）・カブルモ/チョボマキ（各2件）・ルクシオ（1件）計12件が `進化加速>ルール制限解除` を取得。条件進化 regex も修正しマメパトが `進化加速>条件進化` を取得。`tag_cards.mjs` → `card_tags.json` リビルド → docs 同期 → git push。
+
+- [x] **28-4** 進化加速整理（>山札から廃止 + イーブイ確認）。リビルド → git push
+
+---
+
 #### Phase 28-1: ワザロック廃止・ロック付与導入
 
 `ワザロック>自己ロック`（強力技デメリット型）廃止、`ワザロック>相手ロック` → `ロック付与` へリネーム。`scripts/tag_cards.mjs` 更新 → `card_tags.json` リビルド → docs 同期 → git push。
@@ -987,5 +995,30 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 リビルド後、グロウ草エネルギーに `軽減` タグが残っていないこと、`軽減>exVGXから` がどのカードにも残っていないことを確認。`node scripts/tag_cards.mjs` → `node scripts/tag_qa_entries.mjs` → `node scripts/build_qa_index.mjs` → `git commit` → `git push`
 
 - [x] **27-5** グロウ草エネルギー誤タグ削除・軽減>exVGXから dead tag削除・無効>条件付きその他→条件付きリネーム。リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+
+#### Phase 28-1: ワザロック廃止
+
+`scripts/tag_cards.mjs` と `scripts/tag_qa_entries.mjs` の両方に適用する。
+
+- `ワザロック>相手ロック` の該当カードに `ロック` を付与してから `ワザロック` タグ全体（親タグ＋全サブタグ）を削除
+- `ワザロック>自己ロック` のカードはタグ削除のみ（ユースケースなし）
+- VALID_TAGS から `ワザロック` 関連エントリを全削除
+- リビルド → `npm run build` 確認 → `git commit` → `git push`
+
+- [x] **28-1** ワザロック廃止（>相手ロック→ロック付与後にワザロック全削除、>自己ロック削除）。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+
+#### Phase 28-2: 手札干渉 サブタグ廃止
+
+`scripts/tag_cards.mjs` と `scripts/tag_qa_entries.mjs` の両方に適用する。
+
+- `手札干渉>手札トラッシュ` を廃止。該当カードは既存の `サーチ` / `ドロー` / `エネ除去>自己コスト` 等の適切なタグを持っているはずなので、サブタグ削除のみ
+- `手札干渉>手札参照` を廃止。同様にサブタグ削除のみ
+- 廃止後に `手札干渉` 親タグのみ持つカードが残らないこと（残る場合は別タグに振り分け）
+- VALID_TAGS から 2 サブタグを削除
+- リビルド → `npm run build` 確認 → `git commit` → `git push`
+
+- [x] **28-2** 手札干渉サブタグ廃止（手札トラッシュ・手札参照）。同期更新・リビルド → git push #claude/queue
 > [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
 
