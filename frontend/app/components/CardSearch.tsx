@@ -337,6 +337,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 const effectText = [
                     ...card.abilities.map(a => `${a.name} ${a.text}`),
                     ...card.attacks.map(a => `${a.name} ${a.text}`),
+                    ...(card.rules || []),
                 ].join(' ');
                 if (!evaluateQuery(effectText, deferredEffectQuery, isOrSearch)) return false;
             }
@@ -394,7 +395,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-2 ring-violet-400/90 shadow-[0_0_12px_rgba(167,139,250,0.55)]' : ''}`}
             >
                 <button
-                    onClick={() => hasChildren ? toggleExpand(parent) : toggleTag(parent)}
+                    onClick={() => toggleTag(parent)}
                     className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium border-y border-l transition touch-manipulation ${
                         hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
                     } ${

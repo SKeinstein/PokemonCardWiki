@@ -1106,9 +1106,9 @@ function assignTags(c) {
   const add  = (...ts) => ts.forEach(t => tags.add(t));
 
   const all  = allText(c);
-  const atk  = attackText(c);
-  const abl  = abilityText(c);
   const rul  = rulesText(c);
+  const atk  = attackText(c) + (rul ? '\n' + rul : '');
+  const abl  = abilityText(c) + (rul ? '\n' + rul : '');
   const name = c.name;
 
   for (const rule of TAG_RULES) {
