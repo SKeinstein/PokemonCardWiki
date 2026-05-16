@@ -550,9 +550,6 @@ const TAG_RULES = [
       (/ダメージは「-\d+」される/.test(rul) || /受けるダメージは.{1,10}少なくな/.test(rul)) &&
       !/「.{1,20}のポケモン」.{1,30}ダメージ/.test(rul),
   },
-  // §B-9-2  軽減>exVGXから: damage reduction specifically FROM ex/V/GX Pokémon
-  // (Placeholder — currently all ex/V/GX-specific protections are full negation; 0 matches expected)
-
   // §B-9-3  軽減>ベンチへのダメージ: bench-based ability that reduces (not fully negates) damage
   // ダイゴのメレシー (ストーンパレス): "「ダイゴのポケモン」全員が受けるワザのダメージは「-30」される" (ability)
   {
@@ -562,10 +559,9 @@ const TAG_RULES = [
   },
   // §B-9-4  軽減>その他条件付き: conditional reduction (type/trainer-specific or HP-buffer)
   // いしのどうくつ: -30 only for ダイゴのポケモン (stadium)
-  // グロウ草エネルギー: +20 max HP (effective damage buffer)
   {
     tags: ['軽減', '軽減>その他条件付き'],
-    condition: (all, atk, abl, name) => ['いしのどうくつ', 'グロウ草エネルギー'].includes(name),
+    condition: (all, atk, abl, name) => name === 'いしのどうくつ',
   },
   // General: conditional "-X" reduction in rules text for specific Pokémon types
   {
@@ -603,7 +599,7 @@ const TAG_RULES = [
   // — デオキシス(サイコプロテクト): 「特性を持つポケモンからワザのダメージを受けない」
   // — ミライドン(プロテクトコード): 「『ポケモンex』からワザのダメージを受けない」
   {
-    tags: ['無効', '無効>条件付きその他'],
+    tags: ['無効', '無効>条件付き'],
     condition: (all, atk, abl) => {
       const src = abl + '\n' + atk;
       return (
@@ -1161,7 +1157,7 @@ const GROUP_ORDER = [
   'ワザロック', 'ワザロック>自己ロック', 'ワザロック>相手ロック',
   '逃げる操作', '逃げる操作>コスト無償', '逃げる操作>相手ロック', '逃げる操作>自分ロック',
   'ロック', 'ロック>グッズロック', 'ロック>サポートロック', 'ロック>ACE SPECロック', 'ロック>トレーナー効果無効',
-  '軽減', '軽減>無条件', '軽減>exVGXから', '軽減>ベンチへのダメージ', '軽減>その他条件付き',
+  '軽減', '軽減>無条件', '軽減>ベンチへのダメージ', '軽減>その他条件付き',
   'カウンター効果',
   '自傷', '自傷>ダメカン', '自傷>ダメージ',
   'ベンチ展開', 'ベンチ展開>山札展開',
@@ -1179,7 +1175,7 @@ const GROUP_ORDER = [
   '参照 たねポケモン', '参照 1進化ポケモン', '参照 2進化ポケモン',
   'ポケモンのどうぐ>トラッシュ',
   // §B-26 ベンチ保護
-  '無効', '無効>ベンチへのワザダメージ', '無効>ベンチへの効果とダメージ', '無効>ワザの効果のみ', '無効>ダメカン配置', '無効>コイントス', '無効>条件付きその他',
+  '無効', '無効>ベンチへのワザダメージ', '無効>ベンチへの効果とダメージ', '無効>ワザの効果のみ', '無効>ダメカン配置', '無効>コイントス', '無効>条件付き',
   // §B-24 ダメージ操作
   'ダメージ操作', 'ダメージ操作>抵抗無視', 'ダメージ操作>弱点抵抗無視', 'ダメージ操作>弱点無視', 'ダメージ操作>与ダメージ増加', 'ダメージ操作>被ダメージ増加',
   // D-4 future candidates
