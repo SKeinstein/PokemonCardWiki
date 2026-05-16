@@ -8,38 +8,6 @@ Maintained by Foreman/Scribe.
 
 ## Unreported
 
-#### Phase 31-4: 回復>特殊状態 サブタグ新設
-
-`回復>特殊状態` サブタグを §B-3-4 として新設。対象6カード（ポケモンセンターのお姉さん・ミアレガレット・イエッサン・オリーヴァex・お祭り会場・バブル水エネルギー）、19エントリ（複数プリント含む）。`tag_cards.mjs` にルール追加（`/特殊状態.{0,15}回復/`）・VALID_TAGS 追加 → `card_tags.json` リビルド → docs（§B-3-4セクション追加・サマリーテーブル更新）同期 → git push。
-
-- [x] **31-4** 回復>特殊状態 サブタグ新設。リビルド → git push
-
----
-
-#### Phase 28-5: 特性無効→ロック>特性 統合
-
-`特性無効`（§B-22）タグを廃止し、`ロック>特性` サブタグ（§B-8）に統合。17件検出（旧7件から拡大）。`tag_cards.mjs` の §B-22 ルールを `tags: ['ロック', 'ロック>特性']` に変更、GROUP_ORDER・SECTION_MAP を同期更新。`card_tags.json` リビルド → docs（§B-8拡充・§B-22廃止注記・各サマリーテーブル）同期 → git push。
-
-- [x] **28-5** 特性無効→ロック>特性 統合（新サブタグ追加・特性無効廃止）。リビルド → git push
-
----
-
-#### Phase 28-4: 進化加速整理（>山札から廃止・イーブイ確認）
-
-`進化加速>山札から` サブタグ廃止（105件→サブタグなし `進化加速` に統合）。ルール制限解除 regex を修正し、タマタマ（3件）・イーブイ ブーストしんか（4件）・カブルモ/チョボマキ（各2件）・ルクシオ（1件）計12件が `進化加速>ルール制限解除` を取得。条件進化 regex も修正しマメパトが `進化加速>条件進化` を取得。`tag_cards.mjs` → `card_tags.json` リビルド → docs 同期 → git push。
-
-- [x] **28-4** 進化加速整理（>山札から廃止 + イーブイ確認）。リビルド → git push
-
----
-
-#### Phase 28-1: ワザロック廃止・ロック付与導入
-
-`ワザロック>自己ロック`（強力技デメリット型）廃止、`ワザロック>相手ロック` → `ロック付与` へリネーム。`scripts/tag_cards.mjs` 更新 → `card_tags.json` リビルド → docs 同期 → git push。
-
-- [x] **28-1** ワザロック廃止（>相手ロック→ロック付与、>自己ロック削除）。リビルド → git push
-
----
-
 ## Archive
 
 ### Phase 1: Data Quality ✅
@@ -880,14 +848,14 @@ VALID_TAGS 更新。リビルド。
 `frontend/app/components/CardSearch.tsx` のリセット/全解除ボタン表示時のレイアウトずれを修正する。フィルター項目を選択するとリセットボタンが出現してレイアウトがずれる現象。ボタン領域の高さをあらかじめ確保し（例: `min-h` や invisible なプレースホルダー）、選択時にボタンをアクティブ化する方式で対応。`npm run build` で確認。
 
 - [x] **27-1** リセット・全解除ボタン出現によるUIずれ修正（事前に領域確保）。npm run build 確認 #claude/queue
-> [!success] 2026-05-13 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.140[1C──────────────────...
+> [!success] 2026-05-13
 
 #### Phase 27-2: セレビィのタグ修正
 
 `scripts/tag_cards.mjs` でセレビィが `サーチ>スタジアム` にのみ分類されているが、`サーチ>ポケモン` も持つべきかカードテキストを確認し、必要であれば追加する。`node scripts/tag_cards.mjs` → `node scripts/tag_qa_entries.mjs` → `node scripts/build_qa_index.mjs` でリビルド。`git commit` → `git push`。
 
 - [x] **27-2** セレビィのタグ確認・修正（サーチ>ポケモン追加検討）。リビルド → git push #claude/queue
-> [!success] 2026-05-13 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.140
+> [!success] 2026-05-13
 
 
 
@@ -909,7 +877,7 @@ VALID_TAGS 更新。リビルド。
 サブタグは不要（10件程度のため）。VALID_TAGS に `最大HP強化` を追加。`tag_qa_entries.mjs` にも同期。リビルド後、上記10件が確実にタグを持つことを確認。`git commit` → `git push`。
 
 - [x] **28-3** 最大HP強化タグ新設（最大HP+N パターン追加）。tag_cards.mjs + tag_qa_entries.mjs 同期・VALID_TAGS更新・リビルド → git push #claude/queue
-> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+> [!success] 2026-05-14
 
 #### Phase 29-1: テキスト検索復活（特性名・ワザ名・効果テキスト）
 
@@ -938,7 +906,7 @@ if (deferredEffectQuery) {
 `npm run build` エラーなし確認 → `git commit` → `git push`
 
 - [x] **29-1** テキスト検索復活（effectQuery アンコメント + 特性名/ワザ名/テキスト検索ロジック実装）。npm run build 確認 → git commit → git push #claude/queue
-> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+> [!success] 2026-05-14
 
 #### Phase 30-1: 最終進化フィルター実装
 
@@ -970,21 +938,21 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 `npm run build` エラーなし確認 → `git commit` → `git push`
 
 - [x] **30-1** 最終進化フィルター実装（isFinalEvolution ロジック + finalEvoOnly トグル UI）。npm run build 確認 → git commit → git push #claude/queue
-> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.141
+> [!success] 2026-05-14
 
 #### Phase 30-2: 採用デッキ表示を日本語化
 
 `frontend/app/components/CardModal.tsx` の採用デッキセクションのラベルを日本語にする。現状は英語表記になっている箇所を確認し、日本語に変更。`npm run build` で確認。
 
 - [x] **30-2** CardModal 採用デッキセクションのラベルを日本語化。npm run build 確認 #claude/queue
-> [!success] 2026-05-14 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.141[1C──────────────────...
+> [!success] 2026-05-14
 
 #### Phase 27-3: ワザコピー — ヤドキング調査・追加
 
 `data/card_tags.json` で `ワザコピー` タグを持つカードを確認し、ヤドキングが含まれていなければカードテキストを調査して含めるべきか判断する。他にも `ワザコピー` に含まれるべきで漏れているカードがあれば合わせて追加する。`node scripts/tag_cards.mjs` → リビルド → `git commit` → `git push`。
 
 - [x] **27-3** ワザコピータグ：ヤドキング調査・追加、他漏れ確認。リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.141[1C──────────────────...
+> [!success] 2026-05-16
 
 
 #### Phase 27-4: 総合レビュー
@@ -998,7 +966,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 27-1〜27-3 の各タスクが個別に push 済みであれば不要。まとめて push する場合はここで。
 
 - [x] **27-4** Phase 27 総合レビュー。`npm run build` エラーなし確認 → `git push`（未push分があれば） #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code╭───[1CClaude[1CCode[1Cv2.1.143[1C──────────────────...
+> [!success] 2026-05-16
 
 #### Phase 27-5: 軽減・無効タグ クリーンアップ
 
@@ -1011,7 +979,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 リビルド後、グロウ草エネルギーに `軽減` タグが残っていないこと、`軽減>exVGXから` がどのカードにも残っていないことを確認。`node scripts/tag_cards.mjs` → `node scripts/tag_qa_entries.mjs` → `node scripts/build_qa_index.mjs` → `git commit` → `git push`
 
 - [x] **27-5** グロウ草エネルギー誤タグ削除・軽減>exVGXから dead tag削除・無効>条件付きその他→条件付きリネーム。リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 #### Phase 28-1: ワザロック廃止
 
@@ -1023,7 +991,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` 確認 → `git commit` → `git push`
 
 - [x] **28-1** ワザロック廃止（>相手ロック→ロック付与後にワザロック全削除、>自己ロック削除）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 #### Phase 28-2: 手札干渉 サブタグ廃止
 
@@ -1036,7 +1004,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` 確認 → `git commit` → `git push`
 
 - [x] **28-2** 手札干渉サブタグ廃止（手札トラッシュ・手札参照）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 #### Phase 28-4: 進化加速 整理
 
@@ -1048,7 +1016,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` 確認 → `git commit` → `git push`
 
 - [x] **28-4** 進化加速整理（>山札から廃止 + イーブイ確認）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 #### Phase 28-5: 特性無効 → ロック>特性 統合
 
@@ -1060,7 +1028,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` 確認 → `git commit` → `git push`
 
 - [x] **28-5** 特性無効→ロック>特性 統合（新サブタグ追加・特性無効廃止）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 #### Phase 31-3: ベンチ展開 サブタグ追加（山札・トラッシュ）
 
@@ -1074,7 +1042,7 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` → `git commit` → `git push`
 
 - [x] **31-3** ベンチ展開サブタグ追加（>山札・>トラッシュ）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
 
 
 #### Phase 31-1: トラッシュ回収>場 削除
@@ -1087,18 +1055,6 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 
 - [x] **31-1** トラッシュ回収>場 削除（69件をベンチ展開>トラッシュ/エネ加速>トラッシュに振替後、ルール削除）。同期更新・リビルド → git push #claude/queue
 > [!success] 2026-05-16
-#### Phase 31-1: トラッシュ回収>場 削除
-
-旧 `トラッシュ回収>場` サブタグを廃止。該当 69 件のカードは「トラッシュからベンチ展開」または「トラッシュからエネ装着」系。
-
-- 該当 69 件を調査し、`エネ加速>トラッシュ` または `ベンチ展開>トラッシュ`（31-3 で新設済み）をすでに持っているか確認
-- 持っていない場合はカードテキストを見て適切なタグを付与
-- `scripts/tag_cards.mjs` の `§B-1-T2 トラッシュ回収>場` ルール（行 374 付近）と VALID_TAGS エントリを削除
-- `scripts/tag_qa_entries.mjs` の同等ルールも削除
-- リビルド → `npm run build` 確認 → `git commit` → `git push`
-
-- [x] **31-1** トラッシュ回収>場 削除（該当69件を ベンチ展開>トラッシュ / エネ加速>トラッシュ に振替後、ルール削除）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
 
 #### Phase 31-2: ハルクジラex / ムゲンダイナ スタジアム参照タグ追加
 
@@ -1110,5 +1066,32 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - 同期更新・リビルド → `npm run build` → `git commit` → `git push`
 
 - [x] **31-2** ハルクジラex/ムゲンダイナ にスタジアム参照タグ付与（スピンロトム同等扱い）。同期更新・リビルド → git push #claude/queue
-> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+> [!success] 2026-05-16
+
+#### Phase 31-4: 特殊状態回復 サブタグ新設
+
+`回復` タグに `>特殊状態` サブタグを追加。
+
+- 新サブタグ `回復>特殊状態` を VALID_TAGS に追加
+- 「特殊状態がすべて回復する」「やけど・どくをなおす」「特殊状態を回復する」等のテキストパターンを判定ルールに追加
+- 該当カードを調査・タグ付与
+- `tag_qa_entries.mjs` も同期
+- リビルド → `npm run build` → `git commit` → `git push`
+
+- [x] **31-4** 回復>特殊状態 サブタグ新設。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-16
+
+#### Phase 31-5: にげる操作 → にげるコスト リネーム
+
+タグ名 `にげる操作` を `にげるコスト` にリネームし、サブタグを `軽減` / `増加` に整理。
+
+- タグ名 `にげる操作` → `にげるコスト` に変更（`tag_cards.mjs`, `tag_qa_entries.mjs`, VALID_TAGS, `data/card_tags.json` の該当タグ全件）
+- 既存サブタグ `にげる操作>軽減` 系 → `にげるコスト>軽減`（減らす・ゼロにする）
+- 新サブタグ `にげるコスト>増加`（相手のにげるコストを増やす効果。Phase 25 のダメージ操作と類似パターンで探す）
+- 既存サブタグ `にげる操作>自分ロック` / `>相手ロック` は名前を `にげるコスト>自分ロック` / `>相手ロック` にリネームのみ（`ロック` への完全統合は 32-2 で対応）
+- `tag_qa_entries.mjs` も同期
+- リビルド → `npm run build` → `git commit` → `git push`
+
+- [x] **31-5** にげる操作→にげるコスト リネーム + サブタグ 軽減/増加 整理。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-16
 
