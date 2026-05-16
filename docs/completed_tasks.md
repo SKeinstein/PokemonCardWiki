@@ -1044,6 +1044,16 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - [x] **28-5** 特性無効→ロック>特性 統合（新サブタグ追加・特性無効廃止）。同期更新・リビルド → git push #claude/queue
 > [!success] 2026-05-16
 
+#### Phase 28-6: 回復>複数回復 廃止
+
+`回復>複数回復`（§B-3-3、計画 12 件）を廃止。タグは tag_cards.mjs・card_tags.json に実装されておらず、対象カードは `回復>固定HP回復` で捕捉済み。ドキュメントのみ更新。
+
+- `group_categories_proposal.md` §B-3-3 行を削除
+- D-2 表の公民館分類を `§B-3（回復>固定HP回復）` に修正
+
+- [x] **28-6** 回復>複数回復廃止（再分類後に削除）。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-17
+
 #### Phase 31-3: ベンチ展開 サブタグ追加（山札・トラッシュ）
 
 `ベンチ展開` にサブタグを追加し、`トラッシュ回収>場` の代替先を用意する（31-1 への準備として 31-3 を先に実行）。
@@ -1174,5 +1184,18 @@ const isFinalEvolution = (card: MasterCard): boolean => {
 - リビルド → `npm run build` → `git commit` → `git push`
 
 - [x] **32-3** 特殊状態関連タグ新設（特殊水エネルギー等の特殊状態参照カード分類）。同期更新・リビルド → git push #claude/queue
+> [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
+
+#### Phase 32-4: カード種別参照タグ新設
+
+「ポケモンex参照」「メガシンカex参照」など、公式のカード種別を参照する系の独自タグを統合した親タグを新設。
+
+- 新親タグ `カード種別参照` を作成
+- 既存の独立タグ「ポケモンex参照」「メガシンカex参照」等を `カード種別参照>ポケモンex` `>メガシンカex` 等のサブタグに移行
+- 「ポケモンのどうぐ参照」は対象外（独立扱い）。サーチ系も対象外
+- VALID_TAGS 全更新、元タグ削除、`tag_qa_entries.mjs` 同期
+- リビルド → `npm run build` → `git commit` → `git push`
+
+- [x] **32-4** カード種別参照タグ新設（ポケモンex参照等のサブタグ統合）。同期更新・リビルド → git push #claude/queue
 > [!success] 2026-05-16 — 7[r8[?25h[?25l[?2004h[?1004h[?2031h]0;✳ Claude Code▗[1C▗[3C▖[1C▖[2CClaude[1CCode[1Cv2.1.143
 
