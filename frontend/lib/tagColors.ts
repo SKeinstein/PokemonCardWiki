@@ -14,16 +14,8 @@ export const OFFICIAL_CLASS_GROUPS: OfficialClassGroup[] = [
         },
     },
     {
-        label: 'ルール',
-        tags: ['ポケモンex', 'メガシンカex', 'ACE SPEC'],
-        token: {
-            active: 'bg-amber-600 border-amber-500 text-white',
-            inactive: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-300',
-        },
-    },
-    {
-        label: '形態テーマ',
-        tags: ['テラスタル', '古代', '未来'],
+        label: '特別なカード',
+        tags: ['ポケモンex', 'メガシンカex', 'ACE SPEC', 'テラスタル', '古代', '未来'],
         token: {
             active: 'bg-purple-600 border-purple-500 text-white',
             inactive: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-purple-500 hover:text-purple-300',
