@@ -687,29 +687,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             <HpRangeSlider value={hpRange} onChange={setHpRange} />
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
-                            <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">弱点</label>
-                                <select
-                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${weaknessFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                                    value={weaknessFilter}
-                                    onChange={e => setWeaknessFilter(e.target.value)}
-                                >
-                                    <option value="">すべて</option>
-                                    {allTypes.map(t => <option key={t} value={t}>{typeLabel(t)}</option>)}
-                                </select>
-                            </div>
-                            <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">抵抗力</label>
-                                <select
-                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${resistanceFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                                    value={resistanceFilter}
-                                    onChange={e => setResistanceFilter(e.target.value)}
-                                >
-                                    <option value="">すべて</option>
-                                    {allTypes.map(t => <option key={t} value={t}>{typeLabel(t)}</option>)}
-                                </select>
-                            </div>
+                        <div className="grid grid-cols-1 gap-2 sm:gap-3">
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">にげる</label>
                                 <select
