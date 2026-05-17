@@ -8,7 +8,7 @@ export const TYPE_LABELS: Record<string, string> = {
     dark: 'あく',
     steel: 'はがね',
     dragon: 'ドラゴン',
-    none: '無色',
+    none: 'ノーマル',
 };
 
 export const typeLabel = (type: string): string => TYPE_LABELS[type] ?? type;
