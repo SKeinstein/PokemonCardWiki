@@ -637,8 +637,6 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                             {o.label}
                                         </button>
                                     ))}
-                                </div>
-                                <div className="flex flex-wrap gap-1.5 mt-1">
                                     <button
                                         type="button"
                                         onClick={() => setFinalEvoOnly(prev => !prev)}
