@@ -387,21 +387,19 @@ const TAG_RULES = [
       name === 'エネルギーリサイクル',
   },
 
-  // ── §B-2  特殊状態付与 ────────────────────────────────────────────────────
-  { tags: ['特殊状態', '特殊状態>どく'],     condition: (all) => /どくにする/.test(all) },
-  { tags: ['特殊状態', '特殊状態>やけど'],   condition: (all) => /やけどにする/.test(all) },
-  { tags: ['特殊状態', '特殊状態>こんらん'], condition: (all) => /こんらんにする/.test(all) },
+  // ── §B-2  特殊状態付与 (付与系) ─────────────────────────────────────────────
+  // compound form 「AとBにする」「A・B・Cの中から」も捕捉
+  { tags: ['特殊状態', '特殊状態>どく'],     condition: (all) => /どくにする|どくと(?:やけど|こんらん|ねむり|マヒ)|どく・(?:やけど|こんらん|ねむり|マヒ)/.test(all) },
+  { tags: ['特殊状態', '特殊状態>やけど'],   condition: (all) => /やけどにする|やけどと(?:どく|こんらん|ねむり|マヒ)|やけど・(?:どく|こんらん|ねむり|マヒ)/.test(all) },
+  { tags: ['特殊状態', '特殊状態>こんらん'], condition: (all) => /こんらんにする|(?:どく|やけど|ねむり|マヒ)[・]こんらん/.test(all) },
   { tags: ['特殊状態', '特殊状態>ねむり'],   condition: (all) => /ねむりにする/.test(all) },
   { tags: ['特殊状態', '特殊状態>マヒ'],     condition: (all) => /マヒにする/.test(all) },
-  // §B-2 name-based: stadiums that modify special-condition mechanics (D-2)
-  // めまいの谷: こんらんのポケモンは進化・退化してもこんらんが回復しない
-  { tags: ['特殊状態', '特殊状態>こんらん'], condition: (all, atk, abl, name) => name === 'めまいの谷' },
-  // 危険な密林: どくのポケモンのどくダメカンが2個多くなる
-  { tags: ['特殊状態', '特殊状態>どく'],     condition: (all, atk, abl, name) => name === '危険な密林' },
   // §B-2 特殊状態>耐性: grants immunity to special conditions (にならず / にならない)
   { tags: ['特殊状態', '特殊状態>耐性'],     condition: (all) => /特殊状態にならず|特殊状態にならない/.test(all) },
-  // §B-2 特殊状態>参照: effects conditioned on special condition state of a Pokémon
-  { tags: ['特殊状態', '特殊状態>参照'],     condition: (all) => /特殊状態なら|受けている特殊状態の数/.test(all) },
+  // §B-2 特殊状態>参照 (参照系): effects conditioned on a Pokémon's specific condition
+  // 「特殊状態なら」の汎用参照に加え、個別条件参照（どくなら / どくのポケモン等）も捕捉
+  // めまいの谷（こんらんのポケモン）・危険な密林（どくのポケモン）・くさりもちはここで捕捉
+  { tags: ['特殊状態', '特殊状態>参照'],     condition: (all) => /特殊状態なら|受けている特殊状態の数|(?:どく|やけど|こんらん|ねむり|マヒ)(?:なら|のポケモン)/.test(all) },
 
   // ── §B-3  回復 ────────────────────────────────────────────────────────────
   // 「HPを、それぞれ「30」回復する」のように副詞挟みケースに対応 (HPを と 数値 が非隣接)
