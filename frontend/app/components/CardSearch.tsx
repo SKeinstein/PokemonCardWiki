@@ -645,7 +645,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             </div>
                         )}
 
-                        {/* カテゴリ・タイプ チップ */}
+                        {/* カード種別 + タイプ */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                             <div className="flex flex-col gap-1">
                                 <label className="text-xs text-gray-400 font-bold">カード種別</label>
@@ -702,79 +702,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             </div>
                         </div>
 
-                        {/* HP slider */}
-                        <div className={`max-w-sm transition ${hpFilterActive ? 'rounded-lg p-1 border border-violet-500/60 bg-violet-900/10' : ''}`}>
-                            <HpRangeSlider value={hpRange} onChange={setHpRange} />
-                        </div>
-
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs text-gray-400 font-bold">にげる</label>
-                            <div className="flex flex-wrap gap-1.5 pt-1">
-                                {(['0','1','2','3','4+'] as const).map(v => (
-                                    <button
-                                        key={v}
-                                        type="button"
-                                        onClick={() => setRetreatFilter(retreatFilter === v ? '' : v)}
-                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                            retreatFilter === v
-                                                ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                        }`}
-                                    >
-                                        {v}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
-                            <div className="flex flex-wrap gap-1.5 pt-1">
-                                {['grass','fire','water','electric','psychic','fighting','dark','steel','none'].map(t => (
-                                    <button
-                                        key={t}
-                                        type="button"
-                                        onClick={() => setCostTypeFilter(costTypeFilter === t ? '' : t)}
-                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                            costTypeFilter === t
-                                                ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                        }`}
-                                    >
-                                        {typeLabel(t)}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-1">
-                            <label className="text-xs text-gray-400 font-bold">ワザコスト数</label>
-                            <div className="flex flex-wrap gap-1.5 pt-1">
-                                {[0, 1, 2, 3, 4, 5].map(n => {
-                                    const checked = costCountFilters.has(n);
-                                    return (
-                                        <button
-                                            key={n}
-                                            type="button"
-                                            onClick={() => setCostCountFilters(prev => {
-                                                const next = new Set(prev);
-                                                if (next.has(n)) next.delete(n);
-                                                else next.add(n);
-                                                return next;
-                                            })}
-                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                                checked
-                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                            }`}
-                                        >
-                                            {n === 5 ? '5+' : `${n}`}
-                                        </button>
-                                    );
-                                })}
-                            </div>
-                        </div>
-
-                        {/* 公式分類チップ */}
-                        <div className="space-y-3 pt-2 border-t border-emerald-900/40">
+                        {/* 特別なカード・キャラクター */}
+                        <div className="space-y-3">
                             {OFFICIAL_CLASS_GROUPS.filter(group => group.label !== 'カード種別').map(group => (
                                 <div key={group.label} className="space-y-1.5">
                                     <label className="text-xs text-gray-400 font-bold">{group.label}</label>
@@ -797,6 +726,82 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                     </div>
                                 </div>
                             ))}
+                        </div>
+
+                        {/* HP slider */}
+                        <div className={`max-w-sm transition ${hpFilterActive ? 'rounded-lg p-1 border border-violet-500/60 bg-violet-900/10' : ''}`}>
+                            <HpRangeSlider value={hpRange} onChange={setHpRange} />
+                        </div>
+
+                        {/* ワザのエネルギー + ワザコスト数 横並び */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                            <div className="flex flex-col gap-1">
+                                <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
+                                <div className="flex flex-wrap gap-1.5 pt-1">
+                                    {['grass','fire','water','electric','psychic','fighting','dark','steel','none'].map(t => (
+                                        <button
+                                            key={t}
+                                            type="button"
+                                            onClick={() => setCostTypeFilter(costTypeFilter === t ? '' : t)}
+                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                costTypeFilter === t
+                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                            }`}
+                                        >
+                                            {typeLabel(t)}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="flex flex-col gap-1">
+                                <label className="text-xs text-gray-400 font-bold">ワザコスト数</label>
+                                <div className="flex flex-wrap gap-1.5 pt-1">
+                                    {[0, 1, 2, 3, 4, 5].map(n => {
+                                        const checked = costCountFilters.has(n);
+                                        return (
+                                            <button
+                                                key={n}
+                                                type="button"
+                                                onClick={() => setCostCountFilters(prev => {
+                                                    const next = new Set(prev);
+                                                    if (next.has(n)) next.delete(n);
+                                                    else next.add(n);
+                                                    return next;
+                                                })}
+                                                className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                    checked
+                                                        ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                        : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                                }`}
+                                            >
+                                                {n === 5 ? '5+' : `${n}`}
+                                            </button>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* にげる */}
+                        <div className="flex flex-col gap-1">
+                            <label className="text-xs text-gray-400 font-bold">にげる</label>
+                            <div className="flex flex-wrap gap-1.5 pt-1">
+                                {(['0','1','2','3','4+'] as const).map(v => (
+                                    <button
+                                        key={v}
+                                        type="button"
+                                        onClick={() => setRetreatFilter(retreatFilter === v ? '' : v)}
+                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                            retreatFilter === v
+                                                ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                        }`}
+                                    >
+                                        {v}
+                                    </button>
+                                ))}
+                            </div>
                         </div>
 
                     </div>
