@@ -32,6 +32,26 @@ const GENERIC_RULES = new Set([
     "スタジアムは、自分の番に1枚だけ、バトル場の横に出せる。別の名前のスタジアムが場に出たなら、このカードをトラッシュする。",
 ]);
 
+type CardKindOption =
+    | { kind: 'category'; value: string; label: string }
+    | { kind: 'final_evo'; label: string }
+    | { kind: 'official_tag'; tag: string; label: string };
+
+const CARD_KIND_OPTIONS: CardKindOption[] = [
+    { kind: 'category', value: 'pokemon', label: 'ポケモン' },
+    { kind: 'final_evo', label: '最終進化のみ' },
+    { kind: 'official_tag', tag: 'たねポケモン', label: 'たねポケモン' },
+    { kind: 'official_tag', tag: '1進化ポケモン', label: '1進化ポケモン' },
+    { kind: 'official_tag', tag: '2進化ポケモン', label: '2進化ポケモン' },
+    { kind: 'official_tag', tag: 'ルールを持つポケモン', label: 'ルールを持つポケモン' },
+    { kind: 'official_tag', tag: 'ワザマシン', label: 'ワザマシン' },
+    { kind: 'category', value: 'グッズ', label: 'グッズ' },
+    { kind: 'category', value: 'サポート', label: 'サポート' },
+    { kind: 'category', value: 'スタジアム', label: 'スタジアム' },
+    { kind: 'category', value: 'ポケモンのどうぐ', label: 'ポケモンのどうぐ' },
+    { kind: 'category', value: 'energy', label: 'エネルギー' },
+];
+
 
 export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
     const [query, setQuery] = useState("");
@@ -628,40 +648,37 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         {/* カテゴリ・タイプ チップ */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
                             <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">カテゴリ</label>
+                                <label className="text-xs text-gray-400 font-bold">カード種別</label>
                                 <div className="flex flex-wrap gap-1.5">
-                                    {[
-                                        { value: 'pokemon', label: 'ポケモン' },
-                                        { value: 'グッズ', label: 'グッズ' },
-                                        { value: 'サポート', label: 'サポート' },
-                                        { value: 'スタジアム', label: 'スタジアム' },
-                                        { value: 'ポケモンのどうぐ', label: 'ポケモンのどうぐ' },
-                                        { value: 'energy', label: 'エネルギー' },
-                                    ].map(o => (
-                                        <button
-                                            key={o.value}
-                                            type="button"
-                                            onClick={() => setCategoryFilter(categoryFilter === o.value ? '' : o.value)}
-                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                                categoryFilter === o.value
-                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                            }`}
-                                        >
-                                            {o.label}
-                                        </button>
-                                    ))}
-                                    <button
-                                        type="button"
-                                        onClick={() => setFinalEvoOnly(prev => !prev)}
-                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                            finalEvoOnly
-                                                ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                        }`}
-                                    >
-                                        最終進化のみ
-                                    </button>
+                                    {CARD_KIND_OPTIONS.map(o => {
+                                        const isSelected =
+                                            o.kind === 'category' ? categoryFilter === o.value
+                                            : o.kind === 'final_evo' ? finalEvoOnly
+                                            : selectedOfficialTags.has(o.tag);
+                                        const handleClick = () => {
+                                            if (o.kind === 'category') {
+                                                setCategoryFilter(categoryFilter === o.value ? '' : o.value);
+                                            } else if (o.kind === 'final_evo') {
+                                                setFinalEvoOnly(prev => !prev);
+                                            } else {
+                                                toggleOfficialTag(o.tag);
+                                            }
+                                        };
+                                        return (
+                                            <button
+                                                key={o.kind === 'category' ? o.value : o.kind === 'official_tag' ? o.tag : 'final_evo'}
+                                                type="button"
+                                                onClick={handleClick}
+                                                className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                    isSelected
+                                                        ? 'bg-sky-600 border-sky-500 text-white'
+                                                        : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-sky-500 hover:text-sky-300'
+                                                }`}
+                                            >
+                                                {o.label}
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </div>
                             <div className="flex flex-col gap-1">
@@ -758,7 +775,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
                         {/* 公式分類チップ */}
                         <div className="space-y-3 pt-2 border-t border-emerald-900/40">
-                            {OFFICIAL_CLASS_GROUPS.map(group => (
+                            {OFFICIAL_CLASS_GROUPS.filter(group => group.label !== 'カード種別').map(group => (
                                 <div key={group.label} className="space-y-1.5">
                                     <label className="text-xs text-gray-400 font-bold">{group.label}</label>
                                     <div className="flex flex-wrap gap-1.5">
