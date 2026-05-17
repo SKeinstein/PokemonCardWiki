@@ -263,7 +263,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const hpFilterActive = hpRange.min > HP_MIN || hpRange.max < HP_MAX;
 
     const anyFilterActive = !!(
-        query || effectQuery || typeFilter || categoryFilter ||
+        query || deferredQuery || effectQuery || deferredEffectQuery || typeFilter || categoryFilter ||
         weaknessFilter || resistanceFilter || retreatFilter || costTypeFilter ||
         costCountFilters.size > 0 || hpFilterActive || selectedOfficialTags.size > 0 || selectedTags.size > 0 ||
         isOrSearch || finalEvoOnly
