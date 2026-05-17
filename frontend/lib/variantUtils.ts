@@ -1,4 +1,5 @@
 import { CardVariant } from "./data";
+import releaseDB from "../data/pack_release_order.json";
 
 const NORMAL_RARITY = new Set(["C", "U", "R"]);
 
@@ -18,6 +19,13 @@ export function pickDefaultVariant(variants: CardVariant[]): CardVariant | null 
     if (variants.length === 1) return variants[0];
 
     return [...variants].sort((a, b) => {
+        const aDate = (releaseDB as Record<string, { release_date?: string }>)[a.set_code]?.release_date;
+        const bDate = (releaseDB as Record<string, { release_date?: string }>)[b.set_code]?.release_date;
+
+        if (aDate && bDate && aDate !== bDate) {
+            return bDate < aDate ? -1 : 1;
+        }
+
         const eraDiff = eraRank(a.set_code) - eraRank(b.set_code);
         if (eraDiff !== 0) return eraDiff;
         const setDiff = b.set_code.localeCompare(a.set_code, undefined, { numeric: true });

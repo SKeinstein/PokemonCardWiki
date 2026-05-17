@@ -1,0 +1,1138 @@
+{
+  "M4": {
+    "name": "拡張パック ニンジャスピナー",
+    "release_order": 526,
+    "release_date": "2026-03-13"
+  },
+  "M3": {
+    "name": "拡張パック ムニキスゼロ",
+    "release_order": 525,
+    "release_date": "2026-01-23"
+  },
+  "MP1": {
+    "name": "スタートデッキ100 バトルコレクション コロちゃお",
+    "release_order": 524
+  },
+  "MC": {
+    "name": "スタートデッキ100 バトルコレクション",
+    "release_order": 523,
+    "release_date": "2025-12-19"
+  },
+  "M2a": {
+    "name": "ハイクラスパック MEGAドリームex",
+    "release_order": 522,
+    "release_date": "2025-11-28"
+  },
+  "M2": {
+    "name": "拡張パック インフェルノX",
+    "release_order": 521,
+    "release_date": "2025-09-26"
+  },
+  "MBG": {
+    "name": "スターターセットMEGA メガゲンガーex",
+    "release_order": 520,
+    "release_date": "2025-09-05"
+  },
+  "MBD": {
+    "name": "スターターセットMEGA メガディアンシーex",
+    "release_order": 519,
+    "release_date": "2025-09-05"
+  },
+  "M1S": {
+    "name": "拡張パック メガシンフォニア",
+    "release_order": 518,
+    "release_date": "2025-08-01"
+  },
+  "M1L": {
+    "name": "拡張パック メガブレイブ",
+    "release_order": 517,
+    "release_date": "2025-08-01"
+  },
+  "sv11W": {
+    "name": "拡張パック ホワイトフレア",
+    "release_order": 516
+  },
+  "sv11B": {
+    "name": "拡張パック ブラックボルト",
+    "release_order": 515
+  },
+  "sv10": {
+    "name": "拡張パック ロケット団の栄光",
+    "release_order": 514
+  },
+  "sv9a": {
+    "name": "強化拡張パック 熱風のアリーナ",
+    "release_order": 513
+  },
+  "svOD": {
+    "name": "スターターセットex ダイゴのダンバル＆メタグロスex",
+    "release_order": 512
+  },
+  "svOM": {
+    "name": "スターターセットex マリィのモルペコ＆オーロンゲex",
+    "release_order": 511
+  },
+  "svN": {
+    "name": "デッキビルドBOX バトルパートナーズ",
+    "release_order": 510
+  },
+  "sv9": {
+    "name": "拡張パック バトルパートナーズ",
+    "release_order": 509
+  },
+  "sv8a": {
+    "name": "ハイクラスパック テラスタルフェスex",
+    "release_order": 508
+  },
+  "svM": {
+    "name": "スタートデッキ Generations",
+    "release_order": 507
+  },
+  "sv8": {
+    "name": "拡張パック 超電ブレイカー",
+    "release_order": 506
+  },
+  "sv7a": {
+    "name": "強化拡張パック 楽園ドラゴーナ",
+    "release_order": 505
+  },
+  "svLN": {
+    "name": "スターターセット テラスタイプ：ステラ ニンフィアex",
+    "release_order": 504
+  },
+  "svLS": {
+    "name": "スターターセット テラスタイプ：ステラ ソウブレイズex",
+    "release_order": 503
+  },
+  "svK": {
+    "name": "デッキビルドBOX ステラミラクル",
+    "release_order": 502
+  },
+  "sv7": {
+    "name": "拡張パック ステラミラクル",
+    "release_order": 501
+  },
+  "sv6a": {
+    "name": "強化拡張パック ナイトワンダラー",
+    "release_order": 500
+  },
+  "svJP": {
+    "name": "バトルマスターデッキ パオジアンex",
+    "release_order": 499
+  },
+  "svJL": {
+    "name": "バトルマスターデッキ テラスタル リザードンex",
+    "release_order": 498
+  },
+  "sv6": {
+    "name": "拡張パック 変幻の仮面",
+    "release_order": 497
+  },
+  "sv5a": {
+    "name": "強化拡張パック クリムゾンヘイズ",
+    "release_order": 496
+  },
+  "svI": {
+    "name": "ポケモンカードゲーム スカーレット&amp;バイオレット バトルアカデミー",
+    "release_order": 495
+  },
+  "sv5M": {
+    "name": "拡張パック サイバージャッジ",
+    "release_order": 494
+  },
+  "sv5K": {
+    "name": "拡張パック ワイルドフォース",
+    "release_order": 493
+  },
+  "svHM": {
+    "name": "スターターデッキ&amp;ビルドセット 未来のミライドンex",
+    "release_order": 492
+  },
+  "svHK": {
+    "name": "スターターデッキ&amp;ビルドセット 古代のコライドンex",
+    "release_order": 491
+  },
+  "sv4a": {
+    "name": "ハイクラスパック シャイニートレジャーex",
+    "release_order": 490
+  },
+  "svG": {
+    "name": "スペシャルデッキセットex フシギバナ・リザードン・カメックス",
+    "release_order": 489
+  },
+  "sv4M": {
+    "name": "拡張パック 未来の一閃",
+    "release_order": 488
+  },
+  "sv4K": {
+    "name": "拡張パック 古代の咆哮",
+    "release_order": 487
+  },
+  "svEM": {
+    "name": "スターターセット テラスタル ミュウツーex",
+    "release_order": 486
+  },
+  "svEL": {
+    "name": "スターターセット テラスタル ラウドボーンex",
+    "release_order": 485
+  },
+  "sv3a": {
+    "name": "強化拡張パック レイジングサーフ",
+    "release_order": 484
+  },
+  "WCS23": {
+    "name": "ポケモンワールドチャンピオンシップス2023横浜記念デッキ ピカチュウ",
+    "release_order": 483
+  },
+  "svF": {
+    "name": "デッキビルドBOX 黒炎の支配者",
+    "release_order": 482
+  },
+  "sv3": {
+    "name": "拡張パック 黒炎の支配者",
+    "release_order": 481
+  },
+  "svD": {
+    "name": "おまかせexスタートデッキ",
+    "release_order": 480
+  },
+  "sv2a": {
+    "name": "強化拡張パック ポケモンカード151",
+    "release_order": 479
+  },
+  "svP1": {
+    "name": "exスペシャルセット",
+    "release_order": 478
+  },
+  "sv2D": {
+    "name": "拡張パック クレイバースト",
+    "release_order": 477
+  },
+  "sv2P": {
+    "name": "拡張パック スノーハザード",
+    "release_order": 476
+  },
+  "svC": {
+    "name": "スターターセットex ピカチュウex&amp;パーモット",
+    "release_order": 475
+  },
+  "sv1a": {
+    "name": "強化拡張 トリプレットビート",
+    "release_order": 474
+  },
+  "svB": {
+    "name": "プレミアムトレーナーボックスex",
+    "release_order": 473
+  },
+  "svAW": {
+    "name": "スターターセットex クワッス&amp;ミミッキュex",
+    "release_order": 472
+  },
+  "svAL": {
+    "name": "スターターセットex ホゲータ&amp;デンリュウex",
+    "release_order": 471
+  },
+  "svAM": {
+    "name": "スターターセットex ニャオハ&amp;ルカリオex",
+    "release_order": 470
+  },
+  "sv1V": {
+    "name": "拡張パック バイオレットex",
+    "release_order": 469
+  },
+  "sv1S": {
+    "name": "拡張パック スカーレットex",
+    "release_order": 468
+  },
+  "s12a": {
+    "name": "ハイクラスパック VSTARユニバース",
+    "release_order": 467
+  },
+  "sO": {
+    "name": "スペシャルデッキセット リザードンVSTAR VSレックウザVMAX",
+    "release_order": 466
+  },
+  "s12": {
+    "name": "拡張パック パラダイムトリガー",
+    "release_order": 464
+  },
+  "s11a": {
+    "name": "強化拡張パック 白熱のアルカナ",
+    "release_order": 463
+  },
+  "sp6": {
+    "name": "VSTARスペシャルセット",
+    "release_order": 462
+  },
+  "sPD": {
+    "name": "VSTAR&amp;VMAXハイクラスデッキ デオキシス",
+    "release_order": 461
+  },
+  "sPZ": {
+    "name": "VSTAR&amp;VMAXハイクラスデッキ ゼラオラ",
+    "release_order": 460
+  },
+  "s11": {
+    "name": "拡張パック ロストアビス",
+    "release_order": 459
+  },
+  "s10b": {
+    "name": "強化拡張パック Pokémon GO",
+    "release_order": 456
+  },
+  "s10a": {
+    "name": "強化拡張パック ダークファンタズマ",
+    "release_order": 455
+  },
+  "s10P": {
+    "name": "拡張パック スペースジャグラー",
+    "release_order": 454
+  },
+  "s10D": {
+    "name": "拡張パック タイムゲイザー",
+    "release_order": 453
+  },
+  "sLD": {
+    "name": "スターターセットVSTAR ダークライ",
+    "release_order": 452
+  },
+  "sLL": {
+    "name": "スターターセットVSTAR ルカリオ",
+    "release_order": 451
+  },
+  "s9a": {
+    "name": "強化拡張パック バトルリージョン",
+    "release_order": 450
+  },
+  "sN": {
+    "name": "スタートデッキ100 コロコロコミックver.",
+    "release_order": 447
+  },
+  "sK": {
+    "name": "プレミアムトレーナーボックス VSTAR",
+    "release_order": 446
+  },
+  "s9": {
+    "name": "拡張パック スターバース",
+    "release_order": 445
+  },
+  "sI": {
+    "name": "スタートデッキ100",
+    "release_order": 444
+  },
+  "s8b": {
+    "name": "ハイクラスパック VMAXクライマックス",
+    "release_order": 443
+  },
+  "sJ": {
+    "name": "スペシャルデッキセット ザシアン·ザマゼンタVSムゲンダイナ",
+    "release_order": 442
+  },
+  "s8a": {
+    "name": "拡張パック 25th ANNIVERSARY COLLECTION",
+    "release_order": 441
+  },
+  "s8": {
+    "name": "拡張パック フュージョンアーツ",
+    "release_order": 440
+  },
+  "sp5": {
+    "name": "スペシャルカードセット ミュウツーV-UNION",
+    "release_order": 433
+  },
+  "sH": {
+    "name": "ファミリーポケモンカードゲーム",
+    "release_order": 431
+  },
+  "s7R": {
+    "name": "拡張パック 蒼空ストリーム",
+    "release_order": 430
+  },
+  "s7D": {
+    "name": "拡張パック 摩天パーフェクト",
+    "release_order": 429
+  },
+  "sDI": {
+    "name": "ハイクラスデッキ インテレオンVMAX",
+    "release_order": 426
+  },
+  "sGG": {
+    "name": "ハイクラスデッキ ゲンガーVMAX",
+    "release_order": 425
+  },
+  "sp4": {
+    "name": "VMAXスペシャルセット イーブイヒーローズ",
+    "release_order": 424
+  },
+  "s6a": {
+    "name": "強化拡張パック イーブイヒーローズ",
+    "release_order": 423
+  },
+  "sp3": {
+    "name": "ジャンボパックセット 白銀のランス&amp;漆黒のガイスト",
+    "release_order": 422
+  },
+  "s6K": {
+    "name": "拡張パック 漆黒のガイスト",
+    "release_order": 421
+  },
+  "s6H": {
+    "name": "拡張パック 白銀のランス",
+    "release_order": 420
+  },
+  "s5a": {
+    "name": "強化拡張パック 双璧のファイター",
+    "release_order": 419
+  },
+  "sF": {
+    "name": "プレミアムトレーナーボックス ICHIGEKI(RENGEKI)",
+    "release_order": 415
+  },
+  "s5R": {
+    "name": "拡張パック 連撃マスター",
+    "release_order": 417
+  },
+  "s5I": {
+    "name": "拡張パック 一撃マスター",
+    "release_order": 416
+  },
+  "sC2": {
+    "name": "VMAX対戦トリプルスターターセット",
+    "release_order": 413
+  },
+  "sEK": {
+    "name": "スターターセットVMAX カメックス",
+    "release_order": 412
+  },
+  "sEF": {
+    "name": "スターターセットVMAX フシギバナ",
+    "release_order": 411
+  },
+  "s4a": {
+    "name": "ハイクラスパック シャイニースターV",
+    "release_order": 406
+  },
+  "sp2": {
+    "name": "VMAXスペシャルセット",
+    "release_order": 405
+  },
+  "s4": {
+    "name": "拡張パック 仰天のボルテッカー",
+    "release_order": 403
+  },
+  "sD": {
+    "name": "Vスタートデッキ草 フシギバナ",
+    "release_order": 394
+  },
+  "s3a": {
+    "name": "強化拡張パック 伝説の鼓動",
+    "release_order": 393
+  },
+  "s3": {
+    "name": "拡張パック ムゲンゾーン",
+    "release_order": 392
+  },
+  "s2a": {
+    "name": "強化拡張パック 爆炎ウォーカー",
+    "release_order": 391
+  },
+  "sC": {
+    "name": "スターターセットVMAX リザードン",
+    "release_order": 389
+  },
+  "s2": {
+    "name": "拡張パック 反逆クラッシュ",
+    "release_order": 387
+  },
+  "s1a": {
+    "name": "強化拡張パック VMAXライジング",
+    "release_order": 386
+  },
+  "sp1": {
+    "name": "ザシアン+ザマゼンタBOX",
+    "release_order": 385
+  },
+  "sB": {
+    "name": "プレミアムトレーナーボックス ソード&amp;シールド",
+    "release_order": 384
+  },
+  "s1H": {
+    "name": "拡張パック シールド",
+    "release_order": 383
+  },
+  "s1W": {
+    "name": "拡張パック ソード",
+    "release_order": 382
+  },
+  "sA": {
+    "name": "スターターセットV草",
+    "release_order": 377
+  },
+  "sm12a": {
+    "name": "ハイクラスパック TAG TEAM GXタッグオールスターズ",
+    "release_order": 376
+  },
+  "sm12": {
+    "name": "拡張パック オルタージェネシス",
+    "release_order": 375
+  },
+  "sm11b": {
+    "name": "強化拡張パック ドリームリーグ",
+    "release_order": 374
+  },
+  "sm11a": {
+    "name": "強化拡張パック リミックスバウト",
+    "release_order": 372
+  },
+  "smM": {
+    "name": "スターターセットTAG TEAM GX エーフィ&amp;デオキシスGX",
+    "release_order": 369
+  },
+  "sm11": {
+    "name": "拡張パック ミラクルツイン",
+    "release_order": 368
+  },
+  "sm10b": {
+    "name": "強化拡張パック スカイレジェンド",
+    "release_order": 365
+  },
+  "smP2": {
+    "name": "ムービースペシャルパック 名探偵ピカチュウ",
+    "release_order": 364
+  },
+  "sm10a": {
+    "name": "強化拡張パック ジージーエンド",
+    "release_order": 362
+  },
+  "smL": {
+    "name": "ファミリーポケモンカードゲーム",
+    "release_order": 361
+  },
+  "smN": {
+    "name": "デッキビルドBOX TAG TEAM GX",
+    "release_order": 360
+  },
+  "sm10": {
+    "name": "拡張パック ダブルブレイズ",
+    "release_order": 359
+  },
+  "sm9b": {
+    "name": "強化拡張パック フルメタルウォール",
+    "release_order": 358
+  },
+  "smK": {
+    "name": "トレーナーバトルデッキ ニビシティジムのタケシ",
+    "release_order": 356
+  },
+  "sm9a": {
+    "name": "強化拡張パック ナイトユニゾン",
+    "release_order": 354
+  },
+  "smJ": {
+    "name": "プレミアムトレーナーボックス TAG TEAM GX",
+    "release_order": 352
+  },
+  "sm9": {
+    "name": "拡張パック タッグボルト",
+    "release_order": 351
+  },
+  "smI": {
+    "name": "スターターセット 炎のブースターGX",
+    "release_order": 346
+  },
+  "sm8b": {
+    "name": "ハイクラスパック GXウルトラシャイニー",
+    "release_order": 344
+  },
+  "sm8a": {
+    "name": "強化拡張パック ダークオーダー",
+    "release_order": 343
+  },
+  "sm8": {
+    "name": "拡張パック 超爆インパクト",
+    "release_order": 342
+  },
+  "sm7b": {
+    "name": "強化拡張パック フェアリーライズ",
+    "release_order": 341
+  },
+  "smH": {
+    "name": "GXスタートデッキ 草ラランテス",
+    "release_order": 331
+  },
+  "sm7a": {
+    "name": "強化拡張パック 迅雷スパーク",
+    "release_order": 329
+  },
+  "sm7": {
+    "name": "拡張パック 裂空のカリスマ",
+    "release_order": 328
+  },
+  "sm6b": {
+    "name": "強化拡張パック チャンピオンロード",
+    "release_order": 327
+  },
+  "sm6a": {
+    "name": "強化拡張パック ドラゴンストーム",
+    "release_order": 326
+  },
+  "sm6": {
+    "name": "拡張パック 禁断の光",
+    "release_order": 324
+  },
+  "sm5+": {
+    "name": "強化拡張パック ウルトラフォース",
+    "release_order": 320
+  },
+  "smF": {
+    "name": "プレミアムトレーナーボックス ウルトラサン·ウルトラムーン",
+    "release_order": 319
+  },
+  "sm5M": {
+    "name": "拡張パック ウルトラムーン",
+    "release_order": 318
+  },
+  "sm5S": {
+    "name": "拡張パック ウルトラサン",
+    "release_order": 317
+  },
+  "smE": {
+    "name": "スターターセット伝説 ソルガレオGX·ルナアーラGX",
+    "release_order": 314
+  },
+  "sm4+": {
+    "name": "ハイクラスパック GXバトルブースト",
+    "release_order": 312
+  },
+  "sm4A": {
+    "name": "拡張パック 超次元の暴獣",
+    "release_order": 311
+  },
+  "sm4S": {
+    "name": "拡張パック 覚醒の勇者",
+    "release_order": 310
+  },
+  "sm3+": {
+    "name": "強化拡張パック ひかる伝説",
+    "release_order": 309
+  },
+  "sm3N": {
+    "name": "拡張パック 光を喰らう闇",
+    "release_order": 305
+  },
+  "sm3H": {
+    "name": "拡張パック 闘う虹を見たか",
+    "release_order": 304
+  },
+  "XY": {
+    "name": "ポケモンカードゲーム ハイクラスパック THE BEST OF XY",
+    "release_order": 302
+  },
+  "smD": {
+    "name": "30枚デッキ対戦セット サトシVSロケット団",
+    "release_order": 301
+  },
+  "sm2+": {
+    "name": "強化拡張パック 新たなる試練の向こう",
+    "release_order": 300
+  },
+  "smC": {
+    "name": "スターターセット改造 カプ・ブルルGX",
+    "release_order": 296
+  },
+  "sm2L": {
+    "name": "拡張パック アローラの月光",
+    "release_order": 295
+  },
+  "sm2K": {
+    "name": "拡張パック キミを待つ島々",
+    "release_order": 294
+  },
+  "sm1M+": {
+    "name": "強化拡張パック サン&amp;ムーン",
+    "release_order": 287
+  },
+  "smP1": {
+    "name": "イワンコ全力デッキ",
+    "release_order": 285
+  },
+  "sm1M": {
+    "name": "拡張パック コレクションムーン",
+    "release_order": 280
+  },
+  "sm1S": {
+    "name": "拡張パック コレクションサン",
+    "release_order": 279
+  },
+  "smB": {
+    "name": "プレミアムトレーナーボックス",
+    "release_order": 278
+  },
+  "smA": {
+    "name": "スターターセット草 ジュナイパーGX",
+    "release_order": 275
+  },
+  "sm0": {
+    "name": "ピカチュウと新しい仲間たち",
+    "release_order": 274
+  },
+  "CP6": {
+    "name": "コンセプトパック ポケットモンスターカードゲーム 拡張パック 20th Anniversary",
+    "release_order": 270
+  },
+  "CP5": {
+    "name": "コンセプトパック 幻·伝説ドリームキラコレクション",
+    "release_order": 267
+  },
+  "XY11": {
+    "name": "拡張パック 爆熱の闘士",
+    "release_order": 263
+  },
+  "CP4": {
+    "name": "プレミアムチャンピオンパック EX×M×BREAK",
+    "release_order": 260
+  },
+  "XYH": {
+    "name": "メガバトルデッキ60 MタブンネEX",
+    "release_order": 259
+  },
+  "XYG": {
+    "name": "パーフェクトバトルデッキ60 ジガルデEX",
+    "release_order": 258
+  },
+  "XY10": {
+    "name": "拡張パック めざめる超王",
+    "release_order": 257
+  },
+  "20th": {
+    "name": "ポケットモンスターカードゲーム スターターパック",
+    "release_order": 256
+  },
+  "CP3": {
+    "name": "コンセプトパック ポケキュンコレクション",
+    "release_order": 254
+  },
+  "XY9": {
+    "name": "拡張パック 破天の怒り",
+    "release_order": 246
+  },
+  "XYF": {
+    "name": "BREAKコンボデッキ60 ゴルダックBREAK+パルキアEX",
+    "release_order": 244
+  },
+  "SNP": {
+    "name": "BREAK進化パック ライチュウBREAK",
+    "release_order": 242
+  },
+  "XY8": {
+    "name": "拡張パック 青い衝撃",
+    "release_order": 240
+  },
+  "MMB": {
+    "name": "MマスターデッキビルドBOX パワースタイル",
+    "release_order": 238
+  },
+  "XYE": {
+    "name": "対戦スタートセット30 エンブオーEX VSトゲキッスEX",
+    "release_order": 236
+  },
+  "CP2": {
+    "name": "コンセプトパック 伝説キラコレクション",
+    "release_order": 235
+  },
+  "XY7": {
+    "name": "拡張パック バンデットリング",
+    "release_order": 233
+  },
+  "XYD": {
+    "name": "メガバトルデッキ60 MレックウザEX",
+    "release_order": 231
+  },
+  "XY6": {
+    "name": "拡張パック エメラルドブレイク",
+    "release_order": 230
+  },
+  "CP1": {
+    "name": "コンセプトパック マグマ団VSアクア団 ダブルクライシス",
+    "release_order": 229
+  },
+  "XY5": {
+    "name": "拡張パック ガイアボルケーノ",
+    "release_order": 226
+  },
+  "XYC": {
+    "name": "スーパーレジェンドセット60 ゼルネアスEX·イベルタルEX",
+    "release_order": 224
+  },
+  "XYB": {
+    "name": "ハイパーメタルチェーンデッキ60 ディアルガEX+ギルガルドEX",
+    "release_order": 223
+  },
+  "XY4": {
+    "name": "拡張パック ファントムゲート",
+    "release_order": 222
+  },
+  "XY3": {
+    "name": "拡張パック ライジングフィスト",
+    "release_order": 216
+  },
+  "XYA": {
+    "name": "メガバトルデッキ60 MリザードンEX",
+    "release_order": 215
+  },
+  "XY2": {
+    "name": "拡張パック ワイルドブレイズ",
+    "release_order": 214
+  },
+  "Y30": {
+    "name": "イベルタルデッキ30",
+    "release_order": 213
+  },
+  "X30": {
+    "name": "ゼルネアスデッキ30",
+    "release_order": 212
+  },
+  "XY1": {
+    "name": "拡張パック コレクションX",
+    "release_order": 210
+  },
+  "MG": {
+    "name": "30枚デッキ対戦set ミュウツーVSゲノセクト",
+    "release_order": 205
+  },
+  "EBB": {
+    "name": "コンセプトパック EXバトルブースト",
+    "release_order": 204
+  },
+  "K+K": {
+    "name": "最強爆流コンボデッキ60 カメックス+キュレムEX",
+    "release_order": 203
+  },
+  "BW9": {
+    "name": "拡張パック メガロキャノン",
+    "release_order": 202
+  },
+  "SC": {
+    "name": "コンセプトパック シャイニーコレクション",
+    "release_order": 201
+  },
+  "BW8": {
+    "name": "拡張パック ラセンフォース",
+    "release_order": 199
+  },
+  "WAK": {
+    "name": "みんなのWAKUWAKUバトル",
+    "release_order": 198
+  },
+  "PBG": {
+    "name": "プラズマ団バトルギフトセット",
+    "release_order": 197
+  },
+  "BKW": {
+    "name": "バトル強化デッキ60 ホワイトキュレムEX",
+    "release_order": 196
+  },
+  "BKB": {
+    "name": "バトル強化デッキ60 ブラックキュレムEX",
+    "release_order": 195
+  },
+  "MDB": {
+    "name": "マスターデッキビルドBOX EX",
+    "release_order": 194
+  },
+  "PPD": {
+    "name": "プラズマ団パワードデッキ30",
+    "release_order": 193
+  },
+  "BW7": {
+    "name": "拡張パック プラズマゲイル",
+    "release_order": 192
+  },
+  "BW6": {
+    "name": "拡張パック フリーズボルト",
+    "release_order": 190
+  },
+  "KLD": {
+    "name": "バトル強化デッキ30 ケルディオ",
+    "release_order": 189
+  },
+  "HSZ": {
+    "name": "はじめてセット 全国図鑑版",
+    "release_order": 188
+  },
+  "GBR": {
+    "name": "ガブリアスデッキ30",
+    "release_order": 187
+  },
+  "SZD": {
+    "name": "サザンドラデッキ30",
+    "release_order": 186
+  },
+  "BW5": {
+    "name": "拡張パック リューズブラスト",
+    "release_order": 184
+  },
+  "DS": {
+    "name": "拡張パック ドラゴンセレクション",
+    "release_order": 183
+  },
+  "BW4": {
+    "name": "拡張パック ダークラッシュ",
+    "release_order": 182
+  },
+  "HSP": {
+    "name": "はじめてセットDX ピカチュウver.",
+    "release_order": 181
+  },
+  "BGS": {
+    "name": "バトルギフトセット ボルトロスVSトルネロス",
+    "release_order": 180
+  },
+  "BKZ": {
+    "name": "バトル強化デッキ60 ゼクロムEX",
+    "release_order": 179
+  },
+  "BKR": {
+    "name": "バトル強化デッキ60 レシラムEX",
+    "release_order": 178
+  },
+  "BW3": {
+    "name": "拡張パック サイコドライブ",
+    "release_order": 176
+  },
+  "BW2": {
+    "name": "拡張パック レッドコレクション",
+    "release_order": 174
+  },
+  "BTV": {
+    "name": "バトルテーマデッキ ビクティニ",
+    "release_order": 173
+  },
+  "BK": {
+    "name": "バトル強化デッキ ビリジオン",
+    "release_order": 170
+  },
+  "BW1": {
+    "name": "拡張パック ブラックコレクション",
+    "release_order": 168
+  },
+  "HS": {
+    "name": "はじめてセット(BW)",
+    "release_order": 164
+  },
+  "CS1": {
+    "name": "コレクションシート 旅立ちの仲間 ツタージャ",
+    "release_order": 161
+  },
+  "LL": {
+    "name": "強化パック ロストリンク",
+    "release_order": 159
+  },
+  "PW": {
+    "name": "ポケモンカードゲーム ピカチュウワールド",
+    "release_order": 157
+  },
+  "L3": {
+    "name": "拡張パック 頂上大激突",
+    "release_order": 156
+  },
+  "L2": {
+    "name": "拡張パック よみがえる伝説",
+    "release_order": 153
+  },
+  "E": {
+    "name": "ポケモンカードゲーム エキスパートデッキ リーフィアVSメタグロス +Online",
+    "release_order": 151
+  },
+  "B": {
+    "name": "ポケモンカードゲーム バトルスタートデッキ ドダイトス",
+    "release_order": 147
+  },
+  "L1": {
+    "name": "拡張パック ハートゴールドコレクション",
+    "release_order": 144
+  },
+  "M": {
+    "name": "映画公開記念ランダムパック2009",
+    "release_order": 143
+  },
+  "Pt": {
+    "name": "ギフトボックス",
+    "release_order": 129
+  },
+  "Pt5": {
+    "name": "拡張パック アルセウス光臨",
+    "release_order": 138
+  },
+  "PtR": {
+    "name": "コレクションパック レジギガスLV.X",
+    "release_order": 137
+  },
+  "PtM": {
+    "name": "コレクションパック ミュウツーLV.X",
+    "release_order": 136
+  },
+  "PtS": {
+    "name": "コレクションパック シェイミLV.X",
+    "release_order": 135
+  },
+  "Pt3": {
+    "name": "拡張パック フロンティアの鼓動",
+    "release_order": 133
+  },
+  "Pt2": {
+    "name": "拡張パック 時の果ての絆",
+    "release_order": 130
+  },
+  "DP1": {
+    "name": "拡張パック 時空の創造 ダイヤモンドコレクション",
+    "release_order": 101
+  },
+  "Pt1": {
+    "name": "拡張パック ギンガの覇道",
+    "release_order": 127
+  },
+  "DP6": {
+    "name": "拡張パック 破空の激闘",
+    "release_order": 122
+  },
+  "DP5": {
+    "name": "拡張パック 秘境の叫び",
+    "release_order": 119
+  },
+  "DP": {
+    "name": "エントリーパック'08",
+    "release_order": 115
+  },
+  "DP4": {
+    "name": "拡張パック 月光の追跡",
+    "release_order": 112
+  },
+  "10th": {
+    "name": "映画10周年記念プレミアムシート",
+    "release_order": 111
+  },
+  "DP3": {
+    "name": "拡張パック ひかる闇",
+    "release_order": 107
+  },
+  "DP2": {
+    "name": "拡張パック 湖の秘密",
+    "release_order": 104
+  },
+  "SV11B": {
+    "name": "SV11B",
+    "release_order": 0,
+    "release_date": "2025-06-06"
+  },
+  "SV11W": {
+    "name": "SV11W",
+    "release_order": 0,
+    "release_date": "2025-06-06"
+  },
+  "SV10": {
+    "name": "SV10",
+    "release_order": 0,
+    "release_date": "2025-04-18"
+  },
+  "SV9a": {
+    "name": "SV9a",
+    "release_order": 0,
+    "release_date": "2025-03-14"
+  },
+  "SV9": {
+    "name": "SV9",
+    "release_order": 0,
+    "release_date": "2025-01-24"
+  },
+  "SV8a": {
+    "name": "SV8a",
+    "release_order": 0,
+    "release_date": "2024-12-06"
+  },
+  "SV8": {
+    "name": "SV8",
+    "release_order": 0,
+    "release_date": "2024-10-18"
+  },
+  "SV7a": {
+    "name": "SV7a",
+    "release_order": 0,
+    "release_date": "2024-09-13"
+  },
+  "SV7": {
+    "name": "SV7",
+    "release_order": 0,
+    "release_date": "2024-07-19"
+  },
+  "SV6a": {
+    "name": "SV6a",
+    "release_order": 0,
+    "release_date": "2024-06-07"
+  },
+  "SV6": {
+    "name": "SV6",
+    "release_order": 0,
+    "release_date": "2024-04-26"
+  },
+  "SV5a": {
+    "name": "SV5a",
+    "release_order": 0,
+    "release_date": "2024-03-22"
+  },
+  "SV5K": {
+    "name": "SV5K",
+    "release_order": 0,
+    "release_date": "2024-01-26"
+  },
+  "SV5M": {
+    "name": "SV5M",
+    "release_order": 0,
+    "release_date": "2024-01-26"
+  },
+  "SVOM": {
+    "name": "SVOM",
+    "release_order": 0,
+    "release_date": "2025-02-21"
+  },
+  "SVOD": {
+    "name": "SVOD",
+    "release_order": 0,
+    "release_date": "2025-02-21"
+  },
+  "SVLN": {
+    "name": "SVLN",
+    "release_order": 0,
+    "release_date": "2024-08-30"
+  },
+  "SVLS": {
+    "name": "SVLS",
+    "release_order": 0,
+    "release_date": "2024-08-30"
+  },
+  "SVJL": {
+    "name": "SVJL",
+    "release_order": 0,
+    "release_date": "2024-05-17"
+  },
+  "SVJP": {
+    "name": "SVJP",
+    "release_order": 0,
+    "release_date": "2024-05-17"
+  },
+  "SVI": {
+    "name": "SVI",
+    "release_order": 0,
+    "release_date": "2024-03-08"
+  },
+  "SVHK": {
+    "name": "SVHK",
+    "release_order": 0,
+    "release_date": "2024-01-26"
+  },
+  "SVHM": {
+    "name": "SVHM",
+    "release_order": 0,
+    "release_date": "2024-01-26"
+  }
+}

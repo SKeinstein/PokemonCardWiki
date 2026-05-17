@@ -21,6 +21,7 @@ const FILES = [
     "cost_index.json",
     "official_class_index.json",
     "deck_index.json",
+    "pack_release_order.json",
 ];
 
 await mkdir(DEST_DIR, { recursive: true });
