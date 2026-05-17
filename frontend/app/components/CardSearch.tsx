@@ -329,7 +329,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             if (resistanceFilter && card.resistance?.type !== resistanceFilter) return false;
 
             // Retreat Cost Filter
-            if (retreatFilter && card.retreatCost !== parseInt(retreatFilter)) return false;
+            if (retreatFilter) {
+                if (retreatFilter === '4+') { if ((card.retreatCost ?? 0) < 4) return false; }
+                else if (card.retreatCost !== parseInt(retreatFilter)) return false;
+            }
 
             // Energy Cost Filter — at least one attack must satisfy ALL active constraints simultaneously
             if (costTypeFilter || costCountFilters.size > 0) {
@@ -687,59 +690,69 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             <HpRangeSlider value={hpRange} onChange={setHpRange} />
                         </div>
 
-                        <div className="grid grid-cols-1 gap-2 sm:gap-3">
-                            <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">にげる</label>
-                                <select
-                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${retreatFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                                    value={retreatFilter}
-                                    onChange={e => setRetreatFilter(e.target.value)}
-                                >
-                                    <option value="">すべて</option>
-                                    {[0, 1, 2, 3, 4, 5].map(n => <option key={n} value={n}>{n}個</option>)}
-                                </select>
+                        <div className="flex flex-col gap-1">
+                            <label className="text-xs text-gray-400 font-bold">にげる</label>
+                            <div className="flex flex-wrap gap-1.5 pt-1">
+                                {(['0','1','2','3','4+'] as const).map(v => (
+                                    <button
+                                        key={v}
+                                        type="button"
+                                        onClick={() => setRetreatFilter(retreatFilter === v ? '' : v)}
+                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                            retreatFilter === v
+                                                ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                        }`}
+                                    >
+                                        {v}
+                                    </button>
+                                ))}
                             </div>
                         </div>
-                        <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                            <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
-                                <select
-                                    className={`w-full px-3 py-2 min-h-[44px] text-base sm:text-sm border rounded text-white focus:outline-none focus:ring-1 focus:ring-emerald-500 touch-manipulation ${costTypeFilter ? 'border-violet-500 bg-violet-900/30' : 'border-gray-600 bg-gray-800'}`}
-                                    value={costTypeFilter}
-                                    onChange={e => setCostTypeFilter(e.target.value)}
-                                >
-                                    <option value="">すべて</option>
-                                    {['grass','fire','water','electric','psychic','fighting','dark','steel','none'].map(t => (
-                                        <option key={t} value={t}>{typeLabel(t)}</option>
-                                    ))}
-                                </select>
+                        <div className="flex flex-col gap-1">
+                            <label className="text-xs text-gray-400 font-bold">ワザのエネルギー</label>
+                            <div className="flex flex-wrap gap-1.5 pt-1">
+                                {['grass','fire','water','electric','psychic','fighting','dark','steel','none'].map(t => (
+                                    <button
+                                        key={t}
+                                        type="button"
+                                        onClick={() => setCostTypeFilter(costTypeFilter === t ? '' : t)}
+                                        className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                            costTypeFilter === t
+                                                ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                        }`}
+                                    >
+                                        {typeLabel(t)}
+                                    </button>
+                                ))}
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <label className="text-xs text-gray-400 font-bold">ワザコスト数</label>
-                                <div className="flex flex-wrap gap-1.5 pt-1">
-                                    {[0, 1, 2, 3, 4, 5].map(n => {
-                                        const checked = costCountFilters.has(n);
-                                        return (
-                                            <button
-                                                key={n}
-                                                type="button"
-                                                onClick={() => setCostCountFilters(prev => {
-                                                    const next = new Set(prev);
-                                                    if (next.has(n)) next.delete(n);
-                                                    else next.add(n);
-                                                    return next;
-                                                })}
-                                                className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
-                                                    checked
-                                                        ? 'bg-emerald-600 border-emerald-500 text-white'
-                                                        : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
-                                                }`}
-                                            >
-                                                {n === 5 ? '5+' : `${n}個`}
-                                            </button>
-                                        );
-                                    })}
-                                </div>
+                        </div>
+                        <div className="flex flex-col gap-1">
+                            <label className="text-xs text-gray-400 font-bold">ワザコスト数</label>
+                            <div className="flex flex-wrap gap-1.5 pt-1">
+                                {[0, 1, 2, 3, 4, 5].map(n => {
+                                    const checked = costCountFilters.has(n);
+                                    return (
+                                        <button
+                                            key={n}
+                                            type="button"
+                                            onClick={() => setCostCountFilters(prev => {
+                                                const next = new Set(prev);
+                                                if (next.has(n)) next.delete(n);
+                                                else next.add(n);
+                                                return next;
+                                            })}
+                                            className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${
+                                                checked
+                                                    ? 'bg-emerald-600 border-emerald-500 text-white'
+                                                    : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300'
+                                            }`}
+                                        >
+                                            {n === 5 ? '5+' : `${n}`}
+                                        </button>
+                                    );
+                                })}
                             </div>
                         </div>
 
