@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { MasterCard, CardVariant, OfficialClassIndex } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
-import { pickDefaultVariant } from '../../lib/variantUtils';
+import { pickDisplayVariant } from '../../lib/variantUtils';
 import { getOfficialTagColor } from '../../lib/tagColors';
 
 type DeckEntry = {
@@ -94,7 +94,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
 
     useEffect(() => {
         if (variants && variants.length > 0) {
-            setSelectedVariant(pickDefaultVariant(variants));
+            setSelectedVariant(pickDisplayVariant(variants));
             setMainImgError(false);
             setThumbErrors(new Set());
         }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useDeferredValue } from "react";
 import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex } from "../../lib/data";
-import { pickDefaultVariant } from "../../lib/variantUtils";
+import { pickDisplayVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
 import { OfficialClassGroup, OFFICIAL_CLASS_GROUPS } from "../../lib/tagColors";
 import CardModal from "./CardModal";
@@ -853,7 +853,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             >
                 {filteredCards.slice(0, displayLimit).map((card) => {
                     const cardVariants = variantsMap.get(card.master_id) || [];
-                    const displayVariant = pickDefaultVariant(cardVariants);
+                    const displayVariant = pickDisplayVariant(cardVariants);
                     const inComparison = comparisonCards.some(c => c.master_id === card.master_id);
                     const comparisonFull = comparisonCards.length >= 4 && !inComparison;
 
