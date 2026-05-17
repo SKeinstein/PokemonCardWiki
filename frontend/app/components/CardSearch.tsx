@@ -21,6 +21,17 @@ type Props = {
 const HP_MIN = 30;
 const HP_MAX = 380;
 
+const GENERIC_RULES = new Set([
+    "グッズは、自分の番に何枚でも使える。",
+    "サポートは、自分の番に1枚しか使えない。",
+    "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+    "スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。",
+    "ACE SPECのカードは、デッキに1枚しか入れられない。",
+    "ポケモンのどうぐは、自分のポケモンにつけて使う。ポケモン1匹につき1枚だけつけられ、つけたままにする。",
+    "サポーターは、自分の番に1枚だけ使える。使ったら、自分のバトル場の横におき、自分の番の終わりにトラッシュ。",
+    "スタジアムは、自分の番に1枚だけ、バトル場の横に出せる。別の名前のスタジアムが場に出たなら、このカードをトラッシュする。",
+]);
+
 
 export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
     const [query, setQuery] = useState("");
@@ -337,7 +348,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                 const effectText = [
                     ...card.abilities.map(a => `${a.name} ${a.text}`),
                     ...card.attacks.map(a => `${a.name} ${a.text}`),
-                    ...(card.rules || []),
+                    ...(card.rules || []).filter(r => !GENERIC_RULES.has(r)),
                 ].join(' ');
                 if (!evaluateQuery(effectText, deferredEffectQuery, isOrSearch)) return false;
             }
