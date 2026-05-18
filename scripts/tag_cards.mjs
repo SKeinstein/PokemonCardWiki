@@ -1071,6 +1071,25 @@ const TAG_RULES = [
   },
 ];
 
+// ─── Named card overrides ───────────────────────────────────────────────────
+// パターンマッチで拾い切れない特殊効果カードのタグを上書き・除外する。
+// 全 regex ルール適用後に最後に上書きされる。
+// 主にトレーナーズの独特な効果に使用（Phase 33 完了後に本格洗い出し予定）。
+const NAMED_OVERRIDES = {
+  // ハンディサーキュレーター: 「ワザを使った相手ポケモン」のエネを
+  //   相手ベンチへつけ替える効果 = フィールド干渉。自分のエネ加速ではない。
+  'ハンディサーキュレーター': {
+    add: ['フィールド干渉', 'フィールド干渉>エネルギーつけかえ'],
+    remove: ['エネ加速', 'エネ加速>つけかえ'],
+  },
+  // ヒートバーナー: 相手のどうぐ・特殊エネ・スタジアムをトラッシュ
+  //   = フィールド干渉。条件ダメージでもカード種別参照でもない。
+  'ヒートバーナー': {
+    add: ['フィールド干渉', 'フィールド干渉>どうぐトラッシュ', 'フィールド干渉>エネルギートラッシュ', 'フィールド干渉>スタジアムトラッシュ'],
+    remove: ['カード種別参照', 'カード種別参照>特殊エネルギー', '条件ダメージ', '条件ダメージ>エネルギー消費：手札'],
+  },
+};
+
 
 // ─── Tag assignment ───────────────────────────────────────────────────────────
 function assignTags(c) {
@@ -1087,6 +1106,13 @@ function assignTags(c) {
     if (rule.condition(all, atk, abl, name, rul, c)) {
       add(...[rule.tags].flat());
     }
+  }
+
+  // Apply named overrides last (operates AFTER all regex matches)
+  const ov = NAMED_OVERRIDES[c.name];
+  if (ov) {
+    ov.remove?.forEach(t => tags.delete(t));
+    ov.add?.forEach(t => tags.add(t));
   }
 
   return [...tags].sort();
