@@ -84,7 +84,8 @@ export const DEFAULT_CUSTOM_TAG_TOKEN: CustomTagToken = {
 export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
     {
         label: 'ダメージ系（攻撃）',
-        parents: ['ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動', 'ワザを受けたとき', '番の終わり'],
+        // Phase 33-J: `攻撃` 親タグを先頭に昇格。配下サブ (攻撃>常時 等) は親一致で同グループに紐付く。
+        parents: ['攻撃', 'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動'],
         token: {
             chipSelected: 'bg-rose-600 border-rose-500 text-white',
             chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
@@ -103,7 +104,8 @@ export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
     },
     {
         label: 'ダメージ系（防御・耐性）',
-        parents: ['受けるダメージ軽減', '受けるダメージ無効', '耐性'],
+        // Phase 33-J: `防御` 親タグを先頭に昇格。
+        parents: ['防御', '受けるダメージ軽減', '受けるダメージ無効', '耐性'],
         token: {
             chipSelected: 'bg-cyan-600 border-cyan-500 text-white',
             chipExpanded: 'bg-cyan-900/70 border-cyan-500 text-cyan-100 font-bold',
@@ -120,25 +122,9 @@ export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
             chipDisplayParent: 'text-cyan-400/70',
         },
     },
-    {
-        label: 'タイミング（共通）',
-        parents: ['ワザ使用時', 'トリガー型', '常時'],
-        token: {
-            chipSelected: 'bg-amber-600 border-amber-500 text-white',
-            chipExpanded: 'bg-amber-900/70 border-amber-500 text-amber-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-300',
-            expandSelected: 'bg-amber-700 border-amber-500 text-amber-200',
-            expandExpanded: 'bg-amber-700 border-amber-500 text-amber-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-amber-500 hover:text-amber-300',
-            ring: 'ring-2 ring-amber-400/90 shadow-[0_0_12px_rgba(251,191,36,0.55)]',
-            subtagBorder: 'border-amber-400/70',
-            subtagLabel: 'text-amber-400/80',
-            subtagSelected: 'bg-amber-600 border-amber-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-amber-900/50 text-gray-300 hover:border-amber-500 hover:text-amber-300',
-            chipDisplay: 'bg-amber-900/60 border-amber-700 text-amber-200',
-            chipDisplayParent: 'text-amber-400/70',
-        },
-    },
+    // Phase 33-J: タイミング（共通）グループは廃止。
+    //   旧 ワザ使用時 / トリガー型 / 常時 / ワザを受けたとき / 番の終わり タグは
+    //   `攻撃>X` / `防御>X` に分割され、上記 ダメージ系（攻撃 / 防御）配下のサブとして表示される。
 ];
 
 export const OTHER_CUSTOM_TAG_GROUP_LABEL = 'その他';

@@ -1083,10 +1083,11 @@ const TAG_RULES = [
     condition: (all) => /ダメカンを.{1,30}のせ替える/.test(all),
   },
 
-  // ── §Phase33-4  軸④独立親タグ「ワザを受けたとき」(反射) ──
-  // 反射カードは「ダメカン直置き」+「ワザを受けたとき」の2タグ並列付与
+  // ── §Phase33-4  軸④独立タグ「ワザを受けたとき」(反射) ──
+  // 反射カードは「ダメカン直置き」+「攻撃>ワザを受けたとき」の2タグ並列付与
+  // (Phase 33-J: ワザを受けたとき は文脈的に常に攻撃帰属なので 攻撃> プレフィックスで固定)
   {
-    tags: ['ダメカン直置き', 'ワザを受けたとき'],
+    tags: ['ダメカン直置き', '攻撃>ワザを受けたとき'],
     condition: (all) => HANSHA_PAT.test(all),
   },
 ];
@@ -1127,19 +1128,22 @@ const NAMED_OVERRIDES = {
 };
 
 
-// ─── Phase 33-F  軸④ サブタグ derivation ──────────────────────────────────
-// 軸②値 (ワザダメージ/ダメカン直置き/与ダメージ修飾/受けるダメージ軽減・無効/
-// ダメカン移動/耐性) が付いているカードに対して、軸④ (タイミング) を並列付与する。
-// 設計: vault/10_Projects/Active/Phase33_damage_system_redesign.md §11-3
-//   - ワザ使用時>持続効果 (atk に 「次の(相手|自分)の番、〜される/受けない/にげられない/になる」)
-//   - 番の終わり (atk/abl/rul に 「(自分|相手|お互い)?の?番の終わり」、自分/相手は統合)
-//   - トリガー型>起動型 (abl に 「自分の番に\d*回」)
-//   - トリガー型>きぜつ (abl/atk/rul に 「きぜつしたとき」)
-//   - トリガー型>その他 (進化/ベンチに出した/場に出した/トラッシュされた/出すたび 等)
-//   - 常時>無条件 / 常時>条件付き (上記いずれもマッチしない abl/rul ベースの passive abilities)
-const AXIS2_PARENT_TAGS = new Set([
-  'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾',
-  '受けるダメージ軽減', '受けるダメージ無効', 'ダメカン移動', '耐性',
+// ─── Phase 33-J  メタカテゴリ (攻撃 / 防御) + 軸④ サブタグ derivation ──────
+// Phase 33-J: 旧 §Phase33-F の「軸②値があれば一律 軸④サブ付与」を廃止し、
+//   カードの軸② parent 集合から `攻撃` / `防御` 親タグを直接付与する。
+//   軸④ (常時/番の終わり/トリガー型/ワザ使用時>持続効果) は source block
+//   (atk / abl / rul) と passive 内容のキーワード辞書で 攻撃 / 防御 を attribute する。
+//
+// 設計: vault/10_Projects/Active/Phase33_damage_system_redesign.md §Phase33-J 残課題
+//   - 出力タグ: `攻撃>常時>{無条件|条件付き}` / `防御>常時>{無条件|条件付き}` 等
+//   - 「常時」「番の終わり」等の bare タグは全廃止
+//   - 「攻撃」「防御」自体を親タグに昇格
+
+const ATTACK_PARENTS = new Set([
+  'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動',
+]);
+const DEFENSE_PARENTS = new Set([
+  '受けるダメージ軽減', '受けるダメージ無効', '耐性',
 ]);
 // 持続効果 (atk-based): 「次の○の番」直後が「、」等で続き、「番の終わり」型は除外
 const PERSIST_PAT = /次の(?:相手|自分)の番(?!の終わり)/;
@@ -1157,52 +1161,130 @@ const PASSIVE_DISQUALIFIER_PAT =
 const CONDITIONAL_PAT =
   /(?:「[^」]+のポケモン」|特性を持つ|「ポケモンex」|「ポケモンV」|特殊エネルギーがついている|「テラスタル」|「\d+」以上のワザ|出して使ったとき)/;
 
+// ブロック内容から攻撃寄り/防御寄りを判定する keyword 辞書 (Phase 33-J)
+//   両方ヒット → 'both' (両方付与), 片方のみ → 'attack' or 'defense', どちらも無し → null
+const ATTACK_CONTENT_PAT =
+  /(?:与えるダメージ|与ダメ|ダメカン.{0,15}のせる|ダメカン.{0,15}のせ替|ベンチポケモン.{0,30}ダメージ|ダメージ追加|ダメージ「?[+＋]\d+|×\d+ダメージ|の数[×x]\d+|抵抗力を計算しない|弱点を計算しない|弱点・抵抗力を計算しない|ダメージは.{0,5}「\d+」になる)/;
+const DEFENSE_CONTENT_PAT =
+  /(?:受ける.{0,5}ワザのダメージ|(?:受ける|使う)ワザのダメージは「-\d+」|受けるダメージ.{0,10}少なく|受けるダメージ.{0,10}「-\d+」|ダメージ(?:や効果)?を受けない|ワザの効果を受けない|特殊状態にならな[いず]|.{0,5}にならな[いず]|効果を受けない|ダメカン.{0,5}(?:取り除く|を取り除く|を取り除いて|を取りのぞく|を取りのぞいて)|HPを回復)/;
+
+function classifyBlockSide(text) {
+  if (!text) return null;
+  const hasAtk = ATTACK_CONTENT_PAT.test(text);
+  const hasDef = DEFENSE_CONTENT_PAT.test(text);
+  if (hasAtk && hasDef) return 'both';
+  if (hasAtk) return 'attack';
+  if (hasDef) return 'defense';
+  return null;
+}
+
 function deriveAxis4Tags(c, tags) {
-  if (![...tags].some(t => AXIS2_PARENT_TAGS.has(t))) return;
+  const hasAttack =
+    [...tags].some(t => ATTACK_PARENTS.has(t)) ||
+    tags.has('攻撃>ワザを受けたとき'); // §Phase33-4 反射
+  const hasDefense = [...tags].some(t => DEFENSE_PARENTS.has(t));
+  if (!hasAttack && !hasDefense) return;
+
+  if (hasAttack) tags.add('攻撃');
+  if (hasDefense) tags.add('防御');
 
   const atkRaw = attackText(c);
   const ablRaw = abilityText(c);
   const rulRaw = rulesText(c);
 
-  // (1) 番の終わり (自分/相手 統合)
-  if (END_OF_TURN_PAT.test(atkRaw + '\n' + ablRaw + '\n' + rulRaw)) {
-    tags.add('番の終わり');
+  // attribute(blockHits) → Set of {'攻撃' | '防御'} 帰属サイド
+  //   blockHits = { atk: bool, abl: bool, rul: bool } 各 source block で trigger 検出されたか
+  function attribute(blockHits) {
+    const sides = new Set();
+    // atk hit: ブロック内容で判定。攻撃キーワードのみ→攻撃、防御キーワードのみ→防御、両方→両方
+    if (blockHits.atk) {
+      const side = classifyBlockSide(atkRaw);
+      if (side === 'attack' || side === 'both') sides.add('攻撃');
+      if (side === 'defense' || side === 'both') sides.add('防御');
+      // fallback: ブロックキーワードでは判定できなくてもカードに parent があるなら付与
+      if (!side) {
+        if (hasAttack) sides.add('攻撃');
+        if (hasDefense) sides.add('防御');
+      }
+    }
+    if (blockHits.abl) {
+      const side = classifyBlockSide(ablRaw);
+      if (hasAttack && hasDefense) {
+        if (side === 'attack' || side === 'both') sides.add('攻撃');
+        if (side === 'defense' || side === 'both') sides.add('防御');
+        if (!side) {
+          sides.add('攻撃');
+          sides.add('防御');
+        }
+      } else if (hasAttack) sides.add('攻撃');
+      else if (hasDefense) sides.add('防御');
+    }
+    if (blockHits.rul) {
+      const side = classifyBlockSide(rulRaw);
+      if (hasAttack && hasDefense) {
+        if (side === 'attack' || side === 'both') sides.add('攻撃');
+        if (side === 'defense' || side === 'both') sides.add('防御');
+        if (!side) {
+          sides.add('攻撃');
+          sides.add('防御');
+        }
+      } else if (hasAttack) sides.add('攻撃');
+      else if (hasDefense) sides.add('防御');
+    }
+    return sides;
   }
 
-  // (2) ワザ使用時>持続効果 (atk-based; 番の終わり 型は除外)
+  // (1) 番の終わり (自分/相手 統合)
+  const endHits = {
+    atk: END_OF_TURN_PAT.test(atkRaw),
+    abl: END_OF_TURN_PAT.test(ablRaw),
+    rul: END_OF_TURN_PAT.test(rulRaw),
+  };
+  if (endHits.atk || endHits.abl || endHits.rul) {
+    for (const side of attribute(endHits)) {
+      tags.add(`${side}>番の終わり`);
+    }
+  }
+
+  // (2) ワザ使用時>持続効果 (atk-only; 番の終わり 型は除外)
   if (PERSIST_PAT.test(atkRaw)) {
-    tags.add('ワザ使用時>持続効果');
+    for (const side of attribute({ atk: true, abl: false, rul: false })) {
+      tags.add(`${side}>ワザ使用時>持続効果`);
+    }
   }
 
   // (3) トリガー型 (優先順位: 起動型 > きぜつ > その他)
-  //   起動型: abl-only (「自分の番に1回」は実データ上ほぼ全件 abl 内)
-  //   きぜつ: atk + abl のみ (rul 持ち「ポケモンexがきぜつしたとき」ボイラープレートを除外。
-  //          設計 §9-10 5-C 「純粋数 7カード」)
-  //   その他: abl + rul (危ない廃墟 等の rul ベースの「出すたび」を捕捉)
   let trigger = null;
+  const trigHits = { atk: false, abl: false, rul: false };
   if (TRIGGER_ACTIVATE_PAT.test(ablRaw)) {
     trigger = '起動型';
+    trigHits.abl = true;
   } else if (TRIGGER_KOED_PAT.test(atkRaw + '\n' + ablRaw)) {
     trigger = 'きぜつ';
+    if (TRIGGER_KOED_PAT.test(atkRaw)) trigHits.atk = true;
+    if (TRIGGER_KOED_PAT.test(ablRaw)) trigHits.abl = true;
   } else if (TRIGGER_OTHER_PAT.test(ablRaw + '\n' + rulRaw)) {
     trigger = 'その他';
+    if (TRIGGER_OTHER_PAT.test(ablRaw)) trigHits.abl = true;
+    if (TRIGGER_OTHER_PAT.test(rulRaw)) trigHits.rul = true;
   }
   if (trigger) {
-    tags.add('トリガー型');
-    tags.add(`トリガー型>${trigger}`);
+    for (const side of attribute(trigHits)) {
+      tags.add(`${side}>トリガー型`);
+      tags.add(`${side}>トリガー型>${trigger}`);
+    }
   }
 
   // (4) 常時 (abl/rul ベースの passive — トリガー/番の終わり/受けたとき が含まれない)
-  //   abl と rul は独立に判定。どちらかが passive なら 常時 を付与。
   const ablIsPassive = ablRaw && !PASSIVE_DISQUALIFIER_PAT.test(ablRaw);
   const rulIsPassive = rulRaw && !PASSIVE_DISQUALIFIER_PAT.test(rulRaw);
   if (ablIsPassive || rulIsPassive) {
-    tags.add('常時');
+    const passiveHits = { atk: false, abl: !!ablIsPassive, rul: !!rulIsPassive };
     const checkSrc = (ablIsPassive ? ablRaw : '') + '\n' + (rulIsPassive ? rulRaw : '');
-    if (CONDITIONAL_PAT.test(checkSrc)) {
-      tags.add('常時>条件付き');
-    } else {
-      tags.add('常時>無条件');
+    const subkey = CONDITIONAL_PAT.test(checkSrc) ? '条件付き' : '無条件';
+    for (const side of attribute(passiveHits)) {
+      tags.add(`${side}>常時`);
+      tags.add(`${side}>常時>${subkey}`);
     }
   }
 }
@@ -1268,19 +1350,26 @@ for (const { name, tags } of result) {
 const GROUP_ORDER = [
   'ポケモンいれかえ', 'ポケモンいれかえ>自分', 'ポケモンいれかえ>味方', 'ポケモンいれかえ>相手:C-04型', 'ポケモンいれかえ>相手:C-05型', 'ポケモンいれかえ>バウンス',
   '手札干渉', '手札干渉>手札を見る', '手札干渉>トラッシュ', '手札干渉>山札戻し',
-  // ── Phase 33 新軸② 親タグ群（判定ロジックは 33-B〜F で実装） ──
+  // ── Phase 33-J メタカテゴリ親タグ「攻撃」(軸②攻撃側 + 軸④攻撃帰属サブ) ──
+  '攻撃',
   'ワザダメージ', 'ワザダメージ>ベンチ', 'ワザダメージ>全体スプレッド',
   'ダメカン直置き', 'ダメカン直置き>ベンチ',
   '与ダメージ修飾', '与ダメージ修飾>抵抗無視', '与ダメージ修飾>弱点抵抗無視', '与ダメージ修飾>弱点無視',
   '与ダメージ修飾>与ダメージ増加', '与ダメージ修飾>被ダメージ増加', '与ダメージ修飾>条件付き加算',
-  '受けるダメージ軽減', '受けるダメージ無効', 'ダメカン移動',
-  // ── Phase 33 軸④独立親タグ ──
-  'ワザを受けたとき',
-  'ワザ使用時>持続効果',
-  '番の終わり',
-  'トリガー型', 'トリガー型>起動型', 'トリガー型>きぜつ', 'トリガー型>その他',
-  '常時', '常時>無条件', '常時>条件付き',
+  'ダメカン移動',
+  '攻撃>ワザを受けたとき',
+  '攻撃>ワザ使用時>持続効果',
+  '攻撃>番の終わり',
+  '攻撃>トリガー型', '攻撃>トリガー型>起動型', '攻撃>トリガー型>きぜつ', '攻撃>トリガー型>その他',
+  '攻撃>常時', '攻撃>常時>無条件', '攻撃>常時>条件付き',
+  // ── Phase 33-J メタカテゴリ親タグ「防御」(軸②防御側 + 耐性 + 軸④防御帰属サブ) ──
+  '防御',
+  '受けるダメージ軽減', '受けるダメージ無効',
   '耐性', '耐性>ワザの効果', '耐性>グッズの効果', '耐性>サポートの効果', '耐性>ベンチ効果', '耐性>特殊状態',
+  '防御>ワザ使用時>持続効果',
+  '防御>番の終わり',
+  '防御>トリガー型', '防御>トリガー型>起動型', '防御>トリガー型>きぜつ', '防御>トリガー型>その他',
+  '防御>常時', '防御>常時>無条件', '防御>常時>条件付き',
   'エネ加速', 'エネ加速>山札', 'エネ加速>手札', 'エネ加速>トラッシュ', 'エネ加速>つけかえ',
   'ドロー', 'ドロー>そのまま', 'ドロー>手札トラッシュ後', 'ドロー>シャッフル後', 'ドロー>固定枚数まで',
   'サーチ', 'サーチ>ポケモン', 'サーチ>サポート', 'サーチ>グッズ', 'サーチ>スタジアム', 'サーチ>ポケモンのどうぐ', 'サーチ>エネルギー', 'サーチ>好きなカード',
@@ -1336,21 +1425,29 @@ const SECTION_MAP = {
   'カード種別参照>ポケモンのどうぐ': '§B-28', 'カード種別参照>特殊エネルギー': '§B-28', 'カード種別参照>スタジアム': '§B-28',
   'タイプ変更':         'D-4', 'ワザコピー': 'D-4',
   '退化':               'D-4',
+  '攻撃': '§Phase33-J',
   'ワザダメージ': '§Phase33', 'ワザダメージ>ベンチ': '§Phase33', 'ワザダメージ>全体スプレッド': '§Phase33',
   'ダメカン直置き': '§Phase33', 'ダメカン直置き>ベンチ': '§Phase33',
   '与ダメージ修飾': '§Phase33',
   '与ダメージ修飾>抵抗無視': '§Phase33', '与ダメージ修飾>弱点抵抗無視': '§Phase33', '与ダメージ修飾>弱点無視': '§Phase33',
   '与ダメージ修飾>与ダメージ増加': '§Phase33', '与ダメージ修飾>被ダメージ増加': '§Phase33',
   '与ダメージ修飾>条件付き加算': '§Phase33',
+  'ダメカン移動': '§Phase33',
+  '攻撃>ワザを受けたとき': '§Phase33-J',
+  '攻撃>ワザ使用時>持続効果': '§Phase33-J',
+  '攻撃>番の終わり': '§Phase33-J',
+  '攻撃>トリガー型': '§Phase33-J', '攻撃>トリガー型>起動型': '§Phase33-J',
+  '攻撃>トリガー型>きぜつ': '§Phase33-J', '攻撃>トリガー型>その他': '§Phase33-J',
+  '攻撃>常時': '§Phase33-J', '攻撃>常時>無条件': '§Phase33-J', '攻撃>常時>条件付き': '§Phase33-J',
+  '防御': '§Phase33-J',
   '受けるダメージ軽減': '§Phase33', '受けるダメージ無効': '§Phase33',
-  'ダメカン移動': '§Phase33', 'ワザを受けたとき': '§Phase33',
-  'ワザ使用時': '§Phase33', 'ワザ使用時>持続効果': '§Phase33',
-  '番の終わり': '§Phase33',
-  'トリガー型': '§Phase33', 'トリガー型>起動型': '§Phase33',
-  'トリガー型>きぜつ': '§Phase33', 'トリガー型>その他': '§Phase33',
-  '常時': '§Phase33', '常時>無条件': '§Phase33', '常時>条件付き': '§Phase33',
   '耐性': '§Phase33', '耐性>ワザの効果': '§Phase33', '耐性>グッズの効果': '§Phase33',
   '耐性>サポートの効果': '§Phase33', '耐性>ベンチ効果': '§Phase33', '耐性>特殊状態': '§Phase33',
+  '防御>ワザ使用時>持続効果': '§Phase33-J',
+  '防御>番の終わり': '§Phase33-J',
+  '防御>トリガー型': '§Phase33-J', '防御>トリガー型>起動型': '§Phase33-J',
+  '防御>トリガー型>きぜつ': '§Phase33-J', '防御>トリガー型>その他': '§Phase33-J',
+  '防御>常時': '§Phase33-J', '防御>常時>無条件': '§Phase33-J', '防御>常時>条件付き': '§Phase33-J',
 };
 
 const taggedCount = result.filter(c => c.tags.length > 0).length;
