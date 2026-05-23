@@ -4,7 +4,13 @@ import { useState, useEffect, useMemo, useDeferredValue } from "react";
 import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex } from "../../lib/data";
 import { pickDisplayVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
-import { OfficialClassGroup, OFFICIAL_CLASS_GROUPS } from "../../lib/tagColors";
+import {
+    OFFICIAL_CLASS_GROUPS,
+    CUSTOM_TAG_GROUPS,
+    OTHER_CUSTOM_TAG_GROUP_LABEL,
+    getCustomTagToken,
+    type CustomTagToken,
+} from "../../lib/tagColors";
 import CardModal from "./CardModal";
 import ComparisonTray from "./ComparisonTray";
 import ComparisonModal from "./ComparisonModal";
@@ -239,6 +245,23 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         [tagHierarchy]
     );
 
+    // Group parents by axis (Phase 33 視覚グループ化): defined groups first in declaration
+    // order, then "その他" with everything else. Empty groups (no usable parents) are skipped.
+    const customTagSections = useMemo(() => {
+        const parentSet = new Set(customTagParents);
+        const claimed = new Set<string>();
+        const sections: { label: string; parents: string[] }[] = [];
+        for (const group of CUSTOM_TAG_GROUPS) {
+            const matched = group.parents.filter(p => parentSet.has(p));
+            if (matched.length === 0) continue;
+            matched.forEach(p => claimed.add(p));
+            sections.push({ label: group.label, parents: matched });
+        }
+        const others = customTagParents.filter(p => !claimed.has(p));
+        if (others.length > 0) sections.push({ label: OTHER_CUSTOM_TAG_GROUP_LABEL, parents: others });
+        return sections;
+    }, [customTagParents]);
+
     // Check if a card matches a given tag (parent = prefix match, subtag = exact)
     const cardMatchesTag = (masterId: string, tag: string): boolean => {
         const tags = tagCardMap.get(masterId);
@@ -417,7 +440,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     }, [masterCards]);
 
     // Render a parent tag chip + expand button (parent name click = toggle expand, never filter)
-    const renderParentChip = (parent: string) => {
+    const renderParentChip = (parent: string, token: CustomTagToken) => {
         const children = tagHierarchy.get(parent) || [];
         const isSelected = selectedTags.has(parent);
         const isExpanded = expandedParents.has(parent);
@@ -426,7 +449,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         return (
             <div
                 key={parent}
-                className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? 'ring-2 ring-violet-400/90 shadow-[0_0_12px_rgba(167,139,250,0.55)]' : ''}`}
+                className={`inline-flex rounded-full overflow-hidden transition ${isExpanded ? token.ring : ''}`}
             >
                 <button
                     onClick={() => hasChildren ? toggleExpand(parent) : toggleTag(parent)}
@@ -434,10 +457,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         hasChildren ? 'rounded-l-full' : 'rounded-full border-r'
                     } ${
                         isSelected && !hasChildren
-                            ? 'bg-violet-600 border-violet-500 text-white'
+                            ? token.chipSelected
                             : isExpanded
-                                ? 'bg-violet-900/70 border-violet-500 text-violet-100 font-bold'
-                                : 'bg-gray-800 border-gray-600 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                ? token.chipExpanded
+                                : token.chipDefault
                     }`}
                 >
                     {parent}
@@ -448,10 +471,10 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         aria-label={isExpanded ? `${parent} を閉じる` : `${parent} を開く`}
                         className={`min-w-[44px] min-h-[44px] flex items-center justify-center text-xs border-y border-r rounded-r-full transition touch-manipulation ${
                             isSelected
-                                ? 'bg-violet-700 border-violet-500 text-violet-200'
+                                ? token.expandSelected
                                 : isExpanded
-                                    ? 'bg-violet-700 border-violet-500 text-violet-100'
-                                    : 'bg-gray-700 border-gray-600 text-gray-400 hover:border-violet-500 hover:text-violet-300'
+                                    ? token.expandExpanded
+                                    : token.expandDefault
                         }`}
                     >
                         {isExpanded ? '▲' : '▶'}
@@ -461,14 +484,14 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         );
     };
 
-    const renderSubtagRow = (parent: string) => {
+    const renderSubtagRow = (parent: string, token: CustomTagToken) => {
         const children = tagHierarchy.get(parent);
         if (!children || children.length === 0) return null;
         if (!expandedParents.has(parent)) return null;
         return (
-            <div key={parent} className="pl-3 border-l-2 border-violet-400/70">
+            <div key={parent} className={`pl-3 border-l-2 ${token.subtagBorder}`}>
                 <div className="flex flex-wrap items-center gap-1.5">
-                    <span className="text-sm sm:text-xs text-violet-400/80 font-bold whitespace-nowrap">{parent}:</span>
+                    <span className={`text-sm sm:text-xs font-bold whitespace-nowrap ${token.subtagLabel}`}>{parent}:</span>
                     {[...children].sort((a, b) => a.localeCompare(b, 'ja')).map(child => {
                         const childLabel = child.substring(parent.length + 1);
                         const isChildSelected = selectedTags.has(child);
@@ -477,9 +500,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                 key={child}
                                 onClick={() => toggleTag(child)}
                                 className={`px-2.5 py-2 min-h-[44px] min-w-[44px] text-sm sm:text-xs rounded-full border transition touch-manipulation ${
-                                    isChildSelected
-                                        ? 'bg-violet-600 border-violet-500 text-white'
-                                        : 'bg-gray-800/80 border-violet-900/50 text-gray-300 hover:border-violet-500 hover:text-violet-300'
+                                    isChildSelected ? token.subtagSelected : token.subtagDefault
                                 }`}
                             >
                                 {childLabel}
@@ -828,16 +849,20 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                         {selectedTags.size > 0 && (
                             <div className="flex flex-wrap gap-1.5 items-center pb-2 border-b border-violet-900/50">
                                 <span className="text-xs text-gray-400 font-bold whitespace-nowrap">選択中:</span>
-                                {Array.from(selectedTags).map(tag => (
-                                    <button
-                                        key={tag}
-                                        onClick={() => toggleTag(tag)}
-                                        className="flex items-center gap-1 px-2.5 py-2 min-h-[44px] min-w-[44px] bg-violet-600 border border-violet-500 text-white text-sm sm:text-xs rounded-full hover:bg-violet-700 transition touch-manipulation"
-                                    >
-                                        <span>{tag.includes('>') ? tag.replace('>', ' › ') : tag}</span>
-                                        <span className="text-violet-200 font-bold">×</span>
-                                    </button>
-                                ))}
+                                {Array.from(selectedTags).map(tag => {
+                                    const parent = tag.indexOf('>') >= 0 ? tag.substring(0, tag.indexOf('>')) : tag;
+                                    const token = getCustomTagToken(parent);
+                                    return (
+                                        <button
+                                            key={tag}
+                                            onClick={() => toggleTag(tag)}
+                                            className={`flex items-center gap-1 px-2.5 py-2 min-h-[44px] min-w-[44px] border text-sm sm:text-xs rounded-full transition touch-manipulation ${token.chipSelected}`}
+                                        >
+                                            <span>{tag.includes('>') ? tag.replace('>', ' › ') : tag}</span>
+                                            <span className="font-bold opacity-80">×</span>
+                                        </button>
+                                    );
+                                })}
                                 <button
                                     onClick={() => setSelectedTags(new Set())}
                                     className="text-xs text-violet-400 hover:text-violet-200 underline ml-1 py-2 min-h-[44px] px-3"
@@ -847,16 +872,19 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                             </div>
                         )}
 
-                        {/* Tag list — outer sticky header is already scrollable on mobile */}
-                        <div className="space-y-3 pr-0.5">
-
-                            <div className="flex flex-wrap gap-1.5">
-                                {customTagParents.map(parent => renderParentChip(parent))}
-                            </div>
-
-                            {/* Sub-tag rows for expanded parents (custom side only) */}
-                            {customTagParents.map(parent => renderSubtagRow(parent))}
-
+                        {/* Tag list — Phase 33 視覚グループ化: section per axis */}
+                        <div className="space-y-4 pr-0.5">
+                            {customTagSections.map(section => (
+                                <div key={section.label} className="space-y-2">
+                                    <div className="text-xs text-gray-400 font-bold uppercase tracking-wider pb-1 border-b border-gray-800/70">
+                                        {section.label}
+                                    </div>
+                                    <div className="flex flex-wrap gap-1.5">
+                                        {section.parents.map(parent => renderParentChip(parent, getCustomTagToken(parent)))}
+                                    </div>
+                                    {section.parents.map(parent => renderSubtagRow(parent, getCustomTagToken(parent)))}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )}
