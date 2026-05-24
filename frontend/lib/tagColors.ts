@@ -84,8 +84,17 @@ export const DEFAULT_CUSTOM_TAG_TOKEN: CustomTagToken = {
 export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
     {
         label: 'ダメージ系（攻撃）',
-        // Phase 33-J: `攻撃` 親タグを先頭に昇格。配下サブ (攻撃>常時 等) は親一致で同グループに紐付く。
-        parents: ['攻撃', 'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動'],
+        // Phase 33-K: `攻撃` 親タグ廃止 + タイミング系をトップレベル親タグに昇格 + 条件ダメージ統合 + `未分類` フォールバック新設
+        parents: [
+            // タイミング系
+            '常時', 'トリガー型', 'ワザ使用時', 'ワザを受けたとき', '番の終わり',
+            // メカニズム系
+            'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動',
+            // 条件ダメージ (Phase 33-K: セクション移管のみ、親タグ・サブ温存)
+            '条件ダメージ',
+            // フォールバック
+            '未分類',
+        ],
         token: {
             chipSelected: 'bg-rose-600 border-rose-500 text-white',
             chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
@@ -122,9 +131,8 @@ export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
             chipDisplayParent: 'text-cyan-400/70',
         },
     },
-    // Phase 33-J: タイミング（共通）グループは廃止。
-    //   旧 ワザ使用時 / トリガー型 / 常時 / ワザを受けたとき / 番の終わり タグは
-    //   `攻撃>X` / `防御>X` に分割され、上記 ダメージ系（攻撃 / 防御）配下のサブとして表示される。
+    // Phase 33-K: 攻撃側タイミングタグはトップレベル親タグに昇格（上記 ダメージ系（攻撃）参照）。
+    //   防御側は `防御>X` のまま温存（防御セクション再編は将来タスク）。
 ];
 
 export const OTHER_CUSTOM_TAG_GROUP_LABEL = 'その他';
