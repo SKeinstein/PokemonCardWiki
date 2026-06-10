@@ -82,35 +82,8 @@ export const DEFAULT_CUSTOM_TAG_TOKEN: CustomTagToken = {
 };
 
 export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
-    {
-        label: 'ダメージ系（攻撃）',
-        // Phase 33-K: `攻撃` 親タグ廃止 + タイミング系をトップレベル親タグに昇格 + 条件ダメージ統合 + `未分類` フォールバック新設
-        parents: [
-            // タイミング系
-            '常時', 'トリガー型', 'ワザ使用時', 'ワザを受けたとき', '番の終わり',
-            // メカニズム系
-            'ワザダメージ', 'ダメカン直置き', '与ダメージ修飾', 'ダメカン移動',
-            // 条件ダメージ (Phase 33-K: セクション移管のみ、親タグ・サブ温存)
-            '条件ダメージ',
-            // フォールバック
-            '未分類',
-        ],
-        token: {
-            chipSelected: 'bg-rose-600 border-rose-500 text-white',
-            chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-rose-500 hover:text-rose-300',
-            expandSelected: 'bg-rose-700 border-rose-500 text-rose-200',
-            expandExpanded: 'bg-rose-700 border-rose-500 text-rose-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-rose-500 hover:text-rose-300',
-            ring: 'ring-2 ring-rose-400/90 shadow-[0_0_12px_rgba(251,113,133,0.55)]',
-            subtagBorder: 'border-rose-400/70',
-            subtagLabel: 'text-rose-400/80',
-            subtagSelected: 'bg-rose-600 border-rose-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-rose-900/50 text-gray-300 hover:border-rose-500 hover:text-rose-300',
-            chipDisplay: 'bg-rose-900/60 border-rose-700 text-rose-200',
-            chipDisplayParent: 'text-rose-400/70',
-        },
-    },
+    // Phase 33-M: 攻撃セクション本体はファセット枠 (ATTACK_FACET_COLUMNS)。
+    // ダメージ修飾 (旧別棚) は通常の 親>サブ 木として「その他」グループに流す。
     {
         label: 'ダメージ系（防御・耐性）',
         // Phase 33-J: `防御` 親タグを先頭に昇格。
@@ -137,9 +110,118 @@ export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
 
 export const OTHER_CUSTOM_TAG_GROUP_LABEL = 'その他';
 
+// ── Phase 33-M: 攻撃ファセット枠 ────────────────────────────────────────────
+//
+// 攻撃セクションは 親>サブ の木でなく 4軸ファセット (機構/タイミング/条件/範囲)。
+// 専用枠で「列ごとに最大1つ選ぶ」UI にする (CardSearch の AttackFacetFrame)。
+// タグ自体はフラットな親タグとしてデータに入っており、通常パネルからは除外する。
+
+export type AttackFacetColumn = {
+    key: string;
+    question: string;
+    questionClass: string;
+    parents: string[];
+    token: CustomTagToken;
+};
+
+export const ATTACK_FACET_COLUMNS: AttackFacetColumn[] = [
+    {
+        key: 'mechanism',
+        question: '① どうやって？',
+        questionClass: 'text-rose-300',
+        parents: ['ワザダメージ', 'ダメカンを置く', 'ダメカン移動'],
+        token: {
+            chipSelected: 'bg-rose-600 border-rose-500 text-white',
+            chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-rose-500 hover:text-rose-300',
+            expandSelected: 'bg-rose-700 border-rose-500 text-rose-200',
+            expandExpanded: 'bg-rose-700 border-rose-500 text-rose-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-rose-500 hover:text-rose-300',
+            ring: 'ring-2 ring-rose-400/90 shadow-[0_0_12px_rgba(251,113,133,0.55)]',
+            subtagBorder: 'border-rose-400/70',
+            subtagLabel: 'text-rose-400/80',
+            subtagSelected: 'bg-rose-600 border-rose-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-rose-900/50 text-gray-300 hover:border-rose-500 hover:text-rose-300',
+            chipDisplay: 'bg-rose-900/60 border-rose-700 text-rose-200',
+            chipDisplayParent: 'text-rose-400/70',
+        },
+    },
+    {
+        key: 'timing',
+        question: '② いつ？',
+        questionClass: 'text-amber-300',
+        parents: ['即時', '次の番も', '特性・場', '反射'],
+        token: {
+            chipSelected: 'bg-amber-600 border-amber-500 text-white',
+            chipExpanded: 'bg-amber-900/70 border-amber-500 text-amber-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-300',
+            expandSelected: 'bg-amber-700 border-amber-500 text-amber-200',
+            expandExpanded: 'bg-amber-700 border-amber-500 text-amber-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-amber-500 hover:text-amber-300',
+            ring: 'ring-2 ring-amber-400/90 shadow-[0_0_12px_rgba(251,191,36,0.55)]',
+            subtagBorder: 'border-amber-400/70',
+            subtagLabel: 'text-amber-400/80',
+            subtagSelected: 'bg-amber-600 border-amber-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-amber-900/50 text-gray-300 hover:border-amber-500 hover:text-amber-300',
+            chipDisplay: 'bg-amber-900/60 border-amber-700 text-amber-200',
+            chipDisplayParent: 'text-amber-400/70',
+        },
+    },
+    {
+        key: 'condition',
+        question: '③ 何を参照？',
+        questionClass: 'text-sky-300',
+        parents: ['無条件', '自分の場', '相手の場', 'コイン', '枚数参照', '種別', '特殊状態参照', 'HP/ダメカン'],
+        token: {
+            chipSelected: 'bg-sky-600 border-sky-500 text-white',
+            chipExpanded: 'bg-sky-900/70 border-sky-500 text-sky-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-sky-500 hover:text-sky-300',
+            expandSelected: 'bg-sky-700 border-sky-500 text-sky-200',
+            expandExpanded: 'bg-sky-700 border-sky-500 text-sky-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-sky-500 hover:text-sky-300',
+            ring: 'ring-2 ring-sky-400/90 shadow-[0_0_12px_rgba(56,189,248,0.55)]',
+            subtagBorder: 'border-sky-400/70',
+            subtagLabel: 'text-sky-400/80',
+            subtagSelected: 'bg-sky-600 border-sky-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-sky-900/50 text-gray-300 hover:border-sky-500 hover:text-sky-300',
+            chipDisplay: 'bg-sky-900/60 border-sky-700 text-sky-200',
+            chipDisplayParent: 'text-sky-400/70',
+        },
+    },
+    {
+        key: 'scope',
+        question: '④ どこに飛ぶ？',
+        questionClass: 'text-emerald-300',
+        parents: ['ベンチに届く', '自分側', 'お互い'],
+        token: {
+            chipSelected: 'bg-emerald-600 border-emerald-500 text-white',
+            chipExpanded: 'bg-emerald-900/70 border-emerald-500 text-emerald-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300',
+            expandSelected: 'bg-emerald-700 border-emerald-500 text-emerald-200',
+            expandExpanded: 'bg-emerald-700 border-emerald-500 text-emerald-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-emerald-500 hover:text-emerald-300',
+            ring: 'ring-2 ring-emerald-400/90 shadow-[0_0_12px_rgba(52,211,153,0.55)]',
+            subtagBorder: 'border-emerald-400/70',
+            subtagLabel: 'text-emerald-400/80',
+            subtagSelected: 'bg-emerald-600 border-emerald-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-emerald-900/50 text-gray-300 hover:border-emerald-500 hover:text-emerald-300',
+            chipDisplay: 'bg-emerald-900/60 border-emerald-700 text-emerald-200',
+            chipDisplayParent: 'text-emerald-400/70',
+        },
+    },
+];
+
+export const ATTACK_FACET_TAGS = new Set(ATTACK_FACET_COLUMNS.flatMap(c => c.parents));
+
 const PARENT_TO_GROUP = new Map<string, CustomTagGroup>();
 for (const group of CUSTOM_TAG_GROUPS) {
     for (const parent of group.parents) PARENT_TO_GROUP.set(parent, group);
+}
+// facet tags resolve to their column token (選択中チップ等の色解決用)
+for (const col of ATTACK_FACET_COLUMNS) {
+    for (const parent of col.parents) {
+        PARENT_TO_GROUP.set(parent, { label: col.question, parents: col.parents, token: col.token });
+    }
 }
 
 export function getCustomTagGroup(parent: string): CustomTagGroup | null {

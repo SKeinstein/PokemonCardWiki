@@ -13,9 +13,46 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { deriveAttackFacets } from './derive_attack_facets.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
+
+// ─── Phase 33-M: 攻撃セクション ファセット置き換え ──────────────────────────
+// 設計: gardener vault Phase33M_attack_facet_search.md
+// 旧攻撃セクションのタグを出力から除去し、deriveAttackFacets() の
+// ファセットタグ（フラット・サブなし）で置き換える。
+// 旧タグの生成コード自体は 33-M4 (レガシー掃除) まで温存。
+
+const LEGACY_ATTACK_PARENTS = new Set([
+  'ワザダメージ', 'ダメカン直置き', 'ダメカン移動', '条件ダメージ',
+  '与ダメージ修飾', 'ワザを受けたとき', 'ワザ使用時', '番の終わり',
+  '常時', 'トリガー型', '未分類',
+]);
+
+// 仮ラベル (語彙確定は 33-M 未決事項 §7-1)。
+// C7 は既存の付与系親タグ「特殊状態」と衝突するため「特殊状態参照」とする。
+const FACET_LABELS = {
+  M1: 'ワザダメージ', M2: 'ダメカンを置く', M3: 'ダメカン移動',
+  T1: '即時', T2: '次の番も', T3: '特性・場', T4: '反射',
+  C1: '無条件', C2: '自分の場', C3: '相手の場', C4: 'コイン',
+  C5: '枚数参照', C6: '種別', C7: '特殊状態参照', C8: 'HP/ダメカン',
+  S1: 'ベンチに届く', S2: '自分側', S3: 'お互い',
+  // 別棚は通常の 親>サブ 木（2026-06-10 ユーザー判断）
+  G1: 'ダメージ修飾>味方の火力アップ', G2: 'ダメージ修飾>相手への被ダメ増', G3: 'ダメージ修飾>弱点・抵抗ルール改変',
+};
+
+function applyAttackFacets(c, tags) {
+  for (const t of [...tags]) {
+    if (LEGACY_ATTACK_PARENTS.has(t.split('>')[0])) tags.delete(t);
+  }
+  const { facets, shelf } = deriveAttackFacets(c);
+  for (const f of facets) tags.add(FACET_LABELS[f]);
+  for (const g of shelf) {
+    tags.add('ダメージ修飾');
+    tags.add(FACET_LABELS[g]);
+  }
+}
 
 // ─── Load & deduplicate ──────────────────────────────────────────────────────
 const raw = JSON.parse(readFileSync(join(ROOT, 'data', 'card_details.json'), 'utf-8'));
@@ -1337,6 +1374,9 @@ function assignTags(c) {
   // Phase 33-F: 軸④ サブタグを派生 (NAMED_OVERRIDES 適用後の軸②セットを参照)
   deriveAxis4Tags(c, tags);
 
+  // Phase 33-M: 攻撃セクションをファセットで置き換え（最後に適用）
+  applyAttackFacets(c, tags);
+
   return [...tags].sort();
 }
 
@@ -1478,6 +1518,14 @@ const SECTION_MAP = {
   '防御>トリガー型': '§Phase33-J', '防御>トリガー型>起動型': '§Phase33-J',
   '防御>トリガー型>きぜつ': '§Phase33-J', '防御>トリガー型>その他': '§Phase33-J',
   '防御>常時': '§Phase33-J', '防御>常時>無条件': '§Phase33-J', '防御>常時>条件付き': '§Phase33-J',
+  // Phase 33-M: 攻撃ファセット（後勝ちで M1-M3 の旧 §Phase33 を上書き）
+  'ワザダメージ': '§P33-M', 'ダメカンを置く': '§P33-M', 'ダメカン移動': '§P33-M',
+  '即時': '§P33-M', '次の番も': '§P33-M', '特性・場': '§P33-M', '反射': '§P33-M',
+  '無条件': '§P33-M', '自分の場': '§P33-M', '相手の場': '§P33-M', 'コイン': '§P33-M',
+  '枚数参照': '§P33-M', '種別': '§P33-M', '特殊状態参照': '§P33-M', 'HP/ダメカン': '§P33-M',
+  'ベンチに届く': '§P33-M', '自分側': '§P33-M', 'お互い': '§P33-M',
+  'ダメージ修飾': '§P33-M', 'ダメージ修飾>味方の火力アップ': '§P33-M',
+  'ダメージ修飾>相手への被ダメ増': '§P33-M', 'ダメージ修飾>弱点・抵抗ルール改変': '§P33-M',
 };
 
 const taggedCount = result.filter(c => c.tags.length > 0).length;

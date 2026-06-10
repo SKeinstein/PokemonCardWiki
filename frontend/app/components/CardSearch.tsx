@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useDeferredValue } from "react";
+import { useState, useEffect, useMemo, useDeferredValue, useRef } from "react";
 import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex } from "../../lib/data";
 import { pickDisplayVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
@@ -8,6 +8,8 @@ import {
     OFFICIAL_CLASS_GROUPS,
     CUSTOM_TAG_GROUPS,
     OTHER_CUSTOM_TAG_GROUP_LABEL,
+    ATTACK_FACET_COLUMNS,
+    ATTACK_FACET_TAGS,
     getCustomTagToken,
     type CustomTagToken,
 } from "../../lib/tagColors";
@@ -66,6 +68,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const [categoryFilter, setCategoryFilter] = useState("");
     const [gridCols, setGridCols] = useState(4); // mobile-first default (375px); hydration sets correct value per breakpoint
     const [maxGridCols, setMaxGridCols] = useState(15);
+    const [isMobile, setIsMobile] = useState(false);
+    const facetGridRef = useRef<HTMLDivElement | null>(null);
+    const [facetTemplate, setFacetTemplate] = useState<string | null>(null);
     const [isOrSearch, setIsOrSearch] = useState(false);
     const [showAdvanced, setShowAdvanced] = useState(false);
     const [selectedCard, setSelectedCard] = useState<MasterCard | null>(null);
@@ -111,15 +116,66 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
 
         setGridCols(getDefaultCols(window.innerWidth));
         setMaxGridCols(getMaxCols(window.innerWidth));
+        setIsMobile(window.innerWidth < 768);
 
         const handleResize = () => {
             const max = getMaxCols(window.innerWidth);
             setMaxGridCols(max);
             setGridCols(prev => Math.min(prev, max));
+            setIsMobile(window.innerWidth < 768);
         };
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    // 攻撃ファセット枠の列幅最適化: 全列の最大段数 k を最小化する。
+    // 各列について「k段以内に収まる最小幅 m_i(k)」を実測チップ幅から二分探索で求め、
+    // Σm_i(k) がコンテナに入る最小の k を採用。余り幅は m_i 比例で分配 (minmax の fr)。
+    useEffect(() => {
+        const el = facetGridRef.current;
+        if (!el || isMobile) { setFacetTemplate(null); return; }
+        const CHIP_GAP = 6;   // gap-1.5
+        const PANEL_PAD = 18; // p-2 ×2 + border ×2
+        const COL_GAP = 8;    // gap-2
+        const chipWidths = (Array.from(el.children) as HTMLElement[]).map(panel =>
+            Array.from(panel.querySelectorAll('button')).map(b => Math.ceil(b.getBoundingClientRect().width))
+        );
+        if (chipWidths.some(ws => ws.length === 0)) return;
+
+        const rowsAt = (ws: number[], width: number) => {
+            let rows = 1, cur = 0;
+            for (const w of ws) {
+                if (cur === 0) cur = w;
+                else if (cur + CHIP_GAP + w <= width) cur += CHIP_GAP + w;
+                else { rows++; cur = w; }
+            }
+            return rows;
+        };
+        const minWidthFor = (ws: number[], k: number) => {
+            let lo = Math.max(...ws);
+            let hi = ws.reduce((a, b) => a + b + CHIP_GAP, -CHIP_GAP);
+            while (lo < hi) {
+                const mid = (lo + hi) >> 1;
+                if (rowsAt(ws, mid) <= k) hi = mid; else lo = mid + 1;
+            }
+            return lo;
+        };
+        const compute = () => {
+            const W = el.clientWidth - COL_GAP * 3;
+            for (let k = 1; k <= 6; k++) {
+                const mins = chipWidths.map(ws => minWidthFor(ws, k) + PANEL_PAD);
+                if (mins.reduce((a, b) => a + b, 0) <= W || k === 6) {
+                    setFacetTemplate(mins.map(m => `minmax(${m}px, ${m}fr)`).join(' '));
+                    return;
+                }
+            }
+        };
+        compute();
+        const ro = new ResizeObserver(compute);
+        ro.observe(el);
+        return () => ro.disconnect();
+        // showTagPanel: 枠はパネルを開くまで DOM に無いため、開いたときに再計測する
+    }, [isMobile, showTagPanel]);
 
     // Reset pagination when search parameters change
     useEffect(() => {
@@ -257,7 +313,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             matched.forEach(p => claimed.add(p));
             sections.push({ label: group.label, parents: matched });
         }
-        const others = customTagParents.filter(p => !claimed.has(p));
+        // attack facet tags live in the dedicated frame, not the generic panel
+        const others = customTagParents.filter(p => !claimed.has(p) && !ATTACK_FACET_TAGS.has(p));
         if (others.length > 0) sections.push({ label: OTHER_CUSTOM_TAG_GROUP_LABEL, parents: others });
         return sections;
     }, [customTagParents]);
@@ -281,6 +338,32 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             const next = new Set(prev);
             if (next.has(tag)) next.delete(tag);
             else next.add(tag);
+            return next;
+        });
+    };
+
+    // 攻撃ファセット: 列内は単一選択（同列の他ボタンを外してから付ける、再タップで解除）
+    const selectFacetTag = (columnParents: string[], tag: string) => {
+        setSelectedTags(prev => {
+            const next = new Set(prev);
+            const had = next.has(tag);
+            for (const p of columnParents) next.delete(p);
+            if (!had) next.add(tag);
+            return next;
+        });
+    };
+
+    const selectedFacetTags = useMemo(
+        () => ATTACK_FACET_COLUMNS
+            .map(col => col.parents.find(p => selectedTags.has(p)))
+            .filter((p): p is string => !!p),
+        [selectedTags]
+    );
+
+    const clearFacetTags = () => {
+        setSelectedTags(prev => {
+            const next = new Set(prev);
+            for (const p of ATTACK_FACET_TAGS) next.delete(p);
             return next;
         });
     };
@@ -871,6 +954,66 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                 </button>
                             </div>
                         )}
+
+                        {/* 攻撃ファセット枠 — Phase 33-M: 4軸×列内単一選択 */}
+                        <div className="space-y-2">
+                            <div className="text-xs text-gray-400 font-bold uppercase tracking-wider pb-1 border-b border-gray-800/70">
+                                攻撃ダメージで絞り込む
+                                <span className="ml-2 normal-case font-normal text-gray-500">各列から1つまで選択 — 選ばない列は絞り込まない</span>
+                            </div>
+                            {/* 全体の高さ最小化: 各列の幅を中身の文字量に比例配分 (①19字 ②12字 ③33字 ④12字 ≈ 5:4:10:4)。
+                                どの列も同程度の段数で折り返す。チップ内改行は禁止 (whitespace-nowrap)。
+                                PC では常に4枠横並び。inline style なのは Turbopack が arbitrary class を
+                                HMR で拾い損ねるため (grid-cols-4 で実績あり) */}
+                            <div
+                                ref={facetGridRef}
+                                className="grid gap-2 items-start"
+                                style={{
+                                    // モバイルは4軸を縦4段 (各軸全幅)、PCは段数最小化の実測最適分配
+                                    gridTemplateColumns: isMobile
+                                        ? '1fr'
+                                        : facetTemplate ?? '5fr 4fr 10fr 4fr',
+                                }}
+                            >
+                                {ATTACK_FACET_COLUMNS.map(col => (
+                                    <div
+                                        key={col.key}
+                                        className="rounded-lg border border-gray-700/60 bg-gray-900/40 p-2 space-y-1.5 min-w-0"
+                                    >
+                                        <div className={`text-xs font-bold ${col.questionClass}`}>{col.question}</div>
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {col.parents.map(tag => {
+                                                const isSelected = selectedTags.has(tag);
+                                                return (
+                                                    <button
+                                                        key={tag}
+                                                        onClick={() => selectFacetTag(col.parents, tag)}
+                                                        className={`inline-flex items-center justify-center px-2.5 min-h-[44px] min-w-[44px] text-sm sm:text-xs font-medium whitespace-nowrap rounded-full border transition touch-manipulation ${
+                                                            isSelected ? col.token.chipSelected : col.token.chipDefault
+                                                        }`}
+                                                    >
+                                                        {tag}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            {selectedFacetTags.length > 0 && (
+                                <div className="flex flex-wrap items-center gap-2 text-sm sm:text-xs text-gray-300 px-1">
+                                    <span className="text-gray-400 font-bold">選択中:</span>
+                                    <span className="font-medium">{selectedFacetTags.join(' × ')}</span>
+                                    <span className="text-gray-400">→ 該当 <span className="font-bold text-white">{filteredCards.length.toLocaleString()}</span> 枚</span>
+                                    <button
+                                        onClick={clearFacetTags}
+                                        className="text-xs text-rose-400 hover:text-rose-200 underline py-1 px-2 touch-manipulation"
+                                    >
+                                        クリア
+                                    </button>
+                                </div>
+                            )}
+                        </div>
 
                         {/* Tag list — Phase 33 視覚グループ化: section per axis */}
                         <div className="space-y-4 pr-0.5">
