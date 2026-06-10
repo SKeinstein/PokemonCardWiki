@@ -15,8 +15,9 @@
  *   }>
  *
  * relatedQA matching: a card is related to a QA entry when they share at least
- * one subtag (a tag containing '>'), matched exactly between qa_entry_tags.json
- * and card_tags.json.
+ * one matchable tag, matched exactly between qa_entry_tags.json and
+ * card_tags.json. Matchable = subtag (contains '>') or attack facet tag
+ * (Phase 33-M flat vocabulary, whitelisted below).
  *
  * Frontend usage:
  *   import qaIndex   from '@/data/qa_index.json';
@@ -49,26 +50,38 @@ for (let i = 0; i < qaEntries.length; i++) {
 
 // ── Build lookup maps ──────────────────────────────────────────────────────
 
+// Phase 33-M attack facets are flat (no '>') but specific enough to drive
+// relatedQA matching. The generic facets (ワザダメージ/即時/無条件) are
+// deliberately absent: they cover 400-1300 cards each and would flood links.
+const ATTACK_FACETS = new Set([
+  'ダメカンを置く', 'ダメカン移動', '反射',
+  '次の番も', '特性・場',
+  '自分の場', '相手の場', 'コイン', '枚数参照', '種別', '特殊状態参照', 'HP/ダメカン',
+  'ベンチに届く', '自分側', 'お互い',
+]);
+
+const isMatchableTag = t => t.includes('>') || ATTACK_FACETS.has(t);
+
 /** cardId → Set<tag> (all tags, used for directQA path) */
 const cardTagMap = new Map();
 for (const c of cardTags) {
   cardTagMap.set(c.cardId, new Set(c.tags));
 }
 
-/** subtag → Set<cardId>  (subtags only: tags containing '>') */
+/** matchable tag → Set<cardId> */
 const subtagToCards = new Map();
 for (const c of cardTags) {
   for (const tag of c.tags) {
-    if (!tag.includes('>')) continue;
+    if (!isMatchableTag(tag)) continue;
     if (!subtagToCards.has(tag)) subtagToCards.set(tag, new Set());
     subtagToCards.get(tag).add(c.cardId);
   }
 }
 
-/** qaIndex → Set<subtag>  (subtags only for each QA entry) */
+/** qaIndex → Set<matchable tag> for each QA entry */
 const entrySubTagMap = new Map();
 for (const e of qaEntryTags) {
-  const subtags = e.tags.filter(t => t.includes('>'));
+  const subtags = e.tags.filter(isMatchableTag);
   if (subtags.length > 0) {
     entrySubTagMap.set(e.qaIndex, new Set(subtags));
   }
