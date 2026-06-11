@@ -30,8 +30,10 @@ const LABELS = {
 const REGRESSION = [
   ['ヤバソチャex', 'せんじがえし', ['M2', 'T1', 'C5', 'S1']],
   ['シェイミ', 'ピンポイントダイブ', ['M1', 'T1', 'C1', 'C6', 'S1']],
-  ['ドラパルトex', 'ファントムダイブ', ['M1', 'M2', 'T1', 'C1', 'S1']],
-  ['テツノイワオex', 'リパルサーアックス', ['M1', 'M2', 'T1', 'T4', 'C1']],
+  // 2026-06-11 成分分割: バニラ素点の M1/T1 はダメカン成分の notability に
+  // 便乗しない (ファントムダイブ型)。M1 はダメージ成分自身が notable のときのみ
+  ['ドラパルトex', 'ファントムダイブ', ['M2', 'T1', 'C1', 'S1']],
+  ['テツノイワオex', 'リパルサーアックス', ['M2', 'T4', 'C1']],
   ['危ない廃墟', null, ['M2', 'T3', 'C1', 'C6', 'S1']],
   ['マシマシラ', 'アドレナブレイン', ['M3', 'T3', 'C2', 'C8', 'S1']],
   ['ウネルミナモex', 'カタルシスロアー', ['M1', 'T1', 'C7']],
@@ -81,8 +83,9 @@ for (const [name, eff, want] of REGRESSION) {
   const entries = inSection.filter(d => d.name === name);
   const hit = eff ? entries.find(d => d.effects.some(e => e.name === eff)) : entries[0];
   if (!hit) { regLines.push(`| ✗ | ${name} ${eff || ''} | — | セクション外 |`); continue; }
-  const ef = eff ? hit.effects.find(e => e.name === eff) : null;
-  const got = ef ? ef.facets : hit.facets;
+  // 成分分割で同名 effect が複数になりうる → notable 成分の union で判定
+  const efs = eff ? hit.effects.filter(e => e.name === eff && e.notable) : [];
+  const got = efs.length ? [...new Set(efs.flatMap(e => e.facets))].sort() : hit.facets;
   const missing = want.filter(w => !got.includes(w));
   const extra = got.filter(g => !want.includes(g));
   const ok = !missing.length && !extra.length;

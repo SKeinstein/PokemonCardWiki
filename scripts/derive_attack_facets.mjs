@@ -66,14 +66,15 @@ const RE = {
   receiveOnly: /ダメージを受けない|ダメージは、?なくなる|ダメージを「?[-−]/,
 
   counterPlace: /ダメカンを.{0,30}のせる|ダメカン\s*を?\s*\d+個/,
-  counterMove: /のせ替え|ダメカンを.{0,25}(?:移|うつ)す/,
+  // のせ替えられない = 移動禁止の妨害特性 (ミネズミ) — 移動ではない
+  counterMove: /のせ替え(?!られない)|ダメカンを.{0,25}(?:移|うつ)す/,
 
   reflect: /(?:ワザの)?ダメージを受けたとき[^。]{0,80}(?:ダメージ|ダメカン)/,
   // 持続は攻撃文のみ: 遅延ダメージ (ダメカンのせる/Nダメージ) と次の番の自己火力バフ。
   // 「受けるダメージ-N」「ダメージを受けない」等の防御持続は defensiveClause で除去済みだが、
   // マッギョ型「受けたポケモンが受けるダメージ+N」(G2脆弱化) を拾わないよう
   // バフ側は「使うワザの/の「ワザ名」の」を必須にする
-  lingering: /次の(?:自分|相手)の番[^。]{0,60}(?:ダメカンを[^。]{0,15}のせる|に、?\d+ダメージ|\d+ダメージ追加)|次の自分の番、?[^。]{0,40}(?:使うワザの|の「[^」]{1,25}」の)[^。]{0,30}ダメージは「?[+＋]/,
+  lingering: /次の(?:自分|相手)の番[^。]{0,60}(?:ダメカンを[^。]{0,15}のせる|に、?\d+ダメージ|\d+ダメージ追加)|次の自分の番、?[^。]{0,40}(?:使うワザの|の「[^」]{1,25}」の)[^。]{0,30}ダメージは「?(?:[+＋]|\d+」?になる)/,
   turnEnd: /番の終わり/,
 
   // 防御・耐性の文 (受ける側) — 攻撃ファセットの解析対象から文単位で除去する
@@ -86,21 +87,37 @@ const RE = {
   // a lost type suffix, so treat as card-type reference
   cardType: /ポケモン(?:ex|EX|V(?![ァ-ヶA-Za-z])|ＶMAX)|「?(?:ex|Ｖ)(?:・|か)V?」|テラスタル|「古代」|「未来」|ルールを持つ|たねポケモン|進化ポケモン|\d進化|ポケモンがポケモン(?:なら|のとき)|（ポケモンをのぞく）/,
   special: /(?:どく|やけど|ねむり|マヒ|こんらん|特殊状態)(?:状態)?(?:である)?(?:なら|のとき|になっているなら)/,
-  hpRef: /残りHP|HPが[^。]{0,15}(?:以下|以上)|ダメカンがのっている|のっているダメカンの数|にのっているダメカンを/,
+  hpRef: /残りHP|HPが[^。]{0,15}(?:以下|以上)|ダメカンがのってい(?:る|ない)|のっているダメカンの数|にのっているダメカンを/,
 
-  myBoard: /自分の(?:場|ベンチ|バトルポケモン|ポケモン|トラッシュ)[^。]{0,40}(?:の数|全員の|いる(?:なら|とき)|ある(?:なら|とき)|ついている(?:なら|エネルギー))|自分の[^。]{0,25}エネルギーの(?:数|個数)|このポケモンについている[^。]{0,12}エネルギーの数|このポケモンに[^。]{0,20}ついているなら|ベンチから出た番なら|から進化した番なら|進化していたなら|使っていたなら|HPを回復していたなら|場に[^。]{0,6}スタジアムが出ているなら|自分の[^。]{0,25}きぜつしていたなら|多くエネルギーがついているなら/,
-  oppBoard: /相手の(?:場|ベンチ|バトルポケモン|ポケモン|トラッシュ)[^。]{0,40}(?:の数|全員の|いる(?:なら|とき)|ある(?:なら|とき)|が?\d個以上|ついている(?:なら|エネルギー))|相手の[^。]{0,25}エネルギーの(?:数|個数)|相手の[^。]{0,20}(?:弱点|抵抗力)が|相手の[^。]{0,25}にげるためのエネルギーが(?:ない|\d個)/,
+  // 「ついているエネルギー」(裸) は不採用 — エネ操作の副作用文 (ゲンガーex「ついている
+  // エネルギーを1個選び、つけ替える」/ドサイドン「…トラッシュする」) を条件と誤認する。
+  // 枚数参照は「エネルギーの数/個数/枚数」ブランチが受け持つ。
+  // oppBoard の窓は「このポケモン」をまたがない (タケルライコ「相手のポケモン1匹に、
+  // このポケモンについているエネルギーの数×30」= 自エネ参照、C3 ではない)
+  myBoard: /自分の(?:場|ベンチ|バトルポケモン|ポケモン|トラッシュ)[^。]{0,40}(?:の数|全員の|いる(?:なら|とき)|ある(?:なら|とき)|ついているなら)|自分の[^。]{0,25}エネルギーの(?:数|個数|枚数)|このポケモンについている[^。]{0,12}エネルギーの数|このポケモンに[^。]{0,20}ついているなら|ベンチから(?:バトル場に)?出(?:た番|ていた)なら|から進化した番なら|進化していたなら|使っていたなら|HPを回復していたなら|場に[^。]{0,6}スタジアムが出ているなら|自分の[^。]{0,25}きぜつしていたなら|多くエネルギーがついているなら/,
+  oppBoard: /相手の(?:場|ベンチ|バトルポケモン|ポケモン|トラッシュ)(?:(?!このポケモン)[^。]){0,40}(?:の数|全員の|いる(?:なら|とき)|ある(?:なら|とき)|が?\d個以上|ついているなら)|相手の(?:(?!このポケモン)[^。]){0,25}エネルギーの(?:数|個数|枚数)|相手の[^。]{0,20}(?:弱点|抵抗力)が|相手の[^。]{0,25}にげるためのエネルギーが(?:ない|\d個)/,
 
-  benchHit: /(?:相手の)?ベンチ(?:の)?(?:ポケモン)?[^。]{0,40}(?:ダメージ|ダメカン)|ダメカン[^。]{0,30}ベンチ|相手の(?:場の)?ポケモン(?:\d匹|全員)[^。]{0,30}(?:ダメージ|ダメカン)|相手の(?:場の)?ポケモン1匹に/,
-  selfHit: /このポケモンにも|このポケモン(?:本体)?に、?\d*(?:ダメカン|ダメージ)|自分の(?:ポケモン|ベンチ|バトルポケモン)[^。]{0,30}(?:ダメージ|ダメカン)/,
-  mutualHit: /おたがいの[^。]{0,40}(?:ダメージ|ダメカン)/,
+  // 着弾先は与格「に」必須 (ダダリン「ベンチにポケモンがいるなら+80」/ディアンシー
+  // 「相手のポケモン全員についている…枚数×40」のような条件参照文を弾く)。
+  // 「に、」(読点付き) は着弾確定 — 挿入句 (シロデスナ「それぞれ残りHPが…になるように、」/
+  // タケルライコ「に、このポケモンについている…の数×30ダメージ」) を制限なしで許す。
+  // 読点なしの「に」直結は参照マーカー (ついている/のっている/なら/の数/枚数) を禁止。
+  // 逆順形「ダメカン/ダメージを、相手のポケモン1匹にのせる/与える」(ヤバソチャ/ウミトリオex)
+  // は別パターン。
+  // 着弾語は動作形のみ: 「Nダメージ」「ダメージを与え」「ダメカンを」。
+  // 「ダメカンがのっている」(状態参照、イダイナキバ/シザリガー) は着弾でない。
+  benchHit: /ベンチ(?:の)?[^。]{0,12}?ポケモン(?:\d匹|全員)?[^。]{0,8}?に(?:も)?(?:、[^。]{0,30}?|(?:(?!ついている|のっている|なら|の数|枚数)[^。]){0,25})(?:\d+ダメージ|ダメージを与え|ダメカンを)|(?:ダメカン|ダメージ)[^。]{0,30}?(?:ベンチ(?:の)?[^。]{0,10}?ポケモン|相手の(?:場の)?ポケモン(?:\d匹|全員)?)[^。]{0,4}?に、?[^。]{0,10}?(?:のせ|与え)|相手の(?:場の)?ポケモン(?:\d匹|全員)[^。]{0,8}?に(?:も)?(?:、[^。]{0,30}?|(?:(?!ついている|のっている|なら|の数|枚数)[^。]){0,25})(?:\d+ダメージ|ダメージを与え|ダメカンを|のせ替え)/,
+  selfHit: /このポケモンにも|このポケモン(?:本体)?に、?\d*(?:ダメカンを|ダメージ)|自分の(?:ベンチの?)?(?:バトル)?ポケモン(?:\d匹|全員)?[^。]{0,8}?に(?:も)?(?:、[^。]{0,30}?|(?:(?!ついている|のっている|なら|の数|枚数)[^。]){0,25})(?:\d+ダメージ|ダメージを与え|ダメカンを)|(?:ダメカン|ダメージ)[^。]{0,30}?(?:自分の(?:ベンチの?)?[^。]{0,8}?ポケモン(?:\d匹|全員)?|このポケモン)[^。]{0,4}?に、?[^。]{0,10}?(?:のせ|与え)/,
+  // おたがい参照 (オーガポン「おたがいの…エネルギーの数×」) は C2+C3 であって S3 でない —
+  // S3 も着弾の対象文法必須 (エモンガ「おたがいのベンチポケモン全員にも、それぞれ10ダメージ」)
+  mutualHit: /おたがいの[^。]{0,12}?ポケモン[^。]{0,20}?に(?:も)?(?:、[^。]{0,30}?|(?:(?!ついている|のっている|なら|の数|枚数)[^。]){0,25})(?:\d+ダメージ|ダメージを与え|ダメカンを)/,
 
   buffAlly: /ワザの[^。]{0,40}ダメージ[^。]{0,15}[+＋]\d+|与えるダメージ[^。]{0,10}[+＋]\d+/,
   debuffOpp: /受けるワザのダメージ(?:は|を)[^。]{0,10}[+＋]\d+/,
   ruleChange: /(?:弱点|抵抗力)[^。]{0,20}(?:計算しない|なくな)/,
 
-  // amount varies: "80＋"/"30×" damage field, or 追加/×N in text
-  variableDmg: /\d+ダメージ追加|ダメージ追加|×\s*\d|\d\s*×|個ぶんのダメカン|枚ぶんのダメカン|数ぶん/,
+  // amount varies: "80＋"/"30×" damage field, or 追加/×N/受けたダメージぶん in text
+  variableDmg: /\d+ダメージ追加|ダメージ追加|×\s*\d|\d\s*×|個ぶんのダメカン|枚ぶんのダメカン|数ぶん|ダメージぶん/,
 };
 
 function detectMechanisms(e) {
@@ -137,7 +154,8 @@ function detectConditions(e) {
   if (RE.hpRef.test(e.text)) c.add('C8');
   if (RE.myBoard.test(e.text)) c.add('C2');
   if (RE.oppBoard.test(e.text)) c.add('C3');
-  if (/おたがいの[^。]{0,30}(?:の数|全員)/.test(e.text)) { c.add('C2'); c.add('C3'); }
+  // 「おたがいの…全員に」は着弾の全称量化 (S3側) — 参照は「の数」のみ
+  if (/おたがいの[^。]{0,30}の数/.test(e.text)) { c.add('C2'); c.add('C3'); }
   return c;
 }
 
@@ -153,18 +171,25 @@ function detectScope(e) {
 // Targeting restrictions (C6 ③) do not break C1 — C1 asks "is the number
 // stable", C6 asks "does it interact with card types" (design §3.3).
 // Any non-C6 condition (coin failure, board count, …) makes the amount
-// unstable even when the printed number is fixed (ウラなら失敗型). C6 breaks
-// C1 only when paired with variable markers (テツノカイナ型 ならN追加);
-// fixed amount + C6 targeting keeps C1 (シェイミ型). Counter movement (M3)
-// is never C1: it depends on counters already in play.
+// unstable even when the printed number is fixed (ウラなら失敗型).
+// Counter movement (M3) is never C1: it depends on counters already in play.
+// 可変マーカー (×N / 受けたダメージぶん 等) も量が不定なので C1 不成立 —
+// ザマゼンタ型の可変反射 / ウネルミナモ型の自己ダメカン連動 (2026-06-12)。
+// fixed amount + C6 targeting keeps C1 (シェイミ型)。
 function isAmountStable(e, conds, mech) {
   if (mech.has('M3')) return false;
   if ([...conds].some(c => c !== 'C6')) return false;
   const variable = /[+×]/.test(e.damage) || RE.variableDmg.test(e.text);
-  return !(variable && conds.has('C6'));
+  return !variable;
 }
 
 // ─── Shelf (G) detection — card level, modifiers not dealers ────────────────
+
+// 「ベンチは弱点・抵抗力を計算しない」は標準ルールの注記 (通常は［］で除去されるが
+// キチキギスex等は括弧がスクレイプ時に欠落) — G3 のルール改変ではないので落とす
+function stripBenchNote(t) {
+  return t.replace(/ベンチは弱点・抵抗力を計算しない。?/g, '');
+}
 
 function detectShelf(card) {
   const g = new Set();
@@ -174,14 +199,14 @@ function detectShelf(card) {
   if (/グッズ|サポート|スタジアム|どうぐ|エネルギー/.test(kind)) {
     for (const r of card.rules || []) texts.push(norm(r));
   }
-  const t = texts.join('\n');
+  const t = stripBenchNote(texts.join('\n'));
   if (RE.debuffOpp.test(t)) g.add('G2');
   else if (RE.buffAlly.test(t)) g.add('G1');
   if (RE.ruleChange.test(t)) g.add('G3');
   // attacks can also debuff (ビブラーバ型) or change weakness/resistance
   // rules (ウソッキー型); ally-buff from own attack text is T2 main, not G1
   for (const a of card.attacks || []) {
-    const at = norm(a.text);
+    const at = stripBenchNote(norm(a.text));
     if (RE.debuffOpp.test(at)) g.add('G2');
     if (RE.ruleChange.test(at)) g.add('G3');
   }
@@ -190,30 +215,56 @@ function detectShelf(card) {
 
 // ─── Per-card derivation ─────────────────────────────────────────────────────
 
+// ファントムダイブ型対策 (2026-06-11): 素点ダメージ(バニラ成分)とダメカン・反射文
+// (notable成分)が1ワザに同居すると、effect 単位の union で M1/T1 が漏れて
+// 「あらゆる攻撃カードがワザダメージを持つべき」事態になる。ワザの文をダメカン側と
+// ダメージ側に分け、機構/タイミング/範囲は成分ごとに評価する。条件はワザ全体に
+// かかりうる(ウラなら失敗 等)ため、ダメカン成分の条件検出はワザ全文 (condText) で行う。
+function splitComponents(e) {
+  if (e.src !== 'attack') return [e];
+  const counter = [];
+  const rest = [];
+  for (const s of e.text.split('。')) {
+    if (!s) continue;
+    const isCounter = RE.reflect.test(s) || RE.counterMove.test(s) || RE.counterPlace.test(s);
+    // 融合文 (ウネルミナモ型「ダメカンをのせ、のせた数×20ダメージ」) は
+    // ダメージ自体も notable なので両成分に属させる
+    if (isCounter && /×\s*\d+ダメージ|\d+ダメージ追加/.test(s)) { counter.push(s); rest.push(s); continue; }
+    (isCounter ? counter : rest).push(s);
+  }
+  if (!counter.length) return [e];
+  const dmgComp = { ...e, text: rest.join('。') };
+  const baseDmg = /^\d+/.test(e.damage) && parseInt(e.damage, 10) > 0;
+  if (!baseDmg && !RE.dealDamage.test(dmgComp.text)) return [e]; // ダメージ成分なし → 分割不要
+  return [dmgComp, { ...e, damage: '', text: counter.join('。'), condText: e.text }];
+}
+
 export function deriveAttackFacets(card) {
   const effects = [];
   for (const raw of extractEffects(card)) {
     // 防御文を文単位で落としてから解析 (攻撃ファセットは攻撃文だけを見る)
-    const e = {
+    const base = {
       ...raw,
       text: raw.text.split('。').filter(s => !RE.defensiveClause.test(s)).join('。'),
     };
-    const mech = detectMechanisms(e);
-    if (!mech.size) continue;
-    const timing = detectTiming(e, mech);
-    const conds = detectConditions(e);
-    const scope = detectScope(e);
-    if (isAmountStable(e, conds, mech)) conds.add('C1');
+    for (const e of splitComponents(base)) {
+      const mech = detectMechanisms(e);
+      if (!mech.size) continue;
+      const timing = detectTiming(e, mech);
+      const conds = detectConditions(e.condText ? { ...e, text: e.condText } : e);
+      const scope = detectScope(e);
+      if (isAmountStable(e, conds, mech)) conds.add('C1');
 
-    // §3.2 notable: vanilla (M1 + T1-only + amount-stable-no-real-cond + no scope) is invisible
-    const realConds = [...conds].filter(c => c !== 'C1');
-    const notable =
-      mech.has('M2') || mech.has('M3') ||
-      timing.has('T2') || timing.has('T3') || timing.has('T4') ||
-      realConds.length > 0 ||
-      scope.size > 0;
+      // §3.2 notable: vanilla (M1 + T1-only + amount-stable-no-real-cond + no scope) is invisible
+      const realConds = [...conds].filter(c => c !== 'C1');
+      const notable =
+        mech.has('M2') || mech.has('M3') ||
+        timing.has('T2') || timing.has('T3') || timing.has('T4') ||
+        realConds.length > 0 ||
+        scope.size > 0;
 
-    effects.push({ src: e.src, name: e.name, notable, facets: [...mech, ...timing, ...conds, ...scope].sort() });
+      effects.push({ src: e.src, name: e.name, notable, facets: [...mech, ...timing, ...conds, ...scope].sort() });
+    }
   }
 
   const facets = new Set();
