@@ -36,8 +36,9 @@ function norm(t) {
 // ─── Clause-level patterns ───────────────────────────────────────────────────
 
 const RE = {
-  // D1: printed "-N" reduction — covers self (受ける) and mirror (使う) directions
-  reduce: /(?:受ける|使う)ワザのダメージは「-\d+」される|受けるダメージは[^。]{0,10}少なくな/,
+  // D1: printed "-N" reduction — covers self (受ける) and mirror (使う) directions.
+  // きのみ型「ダメージを受けるとき、そのダメージは「-60」され」も含む (2026-06-12 タグゼロ監査)
+  reduce: /(?:受ける|使う)ワザのダメージは「-\d+」される|受けるダメージは[^。]{0,10}少なくな|ダメージを受けるとき、?そのダメージは「-\d+」され/,
   // D2: damage fully prevented (ワザのダメージ(や効果)を受けない / ダメカンがのらない)
   negate: /ワザのダメージ(?:や効果)?を受けない|ダメカンがのらない/,
   // D3: effect immunity — ワザの効果 / グッズ・サポートの効果 / 「ダメージや効果」の効果部分
