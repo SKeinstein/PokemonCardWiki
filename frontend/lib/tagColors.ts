@@ -83,29 +83,8 @@ export const DEFAULT_CUSTOM_TAG_TOKEN: CustomTagToken = {
 
 export const CUSTOM_TAG_GROUPS: CustomTagGroup[] = [
     // Phase 33-M: 攻撃セクション本体はファセット枠 (ATTACK_FACET_COLUMNS)。
+    // Phase 33-N: 防御セクション本体もファセット枠 (DEFENSE_FACET_COLUMNS)。
     // ダメージ修飾 (旧別棚) は通常の 親>サブ 木として「その他」グループに流す。
-    {
-        label: 'ダメージ系（防御・耐性）',
-        // Phase 33-J: `防御` 親タグを先頭に昇格。
-        parents: ['防御', '受けるダメージ軽減', '受けるダメージ無効', '耐性'],
-        token: {
-            chipSelected: 'bg-cyan-600 border-cyan-500 text-white',
-            chipExpanded: 'bg-cyan-900/70 border-cyan-500 text-cyan-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
-            expandSelected: 'bg-cyan-700 border-cyan-500 text-cyan-200',
-            expandExpanded: 'bg-cyan-700 border-cyan-500 text-cyan-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-cyan-500 hover:text-cyan-300',
-            ring: 'ring-2 ring-cyan-400/90 shadow-[0_0_12px_rgba(34,211,238,0.55)]',
-            subtagBorder: 'border-cyan-400/70',
-            subtagLabel: 'text-cyan-400/80',
-            subtagSelected: 'bg-cyan-600 border-cyan-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-cyan-900/50 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
-            chipDisplay: 'bg-cyan-900/60 border-cyan-700 text-cyan-200',
-            chipDisplayParent: 'text-cyan-400/70',
-        },
-    },
-    // Phase 33-K: 攻撃側タイミングタグはトップレベル親タグに昇格（上記 ダメージ系（攻撃）参照）。
-    //   防御側は `防御>X` のまま温存（防御セクション再編は将来タスク）。
 ];
 
 export const OTHER_CUSTOM_TAG_GROUP_LABEL = 'その他';
@@ -213,12 +192,84 @@ export const ATTACK_FACET_COLUMNS: AttackFacetColumn[] = [
 
 export const ATTACK_FACET_TAGS = new Set(ATTACK_FACET_COLUMNS.flatMap(c => c.parents));
 
+// ── Phase 33-N: 防御ファセット枠 ────────────────────────────────────────────
+//
+// 防御セクションも攻撃と同じ列ごと単一選択のファセット枠 (3軸: 機構/タイミング・条件/対象)。
+
+export const DEFENSE_FACET_COLUMNS: AttackFacetColumn[] = [
+    {
+        key: 'defMechanism',
+        question: '① なにを防ぐ？',
+        questionClass: 'text-cyan-300',
+        parents: ['受けるダメージ軽減', '受けるダメージ無効', '効果を受けない', '特殊状態にならない'],
+        token: {
+            chipSelected: 'bg-cyan-600 border-cyan-500 text-white',
+            chipExpanded: 'bg-cyan-900/70 border-cyan-500 text-cyan-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
+            expandSelected: 'bg-cyan-700 border-cyan-500 text-cyan-200',
+            expandExpanded: 'bg-cyan-700 border-cyan-500 text-cyan-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-cyan-500 hover:text-cyan-300',
+            ring: 'ring-2 ring-cyan-400/90 shadow-[0_0_12px_rgba(34,211,238,0.55)]',
+            subtagBorder: 'border-cyan-400/70',
+            subtagLabel: 'text-cyan-400/80',
+            subtagSelected: 'bg-cyan-600 border-cyan-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-cyan-900/50 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
+            chipDisplay: 'bg-cyan-900/60 border-cyan-700 text-cyan-200',
+            chipDisplayParent: 'text-cyan-400/70',
+        },
+    },
+    {
+        key: 'defTiming',
+        question: '② いつ・条件は？',
+        questionClass: 'text-lime-300',
+        parents: ['常時', '次の相手の番', 'コインしだい', '特定の相手のみ'],
+        token: {
+            chipSelected: 'bg-lime-600 border-lime-500 text-white',
+            chipExpanded: 'bg-lime-900/70 border-lime-500 text-lime-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-lime-500 hover:text-lime-300',
+            expandSelected: 'bg-lime-700 border-lime-500 text-lime-200',
+            expandExpanded: 'bg-lime-700 border-lime-500 text-lime-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-lime-500 hover:text-lime-300',
+            ring: 'ring-2 ring-lime-400/90 shadow-[0_0_12px_rgba(163,230,53,0.55)]',
+            subtagBorder: 'border-lime-400/70',
+            subtagLabel: 'text-lime-400/80',
+            subtagSelected: 'bg-lime-600 border-lime-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-lime-900/50 text-gray-300 hover:border-lime-500 hover:text-lime-300',
+            chipDisplay: 'bg-lime-900/60 border-lime-700 text-lime-200',
+            chipDisplayParent: 'text-lime-400/70',
+        },
+    },
+    {
+        key: 'defTarget',
+        question: '③ だれを守る？',
+        questionClass: 'text-fuchsia-300',
+        parents: ['このポケモン', '場の全員', 'ベンチ', '相手を弱める'],
+        token: {
+            chipSelected: 'bg-fuchsia-600 border-fuchsia-500 text-white',
+            chipExpanded: 'bg-fuchsia-900/70 border-fuchsia-500 text-fuchsia-100 font-bold',
+            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-fuchsia-500 hover:text-fuchsia-300',
+            expandSelected: 'bg-fuchsia-700 border-fuchsia-500 text-fuchsia-200',
+            expandExpanded: 'bg-fuchsia-700 border-fuchsia-500 text-fuchsia-100',
+            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-fuchsia-500 hover:text-fuchsia-300',
+            ring: 'ring-2 ring-fuchsia-400/90 shadow-[0_0_12px_rgba(232,121,249,0.55)]',
+            subtagBorder: 'border-fuchsia-400/70',
+            subtagLabel: 'text-fuchsia-400/80',
+            subtagSelected: 'bg-fuchsia-600 border-fuchsia-500 text-white',
+            subtagDefault: 'bg-gray-800/80 border-fuchsia-900/50 text-gray-300 hover:border-fuchsia-500 hover:text-fuchsia-300',
+            chipDisplay: 'bg-fuchsia-900/60 border-fuchsia-700 text-fuchsia-200',
+            chipDisplayParent: 'text-fuchsia-400/70',
+        },
+    },
+];
+
+export const DEFENSE_FACET_TAGS = new Set(DEFENSE_FACET_COLUMNS.flatMap(c => c.parents));
+
 const PARENT_TO_GROUP = new Map<string, CustomTagGroup>();
 for (const group of CUSTOM_TAG_GROUPS) {
     for (const parent of group.parents) PARENT_TO_GROUP.set(parent, group);
 }
 // facet tags resolve to their column token (選択中チップ等の色解決用)
-for (const col of ATTACK_FACET_COLUMNS) {
+for (const col of [...ATTACK_FACET_COLUMNS, ...DEFENSE_FACET_COLUMNS]) {
     for (const parent of col.parents) {
         PARENT_TO_GROUP.set(parent, { label: col.question, parents: col.parents, token: col.token });
     }
