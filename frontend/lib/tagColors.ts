@@ -31,6 +31,12 @@ export const OFFICIAL_CLASS_GROUPS: OfficialClassGroup[] = [
     },
 ];
 
+// キャラクター系公式タグ（Nのポケモン等）はチップでは「のポケモン」を省いて表示する。
+// データ上のタグ名は公式サイト準拠のまま（QA結合・index が依存）。
+export function officialTagLabel(tag: string): string {
+    return tag.replace(/のポケモン$/, '');
+}
+
 export function getOfficialTagColor(tag: string): string {
     for (const group of OFFICIAL_CLASS_GROUPS) {
         if (group.tags.includes(tag)) return group.token.active;
@@ -103,90 +109,69 @@ export type AttackFacetColumn = {
     token: CustomTagToken;
 };
 
+// Phase 33-P 配色見直し: 攻撃枠＝暖色 (rose) 単色 / 防御枠＝寒色 (blue) 単色。
+// 列の区別は見出し文言と位置で行い、チップの色は「攻か防か」だけを語る。
+// 公式タグ (sky/purple/teal)・独自その他 (violet) との色相衝突も避ける。
+const ATTACK_FACET_TOKEN: CustomTagToken = {
+    chipSelected: 'bg-rose-600 border-rose-500 text-white',
+    chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
+    chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-rose-500 hover:text-rose-300',
+    expandSelected: 'bg-rose-700 border-rose-500 text-rose-200',
+    expandExpanded: 'bg-rose-700 border-rose-500 text-rose-100',
+    expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-rose-500 hover:text-rose-300',
+    ring: 'ring-2 ring-rose-400/90 shadow-[0_0_12px_rgba(251,113,133,0.55)]',
+    subtagBorder: 'border-rose-400/70',
+    subtagLabel: 'text-rose-400/80',
+    subtagSelected: 'bg-rose-600 border-rose-500 text-white',
+    subtagDefault: 'bg-gray-800/80 border-rose-900/50 text-gray-300 hover:border-rose-500 hover:text-rose-300',
+    chipDisplay: 'bg-rose-900/60 border-rose-700 text-rose-200',
+    chipDisplayParent: 'text-rose-400/70',
+};
+
+const DEFENSE_FACET_TOKEN: CustomTagToken = {
+    chipSelected: 'bg-blue-600 border-blue-500 text-white',
+    chipExpanded: 'bg-blue-900/70 border-blue-500 text-blue-100 font-bold',
+    chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-300',
+    expandSelected: 'bg-blue-700 border-blue-500 text-blue-200',
+    expandExpanded: 'bg-blue-700 border-blue-500 text-blue-100',
+    expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-blue-500 hover:text-blue-300',
+    ring: 'ring-2 ring-blue-400/90 shadow-[0_0_12px_rgba(96,165,250,0.55)]',
+    subtagBorder: 'border-blue-400/70',
+    subtagLabel: 'text-blue-400/80',
+    subtagSelected: 'bg-blue-600 border-blue-500 text-white',
+    subtagDefault: 'bg-gray-800/80 border-blue-900/50 text-gray-300 hover:border-blue-500 hover:text-blue-300',
+    chipDisplay: 'bg-blue-900/60 border-blue-700 text-blue-200',
+    chipDisplayParent: 'text-blue-400/70',
+};
+
 export const ATTACK_FACET_COLUMNS: AttackFacetColumn[] = [
     {
         key: 'mechanism',
         question: '① どうやって？',
         questionClass: 'text-rose-300',
         parents: ['ワザダメージ', 'ダメカンを置く', 'ダメカン移動'],
-        token: {
-            chipSelected: 'bg-rose-600 border-rose-500 text-white',
-            chipExpanded: 'bg-rose-900/70 border-rose-500 text-rose-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-rose-500 hover:text-rose-300',
-            expandSelected: 'bg-rose-700 border-rose-500 text-rose-200',
-            expandExpanded: 'bg-rose-700 border-rose-500 text-rose-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-rose-500 hover:text-rose-300',
-            ring: 'ring-2 ring-rose-400/90 shadow-[0_0_12px_rgba(251,113,133,0.55)]',
-            subtagBorder: 'border-rose-400/70',
-            subtagLabel: 'text-rose-400/80',
-            subtagSelected: 'bg-rose-600 border-rose-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-rose-900/50 text-gray-300 hover:border-rose-500 hover:text-rose-300',
-            chipDisplay: 'bg-rose-900/60 border-rose-700 text-rose-200',
-            chipDisplayParent: 'text-rose-400/70',
-        },
+        token: ATTACK_FACET_TOKEN,
     },
     {
         key: 'timing',
         question: '② いつ？',
-        questionClass: 'text-amber-300',
+        questionClass: 'text-rose-300',
         parents: ['即時', '次の番も', '特性・場', '反射'],
-        token: {
-            chipSelected: 'bg-amber-600 border-amber-500 text-white',
-            chipExpanded: 'bg-amber-900/70 border-amber-500 text-amber-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-300',
-            expandSelected: 'bg-amber-700 border-amber-500 text-amber-200',
-            expandExpanded: 'bg-amber-700 border-amber-500 text-amber-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-amber-500 hover:text-amber-300',
-            ring: 'ring-2 ring-amber-400/90 shadow-[0_0_12px_rgba(251,191,36,0.55)]',
-            subtagBorder: 'border-amber-400/70',
-            subtagLabel: 'text-amber-400/80',
-            subtagSelected: 'bg-amber-600 border-amber-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-amber-900/50 text-gray-300 hover:border-amber-500 hover:text-amber-300',
-            chipDisplay: 'bg-amber-900/60 border-amber-700 text-amber-200',
-            chipDisplayParent: 'text-amber-400/70',
-        },
+        token: ATTACK_FACET_TOKEN,
     },
     {
         key: 'condition',
         question: '③ 何を参照？',
-        questionClass: 'text-sky-300',
+        questionClass: 'text-rose-300',
         parents: ['無条件', '自分の場', '相手の場', 'コイン', '枚数参照', '種別', '特殊状態参照', 'HP/ダメカン'],
-        token: {
-            chipSelected: 'bg-sky-600 border-sky-500 text-white',
-            chipExpanded: 'bg-sky-900/70 border-sky-500 text-sky-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-sky-500 hover:text-sky-300',
-            expandSelected: 'bg-sky-700 border-sky-500 text-sky-200',
-            expandExpanded: 'bg-sky-700 border-sky-500 text-sky-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-sky-500 hover:text-sky-300',
-            ring: 'ring-2 ring-sky-400/90 shadow-[0_0_12px_rgba(56,189,248,0.55)]',
-            subtagBorder: 'border-sky-400/70',
-            subtagLabel: 'text-sky-400/80',
-            subtagSelected: 'bg-sky-600 border-sky-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-sky-900/50 text-gray-300 hover:border-sky-500 hover:text-sky-300',
-            chipDisplay: 'bg-sky-900/60 border-sky-700 text-sky-200',
-            chipDisplayParent: 'text-sky-400/70',
-        },
+        token: ATTACK_FACET_TOKEN,
     },
     {
         key: 'scope',
         question: '④ どこに飛ぶ？',
-        questionClass: 'text-emerald-300',
+        questionClass: 'text-rose-300',
         parents: ['ベンチに届く', '自分側', 'お互い'],
-        token: {
-            chipSelected: 'bg-emerald-600 border-emerald-500 text-white',
-            chipExpanded: 'bg-emerald-900/70 border-emerald-500 text-emerald-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-emerald-500 hover:text-emerald-300',
-            expandSelected: 'bg-emerald-700 border-emerald-500 text-emerald-200',
-            expandExpanded: 'bg-emerald-700 border-emerald-500 text-emerald-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-emerald-500 hover:text-emerald-300',
-            ring: 'ring-2 ring-emerald-400/90 shadow-[0_0_12px_rgba(52,211,153,0.55)]',
-            subtagBorder: 'border-emerald-400/70',
-            subtagLabel: 'text-emerald-400/80',
-            subtagSelected: 'bg-emerald-600 border-emerald-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-emerald-900/50 text-gray-300 hover:border-emerald-500 hover:text-emerald-300',
-            chipDisplay: 'bg-emerald-900/60 border-emerald-700 text-emerald-200',
-            chipDisplayParent: 'text-emerald-400/70',
-        },
+        token: ATTACK_FACET_TOKEN,
     },
 ];
 
@@ -200,65 +185,23 @@ export const DEFENSE_FACET_COLUMNS: AttackFacetColumn[] = [
     {
         key: 'defMechanism',
         question: '① なにを防ぐ？',
-        questionClass: 'text-cyan-300',
+        questionClass: 'text-blue-300',
         parents: ['受けるダメージ軽減', '受けるダメージ無効', '効果を受けない', '特殊状態にならない'],
-        token: {
-            chipSelected: 'bg-cyan-600 border-cyan-500 text-white',
-            chipExpanded: 'bg-cyan-900/70 border-cyan-500 text-cyan-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
-            expandSelected: 'bg-cyan-700 border-cyan-500 text-cyan-200',
-            expandExpanded: 'bg-cyan-700 border-cyan-500 text-cyan-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-cyan-500 hover:text-cyan-300',
-            ring: 'ring-2 ring-cyan-400/90 shadow-[0_0_12px_rgba(34,211,238,0.55)]',
-            subtagBorder: 'border-cyan-400/70',
-            subtagLabel: 'text-cyan-400/80',
-            subtagSelected: 'bg-cyan-600 border-cyan-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-cyan-900/50 text-gray-300 hover:border-cyan-500 hover:text-cyan-300',
-            chipDisplay: 'bg-cyan-900/60 border-cyan-700 text-cyan-200',
-            chipDisplayParent: 'text-cyan-400/70',
-        },
+        token: DEFENSE_FACET_TOKEN,
     },
     {
         key: 'defTiming',
         question: '② いつ・条件は？',
-        questionClass: 'text-lime-300',
+        questionClass: 'text-blue-300',
         parents: ['常時', '次の相手の番', 'コインしだい', '特定の相手のみ'],
-        token: {
-            chipSelected: 'bg-lime-600 border-lime-500 text-white',
-            chipExpanded: 'bg-lime-900/70 border-lime-500 text-lime-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-lime-500 hover:text-lime-300',
-            expandSelected: 'bg-lime-700 border-lime-500 text-lime-200',
-            expandExpanded: 'bg-lime-700 border-lime-500 text-lime-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-lime-500 hover:text-lime-300',
-            ring: 'ring-2 ring-lime-400/90 shadow-[0_0_12px_rgba(163,230,53,0.55)]',
-            subtagBorder: 'border-lime-400/70',
-            subtagLabel: 'text-lime-400/80',
-            subtagSelected: 'bg-lime-600 border-lime-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-lime-900/50 text-gray-300 hover:border-lime-500 hover:text-lime-300',
-            chipDisplay: 'bg-lime-900/60 border-lime-700 text-lime-200',
-            chipDisplayParent: 'text-lime-400/70',
-        },
+        token: DEFENSE_FACET_TOKEN,
     },
     {
         key: 'defTarget',
         question: '③ だれを守る？',
-        questionClass: 'text-fuchsia-300',
+        questionClass: 'text-blue-300',
         parents: ['このポケモン', '場の全員', 'ベンチ', '相手を弱める'],
-        token: {
-            chipSelected: 'bg-fuchsia-600 border-fuchsia-500 text-white',
-            chipExpanded: 'bg-fuchsia-900/70 border-fuchsia-500 text-fuchsia-100 font-bold',
-            chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-fuchsia-500 hover:text-fuchsia-300',
-            expandSelected: 'bg-fuchsia-700 border-fuchsia-500 text-fuchsia-200',
-            expandExpanded: 'bg-fuchsia-700 border-fuchsia-500 text-fuchsia-100',
-            expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-fuchsia-500 hover:text-fuchsia-300',
-            ring: 'ring-2 ring-fuchsia-400/90 shadow-[0_0_12px_rgba(232,121,249,0.55)]',
-            subtagBorder: 'border-fuchsia-400/70',
-            subtagLabel: 'text-fuchsia-400/80',
-            subtagSelected: 'bg-fuchsia-600 border-fuchsia-500 text-white',
-            subtagDefault: 'bg-gray-800/80 border-fuchsia-900/50 text-gray-300 hover:border-fuchsia-500 hover:text-fuchsia-300',
-            chipDisplay: 'bg-fuchsia-900/60 border-fuchsia-700 text-fuchsia-200',
-            chipDisplayParent: 'text-fuchsia-400/70',
-        },
+        token: DEFENSE_FACET_TOKEN,
     },
 ];
 

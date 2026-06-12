@@ -13,6 +13,7 @@ import {
     DEFENSE_FACET_COLUMNS,
     DEFENSE_FACET_TAGS,
     getCustomTagToken,
+    officialTagLabel,
     type CustomTagToken,
 } from "../../lib/tagColors";
 import CardModal from "./CardModal";
@@ -851,7 +852,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                                         isSelected ? group.token.active : group.token.inactive
                                                     }`}
                                                 >
-                                                    {tag}
+                                                    {officialTagLabel(tag)}
                                                 </button>
                                             );
                                         })}
@@ -1090,7 +1091,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                     <span className="text-gray-400">→ 該当 <span className="font-bold text-white">{filteredCards.length.toLocaleString()}</span> 枚</span>
                                     <button
                                         onClick={clearDefenseFacetTags}
-                                        className="text-xs text-cyan-400 hover:text-cyan-200 underline py-1 px-2 touch-manipulation"
+                                        className="text-xs text-blue-400 hover:text-blue-200 underline py-1 px-2 touch-manipulation"
                                     >
                                         クリア
                                     </button>

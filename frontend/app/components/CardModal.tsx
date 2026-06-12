@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MasterCard, CardVariant, OfficialClassIndex } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDisplayVariant } from '../../lib/variantUtils';
-import { getOfficialTagColor, getCustomTagDisplayToken } from '../../lib/tagColors';
+import { getOfficialTagColor, getCustomTagDisplayToken, officialTagLabel } from '../../lib/tagColors';
 
 type DeckEntry = {
     archetype: string;
@@ -307,7 +307,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                                         key={tag}
                                         className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${getOfficialTagColor(tag)}`}
                                     >
-                                        {tag}
+                                        {officialTagLabel(tag)}
                                     </span>
                                 ))}
                                 {tags.map(tag => {
