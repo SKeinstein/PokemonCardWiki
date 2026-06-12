@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MasterCard, CardVariant, OfficialClassIndex } from '../../lib/data';
 import { useBodyScrollLock } from '../hooks/useBodyScrollLock';
 import { pickDisplayVariant } from '../../lib/variantUtils';
-import { getOfficialTagColor, getCustomTagDisplayToken, officialTagLabel } from '../../lib/tagColors';
+import { getOfficialTagColor, getCustomTagDisplayToken, officialTagLabel, ATTACK_FACET_TAGS, DEFENSE_FACET_TAGS } from '../../lib/tagColors';
 
 type DeckEntry = {
     archetype: string;
@@ -300,6 +300,17 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                         {/* Tags section */}
                         {(() => {
                             const officialTags = officialClassIndex?.[selectedVariant?.official_id ?? ''] ?? [];
+                            // 表示順: 攻撃ファセット(列順) → 防御ファセット(列順) → その他(辞書順)。
+                            // サブタグを持つ親は単独チップを出さない（サブ側が「親 › サブ」で示す）
+                            const tagSet = new Set(tags);
+                            const parentsWithSub = new Set(
+                                tags.filter(t => t.includes('>')).map(t => t.substring(0, t.indexOf('>')))
+                            );
+                            const facetTags = [...ATTACK_FACET_TAGS, ...DEFENSE_FACET_TAGS].filter(t => tagSet.has(t));
+                            const otherTags = tags.filter(
+                                t => !ATTACK_FACET_TAGS.has(t) && !DEFENSE_FACET_TAGS.has(t) && !parentsWithSub.has(t)
+                            );
+                            const displayTags = [...facetTags, ...otherTags];
                             return (officialTags.length > 0 || tags.length > 0) && (
                             <div className="mb-4 flex flex-wrap gap-1.5">
                                 {officialTags.map(tag => (
@@ -310,7 +321,7 @@ export default function CardModal({ card, variants, isOpen, onClose, tags = [], 
                                         {officialTagLabel(tag)}
                                     </span>
                                 ))}
-                                {tags.map(tag => {
+                                {displayTags.map(tag => {
                                     const gtIdx = tag.indexOf('>');
                                     const parent = gtIdx >= 0 ? tag.substring(0, gtIdx) : null;
                                     const label = gtIdx >= 0 ? tag.substring(gtIdx + 1) : tag;
