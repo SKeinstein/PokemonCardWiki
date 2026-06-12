@@ -77640,5 +77640,3323 @@
     "weight": "",
     "flavor_text": "",
     "evolutions": []
+  },
+  {
+    "master_id": "トロピウス_110_grass_none_かじつのかおり|ソーラービーム_none",
+    "name": "トロピウス",
+    "hp": 110,
+    "type": "grass",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "かじつのかおり",
+        "damage": "",
+        "cost": [
+          "none"
+        ],
+        "text": "自分の山札を上から6枚見て、その中からポケモンを好きなだけ選び、相手に見せて、手札に加える。残りのカードは山札にもどして切る。"
+      },
+      {
+        "name": "ソーラービーム",
+        "damage": "60",
+        "cost": [
+          "grass",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "357",
+    "pokedexCategory": "フルーツポケモン",
+    "height": "2.0m",
+    "weight": "100.0kg",
+    "flavor_text": "いつも 同じ 果物ばかり 食べていたら のど元に とても 美味しい 果物が 生えてきた。",
+    "evolutions": []
+  },
+  {
+    "master_id": "アゴジムシ_70_grass_none_いとをはく_none",
+    "name": "アゴジムシ",
+    "hp": 70,
+    "type": "grass",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "いとをはく",
+        "damage": "10",
+        "cost": [
+          "none"
+        ],
+        "text": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "736",
+    "pokedexCategory": "ようちゅうポケモン",
+    "height": "0.4m",
+    "weight": "4.4kg",
+    "flavor_text": "ネバネバの 糸を 吐いて 枝に 巻きつけ 振り子の 動きで 木から 木へと 身軽に 飛び移る。",
+    "evolutions": [
+      "クワガノン",
+      "クワガノンGX",
+      "デンヂムシ",
+      "アゴジムシ"
+    ]
+  },
+  {
+    "master_id": "カリキリ_70_grass_none_とつげき_none",
+    "name": "カリキリ",
+    "hp": 70,
+    "type": "grass",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "とつげき",
+        "damage": "30",
+        "cost": [
+          "grass"
+        ],
+        "text": "このポケモンにも10ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "753",
+    "pokedexCategory": "かまくさポケモン",
+    "height": "0.3m",
+    "weight": "1.5kg",
+    "flavor_text": "落ち着いて 日光浴 できるよう カリキリ専用の フラワーポットを 与える トレーナーも 多い。",
+    "evolutions": [
+      "ラランテスGX",
+      "ラランテス",
+      "ラランテスex",
+      "カリキリ"
+    ]
+  },
+  {
+    "master_id": "ラランテスex_260_grass_none_はつらつカッター|リーフガード_none",
+    "name": "ラランテスex",
+    "hp": 260,
+    "type": "grass",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "はつらつカッター",
+        "damage": "60＋",
+        "cost": [
+          "grass"
+        ],
+        "text": "この番に、このポケモンのHPを回復していたなら、200ダメージ追加。"
+      },
+      {
+        "name": "リーフガード",
+        "damage": "140",
+        "cost": [
+          "grass",
+          "none"
+        ],
+        "text": "次の相手の番、このポケモンが受けるワザのダメージは「-50」される。"
+      }
+    ],
+    "rules": [
+      "ポケモンexがきぜつしたとき、相手はサイドを2枚とる。"
+    ],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": [
+      "ラランテスGX",
+      "ラランテス",
+      "ラランテスex",
+      "カリキリ"
+    ]
+  },
+  {
+    "master_id": "チャデス_30_grass_none_ひっそりのせる_ばけがくれ",
+    "name": "チャデス",
+    "hp": 30,
+    "type": "grass",
+    "card_kind": "たね",
+    "abilities": [
+      {
+        "name": "ばけがくれ",
+        "text": "このポケモンは、相手のワザや特性の効果を受けない。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ひっそりのせる",
+        "damage": "",
+        "cost": [
+          "none"
+        ],
+        "text": "相手のバトルポケモンに、ダメカンを1個のせる。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 0,
+    "pokedexNo": "1012",
+    "pokedexCategory": "まっちゃポケモン",
+    "height": "0.1m",
+    "weight": "1.1kg",
+    "flavor_text": "ヤバチャの リージョンフォームに 見えるが まったく 関係のない ポケモンと 最近 判明した。",
+    "evolutions": [
+      "ヤバソチャex",
+      "ヤバソチャ",
+      "チャデス"
+    ]
+  },
+  {
+    "master_id": "ヤバソチャ_60_grass_none_まっちゃスピン_ばけがくれ",
+    "name": "ヤバソチャ",
+    "hp": 60,
+    "type": "grass",
+    "card_kind": "1 進化",
+    "abilities": [
+      {
+        "name": "ばけがくれ",
+        "text": "このポケモンは、相手のワザや特性の効果を受けない。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "まっちゃスピン",
+        "damage": "",
+        "cost": [
+          "none"
+        ],
+        "text": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが6枚以上あるなら、相手のポケモン全員に、それぞれダメカンを4個のせる。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "1013",
+    "pokedexCategory": "まっちゃポケモン",
+    "height": "0.2m",
+    "weight": "2.2kg",
+    "flavor_text": "民家の 床下や 棚の奥など 冷暗所を 好む。 日没後 獲物を 探して 徘徊する。",
+    "evolutions": [
+      "ヤバソチャex",
+      "ヤバソチャ",
+      "チャデス"
+    ]
+  },
+  {
+    "master_id": "ヒードラン_140_fire_none_こがす|ようがんウォール_none",
+    "name": "ヒードラン",
+    "hp": 140,
+    "type": "fire",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "こがす",
+        "damage": "",
+        "cost": [
+          "fire"
+        ],
+        "text": "相手のバトルポケモンをやけどにする。"
+      },
+      {
+        "name": "ようがんウォール",
+        "damage": "120",
+        "cost": [
+          "fire",
+          "fire",
+          "none"
+        ],
+        "text": "次の相手の番、このポケモンはやけどのポケモンからワザのダメージを受けない。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "water",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 4,
+    "pokedexNo": "485",
+    "pokedexCategory": "かこうポケモン",
+    "height": "1.7m",
+    "weight": "430.0kg",
+    "flavor_text": "火山の 洞穴に 生息。  十字の ツメを 食いこませて  壁や 天井を はい回る。",
+    "evolutions": []
+  },
+  {
+    "master_id": "ヤクデ_80_fire_none_のやき|バグパニック_none",
+    "name": "ヤクデ",
+    "hp": 80,
+    "type": "fire",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "のやき",
+        "damage": "",
+        "cost": [
+          "fire"
+        ],
+        "text": "相手の山札を上から1枚トラッシュする。"
+      },
+      {
+        "name": "バグパニック",
+        "damage": "50×",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": "自分の山札を下から7枚オモテにして、その中にある、ワザ「バグパニック」を持つポケモンの枚数×50ダメージ。オモテにしたポケモンは山札にもどして切る。残りのカードはトラッシュする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "water",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "850",
+    "pokedexCategory": "はつねつポケモン",
+    "height": "0.7m",
+    "weight": "1.0kg",
+    "flavor_text": "体に 溜めた 可燃ガスで  発熱。 とくに お腹の  黄色い 部分が 熱いのだ。",
+    "evolutions": [
+      "マルヤクデ",
+      "ヤクデ"
+    ]
+  },
+  {
+    "master_id": "マルヤクデ_140_fire_none_のやき|ヒートタックル_none",
+    "name": "マルヤクデ",
+    "hp": 140,
+    "type": "fire",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "のやき",
+        "damage": "",
+        "cost": [
+          "fire"
+        ],
+        "text": "相手の山札を上から2枚トラッシュする。"
+      },
+      {
+        "name": "ヒートタックル",
+        "damage": "160",
+        "cost": [
+          "fire",
+          "none",
+          "none",
+          "none"
+        ],
+        "text": "このポケモンにも30ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "water",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "851",
+    "pokedexCategory": "はつねつポケモン",
+    "height": "3.0m",
+    "weight": "120.0kg",
+    "flavor_text": "発熱時の 体温は およそ  ８００度。 体を 鞭のように  しならせて 跳びかかってくるぞ。",
+    "evolutions": [
+      "マルヤクデ",
+      "ヤクデ"
+    ]
+  },
+  {
+    "master_id": "カルボウ_80_fire_none_ぜんりょくパンチ_none",
+    "name": "カルボウ",
+    "hp": 80,
+    "type": "fire",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ぜんりょくパンチ",
+        "damage": "40",
+        "cost": [
+          "fire"
+        ],
+        "text": "コインを1回投げウラなら、このワザは失敗。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "water",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "935",
+    "pokedexCategory": "ひのこポケモン",
+    "height": "0.6m",
+    "weight": "10.5kg",
+    "flavor_text": "戦いになると 火力が 上がり 摂氏１０００度に 達する。 油分の多い 木の実を 好む。",
+    "evolutions": [
+      "グレンアルマ",
+      "ソウブレイズ",
+      "グレンアルマex",
+      "ソウブレイズex",
+      "カルボウ"
+    ]
+  },
+  {
+    "master_id": "グレンアルマ_140_fire_none_フレイムレギオン_none",
+    "name": "グレンアルマ",
+    "hp": 140,
+    "type": "fire",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "フレイムレギオン",
+        "damage": "40＋",
+        "cost": [
+          "fire"
+        ],
+        "text": "エネルギーがついている自分のベンチポケモンの数×40ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "water",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "936",
+    "pokedexCategory": "ひのせんしポケモン",
+    "height": "1.5m",
+    "weight": "85.0kg",
+    "flavor_text": "エスパーと 炎の エネルギーで 強化された 鎧を まとう。 灼熱の 火の玉を 放つ。",
+    "evolutions": [
+      "グレンアルマ",
+      "ソウブレイズ",
+      "グレンアルマex",
+      "ソウブレイズex",
+      "カルボウ"
+    ]
+  },
+  {
+    "master_id": "トサキント_70_water_none_つきさす_none",
+    "name": "トサキント",
+    "hp": 70,
+    "type": "water",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "つきさす",
+        "damage": "30",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "118",
+    "pokedexCategory": "きんぎょポケモン",
+    "height": "0.6m",
+    "weight": "15.0kg",
+    "flavor_text": "背びれ 胸びれ 尾びれが  優雅に たなびくので  水の踊り子 と呼ばれる。",
+    "evolutions": [
+      "アズマオウ",
+      "トサキント"
+    ]
+  },
+  {
+    "master_id": "アズマオウ_110_water_none_ハイドロショット_none",
+    "name": "アズマオウ",
+    "hp": 110,
+    "type": "water",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ハイドロショット",
+        "damage": "",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": "相手のポケモン1匹に、このポケモンについているエネルギーの数×30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "119",
+    "pokedexCategory": "きんぎょポケモン",
+    "height": "1.3m",
+    "weight": "39.0kg",
+    "flavor_text": "秋になると プロポーズのため  体に 脂が のってきて  とても きれいな色に 変化する。",
+    "evolutions": [
+      "アズマオウ",
+      "トサキント"
+    ]
+  },
+  {
+    "master_id": "ホエルコ_130_water_none_みずでっぽう|スプラッシュ_none",
+    "name": "ホエルコ",
+    "hp": 130,
+    "type": "water",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "みずでっぽう",
+        "damage": "40",
+        "cost": [
+          "water",
+          "water"
+        ],
+        "text": ""
+      },
+      {
+        "name": "スプラッシュ",
+        "damage": "80",
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 4,
+    "pokedexNo": "320",
+    "pokedexCategory": "たまくじらポケモン",
+    "height": "2.0m",
+    "weight": "130.0kg",
+    "flavor_text": "飲みこんだ 海水を 目の 上の  鼻の 穴から 噴き出し アピール。  毎日 １トンの ヨワシを 食う。",
+    "evolutions": [
+      "ホエルオー",
+      "ホエルオーex",
+      "ホエルコ"
+    ]
+  },
+  {
+    "master_id": "ホエルオーex_380_water_none_なみのり|フォーリングダウン_none",
+    "name": "ホエルオーex",
+    "hp": 380,
+    "type": "water",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "なみのり",
+        "damage": "120",
+        "cost": [
+          "water",
+          "water",
+          "water"
+        ],
+        "text": ""
+      },
+      {
+        "name": "フォーリングダウン",
+        "damage": "270",
+        "cost": [
+          "water",
+          "water",
+          "water",
+          "water",
+          "water"
+        ],
+        "text": "このポケモンをねむりにする。"
+      }
+    ],
+    "rules": [
+      "ポケモンexがきぜつしたとき、相手はサイドを2枚とる。"
+    ],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 4,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": [
+      "ホエルオー",
+      "ホエルオーex",
+      "ホエルコ"
+    ]
+  },
+  {
+    "master_id": "ジーランス_100_water_none_フォッシルビート_none",
+    "name": "ジーランス",
+    "hp": 100,
+    "type": "water",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "フォッシルビート",
+        "damage": "10＋",
+        "cost": [
+          "none"
+        ],
+        "text": "名前に「古びた」とつく自分のベンチポケモンの数×30ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "369",
+    "pokedexCategory": "ちょうじゅポケモン",
+    "height": "1.0m",
+    "weight": "23.4kg",
+    "flavor_text": "岩のように 硬い ウロコと 脂の 詰まった 浮袋で 深海の 水圧に 耐える。",
+    "evolutions": []
+  },
+  {
+    "master_id": "アシマリ_70_water_none_はたく_none",
+    "name": "アシマリ",
+    "hp": 70,
+    "type": "water",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "はたく",
+        "damage": "20",
+        "cost": [
+          "water"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "728",
+    "pokedexCategory": "あしかポケモン",
+    "height": "0.4m",
+    "weight": "7.5kg",
+    "flavor_text": "鼻で ふくらませる バルーンは 日々 練習を 重ねることで 少しずつ 大きく なっていく。",
+    "evolutions": [
+      "アシレーヌGX",
+      "アシレーヌ",
+      "オシャマリ",
+      "アシマリ"
+    ]
+  },
+  {
+    "master_id": "オシャマリ_90_water_none_ハイパーボイス_none",
+    "name": "オシャマリ",
+    "hp": 90,
+    "type": "water",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ハイパーボイス",
+        "damage": "40",
+        "cost": [
+          "water"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "729",
+    "pokedexCategory": "アイドルポケモン",
+    "height": "0.6m",
+    "weight": "17.5kg",
+    "flavor_text": "仲間を 思う 気持ちが 強い。 トレーナーが 落ち込んでいると ダンスを 踊って 励まそうとする。",
+    "evolutions": [
+      "アシレーヌGX",
+      "アシレーヌ",
+      "オシャマリ",
+      "アシマリ"
+    ]
+  },
+  {
+    "master_id": "アシレーヌ_150_water_none_アクアリターン_まんたんメロディ",
+    "name": "アシレーヌ",
+    "hp": 150,
+    "type": "water",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "まんたんメロディ",
+        "text": "自分の番に、このカードを手札から出して進化させたとき、1回使える。自分のポケモン1匹のHPを、すべて回復する。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "アクアリターン",
+        "damage": "120",
+        "cost": [
+          "water",
+          "none"
+        ],
+        "text": "このポケモンと、ついているすべてのカードを、山札にもどして切る。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "730",
+    "pokedexCategory": "ソリストポケモン",
+    "height": "1.8m",
+    "weight": "44.0kg",
+    "flavor_text": "歌姫の 異名を 持つ。 月夜の 晩に 群れを 率いて 歌う 姿は 幻想的。",
+    "evolutions": [
+      "アシレーヌGX",
+      "アシレーヌ",
+      "オシャマリ",
+      "アシマリ"
+    ]
+  },
+  {
+    "master_id": "ナミイルカ_80_water_none_ドレインフィン_none",
+    "name": "ナミイルカ",
+    "hp": 80,
+    "type": "water",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ドレインフィン",
+        "damage": "20",
+        "cost": [
+          "water",
+          "water"
+        ],
+        "text": "このポケモンのHPを「20」回復する。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "963",
+    "pokedexCategory": "イルカポケモン",
+    "height": "1.3m",
+    "weight": "60.2kg",
+    "flavor_text": "水のリングは 頭の 穴から 出る 粘着液と 海の水を 混ぜて 作り出したものなのだ。",
+    "evolutions": [
+      "イルカマン",
+      "イルカマンex",
+      "ナミイルカ"
+    ]
+  },
+  {
+    "master_id": "イルカマン_150_water_none_ジャスティスナックル_none",
+    "name": "イルカマン",
+    "hp": 150,
+    "type": "water",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ジャスティスナックル",
+        "damage": "80＋",
+        "cost": [
+          "water",
+          "water"
+        ],
+        "text": "相手のサイドの残り枚数が1枚なら、200ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "964",
+    "pokedexCategory": "ヒーローポケモン",
+    "height": "1.8m",
+    "weight": "97.4kg",
+    "flavor_text": "５０ノットの 速さで 泳ぎ 溺れている 人や ポケモンを 助ける 海の ヒーロー。",
+    "evolutions": [
+      "イルカマン",
+      "イルカマンex",
+      "ナミイルカ"
+    ]
+  },
+  {
+    "master_id": "ラクライ_70_electric_none_たいあたり|もってくる_none",
+    "name": "ラクライ",
+    "hp": 70,
+    "type": "electric",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "もってくる",
+        "damage": "",
+        "cost": [
+          "electric"
+        ],
+        "text": "自分の山札を1枚引く。"
+      },
+      {
+        "name": "たいあたり",
+        "damage": "30",
+        "cost": [
+          "electric",
+          "electric"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "309",
+    "pokedexCategory": "いなずまポケモン",
+    "height": "0.6m",
+    "weight": "15.2kg",
+    "flavor_text": "静電気を 体毛に 蓄えて 放電する。 嵐が 近づくと 全身から 火花を 散らす。",
+    "evolutions": [
+      "ライボルト",
+      "メガライボルトex",
+      "ラクライ"
+    ]
+  },
+  {
+    "master_id": "ライボルト_120_electric_none_ソニックエッジ|フラッシュバリア_none",
+    "name": "ライボルト",
+    "hp": 120,
+    "type": "electric",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "フラッシュバリア",
+        "damage": "50",
+        "cost": [
+          "electric",
+          "electric"
+        ],
+        "text": "次の相手の番、このポケモンは進化ポケモンからワザのダメージを受けない。"
+      },
+      {
+        "name": "ソニックエッジ",
+        "damage": "110",
+        "cost": [
+          "electric",
+          "electric",
+          "electric"
+        ],
+        "text": "このワザのダメージは、相手のバトルポケモンにかかっている効果を計算しない。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "310",
+    "pokedexCategory": "ほうでんポケモン",
+    "height": "1.5m",
+    "weight": "40.2kg",
+    "flavor_text": "たてがみから 放電している。 頭上に 雷雲を 作り 稲妻を 落として 攻撃する。",
+    "evolutions": [
+      "ライボルト",
+      "メガライボルトex",
+      "ラクライ"
+    ]
+  },
+  {
+    "master_id": "デンヂムシ_100_electric_none_はさむ|ぶつかる_none",
+    "name": "デンヂムシ",
+    "hp": 100,
+    "type": "electric",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "はさむ",
+        "damage": "30",
+        "cost": [
+          "electric"
+        ],
+        "text": ""
+      },
+      {
+        "name": "ぶつかる",
+        "damage": "50",
+        "cost": [
+          "electric",
+          "electric"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "737",
+    "pokedexCategory": "バッテリーポケモン",
+    "height": "0.5m",
+    "weight": "10.5kg",
+    "flavor_text": "食べた 落ち葉を 消化するとき 発電して 電気を 溜めこむ。 あごの 先端から 放電する。",
+    "evolutions": [
+      "クワガノン",
+      "クワガノンGX",
+      "デンヂムシ",
+      "アゴジムシ"
+    ]
+  },
+  {
+    "master_id": "クワガノン_160_electric_none_ギガレールガン|クイックダイブ_none",
+    "name": "クワガノン",
+    "hp": 160,
+    "type": "electric",
+    "card_kind": "2 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "クイックダイブ",
+        "damage": "",
+        "cost": [
+          "electric"
+        ],
+        "text": "相手のポケモン1匹に、50ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+      },
+      {
+        "name": "ギガレールガン",
+        "damage": "260",
+        "cost": [
+          "electric",
+          "electric"
+        ],
+        "text": "このポケモンに「ボルトエネルギー」がついていないなら、このワザは失敗。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "738",
+    "pokedexCategory": "くわがたポケモン",
+    "height": "1.5m",
+    "weight": "45.0kg",
+    "flavor_text": "デンヂムシを 抱えて 電気を もらい 大あごから 強力な 電磁ビームを 連射する。",
+    "evolutions": [
+      "クワガノン",
+      "クワガノンGX",
+      "デンヂムシ",
+      "アゴジムシ"
+    ]
+  },
+  {
+    "master_id": "メガゼラオラex_270_electric_none_サンダーフィスト|ゼプトターン_none",
+    "name": "メガゼラオラex",
+    "hp": 270,
+    "type": "electric",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "サンダーフィスト",
+        "damage": "60×",
+        "cost": [
+          "electric"
+        ],
+        "text": "このポケモンについているエネルギーの数×60ダメージ。"
+      },
+      {
+        "name": "ゼプトターン",
+        "damage": "150",
+        "cost": [
+          "electric",
+          "electric",
+          "electric"
+        ],
+        "text": "このポケモンをベンチポケモンと入れ替える。"
+      }
+    ],
+    "rules": [
+      "メガシンカexがきぜつしたとき、相手はサイドを3枚とる。"
+    ],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ミライドン_120_electric_none_かみなり_フォトンコード",
+    "name": "ミライドン",
+    "hp": 120,
+    "type": "electric",
+    "card_kind": "たね",
+    "abilities": [
+      {
+        "name": "フォトンコード",
+        "text": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けてきぜつしたとき、このポケモンについている「基本エネルギー」を2枚まで選び、ベンチポケモン1匹につけ替える。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "かみなり",
+        "damage": "90",
+        "cost": [
+          "electric",
+          "electric"
+        ],
+        "text": "このポケモンにも30ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "1008",
+    "pokedexCategory": "パラドックスポケモン",
+    "height": "3.5m",
+    "weight": "240.0kg",
+    "flavor_text": "古い 書物に 名が ある テツノオロチらしい。 雷で 大地を 灰に 変えたという。",
+    "evolutions": []
+  },
+  {
+    "master_id": "ヤドン_70_psychic_none_すてほうだい|ずつき_none",
+    "name": "ヤドン",
+    "hp": 70,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "すてほうだい",
+        "damage": "",
+        "cost": [
+          "psychic"
+        ],
+        "text": "自分の手札を好きなだけ選び、トラッシュする。"
+      },
+      {
+        "name": "ずつき",
+        "damage": "20",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "079",
+    "pokedexCategory": "まぬけポケモン",
+    "height": "1.2m",
+    "weight": "36.0kg",
+    "flavor_text": "水辺で ボーッとしている。 なにかが 尻尾に 噛みついても まる１日 気づかない。",
+    "evolutions": [
+      "ヤドラン",
+      "ヤドキング",
+      "ヤドキングex",
+      "メガヤドランex",
+      "ヤドン"
+    ]
+  },
+  {
+    "master_id": "ヤドラン_130_psychic_none_しねんのずつき|スッカラカン_none",
+    "name": "ヤドラン",
+    "hp": 130,
+    "type": "psychic",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "スッカラカン",
+        "damage": "50＋",
+        "cost": [
+          "psychic"
+        ],
+        "text": "自分の手札が1枚もないなら、160ダメージ追加。"
+      },
+      {
+        "name": "しねんのずつき",
+        "damage": "110",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "080",
+    "pokedexCategory": "やどかりポケモン",
+    "height": "1.6m",
+    "weight": "78.5kg",
+    "flavor_text": "くっついている シェルダーは 尻尾から にじみでる うま味が 欲しくて ずっと 離れない。",
+    "evolutions": [
+      "ヤドラン",
+      "ヤドキング",
+      "ヤドキングex",
+      "メガヤドランex",
+      "ヤドン"
+    ]
+  },
+  {
+    "master_id": "ルージュラ_100_psychic_none_きょうれつキッス|ねんりき_none",
+    "name": "ルージュラ",
+    "hp": 100,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "きょうれつキッス",
+        "damage": "",
+        "cost": [
+          "psychic"
+        ],
+        "text": "次の相手の番の終わりに、このワザを受けたポケモンと、ついているすべてのカードを、トラッシュする。"
+      },
+      {
+        "name": "ねんりき",
+        "damage": "50",
+        "cost": [
+          "psychic",
+          "none"
+        ],
+        "text": "コインを1回投げオモテなら、相手のバトルポケモンをマヒにする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "124",
+    "pokedexCategory": "ひとがたポケモン",
+    "height": "1.4m",
+    "weight": "40.6kg",
+    "flavor_text": "人間の 言葉のような 不思議な  鳴き声。 ルージュラに 歌わせる  曲を 作る 音楽家もいる。",
+    "evolutions": []
+  },
+  {
+    "master_id": "カゲボウズ_50_psychic_none_ぶらさがる_ばけがくれ",
+    "name": "カゲボウズ",
+    "hp": 50,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [
+      {
+        "name": "ばけがくれ",
+        "text": "このポケモンは、相手のワザや特性の効果を受けない。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ぶらさがる",
+        "damage": "10",
+        "cost": [
+          "psychic"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "353",
+    "pokedexCategory": "にんぎょうポケモン",
+    "height": "0.6m",
+    "weight": "2.3kg",
+    "flavor_text": "頭の ツノで 恨みや ねたみの 感情を 食べると いわれる。 真夜中 活発に 活動する。",
+    "evolutions": [
+      "ジュペッタ",
+      "ジュペッタGX",
+      "ジュペッタex",
+      "カゲボウズ"
+    ]
+  },
+  {
+    "master_id": "ジュペッタ_80_psychic_none_にんぎょうキャッチ_ばけがくれ",
+    "name": "ジュペッタ",
+    "hp": 80,
+    "type": "psychic",
+    "card_kind": "1 進化",
+    "abilities": [
+      {
+        "name": "ばけがくれ",
+        "text": "このポケモンは、相手のワザや特性の効果を受けない。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "にんぎょうキャッチ",
+        "damage": "80",
+        "cost": [
+          "psychic"
+        ],
+        "text": "のぞむなら、自分の山札から好きなカードを1枚選び、手札に加える。そして山札を切る。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "354",
+    "pokedexCategory": "ぬいぐるみポケモン",
+    "height": "1.1m",
+    "weight": "12.5kg",
+    "flavor_text": "捨てられた ぬいぐるみに おんねんが 宿り ポケモンになった。 自分を 捨てた 子供を 捜している。",
+    "evolutions": [
+      "ジュペッタ",
+      "ジュペッタGX",
+      "ジュペッタex",
+      "カゲボウズ"
+    ]
+  },
+  {
+    "master_id": "ミカルゲ_60_psychic_none_たましいエンド_none",
+    "name": "ミカルゲ",
+    "hp": 60,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "たましいエンド",
+        "damage": "",
+        "cost": [
+          "psychic"
+        ],
+        "text": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが13枚以上あるなら、相手のポケモンを2匹選び、それぞれのっているダメカンの数が4倍になるように、ダメカンをのせる。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "442",
+    "pokedexCategory": "ふういんポケモン",
+    "height": "1.0m",
+    "weight": "108.0kg",
+    "flavor_text": "１０８個の 魂で できている。 二度と 悪さを しないように 要石に 縛りつけられている。",
+    "evolutions": []
+  },
+  {
+    "master_id": "ヒトモシ_70_psychic_none_おにび_none",
+    "name": "ヒトモシ",
+    "hp": 70,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "おにび",
+        "damage": "20",
+        "cost": [
+          "psychic"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "607",
+    "pokedexCategory": "ろうそくポケモン",
+    "height": "0.3m",
+    "weight": "3.1kg",
+    "flavor_text": "ヒトモシの 灯す 明かりは 人や ポケモンの 生命力を 吸い取って 燃えているのだ。",
+    "evolutions": [
+      "シャンデラ",
+      "メガシャンデラex",
+      "ランプラー",
+      "ヒトモシ"
+    ]
+  },
+  {
+    "master_id": "ランプラー_90_psychic_none_ふえるあかり_none",
+    "name": "ランプラー",
+    "hp": 90,
+    "type": "psychic",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ふえるあかり",
+        "damage": "",
+        "cost": [
+          "psychic"
+        ],
+        "text": "自分の山札から「ランプラー」を3枚まで選び、ベンチに出す。そして山札を切る。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "608",
+    "pokedexCategory": "ランプポケモン",
+    "height": "0.6m",
+    "weight": "13.0kg",
+    "flavor_text": "臨終の 際に 現れて 魂が 肉体を 離れると すかさず 吸い取ってしまうのだ。",
+    "evolutions": [
+      "シャンデラ",
+      "メガシャンデラex",
+      "ランプラー",
+      "ヒトモシ"
+    ]
+  },
+  {
+    "master_id": "メガシャンデラex_350_psychic_none_ファントムメイズ_じゅばくのほのお",
+    "name": "メガシャンデラex",
+    "hp": 350,
+    "type": "psychic",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "じゅばくのほのお",
+        "text": "このポケモンがいるかぎり、相手のバトルポケモンは、にげるためのエネルギーが1個ぶん多くなる。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ファントムメイズ",
+        "damage": "130＋",
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "text": "相手のバトルポケモンのにげるためのエネルギーの数×50ダメージ追加。"
+      }
+    ],
+    "rules": [
+      "メガシンカexがきぜつしたとき、相手はサイドを3枚とる。"
+    ],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": [
+      "シャンデラ",
+      "メガシャンデラex",
+      "ランプラー",
+      "ヒトモシ"
+    ]
+  },
+  {
+    "master_id": "ダダリン_140_psychic_none_むねんのイカリ_none",
+    "name": "ダダリン",
+    "hp": 140,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "むねんのイカリ",
+        "damage": "30＋",
+        "cost": [
+          "psychic"
+        ],
+        "text": "自分のトラッシュに、特性「ばけがくれ」を持つポケモンが4枚以上あるなら、140ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "781",
+    "pokedexCategory": "もくずポケモン",
+    "height": "3.9m",
+    "weight": "210.0kg",
+    "flavor_text": "海底を 漂う 藻屑が  沈没船の 部品を 取りこんで  ゴーストポケモンに 生まれ変わった。",
+    "evolutions": []
+  },
+  {
+    "master_id": "マーシャドー_90_psychic_none_かげむすび_none",
+    "name": "マーシャドー",
+    "hp": 90,
+    "type": "psychic",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "かげむすび",
+        "damage": "30×",
+        "cost": [
+          "psychic"
+        ],
+        "text": "相手のバトルポケモンのにげるためのエネルギーの数×30ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "802",
+    "pokedexCategory": "かげすみポケモン",
+    "height": "0.7m",
+    "weight": "22.2kg",
+    "flavor_text": "拳法の 達人の 影に 潜って 動きを コピーしたため 究極奥義を 身につけた。",
+    "evolutions": []
+  },
+  {
+    "master_id": "コノヨザル_150_psychic_none_ゴーストブロー_くちないからだ",
+    "name": "コノヨザル",
+    "hp": 150,
+    "type": "psychic",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "くちないからだ",
+        "text": "このポケモンが、ワザのダメージを受けてきぜつするとき、自分はコインを1回投げる。オモテなら、このポケモンはきぜつせず、残りHPが「10」の状態で場に残る。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ゴーストブロー",
+        "damage": "100",
+        "cost": [
+          "psychic",
+          "psychic"
+        ],
+        "text": "相手のベンチポケモン1匹に、ダメカンを5個のせる。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "dark",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "979",
+    "pokedexCategory": "ふんどざるポケモン",
+    "height": "1.2m",
+    "weight": "56.0kg",
+    "flavor_text": "心に 秘めた 怒りのパワーを こぶしに 込めて 叩きつけると 相手を 骨の髄から 砕く。",
+    "evolutions": [
+      "コノヨザル",
+      "コノヨザルex",
+      "オコリザル",
+      "マンキー"
+    ]
+  },
+  {
+    "master_id": "マンキー_50_fighting_none_けたぐり_none",
+    "name": "マンキー",
+    "hp": 50,
+    "type": "fighting",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "けたぐり",
+        "damage": "20",
+        "cost": [
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "psychic",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "056",
+    "pokedexCategory": "ぶたざるポケモン",
+    "height": "0.5m",
+    "weight": "28.0kg",
+    "flavor_text": "普段は 機嫌が 良くても ちょっとしたことで いきなり 暴れだすから 怖いのだ。",
+    "evolutions": [
+      "コノヨザル",
+      "コノヨザルex",
+      "オコリザル",
+      "マンキー"
+    ]
+  },
+  {
+    "master_id": "オコリザル_110_fighting_none_どつく_none",
+    "name": "オコリザル",
+    "hp": 110,
+    "type": "fighting",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "どつく",
+        "damage": "50",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "psychic",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "057",
+    "pokedexCategory": "ぶたざるポケモン",
+    "height": "1.0m",
+    "weight": "32.0kg",
+    "flavor_text": "ある研究者の 学説では モンスターボールの 中でも オコリザルは 怒っているらしい。",
+    "evolutions": [
+      "コノヨザル",
+      "コノヨザルex",
+      "オコリザル",
+      "マンキー"
+    ]
+  },
+  {
+    "master_id": "ズガイドス_100_fighting_none_つきとばす_none",
+    "name": "ズガイドス",
+    "hp": 100,
+    "type": "fighting",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "つきとばす",
+        "damage": "70",
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "text": "相手のバトルポケモンをベンチポケモンと入れ替える。［バトル場に出すポケモンは相手が選ぶ。］"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "408",
+    "pokedexCategory": "ずつきポケモン",
+    "height": "0.9m",
+    "weight": "31.5kg",
+    "flavor_text": "ズガイドス同士が 頭を ぶつけあうことで 頑丈な 頭が さらに 鍛えられる。",
+    "evolutions": [
+      "ラムパルド",
+      "ラムパルドex",
+      "ズガイドス",
+      "古びたずがいの化石"
+    ]
+  },
+  {
+    "master_id": "ラムパルドex_330_fighting_none_ランページハンマー_はかいのずつき",
+    "name": "ラムパルドex",
+    "hp": 330,
+    "type": "fighting",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "はかいのずつき",
+        "text": "このポケモンがバトル場にいるなら、自分の番に1回使える。コインを1回投げオモテなら、相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ランページハンマー",
+        "damage": "150",
+        "cost": [
+          "fighting",
+          "fighting"
+        ],
+        "text": "次の自分の番、このポケモンが使うワザの、相手のバトルポケモンへのダメージは「+150」される。"
+      }
+    ],
+    "rules": [
+      "ポケモンexがきぜつしたとき、相手はサイドを2枚とる。"
+    ],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": [
+      "ラムパルド",
+      "ラムパルドex",
+      "ズガイドス",
+      "古びたずがいの化石"
+    ]
+  },
+  {
+    "master_id": "モグリュー_70_fighting_none_なかまをよぶ|ツメをたてる_none",
+    "name": "モグリュー",
+    "hp": 70,
+    "type": "fighting",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "なかまをよぶ",
+        "damage": "",
+        "cost": [
+          "none"
+        ],
+        "text": "自分の山札からたねポケモンを2枚まで選び、ベンチに出す。そして山札を切る。"
+      },
+      {
+        "name": "ツメをたてる",
+        "damage": "50",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "529",
+    "pokedexCategory": "もぐらポケモン",
+    "height": "0.3m",
+    "weight": "8.5kg",
+    "flavor_text": "体を スピンさせることで 時速５０キロの スピードのまま まっすぐ 地面を 掘り進む。",
+    "evolutions": [
+      "ドリュウズ",
+      "ドリュウズex",
+      "メガドリュウズex",
+      "モグリュー"
+    ]
+  },
+  {
+    "master_id": "コライドン_130_fighting_none_ガイアインパクト|バトルクロー_none",
+    "name": "コライドン",
+    "hp": 130,
+    "type": "fighting",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "バトルクロー",
+        "damage": "30＋",
+        "cost": [
+          "fighting"
+        ],
+        "text": "相手のバトルポケモンが進化ポケモンなら、30ダメージ追加。"
+      },
+      {
+        "name": "ガイアインパクト",
+        "damage": "190",
+        "cost": [
+          "fighting",
+          "fighting",
+          "none"
+        ],
+        "text": "このポケモンについているエネルギーを、すべてトラッシュする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "psychic",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "1007",
+    "pokedexCategory": "パラドックスポケモン",
+    "height": "2.5m",
+    "weight": "303.0kg",
+    "flavor_text": "拳で 大地を 引き裂いたと 古い 探検記に 記された ツバサノオウの 正体らしい。",
+    "evolutions": []
+  },
+  {
+    "master_id": "メガダークライex_280_dark_none_アビスアイ|ナイトレイド_none",
+    "name": "メガダークライex",
+    "hp": 280,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ナイトレイド",
+        "damage": "110＋",
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "text": "自分のベンチポケモンにダメカンがのっているなら、110ダメージ追加。"
+      },
+      {
+        "name": "アビスアイ",
+        "damage": "",
+        "cost": [
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "text": "相手のバトルポケモンが特殊状態なら、そのポケモンをきぜつさせる。"
+      }
+    ],
+    "rules": [
+      "メガシンカexがきぜつしたとき、相手はサイドを3枚とる。"
+    ],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "バルチャイ_70_dark_none_かぜおこし|はばたく_none",
+    "name": "バルチャイ",
+    "hp": 70,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "はばたく",
+        "damage": "10",
+        "cost": [
+          "dark"
+        ],
+        "text": ""
+      },
+      {
+        "name": "かぜおこし",
+        "damage": "20",
+        "cost": [
+          "dark",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "629",
+    "pokedexCategory": "おむつポケモン",
+    "height": "0.5m",
+    "weight": "9.0kg",
+    "flavor_text": "食べ盛りの 育ち盛り。 体の 成長に あわせて ガイコツを 何度も 履き替えるよ。",
+    "evolutions": [
+      "バルジーナBREAK",
+      "バルジーナ",
+      "バルジーナex",
+      "バルチャイ"
+    ]
+  },
+  {
+    "master_id": "バルジーナ_120_dark_none_ブラストウインド|ボーンスナイプ_none",
+    "name": "バルジーナ",
+    "hp": 120,
+    "type": "dark",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ボーンスナイプ",
+        "damage": "",
+        "cost": [
+          "dark"
+        ],
+        "text": "特殊エネルギーがついている相手のポケモン1匹に、70ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+      },
+      {
+        "name": "ブラストウインド",
+        "damage": "120",
+        "cost": [
+          "dark",
+          "dark",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "630",
+    "pokedexCategory": "ほねわしポケモン",
+    "height": "1.2m",
+    "weight": "39.5kg",
+    "flavor_text": "空から 地上を 観察して 弱った 獲物に 襲いかかる。 骨で 着飾る 習性。",
+    "evolutions": [
+      "バルジーナBREAK",
+      "バルジーナ",
+      "バルジーナex",
+      "バルチャイ"
+    ]
+  },
+  {
+    "master_id": "マーイーカ_60_dark_none_かいてんアタック|ちょうたつ_none",
+    "name": "マーイーカ",
+    "hp": 60,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ちょうたつ",
+        "damage": "",
+        "cost": [
+          "dark"
+        ],
+        "text": "自分の山札からグッズを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+      },
+      {
+        "name": "かいてんアタック",
+        "damage": "30",
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "686",
+    "pokedexCategory": "かいてんポケモン",
+    "height": "0.4m",
+    "weight": "3.5kg",
+    "flavor_text": "光の 点滅で 襲ってきた 敵の 戦意を なくしてしまう。 その 隙に 姿を くらますのだ。",
+    "evolutions": [
+      "カラマネロ",
+      "マーイーカ"
+    ]
+  },
+  {
+    "master_id": "カラマネロ_120_dark_none_まどわす|ブレインクラッシュ_none",
+    "name": "カラマネロ",
+    "hp": 120,
+    "type": "dark",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "まどわす",
+        "damage": "",
+        "cost": [
+          "dark"
+        ],
+        "text": "相手のバトルポケモンをこんらんにする。"
+      },
+      {
+        "name": "ブレインクラッシュ",
+        "damage": "130",
+        "cost": [
+          "dark"
+        ],
+        "text": "相手のバトルポケモンがこんらんでないなら、このワザは失敗。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "687",
+    "pokedexCategory": "ぎゃくてんポケモン",
+    "height": "1.5m",
+    "weight": "47.0kg",
+    "flavor_text": "ポケモンで 一番 強力な 催眠術を 使う。 相手を 意のままに 操ってしまうのだ。",
+    "evolutions": [
+      "カラマネロ",
+      "マーイーカ"
+    ]
+  },
+  {
+    "master_id": "クスネ_70_dark_none_うしろげり|かじる_none",
+    "name": "クスネ",
+    "hp": 70,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "かじる",
+        "damage": "10",
+        "cost": [
+          "dark"
+        ],
+        "text": ""
+      },
+      {
+        "name": "うしろげり",
+        "damage": "30",
+        "cost": [
+          "dark",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "827",
+    "pokedexCategory": "きつねポケモン",
+    "height": "0.6m",
+    "weight": "8.9kg",
+    "flavor_text": "ほかの ポケモンが みつけた 餌を  掠めて 暮らしている。 ふかふかの  肉球は 足音を たてない。",
+    "evolutions": [
+      "フォクスライ",
+      "クスネ"
+    ]
+  },
+  {
+    "master_id": "フォクスライ_100_dark_none_するどいキバ|スキルシーフ_none",
+    "name": "フォクスライ",
+    "hp": 100,
+    "type": "dark",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "スキルシーフ",
+        "damage": "",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": "自分の手札が1枚もないなら、相手の場のポケモンが持つワザを1つ選び、このワザとして使う。"
+      },
+      {
+        "name": "するどいキバ",
+        "damage": "80",
+        "cost": [
+          "dark",
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "828",
+    "pokedexCategory": "きつねポケモン",
+    "height": "1.2m",
+    "weight": "19.9kg",
+    "flavor_text": "狙った 獲物は こっそり  マーキング。 においを 辿って  油断 したころ 盗みに 来るぞ。",
+    "evolutions": [
+      "フォクスライ",
+      "クスネ"
+    ]
+  },
+  {
+    "master_id": "モルペコex_180_dark_none_はらぺこボンバー|ホイールドロー_none",
+    "name": "モルペコex",
+    "hp": 180,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ホイールドロー",
+        "damage": "",
+        "cost": [
+          "dark"
+        ],
+        "text": "自分の手札をすべて山札にもどして切る。その後、山札を6枚引く。"
+      },
+      {
+        "name": "はらぺこボンバー",
+        "damage": "40＋",
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "text": "このポケモンにのっているダメカンの数×40ダメージ追加。"
+      }
+    ],
+    "rules": [
+      "ポケモンexがきぜつしたとき、相手はサイドを2枚とる。"
+    ],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ザルード_130_dark_none_うしろなげ|シャドーウィップ_none",
+    "name": "ザルード",
+    "hp": 130,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "うしろなげ",
+        "damage": "30",
+        "cost": [
+          "dark"
+        ],
+        "text": "自分のベンチポケモン1匹にも、30ダメージ。［ベンチは弱点・抵抗力を計算しない。］"
+      },
+      {
+        "name": "シャドーウィップ",
+        "damage": "100＋",
+        "cost": [
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "text": "自分のベンチポケモンに「シャドーエネルギー」がついているなら、70ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "893",
+    "pokedexCategory": "わるざるポケモン",
+    "height": "1.8m",
+    "weight": "70.0kg",
+    "flavor_text": "群れを つくり 密林で 暮らす。 とても 攻撃的で 森にすむ ポケモンたちから 恐れられている。",
+    "evolutions": []
+  },
+  {
+    "master_id": "オラチフ_70_dark_none_かみつく_none",
+    "name": "オラチフ",
+    "hp": 70,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "かみつく",
+        "damage": "40",
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "942",
+    "pokedexCategory": "わかぞうポケモン",
+    "height": "0.5m",
+    "weight": "16.0kg",
+    "flavor_text": "発達した あごと キバは 岩を 噛み砕く 力強さ。 厚い 脂肪は 防御力 抜群。",
+    "evolutions": [
+      "マフィティフ",
+      "マフィティフex",
+      "オラチフ"
+    ]
+  },
+  {
+    "master_id": "マフィティフ_140_dark_none_かみつく|とびこみヘッド_none",
+    "name": "マフィティフ",
+    "hp": 140,
+    "type": "dark",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "かみつく",
+        "damage": "60",
+        "cost": [
+          "dark",
+          "dark"
+        ],
+        "text": ""
+      },
+      {
+        "name": "とびこみヘッド",
+        "damage": "210",
+        "cost": [
+          "dark",
+          "dark",
+          "dark"
+        ],
+        "text": "次の相手の番、このポケモンが受けるワザのダメージは「+100」される。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "943",
+    "pokedexCategory": "おやぶんポケモン",
+    "height": "1.1m",
+    "weight": "61.0kg",
+    "flavor_text": "子どもと 遊ぶことが 大好き。 普段は 温厚だが 家族を 守るとき 形相が 変わる。",
+    "evolutions": [
+      "マフィティフ",
+      "マフィティフex",
+      "オラチフ"
+    ]
+  },
+  {
+    "master_id": "イーユイ_90_dark_none_うずまくねたみ_none",
+    "name": "イーユイ",
+    "hp": 90,
+    "type": "dark",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "うずまくねたみ",
+        "damage": "20＋",
+        "cost": [
+          "dark"
+        ],
+        "text": "このポケモンにダメカンが2個以上のっているなら、90ダメージ追加。このワザのダメージは弱点を計算しない。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "grass",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "1004",
+    "pokedexCategory": "さいやくポケモン",
+    "height": "0.4m",
+    "weight": "4.9kg",
+    "flavor_text": "多くの 争いの 火種となった 勾玉に 集まった 妬みが 炎を まとい ポケモンとなった。",
+    "evolutions": []
+  },
+  {
+    "master_id": "エアームド_120_steel_none_スチールカッター_none",
+    "name": "エアームド",
+    "hp": 120,
+    "type": "steel",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "スチールカッター",
+        "damage": "40×",
+        "cost": [
+          "steel"
+        ],
+        "text": "自分の手札から「基本エネルギー」を2枚までトラッシュし、その枚数×40ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "227",
+    "pokedexCategory": "よろいどりポケモン",
+    "height": "1.7m",
+    "weight": "50.5kg",
+    "flavor_text": "いばらの 中に 巣を作る。 トゲで 傷つきながら 育てられた ヒナの 羽は 硬くなる。",
+    "evolutions": []
+  },
+  {
+    "master_id": "タテトプス_100_steel_none_くだく_none",
+    "name": "タテトプス",
+    "hp": 100,
+    "type": "steel",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "くだく",
+        "damage": "50",
+        "cost": [
+          "steel",
+          "none"
+        ],
+        "text": "相手のバトルポケモンについているエネルギーを1個選び、トラッシュする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "grass",
+      "value": "－30"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "410",
+    "pokedexCategory": "シールドポケモン",
+    "height": "0.5m",
+    "weight": "57.0kg",
+    "flavor_text": "頑丈な 顔のおかげで 敵は 少なかったと 思われる。 太古の ジャングルに 棲んでいた。",
+    "evolutions": [
+      "トリデプス",
+      "タテトプス",
+      "古びたたての化石"
+    ]
+  },
+  {
+    "master_id": "トリデプス_160_steel_none_ぶちかます_たいこのぼうへき",
+    "name": "トリデプス",
+    "hp": 160,
+    "type": "steel",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "たいこのぼうへき",
+        "text": "このポケモンがベンチにいるかぎり、自分のポケモン全員は、ついているエネルギーが2個以下の相手のポケモンからワザのダメージを受けない。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "ぶちかます",
+        "damage": "160",
+        "cost": [
+          "steel",
+          "steel",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "grass",
+      "value": "－30"
+    },
+    "retreatCost": 4,
+    "pokedexNo": "411",
+    "pokedexCategory": "シールドポケモン",
+    "height": "1.3m",
+    "weight": "149.5kg",
+    "flavor_text": "群れで 暮らす トリデプスたちは 敵に 襲われると 横に 並び 硬い 顔で 攻撃を 防ぐ。",
+    "evolutions": [
+      "トリデプス",
+      "タテトプス",
+      "古びたたての化石"
+    ]
+  },
+  {
+    "master_id": "ドーミラー_80_steel_none_ミラーアタック_none",
+    "name": "ドーミラー",
+    "hp": 80,
+    "type": "steel",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ミラーアタック",
+        "damage": "10＋",
+        "cost": [
+          "steel"
+        ],
+        "text": "相手のバトルポケモンがポケモンなら、30ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "grass",
+      "value": "－30"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "436",
+    "pokedexCategory": "せいどうポケモン",
+    "height": "0.5m",
+    "weight": "60.5kg",
+    "flavor_text": "古い お墓から みつかる。 背中の 模様には 神秘的な 力が 宿っていると いわれる。",
+    "evolutions": [
+      "ドータクンBREAK",
+      "ドータクン",
+      "ドーミラー"
+    ]
+  },
+  {
+    "master_id": "ドータクン_130_steel_none_ひっぱたく|メタルブロック_none",
+    "name": "ドータクン",
+    "hp": 130,
+    "type": "steel",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ひっぱたく",
+        "damage": "40",
+        "cost": [
+          "steel"
+        ],
+        "text": ""
+      },
+      {
+        "name": "メタルブロック",
+        "damage": "120",
+        "cost": [
+          "steel",
+          "steel",
+          "none"
+        ],
+        "text": "次の相手の番、このポケモンが進化ポケモンから受けるワザのダメージは「-100」される。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "grass",
+      "value": "－30"
+    },
+    "retreatCost": 3,
+    "pokedexNo": "437",
+    "pokedexCategory": "どうたくポケモン",
+    "height": "1.3m",
+    "weight": "187.0kg",
+    "flavor_text": "別世界への 穴を 開けて そこから 雨を 降らしていた。 そのため 豊作の神 とされる。",
+    "evolutions": [
+      "ドータクンBREAK",
+      "ドータクン",
+      "ドーミラー"
+    ]
+  },
+  {
+    "master_id": "メガドリュウズex_340_steel_none_ほりくずす|マキシマムドリル_none",
+    "name": "メガドリュウズex",
+    "hp": 340,
+    "type": "steel",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "ほりくずす",
+        "damage": "90",
+        "cost": [
+          "steel",
+          "steel"
+        ],
+        "text": "相手の山札を上から2枚トラッシュする。"
+      },
+      {
+        "name": "マキシマムドリル",
+        "damage": "200＋",
+        "cost": [
+          "steel",
+          "steel",
+          "steel"
+        ],
+        "text": "このワザを使うためのエネルギーより、2個多くエネルギーがついているなら、130ダメージ追加。"
+      }
+    ],
+    "rules": [
+      "メガシンカexがきぜつしたとき、相手はサイドを3枚とる。"
+    ],
+    "weakness": {
+      "type": "fire",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "grass",
+      "value": "－30"
+    },
+    "retreatCost": 4,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": [
+      "ドリュウズ",
+      "ドリュウズex",
+      "メガドリュウズex",
+      "モグリュー"
+    ]
+  },
+  {
+    "master_id": "ツツケラ_70_none_none_にどづき_none",
+    "name": "ツツケラ",
+    "hp": 70,
+    "type": "none",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "にどづき",
+        "damage": "10×",
+        "cost": [
+          "none"
+        ],
+        "text": "コインを2回投げ、オモテの数×10ダメージ。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "731",
+    "pokedexCategory": "きつつきポケモン",
+    "height": "0.3m",
+    "weight": "1.2kg",
+    "flavor_text": "頭を 激しく 揺さぶっても 首の 筋肉が 強いおかげで ダメージは まったく ない。",
+    "evolutions": [
+      "ドデカバシ",
+      "ケララッパ",
+      "ツツケラ"
+    ]
+  },
+  {
+    "master_id": "ケララッパ_90_none_none_そらをとぶ_none",
+    "name": "ケララッパ",
+    "hp": 90,
+    "type": "none",
+    "card_kind": "1 進化",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "そらをとぶ",
+        "damage": "30",
+        "cost": [
+          "none"
+        ],
+        "text": "コインを1回投げウラなら、このワザは失敗。オモテなら、次の相手の番、このポケモンはワザのダメージや効果を受けない。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "732",
+    "pokedexCategory": "ラッパぐちポケモン",
+    "height": "0.6m",
+    "weight": "14.8kg",
+    "flavor_text": "敵に 出会うと クチバシに 溜めこんでいた 多くの 木の実の タネを 放射状に 撃ちだす。",
+    "evolutions": [
+      "ドデカバシ",
+      "ケララッパ",
+      "ツツケラ"
+    ]
+  },
+  {
+    "master_id": "ドデカバシ_150_none_none_フェザーロンド_スカイドロー",
+    "name": "ドデカバシ",
+    "hp": 150,
+    "type": "none",
+    "card_kind": "2 進化",
+    "abilities": [
+      {
+        "name": "スカイドロー",
+        "text": "自分の番に1回使える。自分の山札を1枚引く。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "フェザーロンド",
+        "damage": "60＋",
+        "cost": [
+          "none"
+        ],
+        "text": "おたがいのベンチポケモンの数×20ダメージ追加。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "733",
+    "pokedexCategory": "おおづつポケモン",
+    "height": "1.1m",
+    "weight": "26.0kg",
+    "flavor_text": "番いの ドデカバシは クチバシの 温度を 上げて 温めあうので 仲良しの シンボルと されている。",
+    "evolutions": [
+      "ドデカバシ",
+      "ケララッパ",
+      "ツツケラ"
+    ]
+  },
+  {
+    "master_id": "タイプ：ヌル_110_none_none_パワーエッジ_none",
+    "name": "タイプ：ヌル",
+    "hp": 110,
+    "type": "none",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "パワーエッジ",
+        "damage": "40",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "772",
+    "pokedexCategory": "じんこうポケモン",
+    "height": "1.9m",
+    "weight": "120.5kg",
+    "flavor_text": "神話の ポケモンを モデルに  つくられたが 力の 暴走を  抑える マスクを 着けられている。",
+    "evolutions": [
+      "シルヴァディGX",
+      "シルヴァディ",
+      "タイプ：ヌル"
+    ]
+  },
+  {
+    "master_id": "シルヴァディ_140_none_none_エアスラッシュ_バディコール",
+    "name": "シルヴァディ",
+    "hp": 140,
+    "type": "none",
+    "card_kind": "1 進化",
+    "abilities": [
+      {
+        "name": "バディコール",
+        "text": "自分の手札が1枚もないなら、自分の番に1回使える。自分の山札からサポートを1枚選び、相手に見せて、手札に加える。そして山札を切る。"
+      }
+    ],
+    "attacks": [
+      {
+        "name": "エアスラッシュ",
+        "damage": "130",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": "このポケモンについているエネルギーを1個選び、トラッシュする。"
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "fighting",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "",
+      "value": "--"
+    },
+    "retreatCost": 2,
+    "pokedexNo": "773",
+    "pokedexCategory": "じんこうポケモン",
+    "height": "2.3m",
+    "weight": "100.5kg",
+    "flavor_text": "本来の 力を 解き放つ  最後の ファクターは 信頼する  トレーナーとの 絆 だった。",
+    "evolutions": [
+      "シルヴァディGX",
+      "シルヴァディ",
+      "タイプ：ヌル"
+    ]
+  },
+  {
+    "master_id": "オトシドリ_100_none_none_おとどけチャレンジ|スピードウイング_none",
+    "name": "オトシドリ",
+    "hp": 100,
+    "type": "none",
+    "card_kind": "たね",
+    "abilities": [],
+    "attacks": [
+      {
+        "name": "おとどけチャレンジ",
+        "damage": "",
+        "cost": [
+          "none",
+          "none"
+        ],
+        "text": "コインを2回投げ、すべてオモテなら、自分の山札からポケモンを1枚選び、ベンチに出す。そして山札を切る。"
+      },
+      {
+        "name": "スピードウイング",
+        "damage": "100",
+        "cost": [
+          "none",
+          "none",
+          "none"
+        ],
+        "text": ""
+      }
+    ],
+    "rules": [],
+    "weakness": {
+      "type": "electric",
+      "value": "×2"
+    },
+    "resistance": {
+      "type": "fighting",
+      "value": "－30"
+    },
+    "retreatCost": 1,
+    "pokedexNo": "962",
+    "pokedexCategory": "おとしものポケモン",
+    "height": "1.5m",
+    "weight": "42.9kg",
+    "flavor_text": "胸元の 袋で エサを 包み 巣に 持ち帰る。 大きな 音の するものを 落として 喜ぶ。",
+    "evolutions": []
+  },
+  {
+    "master_id": "ダークベル_none_none_none_none_none",
+    "name": "ダークベル",
+    "hp": null,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "おたがいのバトルポケモン（ポケモンをのぞく）を、それぞれこんらんにする。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "古びたずがいの化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。|グッズは、自分の番に何枚でも使える。_none_ずがいのトゲ",
+    "name": "古びたずがいの化石",
+    "hp": 60,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [
+      {
+        "name": "ずがいのトゲ",
+        "text": "このポケモンが、バトル場で相手のポケモンからワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを3個のせる。"
+      }
+    ],
+    "attacks": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "古びたたての化石_60_none_このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。|グッズは、自分の番に何枚でも使える。_none_たてのまもり",
+    "name": "古びたたての化石",
+    "hp": 60,
+    "type": "",
+    "card_kind": "グッズ",
+    "abilities": [
+      {
+        "name": "たてのまもり",
+        "text": "このポケモンがバトル場にいるかぎり、自分のポケモン全員が、相手のポケモンから受けるワザのダメージは「-10」される。"
+      }
+    ],
+    "attacks": [],
+    "rules": [
+      "このカードは、HP60のタイプのたねポケモンとして、場に出せる。このカードは、特殊状態にならず、にげられない。\n自分の番の中でなら、場に出ているこのカードをトラッシュできる。",
+      "グッズは、自分の番に何枚でも使える。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ごうかいボム_none_none_none_none_none",
+    "name": "ごうかいボム",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードをつけているポケモン（「メガシンカex」をのぞく）が、バトル場で相手の「メガシンカex」から「240」以上のワザのダメージを受けたとき、ワザを使ったポケモンにダメカンを12個のせる。その後、このカードをトラッシュする。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "リトライバッジ_none_none_none_none_none",
+    "name": "リトライバッジ",
+    "hp": null,
+    "type": "",
+    "card_kind": "ポケモンのどうぐ",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の番ごとに1回、このカードをつけているポケモンのワザで自分がコインを投げたとき、そのコインの結果をすべてなくし、はじめからコインを投げなおしてよい。",
+      "ポケモンのどうぐは、自分の番に何枚でも、自分のポケモンにつけられる。ポケモン1匹につき1枚だけつけられ、つけたままにする。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "カスミの元気_none_none_none_none_none",
+    "name": "カスミの元気",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードを使ったなら、自分の番は終わる。\n\n自分の山札から「基本エネルギー」を4枚まで選び、自分のポケモン1匹につける。そして山札を切る。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "グラジオの決戦_none_none_none_none_none",
+    "name": "グラジオの決戦",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、自分の手札がこのカード1枚だけのときにしか使えない。\n\nこの番、自分のポケモン（「ルールを持つポケモン」をのぞく）が使うワザの、相手のバトルポケモンへのダメージは「+80」される。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "サビ組のしたっぱ_none_none_none_none_none",
+    "name": "サビ組のしたっぱ",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、前の相手の番に、自分のポケモンがきぜつしていなければ使えない。\n\n相手の場のポケモンについているエネルギーを1個選び、トラッシュする。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ムク_none_none_none_none_none",
+    "name": "ムク",
+    "hp": null,
+    "type": "",
+    "card_kind": "サポート",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "自分の手札からポケモン（「ルールを持つポケモン」をのぞく）を2枚までトラッシュし、その枚数×3枚ぶん、山札を引く。",
+      "サポートは、自分の番に1枚しか使えない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "化石採掘場_none_none_none_none_none",
+    "name": "化石採掘場",
+    "hp": null,
+    "type": "",
+    "card_kind": "スタジアム",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "おたがいのプレイヤーは、自分の番ごとに1回、自分の山札から、名前に「古びた」とつくグッズを2枚まで選び、ベンチに出してよい。そして山札を切る。",
+      "スタジアムは、自分の番に1枚、バトル場の横に出せる。別のスタジアムが場に出たなら、このカードをトラッシュする。同じ名前のスタジアムは場に出せない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "ボルト雷エネルギー_none_none_none_none_none",
+    "name": "ボルト雷エネルギー",
+    "hp": null,
+    "type": "",
+    "card_kind": "特殊エネルギー",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンが使うワザの、相手のバトルポケモンへのダメージは「+20」される。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
+  },
+  {
+    "master_id": "シャドー悪エネルギー_none_none_none_none_none",
+    "name": "シャドー悪エネルギー",
+    "hp": null,
+    "type": "",
+    "card_kind": "特殊エネルギー",
+    "abilities": [],
+    "attacks": [],
+    "rules": [
+      "このカードは、ポケモンについているかぎり、エネルギー1個ぶんとしてはたらく。\n\nこのカードをつけているポケモンは、ベンチにいるかぎり、相手のワザのダメージを受けない。"
+    ],
+    "weakness": {
+      "type": "",
+      "value": ""
+    },
+    "resistance": {
+      "type": "",
+      "value": ""
+    },
+    "retreatCost": 0,
+    "pokedexNo": "",
+    "pokedexCategory": "",
+    "height": "",
+    "weight": "",
+    "flavor_text": "",
+    "evolutions": []
   }
 ]

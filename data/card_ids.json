@@ -1,12 +1,12 @@
 {
-  "harvestedAt": "2026-04-18T11:59:40.969Z",
+  "harvestedAt": "2026-06-12T20:33:59.732Z",
   "regulations": [
     "G",
     "H",
     "I",
     "J"
   ],
-  "count": 20980,
+  "count": 21464,
   "cards": [
     {
       "id": "1",
@@ -125886,6 +125886,2910 @@
       "id": "50178",
       "name": "ヒカリ",
       "thumb": "/assets/images/card_images/large/M-P/050178_T_HIKARI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50180",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050180_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50180",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050180_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50180",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050180_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50180",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050180_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50181",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050181_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50181",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050181_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50181",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050181_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50181",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050181_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50182",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050182_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50182",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050182_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50182",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050182_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50182",
+      "name": "勝利のしるし",
+      "thumb": "/assets/images/card_images/large/M-P/050182_T_SHIXYOURINOSHIRUSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50183",
+      "name": "ハリマロン",
+      "thumb": "/assets/images/card_images/large/M4/050183_P_HARIMARON.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50183",
+      "name": "ハリマロン",
+      "thumb": "/assets/images/card_images/large/M4/050183_P_HARIMARON.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50183",
+      "name": "ハリマロン",
+      "thumb": "/assets/images/card_images/large/M4/050183_P_HARIMARON.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50183",
+      "name": "ハリマロン",
+      "thumb": "/assets/images/card_images/large/M4/050183_P_HARIMARON.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50184",
+      "name": "フォッコ",
+      "thumb": "/assets/images/card_images/large/M4/050184_P_FUOKKO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50184",
+      "name": "フォッコ",
+      "thumb": "/assets/images/card_images/large/M4/050184_P_FUOKKO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50184",
+      "name": "フォッコ",
+      "thumb": "/assets/images/card_images/large/M4/050184_P_FUOKKO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50184",
+      "name": "フォッコ",
+      "thumb": "/assets/images/card_images/large/M4/050184_P_FUOKKO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50185",
+      "name": "ケロマツ",
+      "thumb": "/assets/images/card_images/large/M4/050185_P_KEROMATSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50185",
+      "name": "ケロマツ",
+      "thumb": "/assets/images/card_images/large/M4/050185_P_KEROMATSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50185",
+      "name": "ケロマツ",
+      "thumb": "/assets/images/card_images/large/M4/050185_P_KEROMATSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50185",
+      "name": "ケロマツ",
+      "thumb": "/assets/images/card_images/large/M4/050185_P_KEROMATSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50186",
+      "name": "ゲコガシラ",
+      "thumb": "/assets/images/card_images/large/M4/050186_P_GEKOGASHIRA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50186",
+      "name": "ゲコガシラ",
+      "thumb": "/assets/images/card_images/large/M4/050186_P_GEKOGASHIRA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50186",
+      "name": "ゲコガシラ",
+      "thumb": "/assets/images/card_images/large/M4/050186_P_GEKOGASHIRA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50186",
+      "name": "ゲコガシラ",
+      "thumb": "/assets/images/card_images/large/M4/050186_P_GEKOGASHIRA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50187",
+      "name": "デンリュウ",
+      "thumb": "/assets/images/card_images/large/M4/050187_P_DENRIXYUU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50187",
+      "name": "デンリュウ",
+      "thumb": "/assets/images/card_images/large/M4/050187_P_DENRIXYUU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50187",
+      "name": "デンリュウ",
+      "thumb": "/assets/images/card_images/large/M4/050187_P_DENRIXYUU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50187",
+      "name": "デンリュウ",
+      "thumb": "/assets/images/card_images/large/M4/050187_P_DENRIXYUU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50188",
+      "name": "ゼルネアス",
+      "thumb": "/assets/images/card_images/large/M4/050188_P_ZERUNEASU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50188",
+      "name": "ゼルネアス",
+      "thumb": "/assets/images/card_images/large/M4/050188_P_ZERUNEASU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50188",
+      "name": "ゼルネアス",
+      "thumb": "/assets/images/card_images/large/M4/050188_P_ZERUNEASU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50188",
+      "name": "ゼルネアス",
+      "thumb": "/assets/images/card_images/large/M4/050188_P_ZERUNEASU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50189",
+      "name": "ネンドール",
+      "thumb": "/assets/images/card_images/large/M4/050189_P_NENDORU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50189",
+      "name": "ネンドール",
+      "thumb": "/assets/images/card_images/large/M4/050189_P_NENDORU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50189",
+      "name": "ネンドール",
+      "thumb": "/assets/images/card_images/large/M4/050189_P_NENDORU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50189",
+      "name": "ネンドール",
+      "thumb": "/assets/images/card_images/large/M4/050189_P_NENDORU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50190",
+      "name": "クロバット",
+      "thumb": "/assets/images/card_images/large/M4/050190_P_KUROBATTO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50190",
+      "name": "クロバット",
+      "thumb": "/assets/images/card_images/large/M4/050190_P_KUROBATTO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50190",
+      "name": "クロバット",
+      "thumb": "/assets/images/card_images/large/M4/050190_P_KUROBATTO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50190",
+      "name": "クロバット",
+      "thumb": "/assets/images/card_images/large/M4/050190_P_KUROBATTO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50191",
+      "name": "メタング",
+      "thumb": "/assets/images/card_images/large/M4/050191_P_METANGU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50191",
+      "name": "メタング",
+      "thumb": "/assets/images/card_images/large/M4/050191_P_METANGU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50191",
+      "name": "メタング",
+      "thumb": "/assets/images/card_images/large/M4/050191_P_METANGU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50191",
+      "name": "メタング",
+      "thumb": "/assets/images/card_images/large/M4/050191_P_METANGU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50192",
+      "name": "ヌメイル",
+      "thumb": "/assets/images/card_images/large/M4/050192_P_NUMEIRU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50192",
+      "name": "ヌメイル",
+      "thumb": "/assets/images/card_images/large/M4/050192_P_NUMEIRU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50192",
+      "name": "ヌメイル",
+      "thumb": "/assets/images/card_images/large/M4/050192_P_NUMEIRU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50192",
+      "name": "ヌメイル",
+      "thumb": "/assets/images/card_images/large/M4/050192_P_NUMEIRU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50193",
+      "name": "ケンタロス",
+      "thumb": "/assets/images/card_images/large/M4/050193_P_KENTAROSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50193",
+      "name": "ケンタロス",
+      "thumb": "/assets/images/card_images/large/M4/050193_P_KENTAROSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50193",
+      "name": "ケンタロス",
+      "thumb": "/assets/images/card_images/large/M4/050193_P_KENTAROSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50193",
+      "name": "ケンタロス",
+      "thumb": "/assets/images/card_images/large/M4/050193_P_KENTAROSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50194",
+      "name": "ミルホッグ",
+      "thumb": "/assets/images/card_images/large/M4/050194_P_MIRUHOGGU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50194",
+      "name": "ミルホッグ",
+      "thumb": "/assets/images/card_images/large/M4/050194_P_MIRUHOGGU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50194",
+      "name": "ミルホッグ",
+      "thumb": "/assets/images/card_images/large/M4/050194_P_MIRUHOGGU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50194",
+      "name": "ミルホッグ",
+      "thumb": "/assets/images/card_images/large/M4/050194_P_MIRUHOGGU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50195",
+      "name": "スピアーex",
+      "thumb": "/assets/images/card_images/large/M4/050195_P_SUPIAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50195",
+      "name": "スピアーex",
+      "thumb": "/assets/images/card_images/large/M4/050195_P_SUPIAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50195",
+      "name": "スピアーex",
+      "thumb": "/assets/images/card_images/large/M4/050195_P_SUPIAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50195",
+      "name": "スピアーex",
+      "thumb": "/assets/images/card_images/large/M4/050195_P_SUPIAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50196",
+      "name": "メガカエンジシex",
+      "thumb": "/assets/images/card_images/large/M4/050196_P_MKAENJISHIEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50196",
+      "name": "メガカエンジシex",
+      "thumb": "/assets/images/card_images/large/M4/050196_P_MKAENJISHIEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50196",
+      "name": "メガカエンジシex",
+      "thumb": "/assets/images/card_images/large/M4/050196_P_MKAENJISHIEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50196",
+      "name": "メガカエンジシex",
+      "thumb": "/assets/images/card_images/large/M4/050196_P_MKAENJISHIEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50197",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050197_P_MGEKKOUGAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50197",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050197_P_MGEKKOUGAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50197",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050197_P_MGEKKOUGAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50197",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050197_P_MGEKKOUGAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50198",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050198_P_MFURAETTEEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50198",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050198_P_MFURAETTEEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50198",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050198_P_MFURAETTEEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50198",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050198_P_MFURAETTEEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50199",
+      "name": "パンプジンex",
+      "thumb": "/assets/images/card_images/large/M4/050199_P_PANPUJINEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50199",
+      "name": "パンプジンex",
+      "thumb": "/assets/images/card_images/large/M4/050199_P_PANPUJINEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50199",
+      "name": "パンプジンex",
+      "thumb": "/assets/images/card_images/large/M4/050199_P_PANPUJINEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50199",
+      "name": "パンプジンex",
+      "thumb": "/assets/images/card_images/large/M4/050199_P_PANPUJINEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50200",
+      "name": "コバルオンex",
+      "thumb": "/assets/images/card_images/large/M4/050200_P_KOBARUONEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50200",
+      "name": "コバルオンex",
+      "thumb": "/assets/images/card_images/large/M4/050200_P_KOBARUONEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50200",
+      "name": "コバルオンex",
+      "thumb": "/assets/images/card_images/large/M4/050200_P_KOBARUONEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50200",
+      "name": "コバルオンex",
+      "thumb": "/assets/images/card_images/large/M4/050200_P_KOBARUONEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50201",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050201_P_MDORAMIDOROEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50201",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050201_P_MDORAMIDOROEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50201",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050201_P_MDORAMIDOROEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50201",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050201_P_MDORAMIDOROEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50202",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050202_P_CHIRACHINOEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50202",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050202_P_CHIRACHINOEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50202",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050202_P_CHIRACHINOEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50202",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050202_P_CHIRACHINOEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50203",
+      "name": "エネルギー回収",
+      "thumb": "/assets/images/card_images/large/M4/050203_T_ENERUGIKAISHIXYUU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50203",
+      "name": "エネルギー回収",
+      "thumb": "/assets/images/card_images/large/M4/050203_T_ENERUGIKAISHIXYUU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50203",
+      "name": "エネルギー回収",
+      "thumb": "/assets/images/card_images/large/M4/050203_T_ENERUGIKAISHIXYUU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50203",
+      "name": "エネルギー回収",
+      "thumb": "/assets/images/card_images/large/M4/050203_T_ENERUGIKAISHIXYUU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50204",
+      "name": "ジャンボアイス",
+      "thumb": "/assets/images/card_images/large/M4/050204_T_JIXYANBOAISU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50204",
+      "name": "ジャンボアイス",
+      "thumb": "/assets/images/card_images/large/M4/050204_T_JIXYANBOAISU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50204",
+      "name": "ジャンボアイス",
+      "thumb": "/assets/images/card_images/large/M4/050204_T_JIXYANBOAISU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50204",
+      "name": "ジャンボアイス",
+      "thumb": "/assets/images/card_images/large/M4/050204_T_JIXYANBOAISU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50205",
+      "name": "スペシャルレッドカード",
+      "thumb": "/assets/images/card_images/large/M4/050205_T_SUPESHIXYARUREDDOKADO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50205",
+      "name": "スペシャルレッドカード",
+      "thumb": "/assets/images/card_images/large/M4/050205_T_SUPESHIXYARUREDDOKADO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50205",
+      "name": "スペシャルレッドカード",
+      "thumb": "/assets/images/card_images/large/M4/050205_T_SUPESHIXYARUREDDOKADO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50205",
+      "name": "スペシャルレッドカード",
+      "thumb": "/assets/images/card_images/large/M4/050205_T_SUPESHIXYARUREDDOKADO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50206",
+      "name": "ツールスクラッパー",
+      "thumb": "/assets/images/card_images/large/M4/050206_T_TSURUSUKURAPPA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50206",
+      "name": "ツールスクラッパー",
+      "thumb": "/assets/images/card_images/large/M4/050206_T_TSURUSUKURAPPA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50206",
+      "name": "ツールスクラッパー",
+      "thumb": "/assets/images/card_images/large/M4/050206_T_TSURUSUKURAPPA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50206",
+      "name": "ツールスクラッパー",
+      "thumb": "/assets/images/card_images/large/M4/050206_T_TSURUSUKURAPPA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50207",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050207_T_AZNOYASURAGI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50207",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050207_T_AZNOYASURAGI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50207",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050207_T_AZNOYASURAGI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50207",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050207_T_AZNOYASURAGI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50208",
+      "name": "ジプソ",
+      "thumb": "/assets/images/card_images/large/M4/050208_T_JIPUSO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50208",
+      "name": "ジプソ",
+      "thumb": "/assets/images/card_images/large/M4/050208_T_JIPUSO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50208",
+      "name": "ジプソ",
+      "thumb": "/assets/images/card_images/large/M4/050208_T_JIPUSO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50208",
+      "name": "ジプソ",
+      "thumb": "/assets/images/card_images/large/M4/050208_T_JIPUSO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50209",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050209_T_HOMIKANOENSOU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50209",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050209_T_HOMIKANOENSOU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50209",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050209_T_HOMIKANOENSOU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50209",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050209_T_HOMIKANOENSOU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50210",
+      "name": "マチエール",
+      "thumb": "/assets/images/card_images/large/M4/050210_T_MACHIERU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50210",
+      "name": "マチエール",
+      "thumb": "/assets/images/card_images/large/M4/050210_T_MACHIERU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50210",
+      "name": "マチエール",
+      "thumb": "/assets/images/card_images/large/M4/050210_T_MACHIERU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50210",
+      "name": "マチエール",
+      "thumb": "/assets/images/card_images/large/M4/050210_T_MACHIERU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50211",
+      "name": "なみのりビーチ",
+      "thumb": "/assets/images/card_images/large/M4/050211_T_NAMINORIBICHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50211",
+      "name": "なみのりビーチ",
+      "thumb": "/assets/images/card_images/large/M4/050211_T_NAMINORIBICHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50211",
+      "name": "なみのりビーチ",
+      "thumb": "/assets/images/card_images/large/M4/050211_T_NAMINORIBICHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50211",
+      "name": "なみのりビーチ",
+      "thumb": "/assets/images/card_images/large/M4/050211_T_NAMINORIBICHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50212",
+      "name": "プリズムタワー",
+      "thumb": "/assets/images/card_images/large/M4/050212_T_PURIZUMUTAWA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50212",
+      "name": "プリズムタワー",
+      "thumb": "/assets/images/card_images/large/M4/050212_T_PURIZUMUTAWA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50212",
+      "name": "プリズムタワー",
+      "thumb": "/assets/images/card_images/large/M4/050212_T_PURIZUMUTAWA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50212",
+      "name": "プリズムタワー",
+      "thumb": "/assets/images/card_images/large/M4/050212_T_PURIZUMUTAWA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50213",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050213_P_MGEKKOUGAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50213",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050213_P_MGEKKOUGAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50213",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050213_P_MGEKKOUGAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50213",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050213_P_MGEKKOUGAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50214",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050214_P_MFURAETTEEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50214",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050214_P_MFURAETTEEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50214",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050214_P_MFURAETTEEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50214",
+      "name": "メガフラエッテex",
+      "thumb": "/assets/images/card_images/large/M4/050214_P_MFURAETTEEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50215",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050215_P_MDORAMIDOROEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50215",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050215_P_MDORAMIDOROEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50215",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050215_P_MDORAMIDOROEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50215",
+      "name": "メガドラミドロex",
+      "thumb": "/assets/images/card_images/large/M4/050215_P_MDORAMIDOROEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50216",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050216_P_CHIRACHINOEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50216",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050216_P_CHIRACHINOEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50216",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050216_P_CHIRACHINOEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50216",
+      "name": "チラチーノex",
+      "thumb": "/assets/images/card_images/large/M4/050216_P_CHIRACHINOEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50217",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050217_T_AZNOYASURAGI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50217",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050217_T_AZNOYASURAGI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50217",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050217_T_AZNOYASURAGI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50217",
+      "name": "AZの安らぎ",
+      "thumb": "/assets/images/card_images/large/M4/050217_T_AZNOYASURAGI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50218",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050218_T_HOMIKANOENSOU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50218",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050218_T_HOMIKANOENSOU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50218",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050218_T_HOMIKANOENSOU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50218",
+      "name": "ホミカの演奏",
+      "thumb": "/assets/images/card_images/large/M4/050218_T_HOMIKANOENSOU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50219",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050219_P_MGEKKOUGAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50219",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050219_P_MGEKKOUGAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50219",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050219_P_MGEKKOUGAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50219",
+      "name": "メガゲッコウガex",
+      "thumb": "/assets/images/card_images/large/M4/050219_P_MGEKKOUGAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50220",
+      "name": "トロピウス",
+      "thumb": "/assets/images/card_images/large/M5/050220_P_TOROPIUSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50220",
+      "name": "トロピウス",
+      "thumb": "/assets/images/card_images/large/M5/050220_P_TOROPIUSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50220",
+      "name": "トロピウス",
+      "thumb": "/assets/images/card_images/large/M5/050220_P_TOROPIUSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50220",
+      "name": "トロピウス",
+      "thumb": "/assets/images/card_images/large/M5/050220_P_TOROPIUSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50221",
+      "name": "アゴジムシ",
+      "thumb": "/assets/images/card_images/large/M5/050221_P_AGOJIMUSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50221",
+      "name": "アゴジムシ",
+      "thumb": "/assets/images/card_images/large/M5/050221_P_AGOJIMUSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50221",
+      "name": "アゴジムシ",
+      "thumb": "/assets/images/card_images/large/M5/050221_P_AGOJIMUSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50221",
+      "name": "アゴジムシ",
+      "thumb": "/assets/images/card_images/large/M5/050221_P_AGOJIMUSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50222",
+      "name": "カリキリ",
+      "thumb": "/assets/images/card_images/large/M5/050222_P_KARIKIRI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50222",
+      "name": "カリキリ",
+      "thumb": "/assets/images/card_images/large/M5/050222_P_KARIKIRI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50222",
+      "name": "カリキリ",
+      "thumb": "/assets/images/card_images/large/M5/050222_P_KARIKIRI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50222",
+      "name": "カリキリ",
+      "thumb": "/assets/images/card_images/large/M5/050222_P_KARIKIRI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50223",
+      "name": "ラランテスex",
+      "thumb": "/assets/images/card_images/large/M5/050223_P_RARANTESUEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50223",
+      "name": "ラランテスex",
+      "thumb": "/assets/images/card_images/large/M5/050223_P_RARANTESUEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50223",
+      "name": "ラランテスex",
+      "thumb": "/assets/images/card_images/large/M5/050223_P_RARANTESUEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50223",
+      "name": "ラランテスex",
+      "thumb": "/assets/images/card_images/large/M5/050223_P_RARANTESUEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50224",
+      "name": "チャデス",
+      "thumb": "/assets/images/card_images/large/M5/050224_P_CHIXYADESU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50224",
+      "name": "チャデス",
+      "thumb": "/assets/images/card_images/large/M5/050224_P_CHIXYADESU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50224",
+      "name": "チャデス",
+      "thumb": "/assets/images/card_images/large/M5/050224_P_CHIXYADESU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50224",
+      "name": "チャデス",
+      "thumb": "/assets/images/card_images/large/M5/050224_P_CHIXYADESU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50225",
+      "name": "ヤバソチャ",
+      "thumb": "/assets/images/card_images/large/M5/050225_P_YABASOCHIXYA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50225",
+      "name": "ヤバソチャ",
+      "thumb": "/assets/images/card_images/large/M5/050225_P_YABASOCHIXYA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50225",
+      "name": "ヤバソチャ",
+      "thumb": "/assets/images/card_images/large/M5/050225_P_YABASOCHIXYA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50225",
+      "name": "ヤバソチャ",
+      "thumb": "/assets/images/card_images/large/M5/050225_P_YABASOCHIXYA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50226",
+      "name": "ヒードラン",
+      "thumb": "/assets/images/card_images/large/M5/050226_P_HIDORAN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50226",
+      "name": "ヒードラン",
+      "thumb": "/assets/images/card_images/large/M5/050226_P_HIDORAN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50226",
+      "name": "ヒードラン",
+      "thumb": "/assets/images/card_images/large/M5/050226_P_HIDORAN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50226",
+      "name": "ヒードラン",
+      "thumb": "/assets/images/card_images/large/M5/050226_P_HIDORAN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50227",
+      "name": "ヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050227_P_YAKUDE.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50227",
+      "name": "ヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050227_P_YAKUDE.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50227",
+      "name": "ヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050227_P_YAKUDE.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50227",
+      "name": "ヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050227_P_YAKUDE.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50228",
+      "name": "マルヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050228_P_MARUYAKUDE.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50228",
+      "name": "マルヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050228_P_MARUYAKUDE.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50228",
+      "name": "マルヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050228_P_MARUYAKUDE.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50228",
+      "name": "マルヤクデ",
+      "thumb": "/assets/images/card_images/large/M5/050228_P_MARUYAKUDE.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50229",
+      "name": "カルボウ",
+      "thumb": "/assets/images/card_images/large/M5/050229_P_KARUBOU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50229",
+      "name": "カルボウ",
+      "thumb": "/assets/images/card_images/large/M5/050229_P_KARUBOU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50229",
+      "name": "カルボウ",
+      "thumb": "/assets/images/card_images/large/M5/050229_P_KARUBOU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50229",
+      "name": "カルボウ",
+      "thumb": "/assets/images/card_images/large/M5/050229_P_KARUBOU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50230",
+      "name": "グレンアルマ",
+      "thumb": "/assets/images/card_images/large/M5/050230_P_GURENARUMA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50230",
+      "name": "グレンアルマ",
+      "thumb": "/assets/images/card_images/large/M5/050230_P_GURENARUMA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50230",
+      "name": "グレンアルマ",
+      "thumb": "/assets/images/card_images/large/M5/050230_P_GURENARUMA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50230",
+      "name": "グレンアルマ",
+      "thumb": "/assets/images/card_images/large/M5/050230_P_GURENARUMA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50231",
+      "name": "トサキント",
+      "thumb": "/assets/images/card_images/large/M5/050231_P_TOSAKINTO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50231",
+      "name": "トサキント",
+      "thumb": "/assets/images/card_images/large/M5/050231_P_TOSAKINTO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50231",
+      "name": "トサキント",
+      "thumb": "/assets/images/card_images/large/M5/050231_P_TOSAKINTO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50231",
+      "name": "トサキント",
+      "thumb": "/assets/images/card_images/large/M5/050231_P_TOSAKINTO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50232",
+      "name": "アズマオウ",
+      "thumb": "/assets/images/card_images/large/M5/050232_P_AZUMAOU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50232",
+      "name": "アズマオウ",
+      "thumb": "/assets/images/card_images/large/M5/050232_P_AZUMAOU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50232",
+      "name": "アズマオウ",
+      "thumb": "/assets/images/card_images/large/M5/050232_P_AZUMAOU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50232",
+      "name": "アズマオウ",
+      "thumb": "/assets/images/card_images/large/M5/050232_P_AZUMAOU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50233",
+      "name": "ホエルコ",
+      "thumb": "/assets/images/card_images/large/M5/050233_P_HOERUKO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50233",
+      "name": "ホエルコ",
+      "thumb": "/assets/images/card_images/large/M5/050233_P_HOERUKO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50233",
+      "name": "ホエルコ",
+      "thumb": "/assets/images/card_images/large/M5/050233_P_HOERUKO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50233",
+      "name": "ホエルコ",
+      "thumb": "/assets/images/card_images/large/M5/050233_P_HOERUKO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50234",
+      "name": "ホエルオーex",
+      "thumb": "/assets/images/card_images/large/M5/050234_P_HOERUOEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50234",
+      "name": "ホエルオーex",
+      "thumb": "/assets/images/card_images/large/M5/050234_P_HOERUOEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50234",
+      "name": "ホエルオーex",
+      "thumb": "/assets/images/card_images/large/M5/050234_P_HOERUOEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50234",
+      "name": "ホエルオーex",
+      "thumb": "/assets/images/card_images/large/M5/050234_P_HOERUOEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50235",
+      "name": "ジーランス",
+      "thumb": "/assets/images/card_images/large/M5/050235_P_JIRANSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50235",
+      "name": "ジーランス",
+      "thumb": "/assets/images/card_images/large/M5/050235_P_JIRANSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50235",
+      "name": "ジーランス",
+      "thumb": "/assets/images/card_images/large/M5/050235_P_JIRANSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50235",
+      "name": "ジーランス",
+      "thumb": "/assets/images/card_images/large/M5/050235_P_JIRANSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50236",
+      "name": "アシマリ",
+      "thumb": "/assets/images/card_images/large/M5/050236_P_ASHIMARI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50236",
+      "name": "アシマリ",
+      "thumb": "/assets/images/card_images/large/M5/050236_P_ASHIMARI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50236",
+      "name": "アシマリ",
+      "thumb": "/assets/images/card_images/large/M5/050236_P_ASHIMARI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50236",
+      "name": "アシマリ",
+      "thumb": "/assets/images/card_images/large/M5/050236_P_ASHIMARI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50237",
+      "name": "オシャマリ",
+      "thumb": "/assets/images/card_images/large/M5/050237_P_OSHIXYAMARI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50237",
+      "name": "オシャマリ",
+      "thumb": "/assets/images/card_images/large/M5/050237_P_OSHIXYAMARI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50237",
+      "name": "オシャマリ",
+      "thumb": "/assets/images/card_images/large/M5/050237_P_OSHIXYAMARI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50237",
+      "name": "オシャマリ",
+      "thumb": "/assets/images/card_images/large/M5/050237_P_OSHIXYAMARI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50238",
+      "name": "アシレーヌ",
+      "thumb": "/assets/images/card_images/large/M5/050238_P_ASHIRENU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50238",
+      "name": "アシレーヌ",
+      "thumb": "/assets/images/card_images/large/M5/050238_P_ASHIRENU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50238",
+      "name": "アシレーヌ",
+      "thumb": "/assets/images/card_images/large/M5/050238_P_ASHIRENU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50238",
+      "name": "アシレーヌ",
+      "thumb": "/assets/images/card_images/large/M5/050238_P_ASHIRENU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50239",
+      "name": "ナミイルカ",
+      "thumb": "/assets/images/card_images/large/M5/050239_P_NAMIIRUKA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50239",
+      "name": "ナミイルカ",
+      "thumb": "/assets/images/card_images/large/M5/050239_P_NAMIIRUKA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50239",
+      "name": "ナミイルカ",
+      "thumb": "/assets/images/card_images/large/M5/050239_P_NAMIIRUKA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50239",
+      "name": "ナミイルカ",
+      "thumb": "/assets/images/card_images/large/M5/050239_P_NAMIIRUKA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50240",
+      "name": "イルカマン",
+      "thumb": "/assets/images/card_images/large/M5/050240_P_IRUKAMAN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50240",
+      "name": "イルカマン",
+      "thumb": "/assets/images/card_images/large/M5/050240_P_IRUKAMAN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50240",
+      "name": "イルカマン",
+      "thumb": "/assets/images/card_images/large/M5/050240_P_IRUKAMAN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50240",
+      "name": "イルカマン",
+      "thumb": "/assets/images/card_images/large/M5/050240_P_IRUKAMAN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50241",
+      "name": "ラクライ",
+      "thumb": "/assets/images/card_images/large/M5/050241_P_RAKURAI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50241",
+      "name": "ラクライ",
+      "thumb": "/assets/images/card_images/large/M5/050241_P_RAKURAI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50241",
+      "name": "ラクライ",
+      "thumb": "/assets/images/card_images/large/M5/050241_P_RAKURAI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50241",
+      "name": "ラクライ",
+      "thumb": "/assets/images/card_images/large/M5/050241_P_RAKURAI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50242",
+      "name": "ライボルト",
+      "thumb": "/assets/images/card_images/large/M5/050242_P_RAIBORUTO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50242",
+      "name": "ライボルト",
+      "thumb": "/assets/images/card_images/large/M5/050242_P_RAIBORUTO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50242",
+      "name": "ライボルト",
+      "thumb": "/assets/images/card_images/large/M5/050242_P_RAIBORUTO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50242",
+      "name": "ライボルト",
+      "thumb": "/assets/images/card_images/large/M5/050242_P_RAIBORUTO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50243",
+      "name": "デンヂムシ",
+      "thumb": "/assets/images/card_images/large/M5/050243_P_DENJIMUSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50243",
+      "name": "デンヂムシ",
+      "thumb": "/assets/images/card_images/large/M5/050243_P_DENJIMUSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50243",
+      "name": "デンヂムシ",
+      "thumb": "/assets/images/card_images/large/M5/050243_P_DENJIMUSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50243",
+      "name": "デンヂムシ",
+      "thumb": "/assets/images/card_images/large/M5/050243_P_DENJIMUSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50244",
+      "name": "クワガノン",
+      "thumb": "/assets/images/card_images/large/M5/050244_P_KUWAGANON.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50244",
+      "name": "クワガノン",
+      "thumb": "/assets/images/card_images/large/M5/050244_P_KUWAGANON.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50244",
+      "name": "クワガノン",
+      "thumb": "/assets/images/card_images/large/M5/050244_P_KUWAGANON.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50244",
+      "name": "クワガノン",
+      "thumb": "/assets/images/card_images/large/M5/050244_P_KUWAGANON.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50245",
+      "name": "メガゼラオラex",
+      "thumb": "/assets/images/card_images/large/M5/050245_P_MZERAORAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50245",
+      "name": "メガゼラオラex",
+      "thumb": "/assets/images/card_images/large/M5/050245_P_MZERAORAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50245",
+      "name": "メガゼラオラex",
+      "thumb": "/assets/images/card_images/large/M5/050245_P_MZERAORAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50245",
+      "name": "メガゼラオラex",
+      "thumb": "/assets/images/card_images/large/M5/050245_P_MZERAORAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50246",
+      "name": "ミライドン",
+      "thumb": "/assets/images/card_images/large/M5/050246_P_MIRAIDON.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50246",
+      "name": "ミライドン",
+      "thumb": "/assets/images/card_images/large/M5/050246_P_MIRAIDON.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50246",
+      "name": "ミライドン",
+      "thumb": "/assets/images/card_images/large/M5/050246_P_MIRAIDON.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50246",
+      "name": "ミライドン",
+      "thumb": "/assets/images/card_images/large/M5/050246_P_MIRAIDON.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50247",
+      "name": "ヤドン",
+      "thumb": "/assets/images/card_images/large/M5/050247_P_YADON.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50247",
+      "name": "ヤドン",
+      "thumb": "/assets/images/card_images/large/M5/050247_P_YADON.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50247",
+      "name": "ヤドン",
+      "thumb": "/assets/images/card_images/large/M5/050247_P_YADON.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50247",
+      "name": "ヤドン",
+      "thumb": "/assets/images/card_images/large/M5/050247_P_YADON.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50248",
+      "name": "ヤドラン",
+      "thumb": "/assets/images/card_images/large/M5/050248_P_YADORAN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50248",
+      "name": "ヤドラン",
+      "thumb": "/assets/images/card_images/large/M5/050248_P_YADORAN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50248",
+      "name": "ヤドラン",
+      "thumb": "/assets/images/card_images/large/M5/050248_P_YADORAN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50248",
+      "name": "ヤドラン",
+      "thumb": "/assets/images/card_images/large/M5/050248_P_YADORAN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50249",
+      "name": "ルージュラ",
+      "thumb": "/assets/images/card_images/large/M5/050249_P_RUJIXYURA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50249",
+      "name": "ルージュラ",
+      "thumb": "/assets/images/card_images/large/M5/050249_P_RUJIXYURA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50249",
+      "name": "ルージュラ",
+      "thumb": "/assets/images/card_images/large/M5/050249_P_RUJIXYURA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50249",
+      "name": "ルージュラ",
+      "thumb": "/assets/images/card_images/large/M5/050249_P_RUJIXYURA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50250",
+      "name": "カゲボウズ",
+      "thumb": "/assets/images/card_images/large/M5/050250_P_KAGEBOUZU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50250",
+      "name": "カゲボウズ",
+      "thumb": "/assets/images/card_images/large/M5/050250_P_KAGEBOUZU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50250",
+      "name": "カゲボウズ",
+      "thumb": "/assets/images/card_images/large/M5/050250_P_KAGEBOUZU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50250",
+      "name": "カゲボウズ",
+      "thumb": "/assets/images/card_images/large/M5/050250_P_KAGEBOUZU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50251",
+      "name": "ジュペッタ",
+      "thumb": "/assets/images/card_images/large/M5/050251_P_JIXYUPETTA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50251",
+      "name": "ジュペッタ",
+      "thumb": "/assets/images/card_images/large/M5/050251_P_JIXYUPETTA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50251",
+      "name": "ジュペッタ",
+      "thumb": "/assets/images/card_images/large/M5/050251_P_JIXYUPETTA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50251",
+      "name": "ジュペッタ",
+      "thumb": "/assets/images/card_images/large/M5/050251_P_JIXYUPETTA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50252",
+      "name": "ミカルゲ",
+      "thumb": "/assets/images/card_images/large/M5/050252_P_MIKARUGE.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50252",
+      "name": "ミカルゲ",
+      "thumb": "/assets/images/card_images/large/M5/050252_P_MIKARUGE.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50252",
+      "name": "ミカルゲ",
+      "thumb": "/assets/images/card_images/large/M5/050252_P_MIKARUGE.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50252",
+      "name": "ミカルゲ",
+      "thumb": "/assets/images/card_images/large/M5/050252_P_MIKARUGE.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50253",
+      "name": "ヒトモシ",
+      "thumb": "/assets/images/card_images/large/M5/050253_P_HITOMOSHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50253",
+      "name": "ヒトモシ",
+      "thumb": "/assets/images/card_images/large/M5/050253_P_HITOMOSHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50253",
+      "name": "ヒトモシ",
+      "thumb": "/assets/images/card_images/large/M5/050253_P_HITOMOSHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50253",
+      "name": "ヒトモシ",
+      "thumb": "/assets/images/card_images/large/M5/050253_P_HITOMOSHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50254",
+      "name": "ランプラー",
+      "thumb": "/assets/images/card_images/large/M5/050254_P_RANPURA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50254",
+      "name": "ランプラー",
+      "thumb": "/assets/images/card_images/large/M5/050254_P_RANPURA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50254",
+      "name": "ランプラー",
+      "thumb": "/assets/images/card_images/large/M5/050254_P_RANPURA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50254",
+      "name": "ランプラー",
+      "thumb": "/assets/images/card_images/large/M5/050254_P_RANPURA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50255",
+      "name": "メガシャンデラex",
+      "thumb": "/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50255",
+      "name": "メガシャンデラex",
+      "thumb": "/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50255",
+      "name": "メガシャンデラex",
+      "thumb": "/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50255",
+      "name": "メガシャンデラex",
+      "thumb": "/assets/images/card_images/large/M5/050255_P_MSHIXYANDERAEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50256",
+      "name": "ダダリン",
+      "thumb": "/assets/images/card_images/large/M5/050256_P_DADARIN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50256",
+      "name": "ダダリン",
+      "thumb": "/assets/images/card_images/large/M5/050256_P_DADARIN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50256",
+      "name": "ダダリン",
+      "thumb": "/assets/images/card_images/large/M5/050256_P_DADARIN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50256",
+      "name": "ダダリン",
+      "thumb": "/assets/images/card_images/large/M5/050256_P_DADARIN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50257",
+      "name": "マーシャドー",
+      "thumb": "/assets/images/card_images/large/M5/050257_P_MASHIXYADO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50257",
+      "name": "マーシャドー",
+      "thumb": "/assets/images/card_images/large/M5/050257_P_MASHIXYADO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50257",
+      "name": "マーシャドー",
+      "thumb": "/assets/images/card_images/large/M5/050257_P_MASHIXYADO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50257",
+      "name": "マーシャドー",
+      "thumb": "/assets/images/card_images/large/M5/050257_P_MASHIXYADO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50258",
+      "name": "コノヨザル",
+      "thumb": "/assets/images/card_images/large/M5/050258_P_KONOYOZARU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50258",
+      "name": "コノヨザル",
+      "thumb": "/assets/images/card_images/large/M5/050258_P_KONOYOZARU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50258",
+      "name": "コノヨザル",
+      "thumb": "/assets/images/card_images/large/M5/050258_P_KONOYOZARU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50258",
+      "name": "コノヨザル",
+      "thumb": "/assets/images/card_images/large/M5/050258_P_KONOYOZARU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50259",
+      "name": "マンキー",
+      "thumb": "/assets/images/card_images/large/M5/050259_P_MANKI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50259",
+      "name": "マンキー",
+      "thumb": "/assets/images/card_images/large/M5/050259_P_MANKI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50259",
+      "name": "マンキー",
+      "thumb": "/assets/images/card_images/large/M5/050259_P_MANKI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50259",
+      "name": "マンキー",
+      "thumb": "/assets/images/card_images/large/M5/050259_P_MANKI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50260",
+      "name": "オコリザル",
+      "thumb": "/assets/images/card_images/large/M5/050260_P_OKORIZARU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50260",
+      "name": "オコリザル",
+      "thumb": "/assets/images/card_images/large/M5/050260_P_OKORIZARU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50260",
+      "name": "オコリザル",
+      "thumb": "/assets/images/card_images/large/M5/050260_P_OKORIZARU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50260",
+      "name": "オコリザル",
+      "thumb": "/assets/images/card_images/large/M5/050260_P_OKORIZARU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50261",
+      "name": "ズガイドス",
+      "thumb": "/assets/images/card_images/large/M5/050261_P_ZUGAIDOSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50261",
+      "name": "ズガイドス",
+      "thumb": "/assets/images/card_images/large/M5/050261_P_ZUGAIDOSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50261",
+      "name": "ズガイドス",
+      "thumb": "/assets/images/card_images/large/M5/050261_P_ZUGAIDOSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50261",
+      "name": "ズガイドス",
+      "thumb": "/assets/images/card_images/large/M5/050261_P_ZUGAIDOSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50262",
+      "name": "ラムパルドex",
+      "thumb": "/assets/images/card_images/large/M5/050262_P_RAMUPARUDOEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50262",
+      "name": "ラムパルドex",
+      "thumb": "/assets/images/card_images/large/M5/050262_P_RAMUPARUDOEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50262",
+      "name": "ラムパルドex",
+      "thumb": "/assets/images/card_images/large/M5/050262_P_RAMUPARUDOEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50262",
+      "name": "ラムパルドex",
+      "thumb": "/assets/images/card_images/large/M5/050262_P_RAMUPARUDOEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50263",
+      "name": "モグリュー",
+      "thumb": "/assets/images/card_images/large/M5/050263_P_MOGURIXYU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50263",
+      "name": "モグリュー",
+      "thumb": "/assets/images/card_images/large/M5/050263_P_MOGURIXYU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50263",
+      "name": "モグリュー",
+      "thumb": "/assets/images/card_images/large/M5/050263_P_MOGURIXYU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50263",
+      "name": "モグリュー",
+      "thumb": "/assets/images/card_images/large/M5/050263_P_MOGURIXYU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50264",
+      "name": "コライドン",
+      "thumb": "/assets/images/card_images/large/M5/050264_P_KORAIDON.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50264",
+      "name": "コライドン",
+      "thumb": "/assets/images/card_images/large/M5/050264_P_KORAIDON.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50264",
+      "name": "コライドン",
+      "thumb": "/assets/images/card_images/large/M5/050264_P_KORAIDON.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50264",
+      "name": "コライドン",
+      "thumb": "/assets/images/card_images/large/M5/050264_P_KORAIDON.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50265",
+      "name": "メガダークライex",
+      "thumb": "/assets/images/card_images/large/M5/050265_P_MDAKURAIEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50265",
+      "name": "メガダークライex",
+      "thumb": "/assets/images/card_images/large/M5/050265_P_MDAKURAIEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50265",
+      "name": "メガダークライex",
+      "thumb": "/assets/images/card_images/large/M5/050265_P_MDAKURAIEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50265",
+      "name": "メガダークライex",
+      "thumb": "/assets/images/card_images/large/M5/050265_P_MDAKURAIEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50266",
+      "name": "バルチャイ",
+      "thumb": "/assets/images/card_images/large/M5/050266_P_BARUCHIXYAI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50266",
+      "name": "バルチャイ",
+      "thumb": "/assets/images/card_images/large/M5/050266_P_BARUCHIXYAI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50266",
+      "name": "バルチャイ",
+      "thumb": "/assets/images/card_images/large/M5/050266_P_BARUCHIXYAI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50266",
+      "name": "バルチャイ",
+      "thumb": "/assets/images/card_images/large/M5/050266_P_BARUCHIXYAI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50267",
+      "name": "バルジーナ",
+      "thumb": "/assets/images/card_images/large/M5/050267_P_BARUJINA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50267",
+      "name": "バルジーナ",
+      "thumb": "/assets/images/card_images/large/M5/050267_P_BARUJINA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50267",
+      "name": "バルジーナ",
+      "thumb": "/assets/images/card_images/large/M5/050267_P_BARUJINA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50267",
+      "name": "バルジーナ",
+      "thumb": "/assets/images/card_images/large/M5/050267_P_BARUJINA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50268",
+      "name": "マーイーカ",
+      "thumb": "/assets/images/card_images/large/M5/050268_P_MAIKA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50268",
+      "name": "マーイーカ",
+      "thumb": "/assets/images/card_images/large/M5/050268_P_MAIKA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50268",
+      "name": "マーイーカ",
+      "thumb": "/assets/images/card_images/large/M5/050268_P_MAIKA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50268",
+      "name": "マーイーカ",
+      "thumb": "/assets/images/card_images/large/M5/050268_P_MAIKA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50269",
+      "name": "カラマネロ",
+      "thumb": "/assets/images/card_images/large/M5/050269_P_KARAMANERO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50269",
+      "name": "カラマネロ",
+      "thumb": "/assets/images/card_images/large/M5/050269_P_KARAMANERO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50269",
+      "name": "カラマネロ",
+      "thumb": "/assets/images/card_images/large/M5/050269_P_KARAMANERO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50269",
+      "name": "カラマネロ",
+      "thumb": "/assets/images/card_images/large/M5/050269_P_KARAMANERO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50270",
+      "name": "クスネ",
+      "thumb": "/assets/images/card_images/large/M5/050270_P_KUSUNE.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50270",
+      "name": "クスネ",
+      "thumb": "/assets/images/card_images/large/M5/050270_P_KUSUNE.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50270",
+      "name": "クスネ",
+      "thumb": "/assets/images/card_images/large/M5/050270_P_KUSUNE.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50270",
+      "name": "クスネ",
+      "thumb": "/assets/images/card_images/large/M5/050270_P_KUSUNE.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50271",
+      "name": "フォクスライ",
+      "thumb": "/assets/images/card_images/large/M5/050271_P_FUOKUSURAI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50271",
+      "name": "フォクスライ",
+      "thumb": "/assets/images/card_images/large/M5/050271_P_FUOKUSURAI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50271",
+      "name": "フォクスライ",
+      "thumb": "/assets/images/card_images/large/M5/050271_P_FUOKUSURAI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50271",
+      "name": "フォクスライ",
+      "thumb": "/assets/images/card_images/large/M5/050271_P_FUOKUSURAI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50272",
+      "name": "モルペコex",
+      "thumb": "/assets/images/card_images/large/M5/050272_P_MORUPEKOEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50272",
+      "name": "モルペコex",
+      "thumb": "/assets/images/card_images/large/M5/050272_P_MORUPEKOEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50272",
+      "name": "モルペコex",
+      "thumb": "/assets/images/card_images/large/M5/050272_P_MORUPEKOEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50272",
+      "name": "モルペコex",
+      "thumb": "/assets/images/card_images/large/M5/050272_P_MORUPEKOEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50273",
+      "name": "ザルード",
+      "thumb": "/assets/images/card_images/large/M5/050273_P_ZARUDO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50273",
+      "name": "ザルード",
+      "thumb": "/assets/images/card_images/large/M5/050273_P_ZARUDO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50273",
+      "name": "ザルード",
+      "thumb": "/assets/images/card_images/large/M5/050273_P_ZARUDO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50273",
+      "name": "ザルード",
+      "thumb": "/assets/images/card_images/large/M5/050273_P_ZARUDO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50274",
+      "name": "オラチフ",
+      "thumb": "/assets/images/card_images/large/M5/050274_P_ORACHIFU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50274",
+      "name": "オラチフ",
+      "thumb": "/assets/images/card_images/large/M5/050274_P_ORACHIFU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50274",
+      "name": "オラチフ",
+      "thumb": "/assets/images/card_images/large/M5/050274_P_ORACHIFU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50274",
+      "name": "オラチフ",
+      "thumb": "/assets/images/card_images/large/M5/050274_P_ORACHIFU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50275",
+      "name": "マフィティフ",
+      "thumb": "/assets/images/card_images/large/M5/050275_P_MAFUITEIFU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50275",
+      "name": "マフィティフ",
+      "thumb": "/assets/images/card_images/large/M5/050275_P_MAFUITEIFU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50275",
+      "name": "マフィティフ",
+      "thumb": "/assets/images/card_images/large/M5/050275_P_MAFUITEIFU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50275",
+      "name": "マフィティフ",
+      "thumb": "/assets/images/card_images/large/M5/050275_P_MAFUITEIFU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50276",
+      "name": "イーユイ",
+      "thumb": "/assets/images/card_images/large/M5/050276_P_IYUI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50276",
+      "name": "イーユイ",
+      "thumb": "/assets/images/card_images/large/M5/050276_P_IYUI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50276",
+      "name": "イーユイ",
+      "thumb": "/assets/images/card_images/large/M5/050276_P_IYUI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50276",
+      "name": "イーユイ",
+      "thumb": "/assets/images/card_images/large/M5/050276_P_IYUI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50277",
+      "name": "エアームド",
+      "thumb": "/assets/images/card_images/large/M5/050277_P_EAMUDO.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50277",
+      "name": "エアームド",
+      "thumb": "/assets/images/card_images/large/M5/050277_P_EAMUDO.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50277",
+      "name": "エアームド",
+      "thumb": "/assets/images/card_images/large/M5/050277_P_EAMUDO.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50277",
+      "name": "エアームド",
+      "thumb": "/assets/images/card_images/large/M5/050277_P_EAMUDO.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50278",
+      "name": "タテトプス",
+      "thumb": "/assets/images/card_images/large/M5/050278_P_TATETOPUSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50278",
+      "name": "タテトプス",
+      "thumb": "/assets/images/card_images/large/M5/050278_P_TATETOPUSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50278",
+      "name": "タテトプス",
+      "thumb": "/assets/images/card_images/large/M5/050278_P_TATETOPUSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50278",
+      "name": "タテトプス",
+      "thumb": "/assets/images/card_images/large/M5/050278_P_TATETOPUSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50279",
+      "name": "トリデプス",
+      "thumb": "/assets/images/card_images/large/M5/050279_P_TORIDEPUSU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50279",
+      "name": "トリデプス",
+      "thumb": "/assets/images/card_images/large/M5/050279_P_TORIDEPUSU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50279",
+      "name": "トリデプス",
+      "thumb": "/assets/images/card_images/large/M5/050279_P_TORIDEPUSU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50279",
+      "name": "トリデプス",
+      "thumb": "/assets/images/card_images/large/M5/050279_P_TORIDEPUSU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50280",
+      "name": "ドーミラー",
+      "thumb": "/assets/images/card_images/large/M5/050280_P_DOMIRA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50280",
+      "name": "ドーミラー",
+      "thumb": "/assets/images/card_images/large/M5/050280_P_DOMIRA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50280",
+      "name": "ドーミラー",
+      "thumb": "/assets/images/card_images/large/M5/050280_P_DOMIRA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50280",
+      "name": "ドーミラー",
+      "thumb": "/assets/images/card_images/large/M5/050280_P_DOMIRA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50281",
+      "name": "ドータクン",
+      "thumb": "/assets/images/card_images/large/M5/050281_P_DOTAKUN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50281",
+      "name": "ドータクン",
+      "thumb": "/assets/images/card_images/large/M5/050281_P_DOTAKUN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50281",
+      "name": "ドータクン",
+      "thumb": "/assets/images/card_images/large/M5/050281_P_DOTAKUN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50281",
+      "name": "ドータクン",
+      "thumb": "/assets/images/card_images/large/M5/050281_P_DOTAKUN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50282",
+      "name": "メガドリュウズex",
+      "thumb": "/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50282",
+      "name": "メガドリュウズex",
+      "thumb": "/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50282",
+      "name": "メガドリュウズex",
+      "thumb": "/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50282",
+      "name": "メガドリュウズex",
+      "thumb": "/assets/images/card_images/large/M5/050282_P_MDORIXYUUZUEX.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50283",
+      "name": "ツツケラ",
+      "thumb": "/assets/images/card_images/large/M5/050283_P_TSUTSUKERA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50283",
+      "name": "ツツケラ",
+      "thumb": "/assets/images/card_images/large/M5/050283_P_TSUTSUKERA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50283",
+      "name": "ツツケラ",
+      "thumb": "/assets/images/card_images/large/M5/050283_P_TSUTSUKERA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50283",
+      "name": "ツツケラ",
+      "thumb": "/assets/images/card_images/large/M5/050283_P_TSUTSUKERA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50284",
+      "name": "ケララッパ",
+      "thumb": "/assets/images/card_images/large/M5/050284_P_KERARAPPA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50284",
+      "name": "ケララッパ",
+      "thumb": "/assets/images/card_images/large/M5/050284_P_KERARAPPA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50284",
+      "name": "ケララッパ",
+      "thumb": "/assets/images/card_images/large/M5/050284_P_KERARAPPA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50284",
+      "name": "ケララッパ",
+      "thumb": "/assets/images/card_images/large/M5/050284_P_KERARAPPA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50285",
+      "name": "ドデカバシ",
+      "thumb": "/assets/images/card_images/large/M5/050285_P_DODEKABASHI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50285",
+      "name": "ドデカバシ",
+      "thumb": "/assets/images/card_images/large/M5/050285_P_DODEKABASHI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50285",
+      "name": "ドデカバシ",
+      "thumb": "/assets/images/card_images/large/M5/050285_P_DODEKABASHI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50285",
+      "name": "ドデカバシ",
+      "thumb": "/assets/images/card_images/large/M5/050285_P_DODEKABASHI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50286",
+      "name": "タイプ：ヌル",
+      "thumb": "/assets/images/card_images/large/M5/050286_P_TAIPUNURU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50286",
+      "name": "タイプ：ヌル",
+      "thumb": "/assets/images/card_images/large/M5/050286_P_TAIPUNURU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50286",
+      "name": "タイプ：ヌル",
+      "thumb": "/assets/images/card_images/large/M5/050286_P_TAIPUNURU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50286",
+      "name": "タイプ：ヌル",
+      "thumb": "/assets/images/card_images/large/M5/050286_P_TAIPUNURU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50287",
+      "name": "シルヴァディ",
+      "thumb": "/assets/images/card_images/large/M5/050287_P_SHIRUVUADEI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50287",
+      "name": "シルヴァディ",
+      "thumb": "/assets/images/card_images/large/M5/050287_P_SHIRUVUADEI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50287",
+      "name": "シルヴァディ",
+      "thumb": "/assets/images/card_images/large/M5/050287_P_SHIRUVUADEI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50287",
+      "name": "シルヴァディ",
+      "thumb": "/assets/images/card_images/large/M5/050287_P_SHIRUVUADEI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50288",
+      "name": "オトシドリ",
+      "thumb": "/assets/images/card_images/large/M5/050288_P_OTOSHIDORI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50288",
+      "name": "オトシドリ",
+      "thumb": "/assets/images/card_images/large/M5/050288_P_OTOSHIDORI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50288",
+      "name": "オトシドリ",
+      "thumb": "/assets/images/card_images/large/M5/050288_P_OTOSHIDORI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50288",
+      "name": "オトシドリ",
+      "thumb": "/assets/images/card_images/large/M5/050288_P_OTOSHIDORI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50289",
+      "name": "ダークベル",
+      "thumb": "/assets/images/card_images/large/M5/050289_T_DAKUBERU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50289",
+      "name": "ダークベル",
+      "thumb": "/assets/images/card_images/large/M5/050289_T_DAKUBERU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50289",
+      "name": "ダークベル",
+      "thumb": "/assets/images/card_images/large/M5/050289_T_DAKUBERU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50289",
+      "name": "ダークベル",
+      "thumb": "/assets/images/card_images/large/M5/050289_T_DAKUBERU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50290",
+      "name": "古びたずがいの化石",
+      "thumb": "/assets/images/card_images/large/M5/050290_T_KOBITAZUGAINOKASEKI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50290",
+      "name": "古びたずがいの化石",
+      "thumb": "/assets/images/card_images/large/M5/050290_T_KOBITAZUGAINOKASEKI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50290",
+      "name": "古びたずがいの化石",
+      "thumb": "/assets/images/card_images/large/M5/050290_T_KOBITAZUGAINOKASEKI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50290",
+      "name": "古びたずがいの化石",
+      "thumb": "/assets/images/card_images/large/M5/050290_T_KOBITAZUGAINOKASEKI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50291",
+      "name": "古びたたての化石",
+      "thumb": "/assets/images/card_images/large/M5/050291_T_FURUBITATATENOKASEKI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50291",
+      "name": "古びたたての化石",
+      "thumb": "/assets/images/card_images/large/M5/050291_T_FURUBITATATENOKASEKI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50291",
+      "name": "古びたたての化石",
+      "thumb": "/assets/images/card_images/large/M5/050291_T_FURUBITATATENOKASEKI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50291",
+      "name": "古びたたての化石",
+      "thumb": "/assets/images/card_images/large/M5/050291_T_FURUBITATATENOKASEKI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50292",
+      "name": "ごうかいボム",
+      "thumb": "/assets/images/card_images/large/M5/050292_T_GOUKAIBOMU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50292",
+      "name": "ごうかいボム",
+      "thumb": "/assets/images/card_images/large/M5/050292_T_GOUKAIBOMU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50292",
+      "name": "ごうかいボム",
+      "thumb": "/assets/images/card_images/large/M5/050292_T_GOUKAIBOMU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50292",
+      "name": "ごうかいボム",
+      "thumb": "/assets/images/card_images/large/M5/050292_T_GOUKAIBOMU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50293",
+      "name": "リトライバッジ",
+      "thumb": "/assets/images/card_images/large/M5/050293_T_RITORAIBAJJI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50293",
+      "name": "リトライバッジ",
+      "thumb": "/assets/images/card_images/large/M5/050293_T_RITORAIBAJJI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50293",
+      "name": "リトライバッジ",
+      "thumb": "/assets/images/card_images/large/M5/050293_T_RITORAIBAJJI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50293",
+      "name": "リトライバッジ",
+      "thumb": "/assets/images/card_images/large/M5/050293_T_RITORAIBAJJI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50294",
+      "name": "カスミの元気",
+      "thumb": "/assets/images/card_images/large/M5/050294_T_KASUMINOGENKI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50294",
+      "name": "カスミの元気",
+      "thumb": "/assets/images/card_images/large/M5/050294_T_KASUMINOGENKI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50294",
+      "name": "カスミの元気",
+      "thumb": "/assets/images/card_images/large/M5/050294_T_KASUMINOGENKI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50294",
+      "name": "カスミの元気",
+      "thumb": "/assets/images/card_images/large/M5/050294_T_KASUMINOGENKI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50295",
+      "name": "グラジオの決戦",
+      "thumb": "/assets/images/card_images/large/M5/050295_T_GURAJIONOKESSEN.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50295",
+      "name": "グラジオの決戦",
+      "thumb": "/assets/images/card_images/large/M5/050295_T_GURAJIONOKESSEN.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50295",
+      "name": "グラジオの決戦",
+      "thumb": "/assets/images/card_images/large/M5/050295_T_GURAJIONOKESSEN.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50295",
+      "name": "グラジオの決戦",
+      "thumb": "/assets/images/card_images/large/M5/050295_T_GURAJIONOKESSEN.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50296",
+      "name": "サビ組のしたっぱ",
+      "thumb": "/assets/images/card_images/large/M5/050296_T_SABIGUMINOSHITAPPA.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50296",
+      "name": "サビ組のしたっぱ",
+      "thumb": "/assets/images/card_images/large/M5/050296_T_SABIGUMINOSHITAPPA.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50296",
+      "name": "サビ組のしたっぱ",
+      "thumb": "/assets/images/card_images/large/M5/050296_T_SABIGUMINOSHITAPPA.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50296",
+      "name": "サビ組のしたっぱ",
+      "thumb": "/assets/images/card_images/large/M5/050296_T_SABIGUMINOSHITAPPA.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50297",
+      "name": "ムク",
+      "thumb": "/assets/images/card_images/large/M5/050297_T_MUKU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50297",
+      "name": "ムク",
+      "thumb": "/assets/images/card_images/large/M5/050297_T_MUKU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50297",
+      "name": "ムク",
+      "thumb": "/assets/images/card_images/large/M5/050297_T_MUKU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50297",
+      "name": "ムク",
+      "thumb": "/assets/images/card_images/large/M5/050297_T_MUKU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50298",
+      "name": "化石採掘場",
+      "thumb": "/assets/images/card_images/large/M5/050298_T_KASEKISAIKUTSUJIXYOU.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50298",
+      "name": "化石採掘場",
+      "thumb": "/assets/images/card_images/large/M5/050298_T_KASEKISAIKUTSUJIXYOU.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50298",
+      "name": "化石採掘場",
+      "thumb": "/assets/images/card_images/large/M5/050298_T_KASEKISAIKUTSUJIXYOU.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50298",
+      "name": "化石採掘場",
+      "thumb": "/assets/images/card_images/large/M5/050298_T_KASEKISAIKUTSUJIXYOU.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50299",
+      "name": "ボルト雷エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050299_E_BORUTOKAMINARIENERUGI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50299",
+      "name": "ボルト雷エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050299_E_BORUTOKAMINARIENERUGI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50299",
+      "name": "ボルト雷エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050299_E_BORUTOKAMINARIENERUGI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50299",
+      "name": "ボルト雷エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050299_E_BORUTOKAMINARIENERUGI.jpg",
+      "regulation": "J"
+    },
+    {
+      "id": "50300",
+      "name": "シャドー悪エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050300_E_SHIXYADOAKUENERUGI.jpg",
+      "regulation": "G"
+    },
+    {
+      "id": "50300",
+      "name": "シャドー悪エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050300_E_SHIXYADOAKUENERUGI.jpg",
+      "regulation": "H"
+    },
+    {
+      "id": "50300",
+      "name": "シャドー悪エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050300_E_SHIXYADOAKUENERUGI.jpg",
+      "regulation": "I"
+    },
+    {
+      "id": "50300",
+      "name": "シャドー悪エネルギー",
+      "thumb": "/assets/images/card_images/large/M5/050300_E_SHIXYADOAKUENERUGI.jpg",
       "regulation": "J"
     }
   ]

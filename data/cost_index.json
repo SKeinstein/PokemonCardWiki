@@ -23505,5 +23505,958 @@
         ]
       }
     ]
+  },
+  {
+    "masterId": "トロピウス_110_grass_none_かじつのかおり|ソーラービーム_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "grass",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "アゴジムシ_70_grass_none_いとをはく_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "カリキリ_70_grass_none_とつげき_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "grass"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ラランテスex_260_grass_none_はつらつカッター|リーフガード_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "grass"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "grass",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "チャデス_30_grass_none_ひっそりのせる_ばけがくれ",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヤバソチャ_60_grass_none_まっちゃスピン_ばけがくれ",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヒードラン_140_fire_none_こがす|ようがんウォール_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fire"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "fire",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヤクデ_80_fire_none_のやき|バグパニック_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fire"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "マルヤクデ_140_fire_none_のやき|ヒートタックル_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fire"
+        ]
+      },
+      {
+        "total": 4,
+        "types": [
+          "fire",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "カルボウ_80_fire_none_ぜんりょくパンチ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fire"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "グレンアルマ_140_fire_none_フレイムレギオン_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fire"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "トサキント_70_water_none_つきさす_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "アズマオウ_110_water_none_ハイドロショット_none",
+    "attacks": [
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ホエルコ_130_water_none_みずでっぽう|スプラッシュ_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "water"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ホエルオーex_380_water_none_なみのり|フォーリングダウン_none",
+    "attacks": [
+      {
+        "total": 3,
+        "types": [
+          "water"
+        ]
+      },
+      {
+        "total": 5,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ジーランス_100_water_none_フォッシルビート_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "アシマリ_70_water_none_はたく_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "オシャマリ_90_water_none_ハイパーボイス_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "アシレーヌ_150_water_none_アクアリターン_まんたんメロディ",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none",
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ナミイルカ_80_water_none_ドレインフィン_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "イルカマン_150_water_none_ジャスティスナックル_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "water"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ラクライ_70_electric_none_たいあたり|もってくる_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ライボルト_120_electric_none_ソニックエッジ|フラッシュバリア_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "デンヂムシ_100_electric_none_はさむ|ぶつかる_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "クワガノン_160_electric_none_ギガレールガン|クイックダイブ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "メガゼラオラex_270_electric_none_サンダーフィスト|ゼプトターン_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "electric"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ミライドン_120_electric_none_かみなり_フォトンコード",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "electric"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヤドン_70_psychic_none_すてほうだい|ずつき_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヤドラン_130_psychic_none_しねんのずつき|スッカラカン_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ルージュラ_100_psychic_none_きょうれつキッス|ねんりき_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "none",
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "カゲボウズ_50_psychic_none_ぶらさがる_ばけがくれ",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ジュペッタ_80_psychic_none_にんぎょうキャッチ_ばけがくれ",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ミカルゲ_60_psychic_none_たましいエンド_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ヒトモシ_70_psychic_none_おにび_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ランプラー_90_psychic_none_ふえるあかり_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "メガシャンデラex_350_psychic_none_ファントムメイズ_じゅばくのほのお",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ダダリン_140_psychic_none_むねんのイカリ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "マーシャドー_90_psychic_none_かげむすび_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "コノヨザル_150_psychic_none_ゴーストブロー_くちないからだ",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "psychic"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "マンキー_50_fighting_none_けたぐり_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "オコリザル_110_fighting_none_どつく_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ズガイドス_100_fighting_none_つきとばす_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "fighting"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ラムパルドex_330_fighting_none_ランページハンマー_はかいのずつき",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "fighting"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "モグリュー_70_fighting_none_なかまをよぶ|ツメをたてる_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "コライドン_130_fighting_none_ガイアインパクト|バトルクロー_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "fighting"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "fighting",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "メガダークライex_280_dark_none_アビスアイ|ナイトレイド_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "バルチャイ_70_dark_none_かぜおこし|はばたく_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "dark",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "バルジーナ_120_dark_none_ブラストウインド|ボーンスナイプ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "dark",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "マーイーカ_60_dark_none_かいてんアタック|ちょうたつ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "カラマネロ_120_dark_none_まどわす|ブレインクラッシュ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "クスネ_70_dark_none_うしろげり|かじる_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "dark",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "フォクスライ_100_dark_none_するどいキバ|スキルシーフ_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "dark",
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "モルペコex_180_dark_none_はらぺこボンバー|ホイールドロー_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 2,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ザルード_130_dark_none_うしろなげ|シャドーウィップ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "オラチフ_70_dark_none_かみつく_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "マフィティフ_140_dark_none_かみつく|とびこみヘッド_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "dark"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "イーユイ_90_dark_none_うずまくねたみ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "dark"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "エアームド_120_steel_none_スチールカッター_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "タテトプス_100_steel_none_くだく_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none",
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "トリデプス_160_steel_none_ぶちかます_たいこのぼうへき",
+    "attacks": [
+      {
+        "total": 3,
+        "types": [
+          "none",
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ドーミラー_80_steel_none_ミラーアタック_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ドータクン_130_steel_none_ひっぱたく|メタルブロック_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "steel"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "none",
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "メガドリュウズex_340_steel_none_ほりくずす|マキシマムドリル_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "steel"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "steel"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ツツケラ_70_none_none_にどづき_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ケララッパ_90_none_none_そらをとぶ_none",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "ドデカバシ_150_none_none_フェザーロンド_スカイドロー",
+    "attacks": [
+      {
+        "total": 1,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "タイプ：ヌル_110_none_none_パワーエッジ_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "シルヴァディ_140_none_none_エアスラッシュ_バディコール",
+    "attacks": [
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
+  },
+  {
+    "masterId": "オトシドリ_100_none_none_おとどけチャレンジ|スピードウイング_none",
+    "attacks": [
+      {
+        "total": 2,
+        "types": [
+          "none"
+        ]
+      },
+      {
+        "total": 3,
+        "types": [
+          "none"
+        ]
+      }
+    ]
   }
 ]
