@@ -41,6 +41,8 @@ console.log('Loading card_tags.json...');
 const cardTags  = JSON.parse(fs.readFileSync(path.join(root, 'data/card_tags.json'),  'utf8'));
 console.log('Loading qa_entry_tags.json...');
 const qaEntryTags = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_entry_tags.json'), 'utf8'));
+console.log('Loading official_class_index.json...');
+const officialClassIndex = JSON.parse(fs.readFileSync(path.join(root, 'data/official_class_index.json'), 'utf8'));
 
 // Build index: question text → position in qaEntries array (for O(1) lookup)
 const questionToIdx = new Map();
@@ -60,7 +62,29 @@ const ATTACK_FACETS = new Set([
   'ベンチに届く', '自分側', 'お互い',
 ]);
 
-const isMatchableTag = t => t.includes('>') || ATTACK_FACETS.has(t);
+// Phase 33-P: defense facets (33-N, flat) join the whitelist. このポケモン (206
+// cards) is the generic target facet and would flood links — deliberately absent.
+const DEFENSE_FACETS = new Set([
+  '受けるダメージ軽減', '受けるダメージ無効', '効果を受けない', '特殊状態にならない',
+  '常時', '次の相手の番', 'コインしだい', '特定の相手のみ',
+  '場の全員', 'ベンチ', '相手を弱める',
+]);
+
+// Phase 33-P: discriminative flat tags outside the facet systems (33-O vocab).
+const MISC_TAGS = new Set(['きぜつさせる']);
+
+// Phase 33-P: キャラ家系は独自タグでなく公式クラス (official_class_index) で結合する。
+// QA 側ルールは公式タグ名をそのまま発行する（tag_qa_entries.mjs CHARACTER_PREFIXES）。
+const OFFICIAL_FAMILY_TAGS = new Set([
+  'ロケット団',
+  'Nのポケモン', 'アオキのポケモン', 'エリカのポケモン', 'カスミのポケモン',
+  'シロナのポケモン', 'ダイゴのポケモン', 'ナンジャモのポケモン', 'ヒビキのポケモン',
+  'ペパーのポケモン', 'ホップのポケモン', 'マリィのポケモン', 'リーリエのポケモン',
+]);
+
+const isMatchableTag = t =>
+  t.includes('>') || ATTACK_FACETS.has(t) || DEFENSE_FACETS.has(t) || MISC_TAGS.has(t) ||
+  OFFICIAL_FAMILY_TAGS.has(t);
 
 /** cardId → Set<tag> (all tags, used for directQA path) */
 const cardTagMap = new Map();
@@ -75,6 +99,14 @@ for (const c of cardTags) {
     if (!isMatchableTag(tag)) continue;
     if (!subtagToCards.has(tag)) subtagToCards.set(tag, new Set());
     subtagToCards.get(tag).add(c.cardId);
+  }
+}
+// official family classes → member cards (cardId 空間は card_tags と共通)
+for (const [cardId, classes] of Object.entries(officialClassIndex)) {
+  for (const tag of classes) {
+    if (!OFFICIAL_FAMILY_TAGS.has(tag)) continue;
+    if (!subtagToCards.has(tag)) subtagToCards.set(tag, new Set());
+    subtagToCards.get(tag).add(cardId);
   }
 }
 
