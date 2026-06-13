@@ -8,6 +8,12 @@ Maintained by Foreman/Scribe.
 
 ## Unreported
 
+_(empty — see Archive)_
+
+## Archive
+
+<!-- 2026-06-13 移動: 5月 Phase 28/31/32/35/37 バッチ -->
+
 ### Phase 37-6: ロック>にげられない>ワザ 廃止・ロック>エネルギー 新設 ✅ (2026-05-17)
 - [x] `ロック>にげられない>ワザ` サブタグ削除：ルール条件を `ロック>にげられない` に統合（70件→にげられない 71件）
 - [x] `ロック>エネルギー` 新設：「手札から出すエネルギーをつけられない」パターン検出（キラフロル/オーロット 計2件）
@@ -118,7 +124,7 @@ Maintained by Foreman/Scribe.
 - [x] `group_categories_proposal.md` §B-2-6/7 節追加・サマリー更新
 - [x] `card_tags.json` リビルド
 
-## Archive
+---
 
 ### Phase 1: Data Quality ✅
 - [x] Create and run `harvest_ids.js`
@@ -426,7 +432,7 @@ Maintained by Foreman/Scribe.
 
 ---
 
-## Unreported (Phase 21)
+<!-- 2026-06-13 移動: 4-5月 Phase 21/18/22/33-A〜B バッチ -->
 
 - [x] **21-4** `frontend/app/components/CardModal.tsx` の右パネルに「採用デッキ」セクションを追加。`data/deck_index.json` を fetch し、表示中カードの master_id に対応するアーキタイプ上位5件を採用率降順で表示する。各行: アーキタイプ名・採用率バー（%）・limitlesstcg リンクボタン。採用デッキがない場合はセクション自体を非表示。表示位置は Q&A セクションの上。`npm run build` → `git add` → `git commit` → `git push`。**採用率バーの仕様**: バー幅は絶対値（100%=満幅）ではなく、表示中の上位5件の最高値を満幅とする相対スケール（例: 最高82%なら82%のバーが満幅、64%は64/82≈78%幅）。これにより差異が視覚的に強調される。
 > [!success] 2026-05-05 — 完了。変更点は1箇所のみ — バー幅の計算を `Math.min(deck.share, 100)%` から `(deck.share / maxShare) * 100%` に変更しました。上位5件の最高採用率が常に満幅になり、差異...
