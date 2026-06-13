@@ -32,6 +32,23 @@ const primaryOverrideByQuestion = new Map(
 );
 console.log(`Loaded ${primaryOverrideByQuestion.size} primary overrides`);
 
+// Phase 33-Y: カード側の attack facet タグを攻撃側として特定された
+// cards[] エントリから QA primary に伝播する。
+const cardTags = JSON.parse(readFileSync(join(ROOT, 'data', 'card_tags.json'), 'utf-8'));
+const cardTagMap = new Map(cardTags.map(c => [c.cardId, c.tags || []]));
+const ATTACK_FACET_AXES = new Set([
+  // MECHANIC
+  'ダメカンを置く', 'ダメカン移動', '反射', 'ワザダメージ',
+  // SOURCE
+  '即時', '特性・場', '次の番も',
+  // RANGE
+  'ベンチに届く', 'お互い', '自分側', 'バトル場のみ',
+]);
+// 伝播の起爆条件: カード側にこのいずれかがあるときだけ伝播する。
+// `ワザダメージ` + `即時` + `バトル場のみ` だけのカード (通常ワザ攻撃) を
+// 伝播対象から外し、relatedQA の汎用拡散を防ぐ ([[tag_qa_entries.mjs]] §125)。
+const NOTABLE_MECHANISMS = new Set(['ダメカンを置く', 'ダメカン移動', '反射']);
+
 // Combined text for pattern matching
 function qaText(e) {
   return `${e.question}\n${e.answer}`;
@@ -788,6 +805,46 @@ function detectCharacterTags(entry) {
   return tags;
 }
 
+// Phase 33-Y: 質問文中で「(自分の)?{name}の(特性|ワザ)「…」」構文を
+// 満たす cards[] エントリを攻撃側として特定し、そのカードに付いている
+// attack facet タグだけを QA primary に伝播する。
+// 「相手の{name}」の場合は対象側なので除外。idx 619 のように構文に乗らない
+// カード名は触らない (進化・どうぐなど無関係カードへの誤伝播を防ぐ)。
+let propagationHits = 0;
+function propagateAttackerFacets(entry, primary) {
+  const q = entry.question || '';
+  for (const ref of (entry.cards || [])) {
+    const name = ref.name;
+    if (!name) continue;
+    let pos = 0;
+    let matched = false;
+    while (true) {
+      const idx = q.indexOf(name, pos);
+      if (idx < 0) break;
+      pos = idx + name.length;
+      const before = q.slice(Math.max(0, idx - 3), idx);
+      if (before.endsWith('相手の')) continue;
+      const after = q.slice(pos);
+      // 「{name}の(特性|ワザ)「…」」 + 「{name}が(特性|ワザ)「…」」(idx 804 サマヨール型)
+      if (!/^(?:[のが](?:ワザ|特性)「[^」]+」)/.test(after)) continue;
+      matched = true;
+      break;
+    }
+    if (!matched) continue;
+    const tags = cardTagMap.get(ref.cardId) || [];
+    if (!tags.some(t => NOTABLE_MECHANISMS.has(t))) continue;
+    let added = false;
+    for (const tag of tags) {
+      if (!ATTACK_FACET_AXES.has(tag)) continue;
+      if (!primary.has(tag)) {
+        primary.add(tag);
+        added = true;
+      }
+    }
+    if (added) propagationHits++;
+  }
+}
+
 // ── Tag assignment ────────────────────────────────────────────────────────────
 let overrideHits = 0;
 function assignTags(entry) {
@@ -801,6 +858,7 @@ function assignTags(entry) {
     for (const tag of (rule.context ?? [])) context.add(tag);
   }
   for (const tag of detectCharacterTags(entry)) primary.add(tag);
+  propagateAttackerFacets(entry, primary);
   // Phase 33-X (2): cards[] が空 + primary が立つQAは基礎用語/ルール集とみなして
   // primary を空にする (relatedQA 拡散から除外)。
   // 公式FAQの規約上「特定カードに関連するQA = cards[] に登録」「ルール全般 = cards[] 空」
@@ -846,7 +904,7 @@ writeFileSync(
   JSON.stringify(result, null, 2),
   'utf-8'
 );
-console.log(`Wrote data/qa_entry_tags.json (${result.length} entries, override hits: ${overrideHits}/${primaryOverrideByQuestion.size})`);
+console.log(`Wrote data/qa_entry_tags.json (${result.length} entries, override hits: ${overrideHits}/${primaryOverrideByQuestion.size}, attack-facet propagation hits: ${propagationHits})`);
 
 // ── Stats ─────────────────────────────────────────────────────────────────────
 const tagCounts = {};
