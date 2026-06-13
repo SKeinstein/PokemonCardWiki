@@ -801,6 +801,14 @@ function assignTags(entry) {
     for (const tag of (rule.context ?? [])) context.add(tag);
   }
   for (const tag of detectCharacterTags(entry)) primary.add(tag);
+  // Phase 33-X (2): cards[] が空 + primary が立つQAは基礎用語/ルール集とみなして
+  // primary を空にする (relatedQA 拡散から除外)。
+  // 公式FAQの規約上「特定カードに関連するQA = cards[] に登録」「ルール全般 = cards[] 空」
+  // が貫かれているため、cards 不在=用語集と決め打ちできる。idx 8/22/24/77/142/184/...
+  // など42件が対象。context は表示用なので保持。
+  if ((entry.cards || []).length === 0 && primary.size > 0) {
+    primary = new Set();
+  }
   // Phase 33-X (3): 質問文キーで primary を強制上書き (個別裁定の隔離)。
   // context は触らず、directQA は build_qa_index 側の責務なのでそのまま動く。
   const ov = primaryOverrideByQuestion.get(entry.question);
