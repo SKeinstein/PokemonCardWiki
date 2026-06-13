@@ -24,6 +24,14 @@ const ROOT = join(__dirname, '..');
 const entries = JSON.parse(readFileSync(join(ROOT, 'data', 'qa_entries.json'), 'utf-8'));
 console.log(`Loaded ${entries.length} Q&A entries`);
 
+// Phase 33-X (3): 個別エントリの primary を強制上書き。質問文キー。
+// directQA で関係カードのみに留めたい極めて特殊な裁定 (発動順序・固有相互作用) 用。
+const overridesRaw = JSON.parse(readFileSync(join(ROOT, 'data', 'qa_primary_overrides.json'), 'utf-8'));
+const primaryOverrideByQuestion = new Map(
+  (overridesRaw.overrides || []).map(o => [o.question, o])
+);
+console.log(`Loaded ${primaryOverrideByQuestion.size} primary overrides`);
+
 // Combined text for pattern matching
 function qaText(e) {
   return `${e.question}\n${e.answer}`;
@@ -781,9 +789,10 @@ function detectCharacterTags(entry) {
 }
 
 // ── Tag assignment ────────────────────────────────────────────────────────────
+let overrideHits = 0;
 function assignTags(entry) {
-  const primary = new Set();
-  const context = new Set();
+  let primary = new Set();
+  let context = new Set();
   const t = qaText(entry);
   for (const rule of QA_TAG_RULES) {
     if (!rule.cond(t)) continue;
@@ -792,6 +801,14 @@ function assignTags(entry) {
     for (const tag of (rule.context ?? [])) context.add(tag);
   }
   for (const tag of detectCharacterTags(entry)) primary.add(tag);
+  // Phase 33-X (3): 質問文キーで primary を強制上書き (個別裁定の隔離)。
+  // context は触らず、directQA は build_qa_index 側の責務なのでそのまま動く。
+  const ov = primaryOverrideByQuestion.get(entry.question);
+  if (ov) {
+    overrideHits++;
+    if (Array.isArray(ov.primary)) primary = new Set(ov.primary);
+    if (Array.isArray(ov.context)) context = new Set(ov.context);
+  }
   // Phase 33-X (4): ワザコピー主題は攻撃ファセット primary と排他。
   // 309 のような「スキルシーフでワザを選べるか」が答え本文の効果説明
   // (「ダメカンを4個のせる」) を拾って ダメカンを置く / 即時 等の primary を
@@ -821,7 +838,7 @@ writeFileSync(
   JSON.stringify(result, null, 2),
   'utf-8'
 );
-console.log(`Wrote data/qa_entry_tags.json (${result.length} entries)`);
+console.log(`Wrote data/qa_entry_tags.json (${result.length} entries, override hits: ${overrideHits}/${primaryOverrideByQuestion.size})`);
 
 // ── Stats ─────────────────────────────────────────────────────────────────────
 const tagCounts = {};
