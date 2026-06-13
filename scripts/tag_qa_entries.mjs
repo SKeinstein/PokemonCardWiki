@@ -1,13 +1,17 @@
 /**
  * tag_qa_entries.mjs
- * Reads data/qa_entries.json (845 entries) and assigns mechanic tags to each
- * entry based on its question + answer text. Uses the same tag taxonomy and
- * sub-tag granularity as scripts/tag_cards.mjs.
+ * Reads data/qa_entries.json and assigns mechanic tags to each entry from its
+ * question + answer text. Uses the same tag taxonomy as scripts/tag_cards.mjs.
+ *
+ * Schema (Phase 33-W): each rule declares `primary` and/or `context`.
+ *   primary = subject of the ruling (must hold on the card for relatedQA match)
+ *   context = situational detail (e.g. opponent's effect, stadium present —
+ *             not required of the card; surfaces only as a reason hint)
+ * Legacy `tags` is treated as primary for back-compat.
  *
  * Outputs:
- *   data/qa_entry_tags.json  : [{ qaIndex: number, tags: string[] }]
- *
- * Run from project root: node scripts/tag_qa_entries.mjs
+ *   data/qa_entry_tags.json : [{ qaIndex, primary, context, tags }]
+ *                             tags = union, kept for any downstream relying on it
  */
 
 import { readFileSync, writeFileSync } from 'fs';
@@ -108,22 +112,30 @@ const QA_TAG_RULES = [
   // 付与しない — ほぼ全ての攻撃 Q&A が該当し relatedQA が洪水になるため。
 
   // 範囲: ベンチに届く / お互い / 自分側
+  // Phase 33-W: 攻撃方式で2系統に分割。
+  // (a) ワザのベンチダメージ系 — 弱点抵抗計算/「ワザのダメージを与え」「全員にXダメージ」
+  //     主題はカード側に `ベンチに届く + ワザダメージ` の両方が必要
+  //     (ユクシーのような「ベンチダメカン置き」カードを除外するため)
   {
-    tags: ['ベンチに届く'],
+    primary: ['ベンチに届く', 'ワザダメージ'],
     cond: t =>
       /[〔\[［]ベンチは弱点・抵抗力を計算しない/.test(t) ||
       /ベンチ.{0,20}弱点.{0,5}抵抗力.{0,20}計算/.test(t) ||
       (/相手のベンチポケモン.{1,60}ワザのダメージ/.test(t) && !/のせ替え/.test(t)) ||
-      /ベンチポケモン.{0,50}全員.{0,30}ダメージ/.test(t) ||
+      /ベンチポケモン.{0,50}全員.{0,30}ダメージ/.test(t),
+  },
+  // (b) ベンチダメカン置き系 — ベンチへダメカンをのせる
+  //     主題は `ベンチに届く + ダメカンを置く`
+  {
+    primary: ['ベンチに届く', 'ダメカンを置く'],
+    cond: t =>
       (
-        (
-          /ベンチポケモン.{1,30}ダメカン.{1,20}のせる/.test(t) ||
-          /ダメカン.{1,20}ベンチポケモン.{1,30}のせる/.test(t) ||
-          /相手のポケモン.{1,10}ダメカンを.{1,30}好きなように.{1,20}のせる/.test(t) ||
-          /たねポケモン全員.{1,20}ダメカンを.{1,10}のせる/.test(t)
-        ) &&
-        !/のせ替え/.test(t)
-      ),
+        /ベンチポケモン.{1,30}ダメカン.{1,20}のせる/.test(t) ||
+        /ダメカン.{1,20}ベンチポケモン.{1,30}のせる/.test(t) ||
+        /相手のポケモン.{1,10}ダメカンを.{1,30}好きなように.{1,20}のせる/.test(t) ||
+        /たねポケモン全員.{1,20}ダメカンを.{1,10}のせる/.test(t)
+      ) &&
+      !/のせ替え/.test(t),
   },
   { tags: ['お互い'], cond: t => /おたがいの(?:ベンチ)?ポケモン全員/.test(t) },
   {
@@ -135,13 +147,14 @@ const QA_TAG_RULES = [
   },
 
   // 機構: ダメカンを置く / ダメカン移動 / 反射
-  { tags: ['ダメカン移動'], cond: t => /ダメカンを.{0,30}のせ替える/.test(t) },
-  { tags: ['反射'], cond: t => HANSHA_PAT.test(t) },
+  // 「のせ替え」は活用語尾 (える/えた/えて) すべてを拾うため語幹で判定
+  { primary: ['ダメカン移動'], cond: t => /ダメカンを.{0,30}のせ替え/.test(t) },
+  { primary: ['反射'], cond: t => HANSHA_PAT.test(t) },
   {
-    tags: ['ダメカンを置く'],
+    primary: ['ダメカンを置く'],
     cond: t =>
       /ダメカンを.{0,30}のせる/.test(t) &&
-      !/ダメカンを.{0,30}のせ替える/.test(t) &&
+      !/ダメカンを.{0,30}のせ替え/.test(t) &&
       !HANSHA_PAT.test(t),
   },
 
@@ -152,7 +165,9 @@ const QA_TAG_RULES = [
       /次の(?:自分|相手)の番[^。]{0,60}(?:ダメカンを[^。]{0,15}のせる|\d+ダメージ追加|に、?\d+ダメージ)/.test(t),
   },
   {
-    tags: ['特性・場'],
+    // Phase 33-W: 「相手の特性で〜」「番の終わりに〜」は状況設定の文脈タグ
+    // (ばけがくれ vs ダメカン置き等)。カード側にこのタグを要求しない。
+    context: ['特性・場'],
     cond: t =>
       /特性「[^」]{1,25}」[^。]{0,50}ダメカンを.{0,20}のせ/.test(t) ||
       /番の終わりに[^。]{0,40}(?:ダメカンを.{0,15}のせ|\d+ダメージ)/.test(t),
@@ -445,21 +460,26 @@ const QA_TAG_RULES = [
     tags: ['受けるダメージ軽減', '場の全員'],
     cond: t => /「.{1,20}のポケモン」全員が.{1,60}受けるワザのダメージは「-\d+」/.test(t),
   },
+  // Phase 33-W: 防御クラス語彙は全て context へ。
+  // ばけがくれ・バトルコロシアム・ひかりのつばさ等は「相手側の妨害」を表す状況設定。
+  // QA の主題は「攻撃側がそれを貫通できるか」であって、攻撃側カードに
+  // `効果を受けない` `受けるダメージ無効` を要求すべきではない。
+  // (これらタグを主題にしたい防御側カードは directQA で覆える。)
   // 効果のみ防ぐ（ダメージは受ける）
   {
-    tags: ['効果を受けない'],
+    context: ['効果を受けない'],
     cond: t =>
       /ワザの効果を受けない/.test(t) &&
       !/ワザのダメージや効果を受けない/.test(t),
   },
   // コイン投げオモテで次の番のダメージ無効
   {
-    tags: ['受けるダメージ無効', 'コインしだい'],
+    context: ['受けるダメージ無効', 'コインしだい'],
     cond: t => /コイン.{1,20}オモテ.{1,30}ワザのダメージ(や効果)?を受けない/.test(t),
   },
   // 攻撃側の種別条件つき無効（ex/V/特性持ち/特殊E/テラスタルから受けない）
   {
-    tags: ['受けるダメージ無効', '特定の相手のみ'],
+    context: ['受けるダメージ無効', '特定の相手のみ'],
     cond: t =>
       /「ポケモンex」から.{0,10}ワザのダメージ.{0,10}受けない/.test(t) ||
       /「ポケモンV」から.{0,10}ワザのダメージ.{0,10}受けない/.test(t) ||
@@ -469,19 +489,19 @@ const QA_TAG_RULES = [
   },
   // 量条件つき無効（「N」以上のダメージを受けない）
   {
-    tags: ['受けるダメージ無効'],
+    context: ['受けるダメージ無効'],
     cond: t => /「\d+」以上のワザのダメージを受けない/.test(t),
   },
-  // ダメカン配置を防ぐ（非ベンチ文脈）— 33-N では D2 受けるダメージ無効
+  // ダメカン配置を防ぐ（非ベンチ文脈）
   {
-    tags: ['受けるダメージ無効'],
+    context: ['受けるダメージ無効'],
     cond: t =>
       /ダメカンがのらない/.test(t) &&
       !/ベンチポケモン.{1,60}ダメカンがのらない/.test(t),
   },
   // ベンチ保護（ダメージ）: バトルコロシアム, ベンチ保護特性・スタジアム
   {
-    tags: ['受けるダメージ無効', 'ベンチ'],
+    context: ['受けるダメージ無効', 'ベンチ'],
     cond: t =>
       /ベンチポケモン.{1,60}ダメカンがのらない/.test(t) ||
       /ベンチポケモン.{1,60}ワザのダメージを受けない/.test(t) ||
@@ -490,7 +510,7 @@ const QA_TAG_RULES = [
   },
   // ベンチ保護（効果とダメージ）
   {
-    tags: ['受けるダメージ無効', '効果を受けない', 'ベンチ'],
+    context: ['受けるダメージ無効', '効果を受けない', 'ベンチ'],
     cond: t =>
       /ベンチポケモン.{1,60}ワザのダメージや効果を受けない/.test(t) ||
       /ベンチにいるかぎり.{1,60}ワザのダメージや効果を受けない/.test(t),
@@ -565,11 +585,24 @@ const QA_TAG_RULES = [
   // ── カード種別参照（Phase 33-P: 旧 特殊連動>*）─────────────────────────────
   { tags: ['カード種別参照', 'カード種別参照>古代'], cond: t => /「古代」|古代のサポート/.test(t) },
   { tags: ['カード種別参照', 'カード種別参照>未来'], cond: t => /「未来」/.test(t) },
+  // テラスタル — 「相手の…テラスタル」のように対象として現れるとき context化。
+  // 攻撃側がテラスタル保護を貫通する裁定 (idx 317 ミカルゲ×ダメカン置き 等) は
+  // 主題が「ダメカンを置く」等であり、攻撃側カードに `テラスタル` を要求しない。
   {
-    tags: ['カード種別参照', 'カード種別参照>テラスタル'],
+    context: ['カード種別参照', 'カード種別参照>テラスタル'],
     cond: t =>
       /「テラスタル」/.test(t) &&
+      /相手の.{0,30}「テラスタル」/.test(t) &&
+      !/自分の.{0,30}「テラスタル」/.test(t) &&
       !/相手のバトルポケモンが「テラスタル」.{1,30}ダメージ追加/.test(t),
+  },
+  // テラスタル — 自分側/条件として現れるとき primary (ブライアの条件等)
+  {
+    primary: ['カード種別参照', 'カード種別参照>テラスタル'],
+    cond: t =>
+      /「テラスタル」/.test(t) &&
+      !/相手のバトルポケモンが「テラスタル」.{1,30}ダメージ追加/.test(t) &&
+      !(/相手の.{0,30}「テラスタル」/.test(t) && !/自分の.{0,30}「テラスタル」/.test(t)),
   },
   { tags: ['ロケット団'], cond: t => /ロケット団/.test(t) },
 
@@ -689,21 +722,31 @@ function detectCharacterTags(entry) {
 
 // ── Tag assignment ────────────────────────────────────────────────────────────
 function assignTags(entry) {
-  const tags = new Set();
+  const primary = new Set();
+  const context = new Set();
   const t = qaText(entry);
   for (const rule of QA_TAG_RULES) {
-    if (rule.cond(t)) {
-      for (const tag of rule.tags) tags.add(tag);
-    }
+    if (!rule.cond(t)) continue;
+    // Legacy `tags` → primary; otherwise use explicit primary/context
+    for (const tag of (rule.primary ?? rule.tags ?? [])) primary.add(tag);
+    for (const tag of (rule.context ?? [])) context.add(tag);
   }
-  for (const tag of detectCharacterTags(entry)) tags.add(tag);
-  return [...tags].sort();
+  for (const tag of detectCharacterTags(entry)) primary.add(tag);
+  // primary が同じタグを持っていたら context 側は捨てる
+  for (const tag of primary) context.delete(tag);
+  const p = [...primary].sort();
+  const c = [...context].sort();
+  return {
+    primary: p,
+    context: c,
+    tags: [...new Set([...p, ...c])].sort(),  // union — back-compat
+  };
 }
 
 // ── Process all entries ───────────────────────────────────────────────────────
 const result = entries.map((entry, qaIndex) => ({
   qaIndex,
-  tags: assignTags(entry),
+  ...assignTags(entry),
 }));
 
 writeFileSync(

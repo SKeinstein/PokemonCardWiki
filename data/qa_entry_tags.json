@@ -1,26 +1,42 @@
 [
   {
     "qaIndex": 0,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 1,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 2,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 3,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 4,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 5,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -29,6 +45,12 @@
   },
   {
     "qaIndex": 6,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -37,44 +59,70 @@
   },
   {
     "qaIndex": 7,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 8,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 9,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 10,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 11,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 12,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 13,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 14,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 15,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 16,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>ねむり"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -83,6 +131,11 @@
   },
   {
     "qaIndex": 17,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -90,22 +143,38 @@
   },
   {
     "qaIndex": 18,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 19,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 20,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 21,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 22,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく",
+      "特殊状態>ねむり",
+      "特殊状態>やけど",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく",
@@ -116,10 +185,18 @@
   },
   {
     "qaIndex": 23,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 24,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -128,70 +205,107 @@
   },
   {
     "qaIndex": 25,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 26,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 27,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 28,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 29,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 30,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 31,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 32,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 33,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 34,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 35,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 36,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 37,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 38,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 39,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 40,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 41,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -199,42 +313,65 @@
   },
   {
     "qaIndex": 42,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 43,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 44,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 45,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 46,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 47,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 48,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 49,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 50,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 51,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -242,6 +379,12 @@
   },
   {
     "qaIndex": 52,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>ねむり"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -250,6 +393,12 @@
   },
   {
     "qaIndex": 53,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -258,6 +407,11 @@
   },
   {
     "qaIndex": 54,
+    "primary": [
+      "特殊状態",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>やけど"
@@ -265,6 +419,11 @@
   },
   {
     "qaIndex": 55,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく"
@@ -272,36 +431,57 @@
   },
   {
     "qaIndex": 56,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 57,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 58,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 59,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 60,
+    "primary": [
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ"
     ]
   },
   {
     "qaIndex": 61,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 62,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 63,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -309,14 +489,23 @@
   },
   {
     "qaIndex": 64,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 65,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 66,
+    "primary": [
+      "特殊状態",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>マヒ"
@@ -324,22 +513,37 @@
   },
   {
     "qaIndex": 67,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 68,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 69,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 70,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 71,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>どく",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -349,10 +553,17 @@
   },
   {
     "qaIndex": 72,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 73,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>弱点・抵抗ルール改変"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>弱点・抵抗ルール改変"
@@ -360,24 +571,43 @@
   },
   {
     "qaIndex": 74,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 75,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 76,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 77,
+    "primary": [
+      "ベンチに届く",
+      "ワザダメージ"
+    ],
+    "context": [],
     "tags": [
-      "ベンチに届く"
+      "ベンチに届く",
+      "ワザダメージ"
     ]
   },
   {
     "qaIndex": 78,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>ねむり",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -387,22 +617,37 @@
   },
   {
     "qaIndex": 79,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 80,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 81,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 82,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 83,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>ねむり",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -412,98 +657,153 @@
   },
   {
     "qaIndex": 84,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 85,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 86,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 87,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 88,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 89,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 90,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 91,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 92,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 93,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 94,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 95,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 96,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 97,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 98,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 99,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 100,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 101,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 102,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 103,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 104,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 105,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 106,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん",
+      "特殊状態>ねむり",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん",
@@ -513,46 +813,71 @@
   },
   {
     "qaIndex": 107,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 108,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 109,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 110,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 111,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 112,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 113,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 114,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 115,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 116,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 117,
+    "primary": [
+      "フィールド干渉",
+      "フィールド干渉>スタジアムトラッシュ"
+    ],
+    "context": [],
     "tags": [
       "フィールド干渉",
       "フィールド干渉>スタジアムトラッシュ"
@@ -560,78 +885,121 @@
   },
   {
     "qaIndex": 118,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 119,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 120,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 121,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 122,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 123,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 124,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 125,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 126,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 127,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 128,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 129,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 130,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 131,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 132,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 133,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 134,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 135,
+    "primary": [
+      "特殊状態",
+      "特殊状態>参照"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>参照"
@@ -639,6 +1007,12 @@
   },
   {
     "qaIndex": 136,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -647,6 +1021,12 @@
   },
   {
     "qaIndex": 137,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>ねむり"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -655,12 +1035,23 @@
   },
   {
     "qaIndex": 138,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 139,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん",
+      "特殊状態>どく",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん",
@@ -670,6 +1061,12 @@
   },
   {
     "qaIndex": 140,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく",
@@ -678,130 +1075,199 @@
   },
   {
     "qaIndex": 141,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 142,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 143,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 144,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 145,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 146,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 147,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 148,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 149,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 150,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 151,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 152,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 153,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 154,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 155,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 156,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 157,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 158,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 159,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 160,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 161,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 162,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 163,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 164,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 165,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 166,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 167,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 168,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 169,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 170,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 171,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -809,124 +1275,196 @@
   },
   {
     "qaIndex": 172,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 173,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 174,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 175,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 176,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 177,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 178,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 179,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 180,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 181,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 182,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 183,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 184,
+    "primary": [
+      "ベンチに届く",
+      "ワザダメージ"
+    ],
+    "context": [],
     "tags": [
-      "ベンチに届く"
+      "ベンチに届く",
+      "ワザダメージ"
     ]
   },
   {
     "qaIndex": 185,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 186,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 187,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 188,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 189,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 190,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 191,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 192,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 193,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 194,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 195,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 196,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 197,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 198,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 199,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 200,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 201,
+    "primary": [
+      "ポケモンいれかえ",
+      "ロック",
+      "ロック>にげられない",
+      "特殊状態",
+      "特殊状態>こんらん",
+      "特殊状態>どく",
+      "特殊状態>ねむり"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ロック",
@@ -939,18 +1477,30 @@
   },
   {
     "qaIndex": 202,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 203,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 204,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 205,
+    "primary": [
+      "ポケモンいれかえ",
+      "ロック",
+      "ロック>にげられない"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ロック",
@@ -959,10 +1509,18 @@
   },
   {
     "qaIndex": 206,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 207,
+    "primary": [
+      "ポケモンいれかえ",
+      "ロック",
+      "ロック>にげられない"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ロック",
@@ -971,164 +1529,250 @@
   },
   {
     "qaIndex": 208,
+    "primary": [
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ"
     ]
   },
   {
     "qaIndex": 209,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 210,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 211,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 212,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 213,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 214,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 215,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 216,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 217,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 218,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 219,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 220,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 221,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 222,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 223,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 224,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 225,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 226,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 227,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 228,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 229,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 230,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 231,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 232,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 233,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 234,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 235,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 236,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 237,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 238,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 239,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 240,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 241,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 242,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 243,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 244,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 245,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 246,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 247,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -1137,126 +1781,191 @@
   },
   {
     "qaIndex": 248,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 249,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 250,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 251,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 252,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 253,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 254,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 255,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 256,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 257,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 258,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 259,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 260,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 261,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 262,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 263,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 264,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 265,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 266,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 267,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 268,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 269,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 270,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 271,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 272,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 273,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 274,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 275,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 276,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 277,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 278,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち"
@@ -1264,28 +1973,45 @@
   },
   {
     "qaIndex": 279,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 280,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 281,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 282,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 283,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 284,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -1293,6 +2019,11 @@
   },
   {
     "qaIndex": 285,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち"
@@ -1300,6 +2031,11 @@
   },
   {
     "qaIndex": 286,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち"
@@ -1307,6 +2043,13 @@
   },
   {
     "qaIndex": 287,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち",
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち",
@@ -1316,16 +2059,27 @@
   },
   {
     "qaIndex": 288,
+    "primary": [
+      "カスミのポケモン"
+    ],
+    "context": [],
     "tags": [
       "カスミのポケモン"
     ]
   },
   {
     "qaIndex": 289,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 290,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -1333,18 +2087,29 @@
   },
   {
     "qaIndex": 291,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 292,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 293,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 294,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex"
@@ -1352,6 +2117,11 @@
   },
   {
     "qaIndex": 295,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -1359,10 +2129,17 @@
   },
   {
     "qaIndex": 296,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 297,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -1370,14 +2147,23 @@
   },
   {
     "qaIndex": 298,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 299,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 300,
+    "primary": [
+      "デメリット",
+      "デメリット>エネ破棄"
+    ],
+    "context": [],
     "tags": [
       "デメリット",
       "デメリット>エネ破棄"
@@ -1385,10 +2171,17 @@
   },
   {
     "qaIndex": 301,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 302,
+    "primary": [
+      "デメリット",
+      "デメリット>エネ破棄"
+    ],
+    "context": [],
     "tags": [
       "デメリット",
       "デメリット>エネ破棄"
@@ -1396,22 +2189,35 @@
   },
   {
     "qaIndex": 303,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 304,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 305,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 306,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 307,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -1419,10 +2225,18 @@
   },
   {
     "qaIndex": 308,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 309,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1430,14 +2244,23 @@
   },
   {
     "qaIndex": 310,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 311,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 312,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -1445,22 +2268,37 @@
   },
   {
     "qaIndex": 313,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 314,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 315,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 316,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 317,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル",
@@ -1469,14 +2307,23 @@
   },
   {
     "qaIndex": 318,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 319,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 320,
+    "primary": [
+      "エネ加速",
+      "エネ加速>つけかえ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>つけかえ"
@@ -1484,10 +2331,17 @@
   },
   {
     "qaIndex": 321,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 322,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -1495,32 +2349,52 @@
   },
   {
     "qaIndex": 323,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 324,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 325,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 326,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 327,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 328,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 329,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1528,6 +2402,12 @@
   },
   {
     "qaIndex": 330,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ",
+      "ホップのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ",
@@ -1536,32 +2416,52 @@
   },
   {
     "qaIndex": 331,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 332,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 333,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 334,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 335,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 336,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 337,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1569,12 +2469,22 @@
   },
   {
     "qaIndex": 338,
+    "primary": [
+      "マリィのポケモン"
+    ],
+    "context": [],
     "tags": [
       "マリィのポケモン"
     ]
   },
   {
     "qaIndex": 339,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ロケット団",
       "特性・場"
@@ -1582,6 +2492,12 @@
   },
   {
     "qaIndex": 340,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ロケット団",
       "特性・場"
@@ -1589,10 +2505,18 @@
   },
   {
     "qaIndex": 341,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 342,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1600,6 +2524,13 @@
   },
   {
     "qaIndex": 343,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "効果を受けない",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "効果を受けない",
@@ -1608,6 +2539,12 @@
   },
   {
     "qaIndex": 344,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカン移動",
       "特性・場"
@@ -1615,6 +2552,11 @@
   },
   {
     "qaIndex": 345,
+    "primary": [
+      "回復",
+      "回復>固定HP回復"
+    ],
+    "context": [],
     "tags": [
       "回復",
       "回復>固定HP回復"
@@ -1622,10 +2564,17 @@
   },
   {
     "qaIndex": 346,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 347,
+    "primary": [
+      "フィールド干渉",
+      "フィールド干渉>スタジアムトラッシュ"
+    ],
+    "context": [],
     "tags": [
       "フィールド干渉",
       "フィールド干渉>スタジアムトラッシュ"
@@ -1633,22 +2582,36 @@
   },
   {
     "qaIndex": 348,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 349,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 350,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 351,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 352,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ",
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ",
@@ -1657,14 +2620,23 @@
   },
   {
     "qaIndex": 353,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 354,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 355,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -1672,34 +2644,53 @@
   },
   {
     "qaIndex": 356,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 357,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 358,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 359,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 360,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 361,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 362,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 363,
+    "primary": [
+      "フィールド干渉",
+      "フィールド干渉>スタジアムトラッシュ"
+    ],
+    "context": [],
     "tags": [
       "フィールド干渉",
       "フィールド干渉>スタジアムトラッシュ"
@@ -1707,6 +2698,11 @@
   },
   {
     "qaIndex": 364,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく"
@@ -1714,28 +2710,45 @@
   },
   {
     "qaIndex": 365,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 366,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 367,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 368,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 369,
+    "primary": [
+      "エリカのポケモン"
+    ],
+    "context": [],
     "tags": [
       "エリカのポケモン"
     ]
   },
   {
     "qaIndex": 370,
+    "primary": [
+      "アオキのポケモン",
+      "エリカのポケモン"
+    ],
+    "context": [],
     "tags": [
       "アオキのポケモン",
       "エリカのポケモン"
@@ -1743,38 +2756,62 @@
   },
   {
     "qaIndex": 371,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 372,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 373,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 374,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 375,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 376,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 377,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [],
     "tags": [
       "ダメカン移動"
     ]
   },
   {
     "qaIndex": 378,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカン移動",
       "特性・場"
@@ -1782,20 +2819,33 @@
   },
   {
     "qaIndex": 379,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 380,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 381,
+    "primary": [
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ"
     ]
   },
   {
     "qaIndex": 382,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -1803,6 +2853,12 @@
   },
   {
     "qaIndex": 383,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -1811,18 +2867,31 @@
   },
   {
     "qaIndex": 384,
+    "primary": [],
+    "context": [
+      "効果を受けない"
+    ],
     "tags": [
       "効果を受けない"
     ]
   },
   {
     "qaIndex": 385,
+    "primary": [],
+    "context": [
+      "効果を受けない"
+    ],
     "tags": [
       "効果を受けない"
     ]
   },
   {
     "qaIndex": 386,
+    "primary": [
+      "エネ加速",
+      "エネ加速>つけかえ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>つけかえ"
@@ -1830,6 +2899,11 @@
   },
   {
     "qaIndex": 387,
+    "primary": [
+      "エネ加速",
+      "エネ加速>つけかえ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>つけかえ"
@@ -1837,18 +2911,30 @@
   },
   {
     "qaIndex": 388,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 389,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 390,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 391,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1856,26 +2942,43 @@
   },
   {
     "qaIndex": 392,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 393,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 394,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 395,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 396,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -1883,14 +2986,27 @@
   },
   {
     "qaIndex": 397,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 398,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 399,
+    "primary": [
+      "ダメカンを置く",
+      "ベンチに届く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -1901,26 +3017,41 @@
   },
   {
     "qaIndex": 400,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 401,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 402,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 403,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 404,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 405,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>トラッシュ"
@@ -1928,34 +3059,56 @@
   },
   {
     "qaIndex": 406,
+    "primary": [],
+    "context": [
+      "効果を受けない"
+    ],
     "tags": [
       "効果を受けない"
     ]
   },
   {
     "qaIndex": 407,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 408,
+    "primary": [
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ"
     ]
   },
   {
     "qaIndex": 409,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 410,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 411,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 412,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ",
+      "ホップのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ",
@@ -1964,18 +3117,30 @@
   },
   {
     "qaIndex": 413,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 414,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 415,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 416,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1983,6 +3148,12 @@
   },
   {
     "qaIndex": 417,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -1990,38 +3161,63 @@
   },
   {
     "qaIndex": 418,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 419,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 420,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 421,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 422,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 423,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち",
+      "ベンチに届く",
+      "ワザダメージ"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち",
-      "ベンチに届く"
+      "ベンチに届く",
+      "ワザダメージ"
     ]
   },
   {
     "qaIndex": 424,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 425,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -2029,6 +3225,11 @@
   },
   {
     "qaIndex": 426,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -2036,26 +3237,41 @@
   },
   {
     "qaIndex": 427,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 428,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 429,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 430,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 431,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 432,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -2063,10 +3279,18 @@
   },
   {
     "qaIndex": 433,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 434,
+    "primary": [
+      "ドロー",
+      "ドロー>手札トラッシュ後",
+      "手札干渉"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>手札トラッシュ後",
@@ -2075,6 +3299,11 @@
   },
   {
     "qaIndex": 435,
+    "primary": [
+      "ドロー",
+      "ドロー>手札トラッシュ後"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>手札トラッシュ後"
@@ -2082,6 +3311,11 @@
   },
   {
     "qaIndex": 436,
+    "primary": [
+      "ドロー",
+      "ドロー>手札トラッシュ後"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>手札トラッシュ後"
@@ -2089,6 +3323,11 @@
   },
   {
     "qaIndex": 437,
+    "primary": [
+      "ドロー",
+      "ドロー>手札トラッシュ後"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>手札トラッシュ後"
@@ -2096,18 +3335,29 @@
   },
   {
     "qaIndex": 438,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 439,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 440,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 441,
+    "primary": [
+      "デメリット",
+      "デメリット>エネ破棄"
+    ],
+    "context": [],
     "tags": [
       "デメリット",
       "デメリット>エネ破棄"
@@ -2115,14 +3365,23 @@
   },
   {
     "qaIndex": 442,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 443,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 444,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -2130,34 +3389,53 @@
   },
   {
     "qaIndex": 445,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 446,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 447,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 448,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 449,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 450,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 451,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 452,
+    "primary": [
+      "最大HP",
+      "最大HP>強化"
+    ],
+    "context": [],
     "tags": [
       "最大HP",
       "最大HP>強化"
@@ -2165,42 +3443,67 @@
   },
   {
     "qaIndex": 453,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 454,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 455,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 456,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 457,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 458,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 459,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 460,
+    "primary": [
+      "アオキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "アオキのポケモン"
     ]
   },
   {
     "qaIndex": 461,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -2208,12 +3511,23 @@
   },
   {
     "qaIndex": 462,
+    "primary": [
+      "アオキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "アオキのポケモン"
     ]
   },
   {
     "qaIndex": 463,
+    "primary": [
+      "アオキのポケモン",
+      "特殊状態",
+      "特殊状態>どく",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "アオキのポケモン",
       "特殊状態",
@@ -2223,62 +3537,102 @@
   },
   {
     "qaIndex": 464,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 465,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 466,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 467,
+    "primary": [
+      "山札破壊"
+    ],
+    "context": [],
     "tags": [
       "山札破壊"
     ]
   },
   {
     "qaIndex": 468,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 469,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 470,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 471,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 472,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 473,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 474,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 475,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 476,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ベンチ",
       "ロケット団",
@@ -2288,34 +3642,56 @@
   },
   {
     "qaIndex": 477,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 478,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 479,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 480,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 481,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 482,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 483,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 484,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2325,6 +3701,14 @@
   },
   {
     "qaIndex": 485,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2334,6 +3718,14 @@
   },
   {
     "qaIndex": 486,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカン移動",
       "ベンチ",
@@ -2343,6 +3735,14 @@
   },
   {
     "qaIndex": 487,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカン移動",
       "ベンチ",
@@ -2352,6 +3752,13 @@
   },
   {
     "qaIndex": 488,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効"
+    ],
     "tags": [
       "ダメカン移動",
       "ベンチ",
@@ -2360,15 +3767,32 @@
   },
   {
     "qaIndex": 489,
+    "primary": [
+      "ベンチに届く",
+      "マリィのポケモン",
+      "ワザダメージ"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効"
+    ],
     "tags": [
       "ベンチ",
       "ベンチに届く",
       "マリィのポケモン",
+      "ワザダメージ",
       "受けるダメージ無効"
     ]
   },
   {
     "qaIndex": 490,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2377,6 +3801,14 @@
   },
   {
     "qaIndex": 491,
+    "primary": [
+      "ダメカンを置く",
+      "ベンチに届く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2386,6 +3818,14 @@
   },
   {
     "qaIndex": 492,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2395,6 +3835,15 @@
   },
   {
     "qaIndex": 493,
+    "primary": [
+      "ダメカンを置く",
+      "ベンチに届く"
+    ],
+    "context": [
+      "ベンチ",
+      "受けるダメージ無効",
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ベンチ",
@@ -2405,24 +3854,40 @@
   },
   {
     "qaIndex": 494,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 495,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 496,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 497,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 498,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -2430,22 +3895,35 @@
   },
   {
     "qaIndex": 499,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 500,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 501,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 502,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 503,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -2453,12 +3931,22 @@
   },
   {
     "qaIndex": 504,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 505,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>相手:C-05型",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>相手:C-05型",
@@ -2467,6 +3955,11 @@
   },
   {
     "qaIndex": 506,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -2474,6 +3967,11 @@
   },
   {
     "qaIndex": 507,
+    "primary": [
+      "特殊状態",
+      "特殊状態>マヒ"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>マヒ"
@@ -2481,22 +3979,35 @@
   },
   {
     "qaIndex": 508,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 509,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 510,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 511,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 512,
+    "primary": [
+      "サイド関連",
+      "マリィのポケモン"
+    ],
+    "context": [],
     "tags": [
       "サイド関連",
       "マリィのポケモン"
@@ -2504,66 +4015,107 @@
   },
   {
     "qaIndex": 513,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 514,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 515,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 516,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 517,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 518,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 519,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 520,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 521,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 522,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 523,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 524,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 525,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 526,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex",
+      "回復",
+      "回復>全回復"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex",
@@ -2573,6 +4125,13 @@
   },
   {
     "qaIndex": 527,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex",
+      "回復",
+      "回復>全回復"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex",
@@ -2582,18 +4141,29 @@
   },
   {
     "qaIndex": 528,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 529,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 530,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 531,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -2601,16 +4171,27 @@
   },
   {
     "qaIndex": 532,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 533,
+    "primary": [
+      "退化"
+    ],
+    "context": [],
     "tags": [
       "退化"
     ]
   },
   {
     "qaIndex": 534,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex"
@@ -2618,10 +4199,17 @@
   },
   {
     "qaIndex": 535,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 536,
+    "primary": [
+      "エネ加速",
+      "エネ加速>つけかえ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>つけかえ"
@@ -2629,26 +4217,41 @@
   },
   {
     "qaIndex": 537,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 538,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 539,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 540,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 541,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 542,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex"
@@ -2656,34 +4259,55 @@
   },
   {
     "qaIndex": 543,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 544,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 545,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 546,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 547,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 548,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 549,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>相手:C-05型"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>相手:C-05型"
@@ -2691,22 +4315,37 @@
   },
   {
     "qaIndex": 550,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 551,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 552,
+    "primary": [
+      "リーリエのポケモン"
+    ],
+    "context": [],
     "tags": [
       "リーリエのポケモン"
     ]
   },
   {
     "qaIndex": 553,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -2714,48 +4353,75 @@
   },
   {
     "qaIndex": 554,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 555,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 556,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 557,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 558,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 559,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 560,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 561,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 562,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 563,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 564,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>メガシンカex"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>メガシンカex"
@@ -2763,22 +4429,35 @@
   },
   {
     "qaIndex": 565,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 566,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 567,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 568,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 569,
+    "primary": [
+      "サーチ",
+      "サーチ>エネルギー"
+    ],
+    "context": [],
     "tags": [
       "サーチ",
       "サーチ>エネルギー"
@@ -2786,94 +4465,147 @@
   },
   {
     "qaIndex": 570,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 571,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 572,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 573,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 574,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 575,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 576,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 577,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 578,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 579,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 580,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 581,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 582,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 583,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 584,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [],
     "tags": [
-      "ダメカンを置く"
+      "ダメカン移動"
     ]
   },
   {
     "qaIndex": 585,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [],
     "tags": [
-      "ダメカンを置く"
+      "ダメカン移動"
     ]
   },
   {
     "qaIndex": 586,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 587,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 588,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 589,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 590,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -2881,6 +4613,11 @@
   },
   {
     "qaIndex": 591,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -2888,52 +4625,85 @@
   },
   {
     "qaIndex": 592,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 593,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 594,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 595,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 596,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 597,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 598,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 599,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 600,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 601,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 602,
+    "primary": [
+      "エネ加速",
+      "エネ加速>つけかえ"
+    ],
+    "context": [
+      "効果を受けない"
+    ],
     "tags": [
       "エネ加速",
       "エネ加速>つけかえ",
@@ -2942,22 +4712,35 @@
   },
   {
     "qaIndex": 603,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 604,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 605,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 606,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 607,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -2965,6 +4748,11 @@
   },
   {
     "qaIndex": 608,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>トラッシュ"
@@ -2972,26 +4760,43 @@
   },
   {
     "qaIndex": 609,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 610,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 611,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 612,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 613,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 614,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん",
+      "特殊状態>どく",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん",
@@ -3001,10 +4806,17 @@
   },
   {
     "qaIndex": 615,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 616,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -3012,16 +4824,29 @@
   },
   {
     "qaIndex": 617,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 618,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 619,
+    "primary": [
+      "ダメカンを置く",
+      "ロケット団"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "ロケット団",
@@ -3030,6 +4855,12 @@
   },
   {
     "qaIndex": 620,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル",
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル",
@@ -3038,42 +4869,71 @@
   },
   {
     "qaIndex": 621,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 622,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 623,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 624,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 625,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 626,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 627,
+    "primary": [
+      "ロケット団",
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "ロケット団",
       "進化加速"
@@ -3081,54 +4941,88 @@
   },
   {
     "qaIndex": 628,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 629,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 630,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 631,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 632,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 633,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 634,
+    "primary": [
+      "ロケット団"
+    ],
+    "context": [],
     "tags": [
       "ロケット団"
     ]
   },
   {
     "qaIndex": 635,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 636,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 637,
+    "primary": [
+      "ヒビキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ヒビキのポケモン"
     ]
   },
   {
     "qaIndex": 638,
+    "primary": [
+      "シロナのポケモン",
+      "最大HP",
+      "最大HP>強化"
+    ],
+    "context": [],
     "tags": [
       "シロナのポケモン",
       "最大HP",
@@ -3137,16 +5031,28 @@
   },
   {
     "qaIndex": 639,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 640,
+    "primary": [
+      "シロナのポケモン"
+    ],
+    "context": [],
     "tags": [
       "シロナのポケモン"
     ]
   },
   {
     "qaIndex": 641,
+    "primary": [
+      "シロナのポケモン",
+      "ドロー",
+      "ドロー>固定枚数まで"
+    ],
+    "context": [],
     "tags": [
       "シロナのポケモン",
       "ドロー",
@@ -3155,46 +5061,77 @@
   },
   {
     "qaIndex": 642,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 643,
+    "primary": [
+      "カスミのポケモン"
+    ],
+    "context": [],
     "tags": [
       "カスミのポケモン"
     ]
   },
   {
     "qaIndex": 644,
+    "primary": [
+      "カスミのポケモン"
+    ],
+    "context": [],
     "tags": [
       "カスミのポケモン"
     ]
   },
   {
     "qaIndex": 645,
+    "primary": [
+      "カスミのポケモン"
+    ],
+    "context": [],
     "tags": [
       "カスミのポケモン"
     ]
   },
   {
     "qaIndex": 646,
+    "primary": [
+      "ヒビキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ヒビキのポケモン"
     ]
   },
   {
     "qaIndex": 647,
+    "primary": [
+      "ヒビキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ヒビキのポケモン"
     ]
   },
   {
     "qaIndex": 648,
+    "primary": [
+      "ヒビキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ヒビキのポケモン"
     ]
   },
   {
     "qaIndex": 649,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>ルール持ち"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>ルール持ち"
@@ -3202,6 +5139,12 @@
   },
   {
     "qaIndex": 650,
+    "primary": [
+      "シロナのポケモン",
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "シロナのポケモン",
       "ダメージ修飾",
@@ -3210,52 +5153,87 @@
   },
   {
     "qaIndex": 651,
+    "primary": [
+      "シロナのポケモン"
+    ],
+    "context": [],
     "tags": [
       "シロナのポケモン"
     ]
   },
   {
     "qaIndex": 652,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 653,
+    "primary": [
+      "ペパーのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ペパーのポケモン"
     ]
   },
   {
     "qaIndex": 654,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 655,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 656,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 657,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 658,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 659,
+    "primary": [
+      "ダイゴのポケモン",
+      "マリィのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン",
       "マリィのポケモン"
@@ -3263,56 +5241,91 @@
   },
   {
     "qaIndex": 660,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 661,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 662,
+    "primary": [
+      "ダイゴのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダイゴのポケモン"
     ]
   },
   {
     "qaIndex": 663,
+    "primary": [
+      "マリィのポケモン"
+    ],
+    "context": [],
     "tags": [
       "マリィのポケモン"
     ]
   },
   {
     "qaIndex": 664,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 665,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 666,
+    "primary": [
+      "リーリエのポケモン"
+    ],
+    "context": [],
     "tags": [
       "リーリエのポケモン"
     ]
   },
   {
     "qaIndex": 667,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 668,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 669,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 670,
+    "primary": [
+      "フィールド干渉",
+      "フィールド干渉>どうぐトラッシュ"
+    ],
+    "context": [],
     "tags": [
       "フィールド干渉",
       "フィールド干渉>どうぐトラッシュ"
@@ -3320,16 +5333,28 @@
   },
   {
     "qaIndex": 671,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 672,
+    "primary": [
+      "リーリエのポケモン"
+    ],
+    "context": [],
     "tags": [
       "リーリエのポケモン"
     ]
   },
   {
     "qaIndex": 673,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ",
+      "ホップのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ",
@@ -3338,6 +5363,12 @@
   },
   {
     "qaIndex": 674,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札",
+      "ホップのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札",
@@ -3346,10 +5377,18 @@
   },
   {
     "qaIndex": 675,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 676,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ",
+      "ホップのポケモン"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ",
@@ -3358,6 +5397,12 @@
   },
   {
     "qaIndex": 677,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "ダメカンを置く",
       "特性・場"
@@ -3365,42 +5410,72 @@
   },
   {
     "qaIndex": 678,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 679,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 680,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 681,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 682,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 683,
+    "primary": [
+      "Nのポケモン"
+    ],
+    "context": [],
     "tags": [
       "Nのポケモン"
     ]
   },
   {
     "qaIndex": 684,
+    "primary": [
+      "ポケモンチェック",
+      "特殊状態",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック",
       "特殊状態",
@@ -3409,16 +5484,27 @@
   },
   {
     "qaIndex": 685,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 686,
+    "primary": [
+      "アオキのポケモン"
+    ],
+    "context": [],
     "tags": [
       "アオキのポケモン"
     ]
   },
   {
     "qaIndex": 687,
+    "primary": [],
+    "context": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3426,10 +5512,17 @@
   },
   {
     "qaIndex": 688,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 689,
+    "primary": [
+      "エネ加速",
+      "エネ加速>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>トラッシュ"
@@ -3437,50 +5530,79 @@
   },
   {
     "qaIndex": 690,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 691,
+    "primary": [
+      "退化"
+    ],
+    "context": [],
     "tags": [
       "退化"
     ]
   },
   {
     "qaIndex": 692,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 693,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 694,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 695,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 696,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 697,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 698,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 699,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 700,
+    "primary": [
+      "サーチ",
+      "サーチ>エネルギー"
+    ],
+    "context": [],
     "tags": [
       "サーチ",
       "サーチ>エネルギー"
@@ -3488,10 +5610,19 @@
   },
   {
     "qaIndex": 701,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 702,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>古代",
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>古代",
@@ -3501,38 +5632,63 @@
   },
   {
     "qaIndex": 703,
+    "primary": [
+      "きぜつさせる"
+    ],
+    "context": [],
     "tags": [
       "きぜつさせる"
     ]
   },
   {
     "qaIndex": 704,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 705,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 706,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 707,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 708,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 709,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 710,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル",
@@ -3541,30 +5697,47 @@
   },
   {
     "qaIndex": 711,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 712,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 713,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 714,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 715,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 716,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 717,
+    "primary": [
+      "デメリット",
+      "デメリット>エネ破棄"
+    ],
+    "context": [],
     "tags": [
       "デメリット",
       "デメリット>エネ破棄"
@@ -3572,34 +5745,53 @@
   },
   {
     "qaIndex": 718,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 719,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 720,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 721,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 722,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 723,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 724,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 725,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -3607,6 +5799,11 @@
   },
   {
     "qaIndex": 726,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>自分"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>自分"
@@ -3614,54 +5811,83 @@
   },
   {
     "qaIndex": 727,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 728,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 729,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 730,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 731,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 732,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 733,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 734,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 735,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 736,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 737,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 738,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 739,
+    "primary": [
+      "ドロー",
+      "ドロー>そのまま"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>そのまま"
@@ -3669,66 +5895,105 @@
   },
   {
     "qaIndex": 740,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 741,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 742,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 743,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 744,
+    "primary": [
+      "退化"
+    ],
+    "context": [],
     "tags": [
       "退化"
     ]
   },
   {
     "qaIndex": 745,
+    "primary": [
+      "ポケモンいれかえ"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ"
     ]
   },
   {
     "qaIndex": 746,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 747,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 748,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 749,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 750,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 751,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 752,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 753,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3736,10 +6001,17 @@
   },
   {
     "qaIndex": 754,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 755,
+    "primary": [],
+    "context": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3747,6 +6019,11 @@
   },
   {
     "qaIndex": 756,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3754,6 +6031,11 @@
   },
   {
     "qaIndex": 757,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3761,10 +6043,18 @@
   },
   {
     "qaIndex": 758,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 759,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル",
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル",
@@ -3773,6 +6063,11 @@
   },
   {
     "qaIndex": 760,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -3780,34 +6075,55 @@
   },
   {
     "qaIndex": 761,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 762,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 763,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 764,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 765,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 766,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 767,
+    "primary": [
+      "デメリット",
+      "デメリット>エネ破棄"
+    ],
+    "context": [],
     "tags": [
       "デメリット",
       "デメリット>エネ破棄"
@@ -3815,14 +6131,23 @@
   },
   {
     "qaIndex": 768,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 769,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 770,
+    "primary": [
+      "エネ加速",
+      "エネ加速>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>トラッシュ"
@@ -3830,18 +6155,29 @@
   },
   {
     "qaIndex": 771,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 772,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 773,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 774,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>相手:C-04型"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>相手:C-04型"
@@ -3849,16 +6185,27 @@
   },
   {
     "qaIndex": 775,
+    "primary": [
+      "相手の場"
+    ],
+    "context": [],
     "tags": [
       "相手の場"
     ]
   },
   {
     "qaIndex": 776,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 777,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -3866,6 +6213,11 @@
   },
   {
     "qaIndex": 778,
+    "primary": [
+      "エネ加速",
+      "エネ加速>山札"
+    ],
+    "context": [],
     "tags": [
       "エネ加速",
       "エネ加速>山札"
@@ -3873,14 +6225,23 @@
   },
   {
     "qaIndex": 779,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 780,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 781,
+    "primary": [
+      "回復",
+      "回復>固定HP回復"
+    ],
+    "context": [],
     "tags": [
       "回復",
       "回復>固定HP回復"
@@ -3888,12 +6249,21 @@
   },
   {
     "qaIndex": 782,
+    "primary": [],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "特性・場"
     ]
   },
   {
     "qaIndex": 783,
+    "primary": [
+      "ドロー",
+      "ドロー>そのまま"
+    ],
+    "context": [],
     "tags": [
       "ドロー",
       "ドロー>そのまま"
@@ -3901,6 +6271,12 @@
   },
   {
     "qaIndex": 784,
+    "primary": [
+      "特殊状態",
+      "特殊状態>ねむり",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>ねむり",
@@ -3909,26 +6285,41 @@
   },
   {
     "qaIndex": 785,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 786,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 787,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 788,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 789,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 790,
+    "primary": [
+      "サーチ",
+      "サーチ>エネルギー"
+    ],
+    "context": [],
     "tags": [
       "サーチ",
       "サーチ>エネルギー"
@@ -3936,22 +6327,36 @@
   },
   {
     "qaIndex": 791,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 792,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 793,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 794,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 795,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん",
@@ -3960,6 +6365,11 @@
   },
   {
     "qaIndex": 796,
+    "primary": [
+      "特殊状態",
+      "特殊状態>こんらん"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>こんらん"
@@ -3967,6 +6377,11 @@
   },
   {
     "qaIndex": 797,
+    "primary": [
+      "特殊状態",
+      "特殊状態>やけど"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>やけど"
@@ -3974,22 +6389,37 @@
   },
   {
     "qaIndex": 798,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 799,
+    "primary": [
+      "ポケモンチェック"
+    ],
+    "context": [],
     "tags": [
       "ポケモンチェック"
     ]
   },
   {
     "qaIndex": 800,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 801,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>未来"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>未来"
@@ -3997,40 +6427,63 @@
   },
   {
     "qaIndex": 802,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 803,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 804,
+    "primary": [],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "特性・場"
     ]
   },
   {
     "qaIndex": 805,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 806,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 807,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 808,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 809,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 810,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>トラッシュ"
@@ -4038,6 +6491,11 @@
   },
   {
     "qaIndex": 811,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>トラッシュ"
@@ -4045,6 +6503,11 @@
   },
   {
     "qaIndex": 812,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>トラッシュ"
@@ -4052,180 +6515,273 @@
   },
   {
     "qaIndex": 813,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 814,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 815,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 816,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 817,
+    "primary": [
+      "サイド関連"
+    ],
+    "context": [],
     "tags": [
       "サイド関連"
     ]
   },
   {
     "qaIndex": 818,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 819,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 820,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 821,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 822,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 823,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 824,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 825,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 826,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 827,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 828,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 829,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 830,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 831,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 832,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 833,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 834,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 835,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 836,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 837,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 838,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 839,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 840,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 841,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 842,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 843,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 844,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 845,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 846,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 847,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 848,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 849,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 850,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 851,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 852,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 853,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 854,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 855,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 856,
+    "primary": [
+      "フィールド干渉",
+      "フィールド干渉>エネルギートラッシュ"
+    ],
+    "context": [],
     "tags": [
       "フィールド干渉",
       "フィールド干渉>エネルギートラッシュ"
@@ -4233,22 +6789,35 @@
   },
   {
     "qaIndex": 857,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 858,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 859,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 860,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 861,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -4256,28 +6825,46 @@
   },
   {
     "qaIndex": 862,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 863,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 864,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 865,
+    "primary": [
+      "ダメカンを置く"
+    ],
+    "context": [],
     "tags": [
       "ダメカンを置く"
     ]
   },
   {
     "qaIndex": 866,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 867,
+    "primary": [
+      "反射"
+    ],
+    "context": [
+      "特性・場"
+    ],
     "tags": [
       "反射",
       "特性・場"
@@ -4285,22 +6872,35 @@
   },
   {
     "qaIndex": 868,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 869,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 870,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 871,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 872,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>テラスタル"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>テラスタル"
@@ -4308,6 +6908,11 @@
   },
   {
     "qaIndex": 873,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>未来"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>未来"
@@ -4315,6 +6920,11 @@
   },
   {
     "qaIndex": 874,
+    "primary": [
+      "ポケモンいれかえ",
+      "ポケモンいれかえ>相手:C-05型"
+    ],
+    "context": [],
     "tags": [
       "ポケモンいれかえ",
       "ポケモンいれかえ>相手:C-05型"
@@ -4322,22 +6932,37 @@
   },
   {
     "qaIndex": 875,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 876,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 877,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 878,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 879,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>未来",
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>未来",
@@ -4347,42 +6972,65 @@
   },
   {
     "qaIndex": 880,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 881,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 882,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 883,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 884,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 885,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 886,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 887,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 888,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 889,
+    "primary": [
+      "手札干渉",
+      "手札干渉>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "手札干渉",
       "手札干渉>トラッシュ"
@@ -4390,6 +7038,11 @@
   },
   {
     "qaIndex": 890,
+    "primary": [
+      "手札干渉",
+      "手札干渉>トラッシュ"
+    ],
+    "context": [],
     "tags": [
       "手札干渉",
       "手札干渉>トラッシュ"
@@ -4397,6 +7050,11 @@
   },
   {
     "qaIndex": 891,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -4404,6 +7062,11 @@
   },
   {
     "qaIndex": 892,
+    "primary": [
+      "ベンチ展開",
+      "ベンチ展開>山札"
+    ],
+    "context": [],
     "tags": [
       "ベンチ展開",
       "ベンチ展開>山札"
@@ -4411,14 +7074,23 @@
   },
   {
     "qaIndex": 893,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 894,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 895,
+    "primary": [
+      "カード種別参照",
+      "カード種別参照>古代"
+    ],
+    "context": [],
     "tags": [
       "カード種別参照",
       "カード種別参照>古代"
@@ -4426,10 +7098,18 @@
   },
   {
     "qaIndex": 896,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 897,
+    "primary": [
+      "ダメカン移動"
+    ],
+    "context": [
+      "効果を受けない"
+    ],
     "tags": [
       "ダメカン移動",
       "効果を受けない"
@@ -4437,24 +7117,39 @@
   },
   {
     "qaIndex": 898,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 899,
+    "primary": [
+      "進化加速"
+    ],
+    "context": [],
     "tags": [
       "進化加速"
     ]
   },
   {
     "qaIndex": 900,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 901,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 902,
+    "primary": [
+      "ダメージ修飾",
+      "ダメージ修飾>味方の火力アップ"
+    ],
+    "context": [],
     "tags": [
       "ダメージ修飾",
       "ダメージ修飾>味方の火力アップ"
@@ -4462,10 +7157,17 @@
   },
   {
     "qaIndex": 903,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 904,
+    "primary": [
+      "回復",
+      "回復>全回復"
+    ],
+    "context": [],
     "tags": [
       "回復",
       "回復>全回復"
@@ -4473,10 +7175,17 @@
   },
   {
     "qaIndex": 905,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 906,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく"
@@ -4484,6 +7193,11 @@
   },
   {
     "qaIndex": 907,
+    "primary": [
+      "特殊状態",
+      "特殊状態>どく"
+    ],
+    "context": [],
     "tags": [
       "特殊状態",
       "特殊状態>どく"
@@ -4491,34 +7205,50 @@
   },
   {
     "qaIndex": 908,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 909,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 910,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 911,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 912,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 913,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 914,
+    "primary": [],
+    "context": [],
     "tags": []
   },
   {
     "qaIndex": 915,
+    "primary": [],
+    "context": [],
     "tags": []
   }
 ]

@@ -53,13 +53,17 @@ for (let i = 0; i < qaEntries.length; i++) {
 // ── Build lookup maps ──────────────────────────────────────────────────────
 
 // Phase 33-M attack facets are flat (no '>') but specific enough to drive
-// relatedQA matching. The generic facets (ワザダメージ/即時/無条件) are
-// deliberately absent: they cover 400-1300 cards each and would flood links.
+// relatedQA matching. The generic facets 即時/無条件 are deliberately absent
+// (covers 1262/388 cards each, would flood links). ワザダメージ (Phase 33-W) is
+// included so primary-tag AND matching can use it as a filter:
+// `ベンチに届く + ワザダメージ` excludes ベンチダメカン置き cards from QA about
+// ベンチ damage rulings (e.g. ユクシー stops matching idx 77/184).
 const ATTACK_FACETS = new Set([
   'ダメカンを置く', 'ダメカン移動', '反射',
   '次の番も', '特性・場',
   '自分の場', '相手の場', 'コイン', '枚数参照', '種別', '特殊状態参照', 'HP/ダメカン',
   'ベンチに届く', '自分側', 'お互い',
+  'ワザダメージ',
 ]);
 
 // Phase 33-P: defense facets (33-N, flat) join the whitelist. このポケモン (206
@@ -110,13 +114,17 @@ for (const [cardId, classes] of Object.entries(officialClassIndex)) {
   }
 }
 
-/** qaIndex → Set<matchable tag> for each QA entry */
-const entrySubTagMap = new Map();
+// Phase 33-W: each QA's primary tag set is the ruling's subject.
+// A card joins relatedQA only when it carries ALL primary tags (AND match).
+// Context tags are kept for display only — not required of the card.
+// Back-compat: entries without explicit primary fall back to legacy `tags`.
+const entryPrimaryMap = new Map();
+const entryContextMap = new Map();
 for (const e of qaEntryTags) {
-  const subtags = e.tags.filter(isMatchableTag);
-  if (subtags.length > 0) {
-    entrySubTagMap.set(e.qaIndex, new Set(subtags));
-  }
+  const primary = (e.primary ?? e.tags ?? []).filter(isMatchableTag);
+  if (primary.length > 0) entryPrimaryMap.set(e.qaIndex, primary);
+  const context = (e.context ?? []).filter(isMatchableTag);
+  if (context.length > 0) entryContextMap.set(e.qaIndex, context);
 }
 
 // ── Accumulate mappings ────────────────────────────────────────────────────
@@ -145,32 +153,43 @@ for (let i = 0; i < qaEntries.length; i++) {
     }
   }
 
-  // Layer 2: subtag-based relatedQA matching
-  //   QA entry subtag X ∩ card subtag X → related match, recording shared subtags
+  // Layer 2: primary-tag AND matching (Phase 33-W).
   //
-  // Spread is permissive by design (Phase 33-V revert of 33-U): the official
-  // FAQ does NOT publish a ruling for every relevant card combination — they
-  // publish a representative pair and players generalize to similar cards.
-  // So a 2-card combination ruling like バトルコロシアム×ヨノワール is meant to
-  // teach the ベンチに届く general rule, and SHOULD reach all ベンチに届く cards.
-  const entrySubtags = entrySubTagMap.get(i);
-  if (!entrySubtags || entrySubtags.size === 0) continue;
+  // The card joins relatedQA when it carries every primary tag of the QA.
+  // - 1 primary tag → same as before (e.g. `ダメカンを置く` reaches all 128 cards)
+  // - 2+ primary tags → intersection (`ベンチに届く + ワザダメージ` reaches ワザでベンチ
+  //   ダメージを与えるカード only, not ベンチダメカン置きカード)
+  //
+  // Spread itself stays permissive (Phase 33-V): the official FAQ publishes a
+  // representative pair and players generalize. The AND match narrows scope by
+  // QA-side specificity, not by suppressing combination rulings wholesale.
+  const primaryTags = entryPrimaryMap.get(i);
+  if (!primaryTags || primaryTags.length === 0) continue;
 
   const refIds = new Set((entry.cards ?? []).map(c => c.cardId));
 
-  for (const subtag of entrySubtags) {
-    const matchedCards = subtagToCards.get(subtag);
-    if (!matchedCards) continue;
+  // Iterate candidates from the smallest primary tag pool, intersect the rest.
+  let candidates = null;
+  for (const tag of primaryTags) {
+    const pool = subtagToCards.get(tag);
+    if (!pool) { candidates = new Set(); break; }
+    if (candidates === null || pool.size < candidates.size) candidates = pool;
+  }
+  if (!candidates || candidates.size === 0) continue;
 
-    for (const cardId of matchedCards) {
-      if (refIds.has(cardId)) continue; // already in directQA
-
-      const accum = getAccum(cardId);
-      if (!accum.relatedMap.has(i)) {
-        accum.relatedMap.set(i, new Set());
-      }
-      accum.relatedMap.get(i).add(subtag);
+  for (const cardId of candidates) {
+    if (refIds.has(cardId)) continue;
+    const cardTagSet = cardTagMap.get(cardId);
+    if (!cardTagSet) continue;
+    let matchesAll = true;
+    for (const tag of primaryTags) {
+      if (!cardTagSet.has(tag)) { matchesAll = false; break; }
     }
+    if (!matchesAll) continue;
+
+    const accum = getAccum(cardId);
+    if (!accum.relatedMap.has(i)) accum.relatedMap.set(i, new Set());
+    for (const tag of primaryTags) accum.relatedMap.get(i).add(tag);
   }
 }
 
