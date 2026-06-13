@@ -212,6 +212,67 @@ console.log(`  Total directQA refs : ${totalDirect}`);
 console.log(`  Total relatedQA refs: ${totalRelated}`);
 console.log(`  File size           : ${(sizeBytes / 1024 / 1024).toFixed(2)} MB`);
 
+// ── Unbound QA audit (Phase 33-T) ──────────────────────────────────────────
+// Q&A entries with no in-pool card reference AND no matchable tag never appear
+// on any card page. Baseline (2026-06-13): 244 general-rules/glossary FAQ +
+// 4 out-of-pool (old regulation) rulings. New unbound entries after a set
+// intake signal a scraper card-link extraction failure or a vocab gap — diff
+// docs/qa_unbound_audit.md to spot them.
+
+const poolCardIds = new Set(cardTags.map(c => c.cardId));
+const noRef = [];
+const outOfPoolRef = [];
+for (let i = 0; i < qaEntries.length; i++) {
+  const entry = qaEntries[i];
+  const refs = entry.cards ?? [];
+  if (refs.some(c => poolCardIds.has(c.cardId))) continue;          // direct-bound
+  if ((entrySubTagMap.get(i)?.size ?? 0) > 0) continue;             // tag-bound
+  if (refs.length === 0) noRef.push(i);
+  else outOfPoolRef.push(i);
+}
+
+const fmtEntry = i => {
+  const e = qaEntries[i];
+  const refs = (e.cards ?? []).map(c => `${c.name}#${c.cardId}`).join('、');
+  return `| ${i} | ${refs || '—'} | ${e.question.replace(/\|/g, '｜').replace(/\n/g, ' ').slice(0, 80)} |`;
+};
+
+const auditMd = `# Unbound Q&A Audit
+
+Generated: ${new Date().toISOString()}
+
+Q&A entries not bound to any card (no in-pool direct reference, no matchable tag).
+These never appear in the frontend. Baseline 2026-06-13: 248 entries
+(244 rules/glossary FAQ + 4 out-of-pool rulings). **If this list grows after a
+set intake, check the FAQ scraper's card-link extraction and QA tagger vocab.**
+
+## Summary
+
+| Class | Count |
+|-------|-------|
+| Total Q&A entries | ${qaEntries.length} |
+| Bound (direct or tag) | ${qaEntries.length - noRef.length - outOfPoolRef.length} |
+| Unbound — no card reference (rules/glossary FAQ) | ${noRef.length} |
+| Unbound — out-of-pool references only (old regulation) | ${outOfPoolRef.length} |
+
+## Out-of-pool references only
+
+| idx | referenced cards | question |
+|-----|------------------|----------|
+${outOfPoolRef.map(fmtEntry).join('\n')}
+
+## No card reference
+
+| idx | referenced cards | question |
+|-----|------------------|----------|
+${noRef.map(fmtEntry).join('\n')}
+`;
+
+const auditPath = path.join(root, 'docs/qa_unbound_audit.md');
+fs.writeFileSync(auditPath, auditMd, 'utf8');
+console.log(`\nWrote ${auditPath}`);
+console.log(`  Unbound QA: ${noRef.length + outOfPoolRef.length} (no-ref ${noRef.length} / out-of-pool ${outOfPoolRef.length})`);
+
 // ── Print usage note ───────────────────────────────────────────────────────
 console.log(`
 Usage in CardModal.tsx:
