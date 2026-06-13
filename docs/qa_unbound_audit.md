@@ -1,6 +1,6 @@
 # Unbound Q&A Audit
 
-Generated: 2026-06-13T07:58:45.824Z
+Generated: 2026-06-13T09:20:14.267Z
 
 Q&A entries not bound to any card (no in-pool direct reference, no matchable tag).
 These never appear in the frontend. Baseline 2026-06-13: 248 entries

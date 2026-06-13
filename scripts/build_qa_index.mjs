@@ -77,7 +77,11 @@ const DEFENSE_FACETS = new Set([
 ]);
 
 // Phase 33-P: discriminative flat tags outside the facet systems (33-O vocab).
-const MISC_TAGS = new Set(['きぜつさせる']);
+// Phase 33-X (4): ワザコピー (親タグ) を追加。309 (スキルシーフ×まっちゃスピン)
+// のような ワザコピー機構の汎用裁定は ワザコピー>{ものまね,きおくにもぐる,ワザ付与}
+// の各サブ全体に届けたい。サブタグ単独だと該当系統内でしか繋がらず、汎用裁定が
+// 他系統 (ジーランス↔ヤドキング 等) に渡らない。
+const MISC_TAGS = new Set(['きぜつさせる', 'ワザコピー']);
 
 // Phase 33-P: キャラ家系は独自タグでなく公式クラス (official_class_index) で結合する。
 // QA 側ルールは公式タグ名をそのまま発行する（tag_qa_entries.mjs CHARACTER_PREFIXES）。
