@@ -43,6 +43,8 @@ console.log('Loading qa_entry_tags.json...');
 const qaEntryTags = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_entry_tags.json'), 'utf8'));
 console.log('Loading official_class_index.json...');
 const officialClassIndex = JSON.parse(fs.readFileSync(path.join(root, 'data/official_class_index.json'), 'utf8'));
+console.log('Loading qa_spread_overrides.json...');
+const spreadOverrides = JSON.parse(fs.readFileSync(path.join(root, 'data/qa_spread_overrides.json'), 'utf8'));
 
 // Build index: question text → position in qaEntries array (for O(1) lookup)
 const questionToIdx = new Map();
@@ -119,6 +121,24 @@ for (const e of qaEntryTags) {
   }
 }
 
+// ── Spread precision controls (Phase 33-U) ─────────────────────────────────
+// relatedQA spread is for rulings that teach a tag's mechanic in general.
+// Two suppression layers (keyed by question text — qa idx shifts on re-scrape):
+//
+// 1. Interaction rule: a QA referencing ≥2 in-pool cards is a combination
+//    ruling between those specific cards. The official FAQ repeats such
+//    rulings on every card they matter for, so each card already gets its
+//    own copy via directQA — tag spread only adds noise (e.g. the
+//    バトルコロシアム×ひっさつしゅりけん ruling reached 411 cards).
+//    spreadWhitelist lists exceptions whose answer states a class-wide rule.
+//
+// 2. spreadBlacklist: manually audited single-card usability / edge-case /
+//    calculation rulings (デンジャラス光線の使用条件 etc.) that tripped facet
+//    tags. blockTags 'all' kills all spread; an array kills only those tags
+//    (e.g. keep family-tag spread, drop the generic 火力アップ facet).
+const spreadWhitelist = new Set(spreadOverrides.spreadWhitelist);
+const spreadBlacklist = new Map(spreadOverrides.spreadBlacklist.map(e => [e.question, e.blockTags]));
+
 // ── Accumulate mappings ────────────────────────────────────────────────────
 
 /**
@@ -150,9 +170,16 @@ for (let i = 0; i < qaEntries.length; i++) {
   const entrySubtags = entrySubTagMap.get(i);
   if (!entrySubtags || entrySubtags.size === 0) continue;
 
+  const inPoolRefs = (entry.cards ?? []).filter(c => cardTagMap.has(c.cardId)).length;
+  if (inPoolRefs >= 2 && !spreadWhitelist.has(entry.question)) continue;
+
+  const blockedTags = spreadBlacklist.get(entry.question);
+  if (blockedTags === 'all') continue;
+
   const refIds = new Set((entry.cards ?? []).map(c => c.cardId));
 
   for (const subtag of entrySubtags) {
+    if (Array.isArray(blockedTags) && blockedTags.includes(subtag)) continue;
     const matchedCards = subtagToCards.get(subtag);
     if (!matchedCards) continue;
 
