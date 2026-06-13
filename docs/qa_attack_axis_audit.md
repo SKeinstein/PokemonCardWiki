@@ -1,6 +1,6 @@
 # QA Attack Facet Axis Audit
 
-Generated: 2026-06-13T09:58:18.665Z
+Generated: 2026-06-13T12:49:15.892Z
 
 cards[] ありの攻撃 Q&A を、Phase 33-W/X で導入した 3 軸 (メカニクス / 起動源 / 範囲)
 で分類した監査レポート。Phase 33-Y 攻撃軸全件再精査 ([[Phase33Y_attack_axis_full_audit]])
