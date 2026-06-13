@@ -10,7 +10,7 @@
  *   T1 ワザで即時 / T2 持続 / T3 特性・場で削る / T4 反射
  *   C1 無条件 / C2 自分の場 / C3 相手の場 / C4 コイン / C5 手札・トラッシュ
  *   C6 カード種別 / C7 特殊状態 / C8 HP・ダメカン
- *   S1 ベンチに届く / S2 自分側にも / S3 お互いに
+ *   S1 ベンチに届く / S2 自分側にも / S3 お互いに / S4 バトル場のみ
  *   Shelf: G1 味方の火力アップ / G2 相手への被ダメ増 / G3 弱点・抵抗ルール改変
  *
  * CLI: node scripts/derive_attack_facets.mjs  → stats to stdout,
@@ -266,6 +266,12 @@ export function deriveAttackFacets(card) {
         timing.has('T2') || timing.has('T3') || timing.has('T4') ||
         realConds.length > 0 ||
         scope.size > 0;
+
+      // Phase 33-X (1-B): S1(ベンチに届く)/S3(お互い) の対義タグ S4(バトル場のみ) を
+      // 対称導入。notable な effect で着弾が相手バトル場止まりのときに発行 — フーディン
+      // 「ハンドパワー」とユクシー「いたみのきおく」を区別し、バトルコロシアム/ばけがくれ
+      // 系 QA の primary `バトル場のみ` に届くようにする。
+      if (notable && !scope.has('S1') && !scope.has('S3')) scope.add('S4');
 
       effects.push({ src: e.src, name: e.name, notable, facets: [...mech, ...timing, ...conds, ...scope].sort() });
     }

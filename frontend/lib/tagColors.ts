@@ -170,7 +170,7 @@ export const ATTACK_FACET_COLUMNS: AttackFacetColumn[] = [
         key: 'scope',
         question: '④ どこに飛ぶ？',
         questionClass: 'text-rose-300',
-        parents: ['ベンチに届く', '自分側', 'お互い'],
+        parents: ['ベンチに届く', '自分側', 'お互い', 'バトル場のみ'],
         token: ATTACK_FACET_TOKEN,
     },
 ];

@@ -53,16 +53,18 @@ for (let i = 0; i < qaEntries.length; i++) {
 // ── Build lookup maps ──────────────────────────────────────────────────────
 
 // Phase 33-M attack facets are flat (no '>') but specific enough to drive
-// relatedQA matching. The generic facets 即時/無条件 are deliberately absent
-// (covers 1262/388 cards each, would flood links). ワザダメージ (Phase 33-W) is
+// relatedQA matching. The generic facet 無条件 is deliberately absent (388 cards,
+// would flood links). 即時 (Phase 33-X 1-A) is whitelisted because the QA tagger
+// only emits it together with other primary tags (e.g. ダメカンを置く + 即時 +
+// バトル場のみ) — never as the sole primary. ワザダメージ (Phase 33-W) is
 // included so primary-tag AND matching can use it as a filter:
 // `ベンチに届く + ワザダメージ` excludes ベンチダメカン置き cards from QA about
 // ベンチ damage rulings (e.g. ユクシー stops matching idx 77/184).
 const ATTACK_FACETS = new Set([
   'ダメカンを置く', 'ダメカン移動', '反射',
-  '次の番も', '特性・場',
+  '即時', '次の番も', '特性・場',
   '自分の場', '相手の場', 'コイン', '枚数参照', '種別', '特殊状態参照', 'HP/ダメカン',
-  'ベンチに届く', '自分側', 'お互い',
+  'ベンチに届く', '自分側', 'お互い', 'バトル場のみ',
   'ワザダメージ',
 ]);
 
@@ -251,7 +253,12 @@ for (let i = 0; i < qaEntries.length; i++) {
   const entry = qaEntries[i];
   const refs = entry.cards ?? [];
   if (refs.some(c => poolCardIds.has(c.cardId))) continue;          // direct-bound
-  if ((entrySubTagMap.get(i)?.size ?? 0) > 0) continue;             // tag-bound
+  // Phase 33-W: tag-bound = has any primary or context tag (entrySubTagMap was
+  // renamed when primary/context split landed; the audit reference here was
+  // missed — Phase 33-X 1-B fix)
+  const primCount = entryPrimaryMap.get(i)?.length ?? 0;
+  const ctxCount = entryContextMap.get(i)?.length ?? 0;
+  if (primCount + ctxCount > 0) continue;                            // tag-bound
   if (refs.length === 0) noRef.push(i);
   else outOfPoolRef.push(i);
 }
