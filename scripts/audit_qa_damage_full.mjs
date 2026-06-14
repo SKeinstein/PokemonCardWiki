@@ -131,8 +131,8 @@ const sectionMd = (key) => `### ${BUCKETS[key]} (${rows[key].length})
 
 | idx | カード | primary | context | 質問 |
 |---|---|---|---|---|
-${rows[key].slice(0, 80).map(fmt).join('\n')}
-${rows[key].length > 80 ? `\n*…他 ${rows[key].length - 80} 件省略*` : ''}
+${rows[key].slice(0, 200).map(fmt).join('\n')}
+${rows[key].length > 200 ? `\n*…他 ${rows[key].length - 200} 件省略*` : ''}
 `;
 
 const md = `# QA Damage-System Full Audit (Phase 33-AA baseline)
