@@ -12,6 +12,7 @@ import {
     ATTACK_FACET_TAGS,
     DEFENSE_FACET_COLUMNS,
     DEFENSE_FACET_TAGS,
+    RULE_TERMS_TAGS,
     getCustomTagToken,
     officialTagLabel,
     type CustomTagToken,
@@ -327,8 +328,9 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             matched.forEach(p => claimed.add(p));
             sections.push({ label: group.label, parents: matched });
         }
-        // attack/defense facet tags live in the dedicated frames, not the generic panel
-        const others = customTagParents.filter(p => !claimed.has(p) && !ATTACK_FACET_TAGS.has(p) && !DEFENSE_FACET_TAGS.has(p));
+        // attack/defense facet tags live in the dedicated frames, not the generic panel.
+        // rule-term tags are link-only (Phase 33-AC) — never shown as a filter chip.
+        const others = customTagParents.filter(p => !claimed.has(p) && !ATTACK_FACET_TAGS.has(p) && !DEFENSE_FACET_TAGS.has(p) && !RULE_TERMS_TAGS.has(p));
         if (others.length > 0) sections.push({ label: OTHER_CUSTOM_TAG_GROUP_LABEL, parents: others });
         return sections;
     }, [customTagParents]);

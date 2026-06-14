@@ -207,6 +207,31 @@ export const DEFENSE_FACET_COLUMNS: AttackFacetColumn[] = [
 
 export const DEFENSE_FACET_TAGS = new Set(DEFENSE_FACET_COLUMNS.flatMap(c => c.parents));
 
+// ── Phase 33-AC: ルール用語 (結合専用タグ) ──────────────────────────────────
+//
+// QAタグ結合のためだけに付与する独自タグ。検索 UI のフィルターパネルには出さず、
+// CardModal の共通タグ表示でのみ色違い (amber) で出現する。
+// 親タグ「ルール用語」配下に「のぞむなら」等の公式ルール用語を集約。
+
+const RULE_TERMS_TOKEN: CustomTagToken = {
+    chipSelected: 'bg-amber-600 border-amber-500 text-white',
+    chipExpanded: 'bg-amber-900/70 border-amber-500 text-amber-100 font-bold',
+    chipDefault: 'bg-gray-800 border-gray-600 text-gray-300 hover:border-amber-500 hover:text-amber-300',
+    expandSelected: 'bg-amber-700 border-amber-500 text-amber-200',
+    expandExpanded: 'bg-amber-700 border-amber-500 text-amber-100',
+    expandDefault: 'bg-gray-700 border-gray-600 text-gray-400 hover:border-amber-500 hover:text-amber-300',
+    ring: 'ring-2 ring-amber-400/90 shadow-[0_0_12px_rgba(251,191,36,0.55)]',
+    subtagBorder: 'border-amber-400/70',
+    subtagLabel: 'text-amber-400/80',
+    subtagSelected: 'bg-amber-600 border-amber-500 text-white',
+    subtagDefault: 'bg-gray-800/80 border-amber-900/50 text-gray-300 hover:border-amber-500 hover:text-amber-300',
+    chipDisplay: 'bg-amber-900/60 border-amber-700 text-amber-200',
+    chipDisplayParent: 'text-amber-400/70',
+};
+
+export const RULE_TERMS_PARENTS = ['ルール用語'];
+export const RULE_TERMS_TAGS = new Set(RULE_TERMS_PARENTS);
+
 const PARENT_TO_GROUP = new Map<string, CustomTagGroup>();
 for (const group of CUSTOM_TAG_GROUPS) {
     for (const parent of group.parents) PARENT_TO_GROUP.set(parent, group);
@@ -216,6 +241,10 @@ for (const col of [...ATTACK_FACET_COLUMNS, ...DEFENSE_FACET_COLUMNS]) {
     for (const parent of col.parents) {
         PARENT_TO_GROUP.set(parent, { label: col.question, parents: col.parents, token: col.token });
     }
+}
+// rule-term tags: 結合専用なので filter panel には出さないが、共通タグ表示で amber 色解決
+for (const parent of RULE_TERMS_PARENTS) {
+    PARENT_TO_GROUP.set(parent, { label: 'ルール用語', parents: RULE_TERMS_PARENTS, token: RULE_TERMS_TOKEN });
 }
 
 export function getCustomTagGroup(parent: string): CustomTagGroup | null {
