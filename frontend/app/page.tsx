@@ -1,13 +1,14 @@
-import { getMasterCards, getCardVariants, getMasterCardTags, getCostIndex, getOfficialClassIndex } from "../lib/data";
+import { getMasterCards, getCardVariants, getMasterCardTags, getCostIndex, getOfficialClassIndex, getKagglePool } from "../lib/data";
 import CardSearch from "./components/CardSearch";
 
 export default async function Home() {
-  const [masterCards, variants, cardTags, costIndex, officialClassIndex] = await Promise.all([
+  const [masterCards, variants, cardTags, costIndex, officialClassIndex, kagglePool] = await Promise.all([
     getMasterCards(),
     getCardVariants(),
     getMasterCardTags(),
     getCostIndex(),
     getOfficialClassIndex(),
+    getKagglePool(),
   ]);
 
   return (
@@ -19,7 +20,7 @@ export default async function Home() {
       </div>
 
       <div className="relative z-10 w-full">
-        <CardSearch masterCards={masterCards} variants={variants} cardTags={cardTags} costIndex={costIndex} officialClassIndex={officialClassIndex} />
+        <CardSearch masterCards={masterCards} variants={variants} cardTags={cardTags} costIndex={costIndex} officialClassIndex={officialClassIndex} kagglePool={kagglePool} />
       </div>
     </main>
   );

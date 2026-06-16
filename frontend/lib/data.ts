@@ -143,6 +143,28 @@ export async function getCostIndex(): Promise<CostEntry[]> {
     return costIndexCache;
 }
 
+export type KagglePool = {
+    generated_at: string;
+    source: string;
+    csv_card_count: number;
+    matched_master_ids: string[];
+    matched_master_count: number;
+    unmatched_count: number;
+};
+
+let kagglePoolCache: KagglePool | null = null;
+
+export async function getKagglePool(): Promise<KagglePool> {
+    if (process.env.NODE_ENV === 'production' && kagglePoolCache) {
+        return kagglePoolCache;
+    }
+
+    const dataPath = path.join(DATA_DIR, "kaggle_pool.json");
+    const fileContents = await fs.readFile(dataPath, "utf8");
+    kagglePoolCache = JSON.parse(fileContents) as KagglePool;
+    return kagglePoolCache;
+}
+
 export type OfficialClassIndex = Record<string, string[]>;
 
 let officialClassIndexCache: OfficialClassIndex | null = null;

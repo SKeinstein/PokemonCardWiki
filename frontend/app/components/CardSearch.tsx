@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useDeferredValue, useRef } from "react";
-import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex } from "../../lib/data";
+import { MasterCard, CardVariant, MasterCardTag, CostEntry, OfficialClassIndex, KagglePool } from "../../lib/data";
 import { pickDisplayVariant } from "../../lib/variantUtils";
 import { typeLabel } from "../../lib/typeUtils";
 import {
@@ -28,6 +28,7 @@ type Props = {
     cardTags: MasterCardTag[];
     costIndex: CostEntry[];
     officialClassIndex: OfficialClassIndex;
+    kagglePool: KagglePool;
 };
 
 const HP_MIN = 30;
@@ -47,11 +48,14 @@ const GENERIC_RULES = new Set([
 type CardKindOption =
     | { kind: 'category'; value: string; label: string }
     | { kind: 'final_evo'; label: string }
+    | { kind: 'kaggle_pool'; mode: 'in' | 'out'; label: string }
     | { kind: 'official_tag'; tag: string; label: string };
 
 const CARD_KIND_OPTIONS: CardKindOption[] = [
     { kind: 'category', value: 'pokemon', label: 'ポケモン' },
     { kind: 'final_evo', label: '最終進化のみ' },
+    { kind: 'kaggle_pool', mode: 'in', label: 'Kaggle ABC' },
+    { kind: 'kaggle_pool', mode: 'out', label: '非Kaggle ABC' },
     { kind: 'official_tag', tag: 'たねポケモン', label: 'たねポケモン' },
     { kind: 'official_tag', tag: '1進化ポケモン', label: '1進化ポケモン' },
     { kind: 'official_tag', tag: '2進化ポケモン', label: '2進化ポケモン' },
@@ -65,7 +69,7 @@ const CARD_KIND_OPTIONS: CardKindOption[] = [
 ];
 
 
-export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex }: Props) {
+export default function CardSearch({ masterCards, variants, cardTags, costIndex, officialClassIndex, kagglePool }: Props) {
     const [query, setQuery] = useState("");
     const [typeFilter, setTypeFilter] = useState("");
     const [effectQuery, setEffectQuery] = useState("");
@@ -91,6 +95,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     const [displayLimit, setDisplayLimit] = useState(100);
     const [filtersExpanded, setFiltersExpanded] = useState(false);
     const [finalEvoOnly, setFinalEvoOnly] = useState(false);
+    const [kagglePoolFilter, setKagglePoolFilter] = useState<'off' | 'in' | 'out'>('off');
 
     // Comparison state
     const [comparisonCards, setComparisonCards] = useState<MasterCard[]>([]);
@@ -195,7 +200,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
     // Reset pagination when search parameters change
     useEffect(() => {
         setDisplayLimit(100);
-    }, [query, effectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags, finalEvoOnly]);
+    }, [query, effectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, selectedTags, isTagOrSearch, hpRange, selectedOfficialTags, finalEvoOnly, kagglePoolFilter]);
 
     // Deferred values for expensive filter inputs — keeps input field responsive during rapid typing
     const deferredQuery = useDeferredValue(query);
@@ -249,6 +254,8 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         }
         return map;
     }, [costIndex]);
+
+    const kagglePoolSet = useMemo(() => new Set(kagglePool.matched_master_ids), [kagglePool]);
 
     const finalEvoSet = useMemo(() => {
         const stageOf = (kind: string) => kind === '2 進化' ? 2 : kind === '1 進化' ? 1 : kind === 'たね' ? 0 : -1;
@@ -542,9 +549,13 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
             // 9. Final Evolution Filter
             if (finalEvoOnly && !finalEvoSet.has(card.master_id)) return false;
 
+            // 10. Kaggle ABC Pool Filter
+            if (kagglePoolFilter === 'in' && !kagglePoolSet.has(card.master_id)) return false;
+            if (kagglePoolFilter === 'out' && kagglePoolSet.has(card.master_id)) return false;
+
             return true;
         });
-    }, [masterCards, deferredQuery, deferredEffectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap, finalEvoOnly, finalEvoSet]);
+    }, [masterCards, deferredQuery, deferredEffectQuery, typeFilter, categoryFilter, isOrSearch, weaknessFilter, resistanceFilter, retreatFilter, costTypeFilter, costCountFilters, costMap, selectedTags, tagCardMap, isTagOrSearch, hpFilterActive, hpRange.min, hpRange.max, selectedOfficialTags, officialClassMap, finalEvoOnly, finalEvoSet, kagglePoolFilter, kagglePoolSet]);
 
     // Unique types for filter
     const allTypes = useMemo(() => {
@@ -633,6 +644,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
         hpFilterActive ? 'x' : '',
         selectedOfficialTags.size > 0 ? 'x' : '',
         finalEvoOnly ? 'x' : '',
+        kagglePoolFilter !== 'off' ? 'x' : '',
     ].filter(Boolean).length;
 
     const customTagSelectedCount = selectedTags.size;
@@ -772,6 +784,7 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                         setHpRange({ min: HP_MIN, max: HP_MAX });
                                         setSelectedOfficialTags(new Set());
                                         setFinalEvoOnly(false);
+                                        setKagglePoolFilter('off');
                                     }}
                                     className="text-xs text-emerald-400 hover:text-emerald-200 underline py-1"
                                 >
@@ -789,19 +802,22 @@ export default function CardSearch({ masterCards, variants, cardTags, costIndex,
                                         const isSelected =
                                             o.kind === 'category' ? categoryFilter === o.value
                                             : o.kind === 'final_evo' ? finalEvoOnly
+                                            : o.kind === 'kaggle_pool' ? kagglePoolFilter === o.mode
                                             : selectedOfficialTags.has(o.tag);
                                         const handleClick = () => {
                                             if (o.kind === 'category') {
                                                 setCategoryFilter(categoryFilter === o.value ? '' : o.value);
                                             } else if (o.kind === 'final_evo') {
                                                 setFinalEvoOnly(prev => !prev);
+                                            } else if (o.kind === 'kaggle_pool') {
+                                                setKagglePoolFilter(prev => prev === o.mode ? 'off' : o.mode);
                                             } else {
                                                 toggleOfficialTag(o.tag);
                                             }
                                         };
                                         return (
                                             <button
-                                                key={o.kind === 'category' ? o.value : o.kind === 'official_tag' ? o.tag : 'final_evo'}
+                                                key={o.kind === 'category' ? o.value : o.kind === 'official_tag' ? o.tag : o.kind === 'kaggle_pool' ? `kaggle_pool_${o.mode}` : 'final_evo'}
                                                 type="button"
                                                 onClick={handleClick}
                                                 className={`px-2.5 py-1.5 min-h-[36px] text-xs font-medium rounded-full border transition touch-manipulation ${

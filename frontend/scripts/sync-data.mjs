@@ -22,6 +22,7 @@ const FILES = [
     "official_class_index.json",
     "deck_index.json",
     "pack_release_order.json",
+    "kaggle_pool.json",
 ];
 
 await mkdir(DEST_DIR, { recursive: true });
